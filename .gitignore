@@ -1,0 +1,29 @@
+# Byte-compiled / otimizações Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ROMs e Saves de Jogos (Proibida distribuição de ROMs comerciais)
+*.gba
+*.sav
+*.srm
+*.dsv
+*.ss[0-9]
+*.sgm
+!**/rom/.gitkeep
+!**/rom/COLOQUE_SUA_ROM_AQUI.txt
+
+# Arquivos de log e temporários
+*.log
+_ferramentas_gerais/mGBA/portable.ini
+_ferramentas_gerais/mGBA/config.ini
+
+# Configurações de IDEs e Sistemas Operacionais
+.vscode/
+.idea/
+.venv/
+env/
+venv/
+.DS_Store
+Thumbs.db
+Desktop.ini
