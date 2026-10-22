@@ -1,5 +1,8 @@
 # 🎮 Modelo de Tradução para Novo Jogo GBA
 
+> [!NOTE]
+> **Aviso Legal:** Todas as traduções desenvolvidas nesta estrutura são projetos de fãs sem fins lucrativos. **Nenhuma ROM original é distribuída ou disponibilizada no repositório**. Cada usuário deve utilizar sua própria cópia adquirida legalmente do jogo para extrair ou aplicar os patches gerados.
+
 Esta pasta serve como template limpo para você iniciar a tradução de qualquer nova ROM de Game Boy Advance sem afetar os outros jogos ou o projeto de Port.
 
 ---

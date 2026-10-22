@@ -1,5 +1,14 @@
 # 🕹️ GBA ROMs Translator PT-BR — Toolkit & Suite de Localização
 
+> [!NOTE]
+> ### ⚖️ Aviso Legal / Fan Project Disclaimer
+> - **Projeto de Fãs Sem Fins Lucrativos:** Este é um projeto voluntário desenvolvido exclusivamente por e para a comunidade de fãs, com objetivos puramente educacionais, de pesquisa em engenharia reversa e preservação da história dos videogames. Nenhuma cobrança financeira é realizada pelo uso deste material.
+> - **Não Disponibilização de ROMs:** Este repositório **NÃO contém, NÃO hospeda e NÃO disponibiliza nenhum arquivo de ROM (.gba) comercial ou protegido por direitos autorais**. O usuário deve obrigatoriamente possuir e fornecer sua própria cópia física/digital original legalmente adquirida.
+> - **Apenas Ferramentas e Patches:** Distribuímos estritamente código-fonte de utilitários e patches de modificação (`.ips`), que contêm apenas as diferenças de texto traduzido e rotinas desenvolvidas pelos fãs.
+> - **Propriedade Intelectual:** Todos os títulos de jogos, artes, marcas comerciais, personagens e trilhas sonoras originais pertencem aos seus respectivos proprietários de copyright (Nintendo, Flight-Plan, Banpresto, Atlus, Konami, etc.).
+
+---
+
 Repositório central de ferramentas modulares, scripts de engenharia reversa e pipelines automatizados para extração, tradução e injeção de textos em ROMs de **Game Boy Advance (GBA)** para Português do Brasil (PT-BR).
 
 Este ambiente foi projetado para operar com **localização sem limites de texto** (reconstrução de ponteiros e realocação de memória) e possui suporte nativo para fluxo de trabalho em par com o **Antigravity (Google DeepMind)**.
