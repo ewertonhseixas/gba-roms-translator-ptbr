@@ -22,7 +22,7 @@ gba-roms-translator-ptbr/
 │
 ├── 📁 protocolo_extracao/        # 📜 PROTOCOLO MESTRE & ENGENHARIA DE EXTRAÇÃO
 │   ├── PROTOCOLO_MESTRE_EXTRACAO.md # Manual técnico integral (Normas, VRAM, Multi-Console)
-│   ├── README.md                 # Guia de início rápido da suíte
+│   ├── README.md                 # Guia de início rápido da suíte de extração
 │   │
 │   ├── 📁 templates/             # Modelos oficiais prontos (.md)
 │   │   ├── 02-glossario-e-terminologias.template.md
@@ -39,6 +39,10 @@ gba-roms-translator-ptbr/
 │       ├── image_text_auditor.py      # Catalogação e auditoria de integridade de imagens/paleta
 │       └── token_optimizer_batcher.py # Fatiador com injeção cirúrgica de contexto (Token Economy)
 │
+├── 📁 protocolo_traducao/        # ✍️ PROTOCOLO MESTRE DE TRADUÇÃO & LOCALIZAÇÃO
+│   ├── PROTOCOLO_MESTRE_TRADUCAO.md # Diretrizes canônicas (Vozes, Gênero Neutro, QA)
+│   └── README.md                 # Guia de diretrizes de escrita e adaptação
+│
 ├── 📁 _ferramentas_gerais/       # Softwares utilitários independentes de plataforma
 │   ├── mGBA/                    # Emulador de precisão com depurador integrado
 │   └── crystaltile2/            # Editor hexadecimal e visualizador de padrões gráficos
@@ -47,7 +51,7 @@ gba-roms-translator-ptbr/
 │   │
 │   └── 📁 _MODELO_NOVO_JOGO/    # Template mestre padronizado para iniciar novos projetos
 │       ├── ARQUIVOS md/         # Modelos pré-carregados de Glossário, Sistema, Itens e Catálogo
-│       ├── docs/                # Relatório técnico padrão
+│       ├── docs/                # Relatório técnico e protocolo de tradução padrão
 │       ├── releases/            # Pasta destino de patches locais
 │       ├── rom/                 # Local para inserção da ROM original local
 │       ├── tools/               # Validador web integrado (App interativo + UI)
@@ -90,7 +94,21 @@ flowchart TD
 
 ---
 
-## 💡 2. Estratégia de Economia de Tokens (*Token Economy*)
+## ✍️ 2. O Protocolo Mestre de Tradução e Localização
+
+O **[Protocolo Mestre de Tradução](protocolo_traducao/PROTOCOLO_MESTRE_TRADUCAO.md)** estabelece as normas gramaticais, literárias e de engenharia para assegurar máxima qualidade nas adaptações em Português Brasileiro:
+
+1. **Localização por Classes e Perfis (*Character Voice*):** Linguagem adaptada ao papel social de cada personagem (Mestres com linguagem solene/artesanal, aprendizes enérgicos, entidades mágicas distintas).
+2. **Neutralidade de Gênero Sistêmica:** Redação epicena e impessoal para diálogos do protagonista que compartilham o mesmo ponteiro de script entre avatares masculino e feminino, eliminando choques de concordância.
+3. **Eliminação Integral do Inglês:** 100% de menus, itens, combate e diálogos traduzidos, mantendo estritamente nomes próprios de pessoas e regiões de fantasia.
+4. **Coerência Terminológica:** Fonte única da verdade ancorada no Glossário unificado (`02-glossario-e-terminologias.md`).
+5. **Política Rígida de Abreviações:** Proibição absoluta de abreviações telegráficas nos diálogos da história; uso permitido e tabelado apenas em menus e descrições curtas de itens.
+6. **Ciclo de Termos Adaptados:** Termos extensos do universo do jogo são introduzidos com sua tradução completa (*ex: Lorde da Forja, Cavaleiro-Ferreiro*) e sintetizados nos diálogos corriqueiros (*ex: Lorde, Ferreiro*) para economia de caracteres.
+7. **Funil de QA em 4 Etapas:** Tradução $\rightarrow$ Validação de Métricas e Tags $\rightarrow$ Revisão Textual Cruzada $\rightarrow$ Teste In-Game no emulador/hardware.
+
+---
+
+## 💡 3. Estratégia de Economia de Tokens (*Token Economy*)
 
 Dumps brutos de ROMs contendo milhares de linhas descontextualizadas geram desperdício massivo de tokens e alucinações terminológicas em Modelos de Linguagem (LLMs). O utilitário [`token_optimizer_batcher.py`](protocolo_extracao/tools/token_optimizer_batcher.py) resolve isso aplicando o **Princípio do Contexto Cirúrgico**:
 
@@ -101,7 +119,7 @@ Dumps brutos de ROMs contendo milhares de linhas descontextualizadas geram despe
 
 ---
 
-## 🛠️ 3. Catálogo das Ferramentas CLI do Framework
+## 🛠️ 4. Catálogo das Ferramentas CLI do Framework
 
 Todas as ferramentas foram desenvolvidas em **Python 3** (sem dependências externas obrigatórias):
 
@@ -115,7 +133,7 @@ Todas as ferramentas foram desenvolvidas em **Python 3** (sem dependências exte
 
 ---
 
-## 🚀 4. Como Iniciar um Novo Projeto de Tradução (Localmente)
+## 🚀 5. Como Iniciar um Novo Projeto de Tradução (Localmente)
 
 1. **Clone o repositório:**
    ```bash
@@ -139,7 +157,7 @@ Todas as ferramentas foram desenvolvidas em **Python 3** (sem dependências exte
 
 ---
 
-## 🌐 5. Extensibilidade Multi-Console
+## 🌐 6. Extensibilidade Multi-Console
 
 Embora o Game Boy Advance seja o foco primordial da arquitetura atual, a suíte foi projetada em camadas desacopladas para permitir extensão direta para outros consoles clássicos:
 
