@@ -3,15 +3,30 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# ROMs e Saves de Jogos (Proibida distribuição de ROMs comerciais)
+# ROMs, Imagens de Disco e Saves (Proibida distribuição de material com copyright)
 *.gba
 *.sav
 *.srm
 *.dsv
 *.ss[0-9]
 *.sgm
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.iso
+*.bin
 !**/rom/.gitkeep
 !**/rom/COLOQUE_SUA_ROM_AQUI.txt
+
+# Backups locais de trabalho
+backups/
+**/backups/
+
+# Fotos e anexos temporários de testes
+*.jpeg
+*.jpg
 
 # Arquivos de log e temporários
 *.log

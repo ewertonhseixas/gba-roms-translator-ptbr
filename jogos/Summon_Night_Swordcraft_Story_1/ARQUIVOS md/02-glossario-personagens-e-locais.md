@@ -31,15 +31,15 @@ Para manter a identidade de **Summon Night: Swordcraft Story**, abaixo estão as
 | **Craftlord of Sapphire** | **Craftlord of Sapphire** | **Craftlord da Safira** | Título de Mestre Sakuro. | ✅ Validado |
 | **Craftlord of Ruby** | **Craftlord of Ruby** | **Craftlord do Rubi** | Título de Mestra Kouren. | ✅ Validado |
 | **Guardian Beast** | **Guardian Beast** | **Guardian Beast** | Criatura invocada que auxilia o protagonista na forja e nas batalhas. | ✅ Validado |
-| **Summon Creature / Summon Beast** | **Summon Creature / Summon Beast** | **Criatura Summon** | Seres chamados de outros mundos (Lyndbaum / Silturn / Sapureth, etc.). | ✅ Validado |
+| **Summon Creature / Summon Beast** | **Summon Creature / Summon Beast** | **Criatura Summon** | Seres chamados de outros mundos (Lyndbaum / Silturn / Sapureth e outros). | ✅ Validado |
 | **Stray Summon ("Stray")** | **Stray Summon ("Stray")** | **Summon Errante** | Criatura invocada que perdeu seu mestre e vaga pelo Labirinto. | ✅ Validado |
 | **Mystic Ore** | **Mystic Ore** | **Minério Místico** | Minério raro que transforma uma arma comum em elemental/especial. | ✅ Validado |
 | **Summonite** | **Summonite** | **Summonite** | Joia/mineral usado para invocar a Fera Guardiã. | ✅ Validado |
 | **City of Swords** | **City of Swords** | **Cidade das Espadas** | Epíteto da cidade marítima de Wystern. | ✅ Validado |
 | **Silver Guild** | **Silver Guild** | **Silver Guild** | Guilda do Mestre Bron, onde o protagonista treina no início. | ✅ Validado |
 | **Gold Guild** | **Gold Guild** | **Gold Guild** | Guilda rival localizada no andar intermediário de Wystern. | ✅ Validado |
-| **Central Tower** | **Central Tower** | **Torre Central** | Castelo dos Craftlords no coração de Wystern, sede do torneio. | ✅ Validado |
-| **Water Scooter** | **Water Scooter** | **Water Scooter** | Veículo usado para navegar pelos canais de água de Wystern. | ✅ Validado |
+| **Central Tower** | **Central Tower** | **Torre Central** | Castelo dos Lordes no coração de Wystern, sede do torneio. | ✅ Validado |
+| **Water Scooter** | **Water Scooter** | **Moto Aquática** | Veículo usado para navegar pelos canais de água de Wystern. | ✅ Validado |
 
 ---
 
@@ -60,9 +60,9 @@ Para manter a identidade de **Summon Night: Swordcraft Story**, abaixo estão as
 | `0x08071C54` | `Razzy` | `Razzy` | Rival do 3º combate do torneio (garota que usa soqueiras). | ✅ Validado |
 | `0x08071C48` | `Ariel` | `Ariel` | Rival do 4º combate (ao lado de Mariel; usa broca). | ✅ Validado |
 | `0x08071C6C` | `Varil` | `Varil` | Rival principal da Guilda Dourada (usa lança). | ✅ Validado |
-| `0x08071BF0` | `Craftlord Lubert` | `Craftlord Lubert` | Lorde Artesão especialista em Brocas/Tecnologia. | ✅ Validado |
-| `0x08071C14` | `Craftlord Ureksa` | `Craftlord Ureksa` | Lorde Artesão antagonista da Guilda Dourada (usa lança). | ✅ Validado |
-| `0x08071BCC` | `Deigleya Soldier` | `Deigleya Soldier` | Soldado inimigo militar. | ✅ Validado |
+| `0x08071BF0` | `Craftlord Lubert` | `Lorde Lubert` | Lorde especialista em Brocas/Tecnologia. | ✅ Validado |
+| `0x08071C14` | `Craftlord Ureksa` | `Lorde Ureksa` | Lorde antagonista da Guilda Dourada (usa lança). | ✅ Validado |
+| `0x08071BCC` | `Deigleya Soldier` | `Soldado Deigleya` | Soldado inimigo militar. | ✅ Validado |
 | `0x0807288C` | `Big Bro` | `Maninho` | Variável `{SIBLING}` (quando jogando com Cleru). | ✅ Validado |
 | `0x0807289C` | `Big Sis` | `Maninha` | Variável `{SIBLING}` (quando jogando com Pratty). | ✅ Validado |
 | `0x080728AC` | `Hayato` | `Hayato` | Nome padrão `{MASTER}` 1. | ✅ Validado |
@@ -77,62 +77,62 @@ Para manter a identidade de **Summon Night: Swordcraft Story**, abaixo estão as
 | Endereço ROM | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :---: |
 | `0x08071F08` | `Labyrinth 2` | `Labirinto 2` | ✅ Validado |
-| `0x08071F20` | `Fort Mirana Docks` | `Fort Mirana Docks` | ✅ Validado |
-| `0x08071F44` / `0x08072D44` | `Fort Mirana` | `Fort Mirana` | ✅ Validado |
-| `0x08071F5C` | `Lighthouse Rooftop` | `Lighthouse Rooftop` | ✅ Validado |
-| `0x08071F84` / `0x08072D5C` | `Cape Lighthouse` | `Cape Lighthouse` | ✅ Validado |
-| `0x08071FA4` / `0x08072D7C` | `Marine Dungeon` | `Marine Dungeon` | ✅ Validado |
-| `0x08071FC4` / `0x08072EE4` | `Upper Wystern` | `Upper Wystern` | ✅ Validado |
-| `0x08072F00` | `Middle Wystern` | `Middle Wystern` | ✅ Validado |
-| `0x08071FE0` / `0x08072F20` | `Lower Wystern` | `Lower Wystern` | ✅ Validado |
+| `0x08071F20` | `Fort Mirana Docks` | `Docas do Forte Mirana` | ✅ Validado |
+| `0x08071F44` / `0x08072D44` | `Fort Mirana` | `Forte Mirana` | ✅ Validado |
+| `0x08071F5C` | `Lighthouse Rooftop` | `Topo do Farol` | ✅ Validado |
+| `0x08071F84` / `0x08072D5C` | `Cape Lighthouse` | `Farol do Cabo` | ✅ Validado |
+| `0x08071FA4` / `0x08072D7C` | `Marine Dungeon` | `Labirinto Marinho` | ✅ Validado |
+| `0x08071FC4` / `0x08072EE4` | `Upper Wystern` | `Wystern Alta` | ✅ Validado |
+| `0x08072F00` | `Middle Wystern` | `Wystern Central` | ✅ Validado |
+| `0x08071FE0` / `0x08072F20` | `Lower Wystern` | `Wystern Baixa` | ✅ Validado |
 | `0x08071FFC` / `0x08072D9C` | `Labyrinth` | `Labirinto` | ✅ Validado |
 | `0x08072010` | `Battle Arena` | `Arena de Batalha` | ✅ Validado |
-| `0x08072D14` | `Ship Workshop` | `Ship Workshop` | ✅ Validado |
-| `0x08072D30` | `Ship Helm` | `Ship Helm` | ✅ Validado |
+| `0x08072D14` | `Ship Workshop` | `Oficina do Navio` | ✅ Validado |
+| `0x08072D30` | `Ship Helm` | `Leme do Navio` | ✅ Validado |
 | `0x08072DB0` | `Mirana` | `Mirana` | ✅ Validado |
-| `0x08072DC0` | `Vance Cape` | `Vance Cape` | ✅ Validado |
-| `0x08072DD8` | `Kagro Volcano` | `Kagro Volcano` | ✅ Validado |
-| `0x08072DF4` | `Rugista Island` | `Rugista Island` | ✅ Validado |
-| `0x08072E14` | `Central Tower 4F` | `Central Tower 4ºA` | ✅ Validado |
-| `0x08072E38` | `Central Tower 3F` | `Central Tower 3ºA` | ✅ Validado |
-| `0x08072E5C` | `Central Tower 2F` | `Central Tower 2ºA` | ✅ Validado |
-| `0x08072E80` | `Central Tower 1F` | `Central Tower 1ºA` | ✅ Validado |
-| `0x08072EA4` | `Silver Guild 2F` | `Silver Guild 2ºA` | ✅ Validado |
-| `0x08072EC4` | `Silver Guild 1F` | `Silver Guild 1ºA` | ✅ Validado |
+| `0x08072DC0` | `Vance Cape` | `Cabo Vance` | ✅ Validado |
+| `0x08072DD8` | `Kagro Volcano` | `Vulcão Kagro` | ✅ Validado |
+| `0x08072DF4` | `Rugista Island` | `Ilha Rugista` | ✅ Validado |
+| `0x08072E14` | `Central Tower 4F` | `Torre Central 4A` | ✅ Validado |
+| `0x08072E38` | `Central Tower 3F` | `Torre Central 3A` | ✅ Validado |
+| `0x08072E5C` | `Central Tower 2F` | `Torre Central 2A` | ✅ Validado |
+| `0x08072E80` | `Central Tower 1F` | `Torre Central 1A` | ✅ Validado |
+| `0x08072EA4` | `Silver Guild 2F` | `G. Prateada 2A` | ✅ Validado |
+| `0x08072EC4` | `Silver Guild 1F` | `G. Prateada 1A` | ✅ Validado |
 | `0x08072F48` | `Rumari's House` | `Casa de Rumari` | ✅ Validado |
 | `0x08072F68` | `Hideout` | `Esconderijo` | ✅ Validado |
 | `0x08072F78` | `Mayor's House` | `Casa do Prefeito` | ✅ Validado |
-| `0x08072F94` | `Hidden Room` | `Hidden Room` | ✅ Validado |
-| `0x08072FAC` | `Assembly Hall` | `Assembly Hall` | ✅ Validado |
+| `0x08072F94` | `Hidden Room` | `Sala Secreta` | ✅ Validado |
+| `0x08072FAC` | `Assembly Hall` | `Salão de Assembleia` | ✅ Validado |
 | `0x08072FC8` | `Arena` | `Arena` | ✅ Validado |
-| `0x08072FD4` | `Workshop` | `Workshop` | ✅ Validado |
-| `0x08072FE8` | `Trish Workshop` | `Trish Workshop` | ✅ Validado |
-| `0x08073008` | `Cazio Workshop` | `Cazio Workshop` | ✅ Validado |
-| `0x08073028` | `Ariel/Mariel Lab` | `Ariel/Mariel Lab` | ✅ Validado |
-| `0x0807304C` | `Razzy Workshop` | `Razzy Workshop` | ✅ Validado |
-| `0x0807306C` | `Sanary Workshop` | `Sanary Workshop` | ✅ Validado |
+| `0x08072FD4` | `Workshop` | `Oficina` | ✅ Validado |
+| `0x08072FE8` | `Trish Workshop` | `Oficina da Trish` | ✅ Validado |
+| `0x08073008` | `Cazio Workshop` | `Oficina do Cazio` | ✅ Validado |
+| `0x08073028` | `Ariel/Mariel Lab` | `Lab. Ariel/Mariel` | ✅ Validado |
+| `0x0807304C` | `Razzy Workshop` | `Oficina da Razzy` | ✅ Validado |
+| `0x0807306C` | `Sanary Workshop` | `Oficina da Sanary` | ✅ Validado |
 | `0x0807308C` | `My Workshop` | `Minha Oficina` | ✅ Validado |
 | `0x080730A4` | `Rondeau's House` | `Casa de Rondeau` | ✅ Validado |
-| `0x080730C4` | `Gold Guild` | `Gold Guild` | ✅ Validado |
+| `0x080730C4` | `Gold Guild` | `Guilda Dourada` | ✅ Validado |
 | `0x080730DC` | `Sakuro's House` | `Casa de Sakuro` | ✅ Validado |
-| `0x080730FC` | `Port` | `Port` | ✅ Validado |
+| `0x080730FC` | `Port` | `Porto` | ✅ Validado |
 | `0x08073108` | `House` | `Casa` | ✅ Validado |
 | `0x08073114` | `Inn` | `Pousada` | ✅ Validado |
 | `0x0807311C` | `Weapon Shop` | `Loja de Armas` | ✅ Validado |
 | `0x08073134` | `Item Shop` | `Loja de Itens` | ✅ Validado |
-| `0x08073148` | `Home` | `Quarto` | ✅ Validado |
-| `0x08073B04` | `Labyrinth  1F` | `Labirinto  1ºA` | ✅ Validado |
-| `0x08073B20` | `Labyrinth  3F` | `Labirinto  3ºA` | ✅ Validado |
-| `0x08073B3C` | `Labyrinth  6F` | `Labirinto  6ºA` | ✅ Validado |
-| `0x08073B58` | `Labyrinth 11F` | `Labirinto 11ºA` | ✅ Validado |
-| `0x08073B74` | `Labyrinth 18F` | `Labirinto 18ºA` | ✅ Validado |
-| `0x08073B90` | `Labyrinth 26F` | `Labirinto 26ºA` | ✅ Validado |
-| `0x08073BAC` | `Labyrinth 31F` | `Labirinto 31ºA` | ✅ Validado |
-| `0x08073BC8` | `Labyrinth 37F` | `Labirinto 37ºA` | ✅ Validado |
-| `0x08073BE4` | `Labyrinth 45F` | `Labirinto 45ºA` | ✅ Validado |
-| `0x08073C00` | `Labyrinth 50F` | `Labirinto 50ºA` | ✅ Validado |
-| `0x08073C1C` | `Labyrinth 56F` | `Labirinto 56ºA` | ✅ Validado |
-| `0x08073C38` | `Labyrinth 66F` | `Labirinto 66ºA` | ✅ Validado |
-| `0x08073C54` | `Labyrinth 76F` | `Labirinto 76ºA` | ✅ Validado |
-| `0x08073C70` | `Labyrinth 86F` | `Labirinto 86ºA` | ✅ Validado |
-| `0x08073C8C` | `Labyrinth 96F` | `Labirinto 96ºA` | ✅ Validado |
+| `0x08073148` | `Home` | `Minha Casa` | ✅ Validado |
+| `0x08073B04` | `Labyrinth  1F` | `Labirinto 1A` | ✅ Validado |
+| `0x08073B20` | `Labyrinth  3F` | `Labirinto 3A` | ✅ Validado |
+| `0x08073B3C` | `Labyrinth  6F` | `Labirinto 6A` | ✅ Validado |
+| `0x08073B58` | `Labyrinth 11F` | `Labirinto 11A` | ✅ Validado |
+| `0x08073B74` | `Labyrinth 18F` | `Labirinto 18A` | ✅ Validado |
+| `0x08073B90` | `Labyrinth 26F` | `Labirinto 26A` | ✅ Validado |
+| `0x08073BAC` | `Labyrinth 31F` | `Labirinto 31A` | ✅ Validado |
+| `0x08073BC8` | `Labyrinth 37F` | `Labirinto 37A` | ✅ Validado |
+| `0x08073BE4` | `Labyrinth 45F` | `Labirinto 45A` | ✅ Validado |
+| `0x08073C00` | `Labyrinth 50F` | `Labirinto 50A` | ✅ Validado |
+| `0x08073C1C` | `Labyrinth 56F` | `Labirinto 56A` | ✅ Validado |
+| `0x08073C38` | `Labyrinth 66F` | `Labirinto 66A` | ✅ Validado |
+| `0x08073C54` | `Labyrinth 76F` | `Labirinto 76A` | ✅ Validado |
+| `0x08073C70` | `Labyrinth 86F` | `Labirinto 86A` | ✅ Validado |
+| `0x08073C8C` | `Labyrinth 96F` | `Labirinto 96A` | ✅ Validado |

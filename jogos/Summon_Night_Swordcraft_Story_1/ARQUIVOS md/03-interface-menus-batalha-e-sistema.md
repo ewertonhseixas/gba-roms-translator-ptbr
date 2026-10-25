@@ -61,7 +61,7 @@ Este documento contém **100% das strings de sistema, menus de pausa, batalha, f
 | `0x08071B74` | `Display the Item List.` | `Exibir a Lista de Itens.` | ✅ Validado |
 | `0x08071BA4` | `Choose the reward.` | `Escolha a recompensa.` | ✅ Validado |
 | `0x08071C88` | `Select rival character` | `Selecionar personagem rival` | ✅ Validado |
-| `0x08071CB8` | `Select Summon Beast` | `Selecionar Summon Beast` | ✅ Validado |
+| `0x08071CB8` | `Select Summon Beast` | `Escolher Fera Guardiã` | ✅ Validado |
 | `0x08071CE0` | `Select main character` | `Selecionar personagem principal` | ✅ Validado |
 | `0x08071D0C` | `Quit Link Mode` | `Sair do Modo Link` | ✅ Validado |
 | `0x08071D2C` | `Play a match` | `Jogar uma partida` | ✅ Validado |
@@ -200,7 +200,7 @@ Este documento contém **100% das strings de sistema, menus de pausa, batalha, f
 | `0x08071BA4` | `Choose the reward.` | `Escolha a recompensa.` | ✅ Validado |
 | `0x08071BCC` | `Deigleya Soldier` | `Soldado Deigleya` | ✅ Validado |
 | `0x08071C88` | `Select rival character` | `Escolher rival` | ✅ Validado |
-| `0x08071CB8` | `Select Summon Beast` | `Escolher Guardian Beast` | ✅ Validado |
+| `0x08071CB8` | `Select Summon Beast` | `Escolher Fera Guardiã` | ✅ Validado |
 | `0x08071CE0` | `Select main character` | `Escolher protagonista` | ✅ Validado |
 | `0x08071D0C` | `Quit Link Mode` | `Sair do Modo Link` | ✅ Validado |
 | `0x08071D2C` | `Play a match` | `Jogar partida` | ✅ Validado |
@@ -219,7 +219,7 @@ Este documento contém **100% das strings de sistema, menus de pausa, batalha, f
 | `0x08071F44` / `0x08072D44` | `Fort Mirana` | `Forte Mirana` | ✅ Validado |
 | `0x08071F5C` | `Lighthouse Rooftop` | `Topo do Farol` | ✅ Validado |
 | `0x08071F84` / `0x08072D5C` | `Cape Lighthouse` | `Farol do Cabo` | ✅ Validado |
-| `0x08071FA4` / `0x08072D7C` | `Marine Dungeon` | `Calabouço Marinho` | ✅ Validado |
+| `0x08071FA4` / `0x08072D7C` | `Marine Dungeon` | `Labirinto Marinho` | ✅ Validado |
 | `0x08071FC4` / `0x08072EE4` | `Upper Wystern` | `Wystern Alta` | ✅ Validado |
 | `0x08071FE0` / `0x08072F20` | `Lower Wystern` | `Wystern Baixa` | ✅ Validado |
 | `0x08071FFC` / `0x08072D9C` | `Labyrinth` | `Labirinto` | ✅ Validado |
@@ -233,8 +233,8 @@ Este documento contém **100% das strings de sistema, menus de pausa, batalha, f
 | `0x08072E38` | `Central Tower 3F` | `Torre Central 3A` | ✅ Validado |
 | `0x08072E5C` | `Central Tower 2F` | `Torre Central 2A` | ✅ Validado |
 | `0x08072E80` | `Central Tower 1F` | `Torre Central 1A` | ✅ Validado |
-| `0x08072EA4` | `Silver Guild 2F` | `Guilda Prateada 2A` | ✅ Validado |
-| `0x08072EC4` | `Silver Guild 1F` | `Guilda Prateada 1A` | ✅ Validado |
+| `0x08072EA4` | `Silver Guild 2F` | `G. Prateada 2A` | ✅ Validado |
+| `0x08072EC4` | `Silver Guild 1F` | `G. Prateada 1A` | ✅ Validado |
 | `0x08072F00` | `Middle Wystern` | `Wystern Central` | ✅ Validado |
 | `0x08072F48` | `Rumari's House` | `Casa da Rumari` | ✅ Validado |
 | `0x08072F68` | `Hideout` | `Esconderijo` | ✅ Validado |
@@ -257,7 +257,7 @@ Este documento contém **100% das strings de sistema, menus de pausa, batalha, f
 | `0x08073114` | `Inn` | `Pousada` | ✅ Validado |
 | `0x0807311C` | `Weapon Shop` | `Loja de Armas` | ✅ Validado |
 | `0x08073134` | `Item Shop` | `Loja de Itens` | ✅ Validado |
-| `0x08073148` | `Home` | `Minha Casa` | ✅ Validado |
+| `0x08073148` | `Home` | `Minha Casa ` | ✅ Validado |
 | `0x08073B04` | `Labyrinth  1F` | `Labirinto  1A` | ✅ Validado |
 | `0x08073B20` | `Labyrinth  3F` | `Labirinto  3A` | ✅ Validado |
 | `0x08073B3C` | `Labyrinth  6F` | `Labirinto  6A` | ✅ Validado |

@@ -9,8 +9,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1701 [0]` | `0x0218` | `There ya are! Now hurry` | `Aí está você! Agora` | ✅ Validado |
-| `#1701 [1]` | `0x0218` | `up an' climb aboard!` | `apresse-se e suba a bordo!` | ✅ Validado |
+| `#1701 [0]` | `0x0218` | `There ya are! Now hurry` | `Aí está você! Anda logo e` | ✅ Validado |
+| `#1701 [1]` | `0x0218` | `up an' climb aboard!` | `sobe a bordo!` | ✅ Validado |
 | `#1701 [2]` | `0x0218` | `(This…)` | `(Isso…)` | ✅ Validado |
 | `#1701 [3]` | `0x0218` | `(This was Master Bron's ship!?)` | `(Esta era a nave do Mestre Bron!?)` | ✅ Validado |
 | `#1701 [4]` | `0x0218` | `(What the…?! This ship` | `(O que…?! Esta nave é` | ✅ Validado |
@@ -26,8 +26,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1701 [15]` | `0x0218` | `I need to apologize.` | `Preciso me desculpar.` | ✅ Validado |
 | `#1701 [16]` | `0x0218` | `I'm sorry, Master!` | `Sinto muito, Mestre!` | ✅ Validado |
 | `#1701 [17]` | `0x0218` | `Uh… I mean… never mind.` | `Uh… quero dizer… deixa pra lá.` | ✅ Validado |
-| `#1701 [18]` | `0x0218` | `Ah! Yer mumblin' about usin'` | `Ah! Você está resmungando sobre usar` | ✅ Validado |
-| `#1701 [19]` | `0x0218` | `my ship without askin' first.` | `meu navio sem perguntar primeiro.` | ✅ Validado |
+| `#1701 [18]` | `0x0218` | `Ah! Yer mumblin' about usin'` | `Ah! Está resmungando por` | ✅ Validado |
+| `#1701 [19]` | `0x0218` | `my ship without askin' first.` | `bater perna, é!?` | ✅ Validado |
 | `#1701 [20]` | `0x0218` | `What!?` | `O quê!?` | ✅ Validado |
 | `#1701 [21]` | `0x0218` | `How did you know, Master?` | `Como você sabia, Mestre?` | ✅ Validado |
 | `#1701 [22]` | `0x0218` | `What? You already knew,` | `O quê? Você já sabia,` | ✅ Validado |
@@ -39,13 +39,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1701 [28]` | `0x0218` | `and start boardin'!` | `e comece a embarcar!` | ✅ Validado |
 | `#1701 [29]` | `0x0218` | `It's not a big deal?` | `Não é grande coisa?` | ✅ Validado |
 | `#1701 [30]` | `0x0218` | `(It might be…)` | `(Pode ser…)` | ✅ Validado |
-| `#1701 [31]` | `0x0218` | `(I had no idea Bron owned` | `(Eu não tinha ideia de que o Bron possuía uma` | ✅ Validado |
-| `#1701 [32]` | `0x0218` | `a seaworthy vessel…)` | `embarcação em condições de navegar…)` | ✅ Validado |
+| `#1701 [31]` | `0x0218` | `(I had no idea Bron owned` | `(Não fazia ideia de que o Mestre` | ✅ Validado |
+| `#1701 [32]` | `0x0218` | `a seaworthy vessel…)` | `Bron tinha um barco de verdade…)` | ✅ Validado |
 | `#1701 [33]` | `0x0218` | `(Should we apologize to him?)` | `(Devemos pedir desculpas a ele?)` | ✅ Validado |
 | `#1701 [34]` | `0x0218` | `(Of course not, you fool!` | `(Claro que não, seu idiota!` | ✅ Validado |
 | `#1701 [35]` | `0x0218` | `Better to say nothing.)` | `Melhor não dizer nada.)` | ✅ Validado |
-| `#1701 [36]` | `0x0218` | `(You're right… sorry, Master.)` | `(Você está certo… desculpe, Mestre.)` | ✅ Validado |
-| `#1701 [37]` | `0x0218` | `(You're right… I'm sorry, Master.)` | `(Você está certo… sinto muito, Mestre.)` | ✅ Validado |
+| `#1701 [36]` | `0x0218` | `(You're right… sorry, Master.)` | `(O senhor tem razão… desculpe.)` | ✅ Validado |
+| `#1701 [37]` | `0x0218` | `(You're right… I'm sorry, Master.)` | `(O senhor tem razão… perdão.)` | ✅ Validado |
 | `#1701 [38]` | `0x0218` | `What are you and yer Beast` | `Sobre o que você e sua` | ✅ Validado |
 | `#1701 [39]` | `0x0218` | `yackin' about?` | `Fera estão conversando?` | ✅ Validado |
 | `#1701 [40]` | `0x0218` | `Oh, uh, nothing!` | `Ah, nada!` | ✅ Validado |
@@ -127,8 +127,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1701 [116]` | `0x0218` | `somethin' that belonged to` | `tenha usado algo que pertencia` | ✅ Validado |
 | `#1701 [117]` | `0x0218` | `someone else without askin'.` | `a outra pessoa sem pedir.` | ✅ Validado |
 | `#1701 [119]` | `0x0218` | `I'm sorry, Master.` | `Sinto muito, Mestre.` | ✅ Validado |
-| `#1701 [120]` | `0x0218` | `Fine, fine. Now quit mopin'` | `Tudo bem, tudo bem. Agora pare de chorar` | ✅ Validado |
-| `#1701 [121]` | `0x0218` | `and climb aboard!` | `e suba a bordo!` | ✅ Validado |
+| `#1701 [120]` | `0x0218` | `Fine, fine. Now quit mopin'` | `Tudo bem. Pare de choramingar` | ✅ Validado |
+| `#1701 [121]` | `0x0218` | `and climb aboard!` | `e vamos logo!` | ✅ Validado |
 
 ---
 
@@ -136,8 +136,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1702 [0]` | `0x0218` | `Good!` | `Que bom!` | ✅ Validado |
-| `#1702 [1]` | `0x0218` | `Do you wanna take this to` | `Você quer levar isso para` | ✅ Validado |
+| `#1702 [0]` | `0x0218` | `Good!` | `Muito bem!` | ✅ Validado |
+| `#1702 [1]` | `0x0218` | `Do you wanna take this to` | `Quer levar isso até o porto?` | ✅ Validado |
 | `#1702 [2]` | `0x0218` | `the weapon shop for me?` | `mim na loja de armas?` | ✅ Validado |
 | `#1702 [3]` | `0x0218` | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
 | `#1702 [4]` | `0x0218` | `Good! I'll meet ya there.` | `Que bom! Encontro você lá.` | ✅ Validado |
@@ -163,8 +163,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1703 [0]` | `0x0218` | `Hello! I'm delivering a package` | `Olá! Estou entregando um` | ✅ Validado |
-| `#1703 [1]` | `0x0218` | `from the Silver Guild on behalf` | `pacote da Silver Guild em` | ✅ Validado |
+| `#1703 [0]` | `0x0218` | `Hello! I'm delivering a package` | `Olá! Vim entregar uma encomenda` | ✅ Validado |
+| `#1703 [1]` | `0x0218` | `from the Silver Guild on behalf` | `da Guilda Prateada!` | ✅ Validado |
 | `#1703 [2]` | `0x0218` | `of Master Bron.` | `nome do Mestre Bron.` | ✅ Validado |
 | `#1703 [3]` | `0x0218` | `Thanks, man! Wait here for` | `Obrigado, cara! Espere aqui um` | ✅ Validado |
 | `#1703 [4]` | `0x0218` | `a sec while I check out his` | `segundo enquanto eu confiro` | ✅ Validado |
@@ -192,7 +192,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1703 [32]` | `0x0218` | `as always, Bron!` | `incrível como sempre, Bron!` | ✅ Validado |
 | `#1703 [33]` | `0x0218` | `Of course! How else am I` | `Claro! De que outra` | ✅ Validado |
 | `#1703 [34]` | `0x0218` | `gonna make a livin' in the` | `forma vou ganhar a vida` | ✅ Validado |
-| `#1703 [35]` | `0x0218` | `City of Swords?` | `na City of Swords?` | ✅ Validado |
+| `#1703 [35]` | `0x0218` | `City of Swords?` | `na Cidade das Espadas?` | ✅ Validado |
 | `#1703 [36]` | `0x0218` | `Here's your payment.` | `Aqui está o seu pagamento.` | ✅ Validado |
 | `#1703 [37]` | `0x0218` | `Thanks very much.` | `Muito obrigado.` | ✅ Validado |
 | `#1703 [38]` | `0x0218` | `Yer very welcome!` | `De nada!` | ✅ Validado |
@@ -202,7 +202,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1703 [42]` | `0x0218` | `that weapons from Wystern haven't` | `armas de Wystern não estão de` | ✅ Validado |
 | `#1703 [43]` | `0x0218` | `been up to their usual standards.` | `acordo com seus padrões habituais.` | ✅ Validado |
 | `#1703 [44]` | `0x0218` | `Don't ya worry. The weapons of` | `Não se preocupe. As armas da` | ✅ Validado |
-| `#1703 [45]` | `0x0218` | `the Silver Guild will always meet` | `Silver Guild sempre atenderão aos` | ✅ Validado |
+| `#1703 [45]` | `0x0218` | `the Silver Guild will always meet` | `Guilda Prateada vão atender aos` | ✅ Validado |
 | `#1703 [46]` | `0x0218` | `anyone's standards!` | `padrões de qualquer pessoa!` | ✅ Validado |
 | `#1703 [47]` | `0x0218` | `With weapons like these,` | `Com armas como essas, não tenho` | ✅ Validado |
 | `#1703 [48]` | `0x0218` | `I've no reason to doubt you!` | `motivos para duvidar de você!` | ✅ Validado |
@@ -223,8 +223,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1704 [0]` | `0x0218` | `Thanks for makin' this` | `Obrigado por fazer esta` | ✅ Validado |
-| `#1704 [1]` | `0x0218` | `journey with me, {PLAYER}.` | `jornada comigo, {PLAYER}.` | ✅ Validado |
+| `#1704 [0]` | `0x0218` | `Thanks for makin' this` | `Obrigado pela viagem, {PLAYER}.` | ✅ Validado |
+| `#1704 [1]` | `0x0218` | `journey with me, {PLAYER}.` | `Mandou bem!` | ✅ Validado |
 | `#1704 [2]` | `0x0218` | `An' thank you, {PARTNER}.` | `E obrigado, {PARTNER}.` | ✅ Validado |
 | `#1704 [4]` | `0x0218` | `Isn't there someone` | `Não tem alguém a quem você` | ✅ Validado |
 | `#1704 [5]` | `0x0218` | `you forgot to thank?` | `esqueceu de agradecer?` | ✅ Validado |
@@ -264,13 +264,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1705 [6]` | `0x0218` | `You've passed the first round.` | `Você passou na primeira rodada.` | ✅ Validado |
 | `#1705 [7]` | `0x0218` | `I'm glad to meet you.` | `Estou feliz em conhecê-lo.` | ✅ Validado |
 | `#1705 [8]` | `0x0218` | `My name is Nigelle, and I` | `Meu nome é Nigelle e` | ✅ Validado |
-| `#1705 [9]` | `0x0218` | `represent the Gold Guild.` | `represento a Gold Guild.` | ✅ Validado |
+| `#1705 [9]` | `0x0218` | `represent the Gold Guild.` | `represento a Guilda Dourada.` | ✅ Validado |
 | `#1705 [10]` | `0x0218` | `Oh?` | `Ah?` | ✅ Validado |
 | `#1705 [11]` | `0x0218` | `You should know that all of` | `Você deve saber que todos nós da` | ✅ Validado |
-| `#1705 [12]` | `0x0218` | `us at the Gold Guild are very` | `Gold Guild estamos muito` | ✅ Validado |
+| `#1705 [12]` | `0x0218` | `us at the Gold Guild are very` | `Guilda Dourada estamos muito` | ✅ Validado |
 | `#1705 [13]` | `0x0218` | `impressed with your work.` | `impressionados com o seu trabalho.` | ✅ Validado |
 | `#1705 [14]` | `0x0218` | `So impressed, in fact, that` | `Tão impressionado, na verdade, que` | ✅ Validado |
-| `#1705 [15]` | `0x0218` | `we want you to work for us…` | `queremos que você trabalhe para nós…` | ✅ Validado |
+| `#1705 [15]` | `0x0218` | `we want you to work for us…` | `queremos que trabalhe pra nós…` | ✅ Validado |
 | `#1705 [16]` | `0x0218` | `starting immediately.` | `começando imediatamente.` | ✅ Validado |
 | `#1705 [17]` | `0x0218` | `Are you serious!?` | `Você está falando sério!?` | ✅ Validado |
 | `#1705 [18]` | `0x0218` | `You must be kidding!` | `Você deve estar brincando!` | ✅ Validado |
@@ -298,9 +298,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1705 [40]` | `0x0218` | `but I digress. We'll pay` | `mas estou divagando.` | ✅ Validado |
 | `#1705 [41]` | `0x0218` | `you 500 boam for each…` | `Pagaremos 500 boam por cada…` | ✅ Validado |
 | `#1705 [42]` | `0x0218` | `For a total of 5,000 boam!` | `Para um total de 5.000 boam!` | ✅ Validado |
-| `#1705 [43]` | `0x0218` | `So we have a deal. Excellent.` | `Portanto, temos um acordo. Excelente.` | ✅ Validado |
-| `#1705 [44]` | `0x0218` | `Now if you'll excuse me, I have` | `Agora, se você me der licença, tenho` | ✅ Validado |
-| `#1705 [45]` | `0x0218` | `other business to attend to…` | `outros assuntos para tratar…` | ✅ Validado |
+| `#1705 [43]` | `0x0218` | `So we have a deal. Excellent.` | `Temos um acordo, então. Excelente.` | ✅ Validado |
+| `#1705 [44]` | `0x0218` | `Now if you'll excuse me, I have` | `Com sua licença, tenho outros` | ✅ Validado |
+| `#1705 [45]` | `0x0218` | `other business to attend to…` | `assuntos a tratar.` | ✅ Validado |
 | `#1705 [46]` | `0x0218` | `but I'll return here` | `mas voltarei aqui` | ✅ Validado |
 | `#1705 [47]` | `0x0218` | `when I'm finished.` | `quando terminar.` | ✅ Validado |
 | `#1705 [48]` | `0x0218` | `I'll see you soon.` | `Vejo você em breve.` | ✅ Validado |
@@ -311,8 +311,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1705 [54]` | `0x0218` | `Indeed.` | `De fato.` | ✅ Validado |
 | `#1705 [55]` | `0x0218` | `Of course, Master.` | `Claro, Mestre.` | ✅ Validado |
 | `#1705 [56]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1705 [57]` | `0x0218` | `I'm sorry, sir, but I need some` | `Sinto muito, senhor, mas preciso de um` | ✅ Validado |
-| `#1705 [58]` | `0x0218` | `time to think about this.` | `tempo para pensar sobre isso.` | ✅ Validado |
+| `#1705 [57]` | `0x0218` | `I'm sorry, sir, but I need some` | `Desculpe, senhor, mas preciso de` | ✅ Validado |
+| `#1705 [58]` | `0x0218` | `time to think about this.` | `alguns minutos.` | ✅ Validado |
 | `#1705 [59]` | `0x0218` | `That's alright. Take all` | `Tudo bem. Leve todo o` | ✅ Validado |
 | `#1705 [60]` | `0x0218` | `the time you need.` | `tempo que precisar.` | ✅ Validado |
 | `#1705 [61]` | `0x0218` | `But I'm sure you're aware` | `Mas tenho certeza que` | ✅ Validado |
@@ -347,17 +347,17 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1706 [0]` | `0x0218` | `Aren't you {PLAYER}` | `Você não é o {PLAYER}` | ✅ Validado |
-| `#1706 [1]` | `0x0218` | `of the Silver Guild?` | `da Silver Guild?` | ✅ Validado |
+| `#1706 [0]` | `0x0218` | `Aren't you {PLAYER}` | `Você não é {PLAYER}` | ✅ Validado |
+| `#1706 [1]` | `0x0218` | `of the Silver Guild?` | `da Guilda Prateada?` | ✅ Validado |
 | `#1706 [2]` | `0x0218` | `Yes, I am.` | `Sim, estou.` | ✅ Validado |
 | `#1706 [3]` | `0x0218` | `It's nice to meet you.` | `Prazer em conhecê-lo.` | ✅ Validado |
 | `#1706 [4]` | `0x0218` | `I'm enrolled in the tournament,` | `Também estou inscrito no torneio.` | ✅ Validado |
-| `#1706 [5]` | `0x0218` | `too. I belong to the Gold Guild.` | `Eu pertenço à Gold Guild.` | ✅ Validado |
+| `#1706 [5]` | `0x0218` | `too. I belong to the Gold Guild.` | `Eu pertenço à Guilda Dourada.` | ✅ Validado |
 | `#1706 [6]` | `0x0218` | `Who knows? Perhaps we'll meet` | `Quem sabe? Talvez nos` | ✅ Validado |
 | `#1706 [7]` | `0x0218` | `at the tournament one day.` | `encontremos no torneio um dia.` | ✅ Validado |
-| `#1706 [8]` | `0x0218` | `The son of Craftlord Shintetsu…` | `O filho de Craftlord Shintetsu…` | ✅ Validado |
+| `#1706 [8]` | `0x0218` | `The son of Craftlord Shintetsu…` | `O filho de Lorde Shintetsu…` | ✅ Validado |
 | `#1706 [9]` | `0x0218` | `I would be honored to face you.` | `Eu ficaria honrado em enfrentá-lo.` | ✅ Validado |
-| `#1706 [10]` | `0x0218` | `The daughter of Craftlord ` | `A filha de Craftlord` | ✅ Validado |
+| `#1706 [10]` | `0x0218` | `The daughter of Craftlord ` | `A filha de Lorde` | ✅ Validado |
 | `#1706 [11]` | `0x0218` | `Shintetsu… it would be an` | `Shintetsu… seria uma` | ✅ Validado |
 | `#1706 [12]` | `0x0218` | `honor to face you.` | `honra enfrentá-la.` | ✅ Validado |
 
@@ -371,9 +371,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1707 [1]` | `0x0218` | `Congratulations!` | `Parabéns!` | ✅ Validado |
 | `#1707 [2]` | `0x0218` | `Your match was great.` | `Sua partida foi ótima.` | ✅ Validado |
 | `#1707 [3]` | `0x0218` | `Well, of course it was.` | `Bem, claro que foi.` | ✅ Validado |
-| `#1707 [4]` | `0x0218` | `Oh, I had a question for you.` | `Ah, eu tinha uma pergunta para você.` | ✅ Validado |
-| `#1707 [5]` | `0x0218` | `Were you approached by a man` | `Você foi abordado por um` | ✅ Validado |
-| `#1707 [6]` | `0x0218` | `from the Gold Guild?` | `homem da Gold Guild?` | ✅ Validado |
+| `#1707 [4]` | `0x0218` | `Oh, I had a question for you.` | `Ah, eu queria te perguntar uma` | ✅ Validado |
+| `#1707 [5]` | `0x0218` | `Were you approached by a man` | `coisa!` | ✅ Validado |
+| `#1707 [6]` | `0x0218` | `from the Gold Guild?` | `homem da Guilda Dourada?` | ✅ Validado |
 | `#1707 [7]` | `0x0218` | `Yeah… which must mean that` | `Sim… o que deve significar que ele` | ✅ Validado |
 | `#1707 [8]` | `0x0218` | `he approached you, too?` | `também se aproximou de você?` | ✅ Validado |
 | `#1707 [9]` | `0x0218` | `Yes.` | `Sim.` | ✅ Validado |
@@ -417,8 +417,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1707 [47]` | `0x0218` | `and I can't allow myself to be` | `e não posso me` | ✅ Validado |
 | `#1707 [48]` | `0x0218` | `distracted from the tournament.` | `distrair do torneio.` | ✅ Validado |
 | `#1707 [49]` | `0x0218` | `Oh, give me a break!` | `Ah, me dê um tempo!` | ✅ Validado |
-| `#1707 [50]` | `0x0218` | `Why don't you just drop` | `Por que você simplesmente não abandona o` | ✅ Validado |
-| `#1707 [51]` | `0x0218` | `the holier-than-thou act!?` | `ato de ser mais santo que você!?` | ✅ Validado |
+| `#1707 [50]` | `0x0218` | `Why don't you just drop` | `Por que você não desiste logo` | ✅ Validado |
+| `#1707 [51]` | `0x0218` | `the holier-than-thou act!?` | `desse torneio?` | ✅ Validado |
 | `#1707 [52]` | `0x0218` | `Whoa! Is something` | `Uau! Há algum` | ✅ Validado |
 | `#1707 [53]` | `0x0218` | `the matter, Sanary?` | `problema, Sanary?` | ✅ Validado |
 | `#1707 [54]` | `0x0218` | `What's the matter, Sanary?` | `Qual é o problema, Sanary?` | ✅ Validado |
@@ -464,7 +464,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1707 [99]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1707 [100]` | `0x0218` | `Alright, then! Let's go find` | `Tudo bem, então! Vamos` | ✅ Validado |
 | `#1707 [101]` | `0x0218` | `that man from the Gold Guild` | `encontrar aquele homem da` | ✅ Validado |
-| `#1707 [102]` | `0x0218` | `and give him the news.` | `Gold Guild e dar-lhe a notícia.` | ✅ Validado |
+| `#1707 [102]` | `0x0218` | `and give him the news.` | `Guilda Dourada e dar-lhe a notícia.` | ✅ Validado |
 
 ---
 
@@ -525,22 +525,22 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1708 [51]` | `0x0218` | `The next round of the tournament` | `A próxima rodada do torneio pode` | ✅ Validado |
 | `#1708 [52]` | `0x0218` | `could start at any time!` | `começar a qualquer momento!` | ✅ Validado |
 | `#1708 [53]` | `0x0218` | `Thank you, sir, but I'm still` | `Obrigado, senhor, mas ainda sou um` | ✅ Validado |
-| `#1708 [54]` | `0x0218` | `a novice Craftknight. I can't` | `novato no Craftknight. Ainda não` | ✅ Validado |
+| `#1708 [54]` | `0x0218` | `a novice Craftknight. I can't` | `novato no forjador. Ainda não` | ✅ Validado |
 | `#1708 [55]` | `0x0218` | `forge great weapons yet.` | `consigo forjar grandes armas.` | ✅ Validado |
 | `#1708 [56]` | `0x0218` | `And I can't accept this.` | `E não posso aceitar isso.` | ✅ Validado |
 | `#1708 [57]` | `0x0218` | `Thank you for your kind words, but` | `Obrigado por suas amáveis palavras,` | ✅ Validado |
-| `#1708 [58]` | `0x0218` | `I am an apprentice Craftknight.` | `mas sou um aprendiz Craftknight.` | ✅ Validado |
+| `#1708 [58]` | `0x0218` | `I am an apprentice Craftknight.` | `mas sou um aprendiz forjador.` | ✅ Validado |
 | `#1708 [59]` | `0x0218` | `I still have much to learn.` | `Ainda tenho muito que aprender.` | ✅ Validado |
 | `#1708 [60]` | `0x0218` | `Is that so?` | `É mesmo?` | ✅ Validado |
-| `#1708 [61]` | `0x0218` | `If you were a real Craftknight,` | `Se você fosse um Craftknight` | ✅ Validado |
+| `#1708 [61]` | `0x0218` | `If you were a real Craftknight,` | `Se você fosse um Cavaleiro` | ✅ Validado |
 | `#1708 [62]` | `0x0218` | `you would take responsibility` | `real, assumiria a` | ✅ Validado |
 | `#1708 [63]` | `0x0218` | `for your work.` | `responsabilidade pelo seu trabalho.` | ✅ Validado |
 | `#1708 [64]` | `0x0218` | `Yet by turning down this money,` | `No entanto, ao recusar este` | ✅ Validado |
-| `#1708 [65]` | `0x0218` | `you decline to accept credit for` | `dinheiro, você se recusa a aceitar o` | ✅ Validado |
+| `#1708 [65]` | `0x0218` | `you decline to accept credit for` | `o pagamento, recusa a recompensa.` | ✅ Validado |
 | `#1708 [66]` | `0x0218` | `the weapons you made.` | `crédito pelas armas que fabricou.` | ✅ Validado |
 | `#1708 [67]` | `0x0218` | `Well…` | `Bem…` | ✅ Validado |
-| `#1708 [68]` | `0x0218` | `Thanks for your offer, but I'm` | `Obrigado pela sua oferta, mas sou um` | ✅ Validado |
-| `#1708 [69]` | `0x0218` | `a novice Craftknight. I'm not` | `Craftknight novato. Não sou tão bom` | ✅ Validado |
+| `#1708 [68]` | `0x0218` | `Thanks for your offer, but I'm` | `Agradeço a oferta, mas sou um` | ✅ Validado |
+| `#1708 [69]` | `0x0218` | `a novice Craftknight. I'm not` | `verdadeiro Cavaleiro.` | ✅ Validado |
 | `#1708 [70]` | `0x0218` | `as good as you think I am.` | `quanto você pensa que sou.` | ✅ Validado |
 | `#1708 [71]` | `0x0218` | `Thank you, but I'm still just` | `Obrigado, mas ainda sou` | ✅ Validado |
 | `#1708 [72]` | `0x0218` | `a novice, and I still have a` | `um novato e ainda tenho` | ✅ Validado |
@@ -548,11 +548,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1708 [74]` | `0x0218` | `I can't give you my` | `Não posso lhe dar` | ✅ Validado |
 | `#1708 [75]` | `0x0218` | `weapons, and I can't` | `minhas armas e não` | ✅ Validado |
 | `#1708 [76]` | `0x0218` | `take your money.` | `posso pegar seu dinheiro.` | ✅ Validado |
-| `#1708 [77]` | `0x0218` | `A true Craftknight is not` | `Um verdadeiro Craftknight não tem` | ✅ Validado |
+| `#1708 [77]` | `0x0218` | `A true Craftknight is not` | `Um verdadeiro forjador não tem` | ✅ Validado |
 | `#1708 [78]` | `0x0218` | `ashamed of his work, or to` | `vergonha de seu trabalho, nem de` | ✅ Validado |
 | `#1708 [79]` | `0x0218` | `be compensated for it.` | `ser recompensado por ele.` | ✅ Validado |
 | `#1708 [80]` | `0x0218` | `Yet by refusing my payment,` | `No entanto, ao recusar meu` | ✅ Validado |
-| `#1708 [81]` | `0x0218` | `you declare your shame.` | `pagamento, você declara sua vergonha.` | ✅ Validado |
+| `#1708 [81]` | `0x0218` | `you declare your shame.` | `recusa pagamento por vergonha.` | ✅ Validado |
 | `#1708 [82]` | `0x0218` | `That's not really` | `Não é isso que` | ✅ Validado |
 | `#1708 [83]` | `0x0218` | `what I mean…` | `quero dizer…` | ✅ Validado |
 | `#1708 [84]` | `0x0218` | `You have nothing to be` | `Você não tem nada do que se` | ✅ Validado |
@@ -623,7 +623,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1709 [0]` | `0x0218` | `Are you a Craftknight?` | `Você é um Craftknight?` | ✅ Validado |
+| `#1709 [0]` | `0x0218` | `Are you a Craftknight?` | `Você é um Cavaleiro?` | ✅ Validado |
 | `#1709 [1]` | `0x0218` | `Yep! How come?` | `Sim! Por quê?` | ✅ Validado |
 | `#1709 [2]` | `0x0218` | `Yes, I am.` | `Sim, estou.` | ✅ Validado |
 | `#1709 [3]` | `0x0218` | `Why do you ask?` | `Por que você pergunta?` | ✅ Validado |
@@ -646,7 +646,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [20]` | `0x0218` | `not skill, and you don't know how` | `não com habilidade, e você não sabe` | ✅ Validado |
 | `#1709 [21]` | `0x0218` | `to analyze your opponents.` | `analisar seus oponentes.` | ✅ Validado |
 | `#1709 [22]` | `0x0218` | `You shouldn't call yourself a` | `Você não deveria se chamar` | ✅ Validado |
-| `#1709 [23]` | `0x0218` | `Craftknight. You're barely worthy` | `Craftknight. Você mal` | ✅ Validado |
+| `#1709 [23]` | `0x0218` | `Craftknight. You're barely worthy` | `Cavaleiro. Você mal` | ✅ Validado |
 | `#1709 [24]` | `0x0218` | `of being an apprentice.` | `merece ser um aprendiz.` | ✅ Validado |
 | `#1709 [26]` | `0x0218` | `You want to fight me?` | `Você quer brigar comigo?` | ✅ Validado |
 | `#1709 [28]` | `0x0218` | `{PARTNER}!` | `{PARTNER}!` | ✅ Validado |
@@ -682,11 +682,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [59]` | `0x0218` | `Come on, {PARTNER}!` | `Vamos, {PARTNER}!` | ✅ Validado |
 | `#1709 [60]` | `0x0218` | `You should have` | `Você deveria ter` | ✅ Validado |
 | `#1709 [61]` | `0x0218` | `more faith in me!` | `mais fé em mim!` | ✅ Validado |
-| `#1709 [62]` | `0x0218` | `I don't like to waste my words` | `Não gosto de desperdiçar minhas palavras` | ✅ Validado |
+| `#1709 [62]` | `0x0218` | `I don't like to waste my words` | `Não gosto de gastar saliva à toa.` | ✅ Validado |
 | `#1709 [63]` | `0x0218` | `on people who don't heed them.` | `com pessoas que não as atendem.` | ✅ Validado |
 | `#1709 [64]` | `0x0218` | `Let's go…` | `Vamos…` | ✅ Validado |
 | `#1709 [65]` | `0x0218` | `Ha! Do you always rely` | `Ah! Você sempre confia` | ✅ Validado |
-| `#1709 [66]` | `0x0218` | `on your Guardian Beast` | `na sua Guardian Beast` | ✅ Validado |
+| `#1709 [66]` | `0x0218` | `on your Guardian Beast` | `na sua Fera Guardiã` | ✅ Validado |
 | `#1709 [67]` | `0x0218` | `to save you?` | `para salvá-lo?` | ✅ Validado |
 | `#1709 [68]` | `0x0218` | `And do you always speak before` | `E você sempre fala antes de pensar?` | ✅ Validado |
 | `#1709 [69]` | `0x0218` | `thinking? It won't be long before` | `Não demorará muito para que meu` | ✅ Validado |
@@ -700,7 +700,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [77]` | `0x0218` | `Are you alright?` | `Você está bem?` | ✅ Validado |
 | `#1709 [78]` | `0x0218` | `Let's go, Master…` | `Vamos, Mestre…` | ✅ Validado |
 | `#1709 [79]` | `0x0218` | `Ha! Do you always need` | `Ah! Você sempre precisa` | ✅ Validado |
-| `#1709 [80]` | `0x0218` | `your Guardian Beast to` | `da sua Guardian Beast` | ✅ Validado |
+| `#1709 [80]` | `0x0218` | `your Guardian Beast to` | `da sua Fera Guardiã` | ✅ Validado |
 | `#1709 [81]` | `0x0218` | `save you from trouble?` | `para evitar problemas?` | ✅ Validado |
 | `#1709 [82]` | `0x0218` | `Of course.` | `Claro.` | ✅ Validado |
 | `#1709 [83]` | `0x0218` | `That's why I'm here.` | `É por isso que estou aqui.` | ✅ Validado |
@@ -708,10 +708,10 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [85]` | `0x0218` | `be a novice now…` | `apenas um novato agora…` | ✅ Validado |
 | `#1709 [86]` | `0x0218` | `but I know my master will` | `mas sei que meu mestre se` | ✅ Validado |
 | `#1709 [87]` | `0x0218` | `become one of the best` | `tornará um dos melhores` | ✅ Validado |
-| `#1709 [88]` | `0x0218` | `Craftknights in the world!` | `Craftknights do mundo!` | ✅ Validado |
+| `#1709 [88]` | `0x0218` | `Craftknights in the world!` | `Cavaleiros do mundo!` | ✅ Validado |
 | `#1709 [89]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1709 [90]` | `0x0218` | `No, {PARTNER}!` | `Não, {PARTNER}!` | ✅ Validado |
-| `#1709 [91]` | `0x0218` | `Your Guardian Beast is as` | `Sua Guardian Beast é tão tola` | ✅ Validado |
+| `#1709 [91]` | `0x0218` | `Your Guardian Beast is as` | `Sua Fera Guardiã é tão tola` | ✅ Validado |
 | `#1709 [92]` | `0x0218` | `foolish as you are, I see.` | `quanto você, pelo que vejo.` | ✅ Validado |
 | `#1709 [93]` | `0x0218` | `Don't insult {PARTNER}!` | `Não insulte o {PARTNER}!` | ✅ Validado |
 | `#1709 [94]` | `0x0218` | `He's my friend!` | `Ele é meu amigo!` | ✅ Validado |
@@ -719,7 +719,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [96]` | `0x0218` | `things you like about me,` | `desagradáveis que quiser sobre mim,` | ✅ Validado |
 | `#1709 [97]` | `0x0218` | `but leave my Beast alone!` | `mas deixe minha Fera em paz!` | ✅ Validado |
 | `#1709 [98]` | `0x0218` | `Why are you defending your` | `Por que você está defendendo` | ✅ Validado |
-| `#1709 [99]` | `0x0218` | `Guardian Beast, when it's the` | `sua Guardian Beast, quando é` | ✅ Validado |
+| `#1709 [99]` | `0x0218` | `Guardian Beast, when it's the` | `sua Fera Guardiã, quando é` | ✅ Validado |
 | `#1709 [100]` | `0x0218` | `Beast's job to defend you?` | `função da Besta defendê-lo?` | ✅ Validado |
 | `#1709 [101]` | `0x0218` | `Because you can't make great` | `Porque você não pode fazer grandes` | ✅ Validado |
 | `#1709 [102]` | `0x0218` | `weapons unless you've got a great` | `armas a menos que tenha um ótimo` | ✅ Validado |
@@ -729,7 +729,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1709 [106]` | `0x0218` | `that's always kind to me?` | `que é sempre gentil comigo?` | ✅ Validado |
 | `#1709 [107]` | `0x0218` | `Don't you understand anything` | `Você não entende nada` | ✅ Validado |
 | `#1709 [108]` | `0x0218` | `about the relationship between` | `sobre a relação entre um` | ✅ Validado |
-| `#1709 [109]` | `0x0218` | `a Craftknight and a Beast!?` | `Craftknight e uma Fera!?` | ✅ Validado |
+| `#1709 [109]` | `0x0218` | `a Craftknight and a Beast!?` | `Cavaleiro e uma Fera!?` | ✅ Validado |
 | `#1709 [110]` | `0x0218` | `What a bizarre philosophy.` | `Que filosofia bizarra.` | ✅ Validado |
 | `#1709 [111]` | `0x0218` | `Believe what you will…` | `Acredite no que você quiser…` | ✅ Validado |
 
@@ -745,9 +745,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1710 [3]` | `0x0218` | `Are you here to cheer me on?` | `Você está aqui para me animar?` | ✅ Validado |
 | `#1710 [4]` | `0x0218` | `Unfortunately, no.` | `Infelizmente, não.` | ✅ Validado |
 | `#1710 [5]` | `0x0218` | `Do you know anything ` | `Você sabe alguma coisa` | ✅ Validado |
-| `#1710 [6]` | `0x0218` | `about the Gold Guild?` | `sobre a Gold Guild?` | ✅ Validado |
+| `#1710 [6]` | `0x0218` | `about the Gold Guild?` | `sobre a Guilda Dourada?` | ✅ Validado |
 | `#1710 [7]` | `0x0218` | `Not much, except that it's` | `Não muito, exceto que é` | ✅ Validado |
-| `#1710 [8]` | `0x0218` | `a rival of the Silver Guild.` | `rival da Silver Guild.` | ✅ Validado |
+| `#1710 [8]` | `0x0218` | `a rival of the Silver Guild.` | `rival da Guilda Prateada.` | ✅ Validado |
 | `#1710 [9]` | `0x0218` | `Why do you ask?` | `Por que você pergunta?` | ✅ Validado |
 | `#1710 [10]` | `0x0218` | `Only that it's a rival of the` | `Só que é rival da Silver` | ✅ Validado |
 | `#1710 [11]` | `0x0218` | `Silver Guild. Why do you ask?` | `Guild. Por que você pergunta?` | ✅ Validado |
@@ -756,12 +756,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1710 [14]` | `0x0218` | `rotten scoundrels!` | `canalhas sujos e podres!` | ✅ Validado |
 | `#1710 [15]` | `0x0218` | `They're running a scam where` | `Eles estão executando um` | ✅ Validado |
 | `#1710 [16]` | `0x0218` | `they purchase cheap weapons` | `esquema onde compram armas` | ✅ Validado |
-| `#1710 [17]` | `0x0218` | `from young Craftknights,` | `baratas do jovem Craftknights` | ✅ Validado |
+| `#1710 [17]` | `0x0218` | `from young Craftknights,` | `baratas do jovem forjadores` | ✅ Validado |
 | `#1710 [18]` | `0x0218` | `and sell them in Wystern for` | `e as vendem em Wystern por` | ✅ Validado |
 | `#1710 [19]` | `0x0218` | `a quick and dirty profit.` | `um lucro rápido e sujo.` | ✅ Validado |
 | `#1710 [20]` | `0x0218` | `What!?` | `O quê!?` | ✅ Validado |
 | `#1710 [21]` | `0x0218` | `I sold ten swords to a man` | `Vendi dez espadas para um` | ✅ Validado |
-| `#1710 [22]` | `0x0218` | `from the Gold Guild…` | `homem da Gold Guild…` | ✅ Validado |
+| `#1710 [22]` | `0x0218` | `from the Gold Guild…` | `homem da Guilda Dourada…` | ✅ Validado |
 | `#1710 [23]` | `0x0218` | `What!? Nigelle didn't say` | `O quê!? Nigelle não` | ✅ Validado |
 | `#1710 [24]` | `0x0218` | `anything about that!` | `disse nada sobre isso!` | ✅ Validado |
 | `#1710 [25]` | `0x0218` | `He said he wanted to purchase` | `Ele disse que queria comprar minhas` | ✅ Validado |
@@ -769,37 +769,37 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1710 [27]` | `0x0218` | `impressed with my work…` | `impressionado com meu trabalho…` | ✅ Validado |
 | `#1710 [28]` | `0x0218` | `Of course he did.` | `Claro que sim.` | ✅ Validado |
 | `#1710 [29]` | `0x0218` | `That's what he says to` | `É o que ele diz a todos os` | ✅ Validado |
-| `#1710 [30]` | `0x0218` | `all the young Craftknights.` | `jovens Craftknights.` | ✅ Validado |
+| `#1710 [30]` | `0x0218` | `all the young Craftknights.` | `jovens Cavaleiros.` | ✅ Validado |
 | `#1710 [31]` | `0x0218` | `But he sounded so sincere…` | `Mas ele parecia tão sincero…` | ✅ Validado |
 | `#1710 [32]` | `0x0218` | `and now he has` | `e agora ele tem dez` | ✅ Validado |
 | `#1710 [33]` | `0x0218` | `ten of my swords.` | `das minhas espadas.` | ✅ Validado |
 | `#1710 [34]` | `0x0218` | `What!? You fell for` | `O quê!? Você caiu em seu` | ✅ Validado |
 | `#1710 [35]` | `0x0218` | `his transparent ruse!?` | `ardil transparente!?` | ✅ Validado |
-| `#1710 [36]` | `0x0218` | `But you know that weapons made by` | `Mas você sabe que as armas feitas pelo` | ✅ Validado |
-| `#1710 [37]` | `0x0218` | `apprentice Craftknights aren't good` | `aprendiz Craftknights não são boas o` | ✅ Validado |
-| `#1710 [38]` | `0x0218` | `enough to be sold to anyone!` | `suficiente para serem vendidas a ninguém!` | ✅ Validado |
+| `#1710 [36]` | `0x0218` | `But you know that weapons made by` | `Mas você sabe que armas feitas por` | ✅ Validado |
+| `#1710 [37]` | `0x0218` | `apprentice Craftknights aren't good` | `aprendizes não podem ser vendidas` | ✅ Validado |
+| `#1710 [38]` | `0x0218` | `enough to be sold to anyone!` | `para ninguém!` | ✅ Validado |
 | `#1710 [39]` | `0x0218` | `When your amateurish` | `Quando suas armas` | ✅ Validado |
 | `#1710 [40]` | `0x0218` | `weapons are purchased by` | `amadoras são compradas` | ✅ Validado |
 | `#1710 [41]` | `0x0218` | `unsuspecting customers,` | `por clientes` | ✅ Validado |
 | `#1710 [42]` | `0x0218` | `the collective reputation` | `desavisados, a reputação coletiva` | ✅ Validado |
-| `#1710 [43]` | `0x0218` | `of every Craftknight in Wystern` | `de cada Craftknight` | ✅ Validado |
+| `#1710 [43]` | `0x0218` | `of every Craftknight in Wystern` | `de cada Cavaleiro` | ✅ Validado |
 | `#1710 [44]` | `0x0218` | `will suffer!` | `em Wystern sofrerá!` | ✅ Validado |
 | `#1710 [45]` | `0x0218` | `Oh, no…` | `Ah, não…` | ✅ Validado |
-| `#1710 [46]` | `0x0218` | `The Gold Guild is more` | `A Gold Guild é mais do` | ✅ Validado |
+| `#1710 [46]` | `0x0218` | `The Gold Guild is more` | `A Guilda Dourada é mais do` | ✅ Validado |
 | `#1710 [47]` | `0x0218` | `than that, unfortunately.` | `que isso, infelizmente.` | ✅ Validado |
 | `#1710 [48]` | `0x0218` | `They buy cheap swords from` | `Eles compram espadas baratas de` | ✅ Validado |
-| `#1710 [49]` | `0x0218` | `apprentice Craftknights like us…` | `aprendizes Craftknights como nós…` | ✅ Validado |
+| `#1710 [49]` | `0x0218` | `apprentice Craftknights like us…` | `aprendizes forjadores como nós…` | ✅ Validado |
 | `#1710 [50]` | `0x0218` | `then sell them with the label` | `e depois vendê-los com o rótulo de` | ✅ Validado |
 | `#1710 [51]` | `0x0218` | `of "Wystern's best weapons."` | `"melhores armas de Wystern".` | ✅ Validado |
 | `#1710 [52]` | `0x0218` | `That's not good at all…` | `Isso não é nada bom…` | ✅ Validado |
 | `#1710 [53]` | `0x0218` | `We both know that weapons from` | `Nós dois sabemos que as armas do` | ✅ Validado |
-| `#1710 [54]` | `0x0218` | `apprentice Craftknights aren't` | `aprendiz Craftknights não são boas o` | ✅ Validado |
-| `#1710 [55]` | `0x0218` | `good enough to be sold.` | `suficiente para serem vendidas.` | ✅ Validado |
+| `#1710 [54]` | `0x0218` | `apprentice Craftknights aren't` | `armas de aprendizes não podem ser` | ✅ Validado |
+| `#1710 [55]` | `0x0218` | `good enough to be sold.` | `vendidas pra ninguém!` | ✅ Validado |
 | `#1710 [56]` | `0x0218` | `And when they are, the` | `E quando isso acontece, a` | ✅ Validado |
-| `#1710 [57]` | `0x0218` | `reputation of every Craftknight` | `reputação de cada Craftknight` | ✅ Validado |
+| `#1710 [57]` | `0x0218` | `reputation of every Craftknight` | `reputação de cada forjador` | ✅ Validado |
 | `#1710 [58]` | `0x0218` | `in Wystern suffers.` | `em Wystern é prejudicada.` | ✅ Validado |
 | `#1710 [59]` | `0x0218` | `You have to stop the` | `Você deve impedir` | ✅ Validado |
-| `#1710 [60]` | `0x0218` | `Gold Guild from doing` | `que a Gold Guild` | ✅ Validado |
+| `#1710 [60]` | `0x0218` | `Gold Guild from doing` | `que a Guilda Dourada` | ✅ Validado |
 | `#1710 [61]` | `0x0218` | `any more damage.` | `cause mais danos.` | ✅ Validado |
 | `#1710 [62]` | `0x0218` | `You're going to take those` | `Você vai pegar essas` | ✅ Validado |
 | `#1710 [63]` | `0x0218` | `weapons back… aren't you?` | `armas de volta… não é?` | ✅ Validado |
@@ -834,39 +834,39 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1710 [94]` | `0x0218` | `I don't have time to spare.` | `Não tenho tempo de sobra.` | ✅ Validado |
 | `#1710 [95]` | `0x0218` | `I can't let anything stop` | `Não posso deixar que nada` | ✅ Validado |
 | `#1710 [96]` | `0x0218` | `me from becoming the` | `me impeça de me tornar o` | ✅ Validado |
-| `#1710 [97]` | `0x0218` | `next Craftlord.` | `próximo Craftlord.` | ✅ Validado |
+| `#1710 [97]` | `0x0218` | `next Craftlord.` | `próximo Lorde.` | ✅ Validado |
 | `#1710 [98]` | `0x0218` | `But my next match in the` | `Mas minha próxima partida no` | ✅ Validado |
 | `#1710 [99]` | `0x0218` | `tournament is looming…` | `torneio está se aproximando…` | ✅ Validado |
 | `#1710 [100]` | `0x0218` | `and I can't let anything distract` | `e não posso deixar que nada me` | ✅ Validado |
 | `#1710 [101]` | `0x0218` | `me from my goal of becoming the` | `distraia do meu objetivo de me` | ✅ Validado |
-| `#1710 [102]` | `0x0218` | `next Craftlord.` | `tornar a próxima Craftlord.` | ✅ Validado |
+| `#1710 [102]` | `0x0218` | `next Craftlord.` | `tornar a próxima Lorde.` | ✅ Validado |
 | `#1710 [104]` | `0x0218` | `…Is that so?` | `…É mesmo?` | ✅ Validado |
 | `#1710 [105]` | `0x0218` | `Of course not, Master.` | `Claro que não, Mestre.` | ✅ Validado |
 | `#1710 [106]` | `0x0218` | `Kutty.` | `Kutty.` | ✅ Validado |
-| `#1710 [107]` | `0x0218` | `You've sold your weapons despite` | `Você vendeu suas armas apesar de ser` | ✅ Validado |
-| `#1710 [108]` | `0x0218` | `being an apprentice and knowing you` | `um aprendiz e saber que poderia` | ✅ Validado |
+| `#1710 [107]` | `0x0218` | `You've sold your weapons despite` | `Você vendeu suas armas mesmo` | ✅ Validado |
+| `#1710 [108]` | `0x0218` | `being an apprentice and knowing you` | `sendo proibido!?` | ✅ Validado |
 | `#1710 [109]` | `0x0218` | `could harm Wystern's reputation.` | `prejudicar a reputação de Wystern.` | ✅ Validado |
 | `#1710 [110]` | `0x0218` | `You should be ashamed for` | `Você deveria ter` | ✅ Validado |
 | `#1710 [111]` | `0x0218` | `having done this…` | `vergonha de ter feito isso…` | ✅ Validado |
-| `#1710 [112]` | `0x0218` | `But instead, you can only think` | `Mas em vez disso, você só pode pensar` | ✅ Validado |
-| `#1710 [113]` | `0x0218` | `of becoming the next Craftlord.` | `em se tornar o próximo Craftlord.` | ✅ Validado |
+| `#1710 [112]` | `0x0218` | `But instead, you can only think` | `Em vez disso, você só pensa em` | ✅ Validado |
+| `#1710 [113]` | `0x0218` | `of becoming the next Craftlord.` | `lucrar com isso!` | ✅ Validado |
 | `#1710 [114]` | `0x0218` | `I have to admit that I understand.` | `Devo admitir que entendo.` | ✅ Validado |
 | `#1710 [115]` | `0x0218` | `I'll just have to figure out how` | `Só terei que descobrir como` | ✅ Validado |
 | `#1710 [116]` | `0x0218` | `to get those swords back from` | `recuperar essas espadas da` | ✅ Validado |
-| `#1710 [117]` | `0x0218` | `the Gold Guild by myself.` | `Gold Guild sozinho.` | ✅ Validado |
-| `#1710 [118]` | `0x0218` | `If the Gold Guild sells those` | `Se a Gold Guild vender essas` | ✅ Validado |
+| `#1710 [117]` | `0x0218` | `the Gold Guild by myself.` | `Guilda Dourada sozinho.` | ✅ Validado |
+| `#1710 [118]` | `0x0218` | `If the Gold Guild sells those` | `Se a Guilda Dourada vender essas` | ✅ Validado |
 | `#1710 [119]` | `0x0218` | `swords, Wystern's reputation` | `espadas, a reputação de Wystern` | ✅ Validado |
 | `#1710 [120]` | `0x0218` | `could be forever tarnished…` | `poderá ficar manchada para sempre…` | ✅ Validado |
 | `#1710 [121]` | `0x0218` | `but you're still more concerned` | `mas você ainda está mais` | ✅ Validado |
-| `#1710 [122]` | `0x0218` | `with becoming a Craftlord?` | `preocupado em se tornar um Craftlord?` | ✅ Validado |
+| `#1710 [122]` | `0x0218` | `with becoming a Craftlord?` | `obcecado em virar Lorde?` | ✅ Validado |
 | `#1710 [123]` | `0x0218` | `Well then, I'll just have to` | `Pois bem, terei que parar` | ✅ Validado |
-| `#1710 [124]` | `0x0218` | `stop the Gold Guild by myself.` | `a Gold Guild sozinho.` | ✅ Validado |
+| `#1710 [124]` | `0x0218` | `stop the Gold Guild by myself.` | `a Guilda Dourada sozinho.` | ✅ Validado |
 | `#1710 [125]` | `0x0218` | `You don't look` | `Você não parece` | ✅ Validado |
 | `#1710 [126]` | `0x0218` | `very happy.` | `muito feliz.` | ✅ Validado |
 | `#1710 [127]` | `0x0218` | `No, I'm not…` | `Não, não estou…` | ✅ Validado |
 | `#1710 [128]` | `0x0218` | `I'd be happier without` | `Eu ficaria mais feliz` | ✅ Validado |
 | `#1710 [129]` | `0x0218` | `the interruption…` | `sem a interrupção…` | ✅ Validado |
-| `#1710 [130]` | `0x0218` | `I understand why you're upset.` | `Eu entendo porque você está chateado.` | ✅ Validado |
+| `#1710 [130]` | `0x0218` | `I understand why you're upset.` | `Eu entendo a sua revolta.` | ✅ Validado |
 | `#1710 [131]` | `0x0218` | `I overheard the conversation` | `Ouvi a conversa entre` | ✅ Validado |
 | `#1710 [132]` | `0x0218` | `between you and your friend.` | `você e seu amigo.` | ✅ Validado |
 | `#1710 [133]` | `0x0218` | `Are you really going to let` | `Você realmente vai` | ✅ Validado |
@@ -906,10 +906,10 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1711 [6]` | `0x0218` | `What a… delightful surprise.` | `Que… surpresa deliciosa.` | ✅ Validado |
 | `#1711 [7]` | `0x0218` | `Sanary says that you` | `Sanary diz que você` | ✅ Validado |
 | `#1711 [8]` | `0x0218` | `sell weapons made by` | `vende armas feitas pelo` | ✅ Validado |
-| `#1711 [9]` | `0x0218` | `apprentice Craftknights…` | `aprendiz Craftknights…` | ✅ Validado |
+| `#1711 [9]` | `0x0218` | `apprentice Craftknights…` | `aprendiz Cavaleiros…` | ✅ Validado |
 | `#1711 [10]` | `0x0218` | `and falsely claim they're` | `e afirmam falsamente que são` | ✅ Validado |
 | `#1711 [11]` | `0x0218` | `made by the best Craftknights` | `fabricados pelo melhor` | ✅ Validado |
-| `#1711 [12]` | `0x0218` | `in Wystern.` | `Craftknights de Wystern.` | ✅ Validado |
+| `#1711 [12]` | `0x0218` | `in Wystern.` | `Cavaleiros de Wystern.` | ✅ Validado |
 | `#1711 [13]` | `0x0218` | `If that's true… you need` | `Se isso for verdade… você` | ✅ Validado |
 | `#1711 [14]` | `0x0218` | `to give those weapons back!` | `precisa devolver essas armas!` | ✅ Validado |
 | `#1711 [15]` | `0x0218` | `I don't know what` | `Não sei do que` | ✅ Validado |
@@ -927,8 +927,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1711 [27]` | `0x0218` | `your weapons back. You sold` | `suas armas. Você os vendeu` | ✅ Validado |
 | `#1711 [28]` | `0x0218` | `them, and I paid for them.` | `e eu paguei por eles.` | ✅ Validado |
 | `#1711 [29]` | `0x0218` | `A simple business transaction.` | `Uma transação comercial simples.` | ✅ Validado |
-| `#1711 [30]` | `0x0218` | `But apprentice weapons aren't` | `Mas as armas de aprendiz não são boas o` | ✅ Validado |
-| `#1711 [31]` | `0x0218` | `good enough to sell!` | `suficiente para serem vendidas!` | ✅ Validado |
+| `#1711 [30]` | `0x0218` | `But apprentice weapons aren't` | `Mas armas de aprendiz não podem` | ✅ Validado |
+| `#1711 [31]` | `0x0218` | `good enough to sell!` | `ser comercializadas!` | ✅ Validado |
 | `#1711 [32]` | `0x0218` | `You should have realized that` | `Você deveria ter percebido isso` | ✅ Validado |
 | `#1711 [33]` | `0x0218` | `before you sold them to me.` | `antes de vendê-los para mim.` | ✅ Validado |
 | `#1711 [34]` | `0x0218` | `You don't have to` | `Você não precisa ser` | ✅ Validado |
@@ -948,14 +948,14 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1711 [50]` | `0x0218` | `Yes, it is!` | `Sim, é!` | ✅ Validado |
 | `#1711 [51]` | `0x0218` | `Hmmm…` | `Hum…` | ✅ Validado |
 | `#1711 [52]` | `0x0218` | `If you're a true Craftknight,` | `Se você é um verdadeiro` | ✅ Validado |
-| `#1711 [53]` | `0x0218` | `why don't you just fight me` | `Craftknight, por que não luta` | ✅ Validado |
+| `#1711 [53]` | `0x0218` | `why don't you just fight me` | `forjador, por que não luta` | ✅ Validado |
 | `#1711 [54]` | `0x0218` | `and TAKE them back?` | `comigo e os pega de volta?` | ✅ Validado |
 | `#1711 [55]` | `0x0218` | `Wait, I know why… because` | `Espere, eu sei por que… porque` | ✅ Validado |
 | `#1711 [56]` | `0x0218` | `you'll never be able to beat me` | `você nunca será capaz de me` | ✅ Validado |
 | `#1711 [57]` | `0x0218` | `with your cruddy weapons!` | `vencer com suas armas toscas!` | ✅ Validado |
 | `#1711 [58]` | `0x0218` | `You know what happens to` | `Você sabe o que acontece com as` | ✅ Validado |
 | `#1711 [59]` | `0x0218` | `children who sass their elders,` | `crianças que insultam os mais` | ✅ Validado |
-| `#1711 [60]` | `0x0218` | `don't you!? They get spanked!` | `velhos, não é!? Eles são espancados!` | ✅ Validado |
+| `#1711 [60]` | `0x0218` | `don't you!? They get spanked!` | `eles levam uma boa surra, né!?` | ✅ Validado |
 | `#1711 [61]` | `0x0218` | `You talk too much!` | `Você fala demais!` | ✅ Validado |
 | `#1711 [63]` | `0x0218` | `I'll fight him first.` | `Vou lutar com ele primeiro.` | ✅ Validado |
 | `#1711 [65]` | `0x0218` | `Sanary is my friend.` | `A Sanary é minha amiga.` | ✅ Validado |
@@ -974,7 +974,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1711 [80]` | `0x0218` | `respect. I'll do it right now!` | `farei isso agora mesmo!` | ✅ Validado |
 | `#1711 [81]` | `0x0218` | `You think you can overcome a` | `Você acha que pode superar` | ✅ Validado |
 | `#1711 [82]` | `0x0218` | `weapon from the best Craftknight` | `uma arma da melhor` | ✅ Validado |
-| `#1711 [83]` | `0x0218` | `in the Gold Guild!?` | `Craftknight na Gold Guild!?` | ✅ Validado |
+| `#1711 [83]` | `0x0218` | `in the Gold Guild!?` | `forjador na Guilda Dourada!?` | ✅ Validado |
 | `#1711 [84]` | `0x0218` | `Let's go,` | `Vamos,` | ✅ Validado |
 | `#1711 [85]` | `0x0218` | `{PARTNER}!` | `{PARTNER}!` | ✅ Validado |
 | `#1711 [87]` | `0x0218` | `We'll take you down a notch!` | `Nós vamos te levar para baixo!` | ✅ Validado |
@@ -1000,9 +1000,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1712 [10]` | `0x0218` | `passion, {PLAYER}…` | `paixão, {PLAYER}…` | ✅ Validado |
 | `#1712 [11]` | `0x0218` | `How could you beat me…` | `Como você pôde me vencer…` | ✅ Validado |
 | `#1712 [12]` | `0x0218` | `and how could you beat the` | `e como você poderia vencer a` | ✅ Validado |
-| `#1712 [13]` | `0x0218` | `weapon of a Craftknight…?` | `arma de um Craftknight…?` | ✅ Validado |
-| `#1712 [14]` | `0x0218` | `Now that we have recovered the` | `Agora que recuperamos as armas, aqui` | ✅ Validado |
-| `#1712 [15]` | `0x0218` | `weapons, here's your money back.` | `está o seu dinheiro de volta.` | ✅ Validado |
+| `#1712 [13]` | `0x0218` | `weapon of a Craftknight…?` | `arma de um Cavaleiro…?` | ✅ Validado |
+| `#1712 [14]` | `0x0218` | `Now that we have recovered the` | `Agora com as armas recuperadas,` | ✅ Validado |
+| `#1712 [15]` | `0x0218` | `weapons, here's your money back.` | `podemos respirar aliviados!` | ✅ Validado |
 | `#1712 [16]` | `0x0218` | `Perhaps you could` | `Talvez você possa comprar` | ✅ Validado |
 | `#1712 [17]` | `0x0218` | `buy some dignity with it.` | `alguma dignidade com isso.` | ✅ Validado |
 | `#1712 [18]` | `0x0218` | `You're just jealous because` | `Você só está com ciúmes porque` | ✅ Validado |
@@ -1014,8 +1014,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1712 [24]` | `0x0218` | `The answer should be obvious` | `A resposta deveria ser` | ✅ Validado |
 | `#1712 [25]` | `0x0218` | `to someone who's supposed to` | `óbvia para alguém que` | ✅ Validado |
 | `#1712 [26]` | `0x0218` | `be so smart.` | `deveria ser tão inteligente.` | ✅ Validado |
-| `#1712 [27]` | `0x0218` | `You can't do your best in battle` | `Você não pode dar o seu melhor na batalha` | ✅ Validado |
-| `#1712 [28]` | `0x0218` | `wielding someone else's weapon.` | `empunhando a arma de outra pessoa.` | ✅ Validado |
+| `#1712 [27]` | `0x0218` | `You can't do your best in battle` | `Não dá para lutar com tudo` | ✅ Validado |
+| `#1712 [28]` | `0x0218` | `wielding someone else's weapon.` | `com a cabeça cheia de culpa!` | ✅ Validado |
 | `#1712 [29]` | `0x0218` | `You have to use your own!` | `Você tem que usar o seu próprio!` | ✅ Validado |
 | `#1712 [31]` | `0x0218` | `An astute observation…` | `Uma observação astuta…` | ✅ Validado |
 | `#1712 [32]` | `0x0218` | `Hmhmhm…` | `Hummm…` | ✅ Validado |
@@ -1051,7 +1051,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1713 [10]` | `0x0218` | `We meet again…` | `Nos encontramos novamente…` | ✅ Validado |
 | `#1713 [11]` | `0x0218` | `and earlier than I thought.` | `e mais cedo do que eu pensava.` | ✅ Validado |
 | `#1713 [12]` | `0x0218` | `Shall we call our` | `Vamos chamar nosso` | ✅ Validado |
-| `#1713 [13]` | `0x0218` | `Guardian Beasts?` | `Guardian Beasts?` | ✅ Validado |
+| `#1713 [13]` | `0x0218` | `Guardian Beasts?` | `Feras Guardiãs?` | ✅ Validado |
 | `#1713 [14]` | `0x0218` | `Indeed.` | `De fato.` | ✅ Validado |
 | `#1713 [15]` | `0x0218` | `…Summon up!` | `…Convoque!` | ✅ Validado |
 | `#1713 [16]` | `0x0218` | `Cool… I wish I knew` | `Legal… eu também gostaria de` | ✅ Validado |
@@ -1061,8 +1061,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1713 [21]` | `0x0218` | `fun to have you around all` | `divertido ter você por` | ✅ Validado |
 | `#1713 [22]` | `0x0218` | `the time.` | `perto o tempo todo.` | ✅ Validado |
 | `#1713 [23]` | `0x0218` | `I'd hardly appreciate being` | `Eu dificilmente gostaria de ser` | ✅ Validado |
-| `#1713 [24]` | `0x0218` | `dragged into this world every` | `arrastado para este mundo toda vez que` | ✅ Validado |
-| `#1713 [25]` | `0x0218` | `time you needed something.` | `você precisasse de alguma coisa.` | ✅ Validado |
+| `#1713 [24]` | `0x0218` | `dragged into this world every` | `puxado pra cá toda vez que uma` | ✅ Validado |
+| `#1713 [25]` | `0x0218` | `time you needed something.` | `batalha começa…` | ✅ Validado |
 | `#1713 [26]` | `0x0218` | `So you'd rather just stay` | `Então você prefere ficar` | ✅ Validado |
 | `#1713 [27]` | `0x0218` | `here all the time?` | `aqui o tempo todo?` | ✅ Validado |
 | `#1713 [28]` | `0x0218` | `That's not what I meant!` | `Não foi isso que eu quis dizer!` | ✅ Validado |
@@ -1081,7 +1081,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1713 [42]` | `0x0218` | `Are you both ready?` | `Vocês dois estão prontos?` | ✅ Validado |
 | `#1713 [43]` | `0x0218` | `Yes.` | `Sim.` | ✅ Validado |
 | `#1713 [44]` | `0x0218` | `Yes!` | `Sim!` | ✅ Validado |
-| `#1713 [45]` | `0x0218` | `As Craftknights of Wystern,` | `Como Craftknights de Wystern,` | ✅ Validado |
+| `#1713 [45]` | `0x0218` | `As Craftknights of Wystern,` | `Como forjadores de Wystern,` | ✅ Validado |
 | `#1713 [46]` | `0x0218` | `fight with honor and dignity!` | `lute com honra e dignidade!` | ✅ Validado |
 | `#1713 [47]` | `0x0218` | `This is the 12th match` | `Esta é a 12ª` | ✅ Validado |
 | `#1713 [48]` | `0x0218` | `of the tournament…` | `partida do torneio…` | ✅ Validado |
@@ -1094,13 +1094,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1714 [0]` | `0x0218` | `I lost the fight…` | `Eu perdi a luta…` | ✅ Validado |
-| `#1714 [1]` | `0x0218` | `and you found your pride.` | `e você encontrou seu orgulho.` | ✅ Validado |
+| `#1714 [0]` | `0x0218` | `I lost the fight…` | `Perdi a luta…` | ✅ Validado |
+| `#1714 [1]` | `0x0218` | `and you found your pride.` | `mas recuperei meu orgulho!` | ✅ Validado |
 | `#1714 [2]` | `0x0218` | `Congratulations.` | `Parabéns.` | ✅ Validado |
 | `#1714 [3]` | `0x0218` | `Thanks, Kenon.` | `Obrigado, Kenon.` | ✅ Validado |
 | `#1714 [4]` | `0x0218` | `I have to ask… you're a` | `Tenho que perguntar…` | ✅ Validado |
 | `#1714 [5]` | `0x0218` | `member of the Gold Guild,` | `você é membro da` | ✅ Validado |
-| `#1714 [6]` | `0x0218` | `aren't you?` | `Gold Guild, não é?` | ✅ Validado |
+| `#1714 [6]` | `0x0218` | `aren't you?` | `Guilda Dourada, não é?` | ✅ Validado |
 | `#1714 [7]` | `0x0218` | `Why did you help us?` | `Por que você nos ajudou?` | ✅ Validado |
 | `#1714 [8]` | `0x0218` | `Thank you, Kenon.` | `Obrigado, Kenon.` | ✅ Validado |
 | `#1714 [9]` | `0x0218` | `I know this is rude, but I'm` | `Eu sei que isso é rude, mas` | ✅ Validado |
@@ -1113,7 +1113,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1714 [16]` | `0x0218` | `I disagree with what the` | `Discordo do que o` | ✅ Validado |
 | `#1714 [17]` | `0x0218` | `Guild is doing, because I` | `Grêmio está fazendo,` | ✅ Validado |
 | `#1714 [18]` | `0x0218` | `know that it's wrong.` | `porque sei que é errado.` | ✅ Validado |
-| `#1714 [19]` | `0x0218` | `Other members of the Gold` | `Outros membros da Gold Guild` | ✅ Validado |
+| `#1714 [19]` | `0x0218` | `Other members of the Gold` | `Outros membros da Guilda Dourada` | ✅ Validado |
 | `#1714 [20]` | `0x0218` | `Guild might not have pride` | `podem não ter orgulho de si` | ✅ Validado |
 | `#1714 [21]` | `0x0218` | `in themselves, but I do…` | `mesmos, mas eu tenho…` | ✅ Validado |
 | `#1714 [22]` | `0x0218` | `so I did what was right.` | `então fiz o que era certo.` | ✅ Validado |
@@ -1138,8 +1138,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1715 [0]` | `0x0218` | `Congratulations for winning` | `Parabéns por vencer sua` | ✅ Validado |
-| `#1715 [1]` | `0x0218` | `your second match… and for` | `segunda partida… e por` | ✅ Validado |
+| `#1715 [0]` | `0x0218` | `Congratulations for winning` | `Parabéns pela vitória na sua` | ✅ Validado |
+| `#1715 [1]` | `0x0218` | `your second match… and for` | `segunda luta!` | ✅ Validado |
 | `#1715 [2]` | `0x0218` | `getting here on time.` | `chegar aqui na hora certa.` | ✅ Validado |
 | `#1715 [3]` | `0x0218` | `Thanks… but I always felt` | `Obrigado… mas sempre senti que` | ✅ Validado |
 | `#1715 [4]` | `0x0218` | `like I was about to lose!` | `estava prestes a perder!` | ✅ Validado |
@@ -1171,7 +1171,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1715 [31]` | `0x0218` | `with you, {PLAYER}?` | `você, {PLAYER}?` | ✅ Validado |
 | `#1715 [32]` | `0x0218` | `Me?` | `Eu?` | ✅ Validado |
 | `#1715 [33]` | `0x0218` | `Yes?` | `Sim?` | ✅ Validado |
-| `#1715 [34]` | `0x0218` | `Kenon is a novice Craftknight,` | `Kenon é um Craftknight novato,` | ✅ Validado |
+| `#1715 [34]` | `0x0218` | `Kenon is a novice Craftknight,` | `Kenon é um forjador novato,` | ✅ Validado |
 | `#1715 [35]` | `0x0218` | `but a skilled fighter, yet` | `mas um lutador habilidoso, mas` | ✅ Validado |
 | `#1715 [36]` | `0x0218` | `you defeated him anyway.` | `você o derrotou mesmo assim.` | ✅ Validado |
 | `#1715 [37]` | `0x0218` | `I admire your ability.` | `Admiro sua habilidade.` | ✅ Validado |
@@ -1229,7 +1229,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1745 [0]` | `0x0218` | `I won,` | `eu ganhei,` | ✅ Validado |
+| `#1745 [0]` | `0x0218` | `I won,` | `A gente venceu,` | ✅ Validado |
 | `#1745 [1]` | `0x0218` | `{PARTNER}!` | `{PARTNER}!` | ✅ Validado |
 | `#1745 [2]` | `0x0218` | `We won,` | `Nós vencemos,` | ✅ Validado |
 | `#1745 [3]` | `0x0218` | `{PARTNER}!` | `{PARTNER}!` | ✅ Validado |
@@ -1245,12 +1245,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [15]` | `0x0218` | `for a little while!` | `comemorar um pouquinho!` | ✅ Validado |
 | `#1745 [16]` | `0x0218` | `Don't you think I deserve` | `Você não acha que mereço` | ✅ Validado |
 | `#1745 [17]` | `0x0218` | `to celebrate my victory?` | `comemorar minha vitória?` | ✅ Validado |
-| `#1745 [19]` | `0x0218` | `You're right… I'm still just` | `Você está certo… Ainda sou apenas um` | ✅ Validado |
-| `#1745 [20]` | `0x0218` | `a novice, and my victory over` | `novato e minha vitória sobre o Varil` | ✅ Validado |
-| `#1745 [21]` | `0x0218` | `Varil was probably a fluke.` | `foi provavelmente um acaso.` | ✅ Validado |
+| `#1745 [19]` | `0x0218` | `You're right… I'm still just` | `Você tem razão… Ainda sou só um` | ✅ Validado |
+| `#1745 [20]` | `0x0218` | `a novice, and my victory over` | `novato, e vencer o Varil foi por` | ✅ Validado |
+| `#1745 [21]` | `0x0218` | `Varil was probably a fluke.` | `pouco.` | ✅ Validado |
 | `#1745 [22]` | `0x0218` | `I get it now.` | `Agora entendi.` | ✅ Validado |
 | `#1745 [23]` | `0x0218` | `We're going to be fighting` | `Iremos lutar contra` | ✅ Validado |
-| `#1745 [24]` | `0x0218` | `strong Craftknights like Varil` | `Craftknights fortes como` | ✅ Validado |
+| `#1745 [24]` | `0x0218` | `strong Craftknights like Varil` | `Cavaleiros fortes como` | ✅ Validado |
 | `#1745 [25]` | `0x0218` | `sooner or later…` | `Varil mais cedo ou mais tarde…` | ✅ Validado |
 | `#1745 [26]` | `0x0218` | `and we'll stay focused,` | `e vamos continuar focados, então` | ✅ Validado |
 | `#1745 [27]` | `0x0218` | `so we're ready for them!` | `estamos prontos para eles!` | ✅ Validado |
@@ -1260,7 +1260,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [32]` | `0x0218` | `just a fluke? I already know` | `Varil foi apenas um` | ✅ Validado |
 | `#1745 [33]` | `0x0218` | `that much…` | `acaso? isso eu já sei…` | ✅ Validado |
 | `#1745 [34]` | `0x0218` | `and I know I'm still just` | `e sei que ainda sou apenas um` | ✅ Validado |
-| `#1745 [35]` | `0x0218` | `a novice Craftknight.` | `novato no Craftknight.` | ✅ Validado |
+| `#1745 [35]` | `0x0218` | `a novice Craftknight.` | `novato no Cavaleiro.` | ✅ Validado |
 | `#1745 [36]` | `0x0218` | `I suspect we'll fight Varil` | `Suspeito que lutaremos contra` | ✅ Validado |
 | `#1745 [37]` | `0x0218` | `again in the tournament…` | `Varil novamente no torneio…` | ✅ Validado |
 | `#1745 [38]` | `0x0218` | `and I promise you that` | `e prometo que estaremos` | ✅ Validado |
@@ -1269,8 +1269,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [42]` | `0x0218` | `I want to take advantage of` | `Quero aproveitar essa` | ✅ Validado |
 | `#1745 [43]` | `0x0218` | `this excitement I'm feeling!` | `emoção que estou sentindo!` | ✅ Validado |
 | `#1745 [44]` | `0x0218` | `It's always pleasant to be` | `É sempre agradável estar a bordo` | ✅ Validado |
-| `#1745 [45]` | `0x0218` | `aboard this ship… even if Bron` | `deste navio… mesmo que o Bron não se` | ✅ Validado |
-| `#1745 [46]` | `0x0218` | `doesn't care for my presence.` | `importe com a minha presença.` | ✅ Validado |
+| `#1745 [45]` | `0x0218` | `aboard this ship… even if Bron` | `desse navio… mesmo que o Bron` | ✅ Validado |
+| `#1745 [46]` | `0x0218` | `doesn't care for my presence.` | `viva reclamando.` | ✅ Validado |
 | `#1745 [47]` | `0x0218` | `Wouldn't you agree,` | `Você não concorda,` | ✅ Validado |
 | `#1745 [48]` | `0x0218` | `{PLAYER}?` | `{PLAYER}?` | ✅ Validado |
 | `#1745 [49]` | `0x0218` | `…What's wrong, {PLAYER}?` | `…O que há de errado, {PLAYER}?` | ✅ Validado |
@@ -1290,7 +1290,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [63]` | `0x0218` | `What!?` | `O quê!?` | ✅ Validado |
 | `#1745 [64]` | `0x0218` | `We must admit that our` | `Devemos admitir que a nossa` | ✅ Validado |
 | `#1745 [65]` | `0x0218` | `victory over Varil was the` | `vitória sobre o Varil foi` | ✅ Validado |
-| `#1745 [66]` | `0x0218` | `result of luck, not skill.` | `resultado de sorte e não de habilidade.` | ✅ Validado |
+| `#1745 [66]` | `0x0218` | `result of luck, not skill.` | `pura sorte, e não habilidade.` | ✅ Validado |
 | `#1745 [67]` | `0x0218` | `Must we…?` | `Devemos…?` | ✅ Validado |
 | `#1745 [68]` | `0x0218` | `You're right… it was.` | `Você está certo… foi.` | ✅ Validado |
 | `#1745 [69]` | `0x0218` | `We were fortunate in that` | `Tivemos sorte porque` | ✅ Validado |
@@ -1307,11 +1307,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [80]` | `0x0218` | `that you can craft a stronger` | `acha que pode criar uma arma` | ✅ Validado |
 | `#1745 [81]` | `0x0218` | `weapon than Varil?` | `mais forte que a Varil?` | ✅ Validado |
 | `#1745 [82]` | `0x0218` | `Listen up, {PLAYER}.` | `Ouça, {PLAYER}.` | ✅ Validado |
-| `#1745 [83]` | `0x0218` | `Even with my help, the weapons you` | `Mesmo com a minha ajuda, as armas que você` | ✅ Validado |
-| `#1745 [84]` | `0x0218` | `craft are of mediocre quality.` | `fabrica são de qualidade medíocre.` | ✅ Validado |
+| `#1745 [83]` | `0x0218` | `Even with my help, the weapons you` | `Mesmo com a minha ajuda, as armas` | ✅ Validado |
+| `#1745 [84]` | `0x0218` | `craft are of mediocre quality.` | `que você faz precisam de cuidado.` | ✅ Validado |
 | `#1745 [85]` | `0x0218` | `Varil can create weapons with` | `Varil pode criar armas com uma` | ✅ Validado |
 | `#1745 [86]` | `0x0218` | `a quality that puts most adult` | `qualidade que envergonha a` | ✅ Validado |
-| `#1745 [87]` | `0x0218` | `Craftknights to shame.` | `maioria dos Craftknights adultos.` | ✅ Validado |
+| `#1745 [87]` | `0x0218` | `Craftknights to shame.` | `maioria dos forjadores adultos.` | ✅ Validado |
 | `#1745 [88]` | `0x0218` | `Master Varil is superior` | `Mestre Varil é superior a` | ✅ Validado |
 | `#1745 [89]` | `0x0218` | `to you in every way.` | `você em todos os sentidos.` | ✅ Validado |
 | `#1745 [90]` | `0x0218` | `So, there's no way` | `Então, não tenho` | ✅ Validado |
@@ -1330,7 +1330,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [103]` | `0x0218` | `…Huh?` | `… Hein?` | ✅ Validado |
 | `#1745 [104]` | `0x0218` | `Don't get lost in your thoughts,` | `Não se perca em seus` | ✅ Validado |
 | `#1745 [105]` | `0x0218` | `Master. Not when we're having` | `pensamentos, Mestre. Não` | ✅ Validado |
-| `#1745 [106]` | `0x0218` | `such a wonderful time!` | `quando estamos nos divertindo tanto!` | ✅ Validado |
+| `#1745 [106]` | `0x0218` | `such a wonderful time!` | `quando a gente tá se divertindo!` | ✅ Validado |
 | `#1745 [107]` | `0x0218` | `…You're thinking about` | `…Você está pensando` | ✅ Validado |
 | `#1745 [108]` | `0x0218` | `Varil, aren't you?` | `na Varil, não está?` | ✅ Validado |
 | `#1745 [109]` | `0x0218` | `Yes. I'm sorry. But I know` | `Sim. Desculpe. Mas sei` | ✅ Validado |
@@ -1354,12 +1354,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [127]` | `0x0218` | `making weapons than you are.` | `fazer armas do que você.` | ✅ Validado |
 | `#1745 [128]` | `0x0218` | `In fact, he's better at making` | `Na verdade, ele é melhor na` | ✅ Validado |
 | `#1745 [129]` | `0x0218` | `weapons than almost any other` | `fabricação de armas do que quase` | ✅ Validado |
-| `#1745 [130]` | `0x0218` | `Craftknight in the world.` | `qualquer outra Craftknight no mundo.` | ✅ Validado |
+| `#1745 [130]` | `0x0218` | `Craftknight in the world.` | `qualquer Cavaleiro por aí!` | ✅ Validado |
 | `#1745 [131]` | `0x0218` | `What makes you ` | `O que faz você` | ✅ Validado |
 | `#1745 [132]` | `0x0218` | `think that?` | `pensar isso?` | ✅ Validado |
 | `#1745 [133]` | `0x0218` | `Because he uses weapons` | `Porque ele usa armas fabricadas` | ✅ Validado |
-| `#1745 [134]` | `0x0218` | `made by other Craftknights.` | `por outros Craftknights.` | ✅ Validado |
-| `#1745 [135]` | `0x0218` | `He doesn't feel any shame about` | `Ele também não sente vergonha disso,` | ✅ Validado |
+| `#1745 [134]` | `0x0218` | `made by other Craftknights.` | `por outros Cavaleiros.` | ✅ Validado |
+| `#1745 [135]` | `0x0218` | `He doesn't feel any shame about` | `Ele nem sente vergonha disso,` | ✅ Validado |
 | `#1745 [136]` | `0x0218` | `it, either, which means he's very` | `o que significa que ele é muito` | ✅ Validado |
 | `#1745 [137]` | `0x0218` | `stupid… or very confident.` | `estúpido… ou muito confiante.` | ✅ Validado |
 | `#1745 [138]` | `0x0218` | `Is it okay for us to pretend` | `Está tudo bem fingirmos que` | ✅ Validado |
@@ -1394,9 +1394,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1745 [167]` | `0x0218` | `Because I know that it's` | `Porque eu sei que a` | ✅ Validado |
 | `#1745 [168]` | `0x0218` | `going to get tougher with` | `cada partida vai` | ✅ Validado |
 | `#1745 [169]` | `0x0218` | `every match.` | `ficar mais difícil.` | ✅ Validado |
-| `#1745 [170]` | `0x0218` | `I was lucky to beat Varil today.` | `Tive a sorte de vencer o Varil hoje.` | ✅ Validado |
-| `#1745 [171]` | `0x0218` | `I'm not sure if I can win again…` | `Não tenho certeza se posso vencer de novo…` | ✅ Validado |
-| `#1745 [172]` | `0x0218` | `I'm thrilled that we won…` | `Estou emocionado por termos vencido…` | ✅ Validado |
+| `#1745 [170]` | `0x0218` | `I was lucky to beat Varil today.` | `Dei sorte de vencer o Varil hoje.` | ✅ Validado |
+| `#1745 [171]` | `0x0218` | `I'm not sure if I can win again…` | `Não sei se venço a próxima…` | ✅ Validado |
+| `#1745 [172]` | `0x0218` | `I'm thrilled that we won…` | `Tô muito feliz por termos vencido!` | ✅ Validado |
 | `#1745 [173]` | `0x0218` | `but I'm as nervous as I` | `mas estou tão` | ✅ Validado |
 | `#1745 [174]` | `0x0218` | `am excited.` | `nervoso quanto animado.` | ✅ Validado |
 | `#1745 [175]` | `0x0218` | `I can feel my muscles` | `Sinto meus músculos` | ✅ Validado |
@@ -1435,8 +1435,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1746 [0]` | `0x0218` | `Hi, Sanary!` | `Olá, Sanary!` | ✅ Validado |
-| `#1746 [1]` | `0x0218` | `Is this seat taken?` | `Este assento está ocupado?` | ✅ Validado |
+| `#1746 [0]` | `0x0218` | `Hi, Sanary!` | `Oi, Sanary!` | ✅ Validado |
+| `#1746 [1]` | `0x0218` | `Is this seat taken?` | `Esse lugar tá ocupado?` | ✅ Validado |
 | `#1746 [2]` | `0x0218` | `Yes, it is. Sorry.` | `Sim, é. Desculpe.` | ✅ Validado |
 | `#1746 [3]` | `0x0218` | `Really?` | `Sério?` | ✅ Validado |
 | `#1746 [4]` | `0x0218` | `Who took it?` | `Quem pegou?` | ✅ Validado |
@@ -1471,8 +1471,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1746 [33]` | `0x0218` | `I've ever met.` | `que já conheci.` | ✅ Validado |
 | `#1746 [34]` | `0x0218` | `You make me crazy!` | `Você me deixa louco!` | ✅ Validado |
 | `#1746 [35]` | `0x0218` | `Let's pretend I'm your big` | `Vamos fingir que sou sua irmã mais` | ✅ Validado |
-| `#1746 [36]` | `0x0218` | `sister, so I can drag your` | `velha, para que eu possa arrastar sua` | ✅ Validado |
-| `#1746 [37]` | `0x0218` | `sassy butt back home.` | `bunda atrevida de volta para casa.` | ✅ Validado |
+| `#1746 [36]` | `0x0218` | `sister, so I can drag your` | `velha, pra arrastar sua bunda da` | ✅ Validado |
+| `#1746 [37]` | `0x0218` | `sassy butt back home.` | `cama sem dó!` | ✅ Validado |
 | `#1746 [38]` | `0x0218` | `I knew you were older than` | `Eu sabia que você era mais` | ✅ Validado |
 | `#1746 [39]` | `0x0218` | `than me, but by how much?` | `velho que eu, mas quanto?` | ✅ Validado |
 | `#1746 [40]` | `0x0218` | `So you're finally admitting` | `Então você finalmente está` | ✅ Validado |
@@ -1499,7 +1499,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1747 [11]` | `0x0218` | `Nobody calls me "Master"` | `Ninguém me chama de "Mestre"` | ✅ Validado |
 | `#1747 [12]` | `0x0218` | `or treats me differently.` | `ou me trata de forma diferente.` | ✅ Validado |
 | `#1747 [13]` | `0x0218` | `Whenever someone finds out` | `Sempre que alguém descobre que` | ✅ Validado |
-| `#1747 [14]` | `0x0218` | `that my father run the Gold` | `meu pai dirige a Gold Guild,` | ✅ Validado |
+| `#1747 [14]` | `0x0218` | `that my father run the Gold` | `meu pai dirige a Guilda Dourada,` | ✅ Validado |
 | `#1747 [15]` | `0x0218` | `Guild, they start kissing up.` | `começa a puxar o meu saco.` | ✅ Validado |
 | `#1747 [16]` | `0x0218` | `They pretend to like me,` | `Eles fingem que` | ✅ Validado |
 | `#1747 [17]` | `0x0218` | `but they don't even know` | `gostam de mim, mas` | ✅ Validado |
@@ -1509,13 +1509,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1747 [21]` | `0x0218` | `Actually, I do.` | `Na verdade, sim.` | ✅ Validado |
 | `#1747 [22]` | `0x0218` | `Oh?` | `Ah?` | ✅ Validado |
 | `#1747 [23]` | `0x0218` | `My dad was Shintetsu, the` | `Meu pai era Shintetsu, o` | ✅ Validado |
-| `#1747 [24]` | `0x0218` | `Craftlord of Iron. Have you` | `Craftlord do Ferro. Você` | ✅ Validado |
+| `#1747 [24]` | `0x0218` | `Craftlord of Iron. Have you` | `Lorde do Ferro. Você` | ✅ Validado |
 | `#1747 [25]` | `0x0218` | `ever heard of him?` | `já ouviu falar dele?` | ✅ Validado |
 | `#1747 [26]` | `0x0218` | `My father was the Iron` | `Meu pai era o Iron` | ✅ Validado |
-| `#1747 [27]` | `0x0218` | `Craftlord, Shintetsu.` | `Craftlord, Shintetsu.` | ✅ Validado |
+| `#1747 [27]` | `0x0218` | `Craftlord, Shintetsu.` | `Lorde, Shintetsu.` | ✅ Validado |
 | `#1747 [28]` | `0x0218` | `Do you know of him?` | `Você conhece ele?` | ✅ Validado |
 | `#1747 [29]` | `0x0218` | `Of course! What kind of Craftknight` | `Claro! Que tipo de` | ✅ Validado |
-| `#1747 [30]` | `0x0218` | `doesn't know of the legendary` | `Craftknight não conhece` | ✅ Validado |
+| `#1747 [30]` | `0x0218` | `doesn't know of the legendary` | `Cavaleiro não conhece` | ✅ Validado |
 | `#1747 [31]` | `0x0218` | `Shintetsu?` | `o lendário Shintetsu?` | ✅ Validado |
 | `#1747 [32]` | `0x0218` | `Now I understand…` | `Agora eu entendo…` | ✅ Validado |
 | `#1747 [33]` | `0x0218` | `Now I know how you` | `Agora eu sei como você me` | ✅ Validado |
@@ -1532,7 +1532,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1747 [44]` | `0x0218` | `to do that anymore.` | `não fazer mais isso.` | ✅ Validado |
 | `#1747 [45]` | `0x0218` | `Really?` | `Sério?` | ✅ Validado |
 | `#1747 [46]` | `0x0218` | `Yes. He promised that the` | `Sim. Ele prometeu que` | ✅ Validado |
-| `#1747 [47]` | `0x0218` | `Gold Guild would never do` | `a Gold Guild nunca` | ✅ Validado |
+| `#1747 [47]` | `0x0218` | `Gold Guild would never do` | `a Guilda Dourada nunca` | ✅ Validado |
 | `#1747 [48]` | `0x0218` | `that again.` | `mais faria isso.` | ✅ Validado |
 | `#1747 [49]` | `0x0218` | `That's great!` | `Isso é ótimo!` | ✅ Validado |
 | `#1747 [50]` | `0x0218` | `Thanks, Varil!` | `Obrigado, Varil!` | ✅ Validado |
@@ -1552,7 +1552,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1748 [2]` | `0x0218` | `What happened, Master?` | `O que aconteceu, Mestre?` | ✅ Validado |
 | `#1748 [3]` | `0x0218` | `What's the rush?` | `Qual é a pressa?` | ✅ Validado |
 | `#1748 [4]` | `0x0218` | `What's wrong, Master!?` | `O que há de errado, Mestre!?` | ✅ Validado |
-| `#1748 [5]` | `0x0218` | `You just barged into my workshop…` | `Você acabou de invadir minha oficina…` | ✅ Validado |
+| `#1748 [5]` | `0x0218` | `You just barged into my workshop…` | `Você invadiu a minha oficina…` | ✅ Validado |
 | `#1748 [6]` | `0x0218` | `What happened?` | `O que aconteceu?` | ✅ Validado |
 | `#1748 [7]` | `0x0218` | `Um…` | `Hum…` | ✅ Validado |
 | `#1748 [8]` | `0x0218` | `What are all of you doing?` | `O que todos vocês estão fazendo?` | ✅ Validado |
@@ -1602,7 +1602,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1748 [54]` | `0x0218` | `Arghh! That hurt like hell,` | `Argh! Isso doeu` | ✅ Validado |
 | `#1748 [55]` | `0x0218` | `dammit…` | `demais, caramba…` | ✅ Validado |
 | `#1748 [56]` | `0x0218` | `Kutty…` | `Kutty…` | ✅ Validado |
-| `#1748 [57]` | `0x0218` | `That's one mighty sock yer packin'` | `Essa é uma meia poderosa na sua embalagem` | ✅ Validado |
+| `#1748 [57]` | `0x0218` | `That's one mighty sock yer packin'` | `Que soco potente você tem aí!` | ✅ Validado |
 | `#1748 [58]` | `0x0218` | `there, fella. Ya put me back to` | `aí, cara. Você me fez voltar aos` | ✅ Validado |
 | `#1748 [59]` | `0x0218` | `my senses and I thank ya…` | `meus sentidos e eu te agradeço…` | ✅ Validado |
 | `#1748 [60]` | `0x0218` | `(Did they talk with their fists…?)` | `(Eles falavam com os punhos…?)` | ✅ Validado |
@@ -1614,11 +1614,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1748 [66]` | `0x0218` | `My sister…` | `Minha irmã…` | ✅ Validado |
 | `#1748 [67]` | `0x0218` | `She's a beautiful girl…` | `Ela é uma garota linda…` | ✅ Validado |
 | `#1748 [68]` | `0x0218` | `What about her?` | `E ela?` | ✅ Validado |
-| `#1748 [69]` | `0x0218` | `Uh, she's got a kid called Razzy.` | `Ér, ela tem uma filha chamada Razzy.` | ✅ Validado |
+| `#1748 [69]` | `0x0218` | `Uh, she's got a kid called Razzy.` | `É, ela tem uma filha: a Razzy.` | ✅ Validado |
 | `#1748 [70]` | `0x0218` | `And the kid's missin'!!` | `E a criança está desaparecida!!` | ✅ Validado |
 | `#1748 [71]` | `0x0218` | `Razzy's gone down into the labyrinth` | `Razzy desceu para o` | ✅ Validado |
 | `#1748 [72]` | `0x0218` | `underneath the Central Tower and` | `labirinto abaixo da` | ✅ Validado |
-| `#1748 [73]` | `0x0218` | `hasn't come out yet…` | `Central Tower e ainda não saiu…` | ✅ Validado |
+| `#1748 [73]` | `0x0218` | `hasn't come out yet…` | `Torre Central e ainda não saiu…` | ✅ Validado |
 | `#1748 [74]` | `0x0218` | `Master was so panicked that he` | `O Mestre ficou tão em pânico que` | ✅ Validado |
 | `#1748 [75]` | `0x0218` | `ended up straining his back…` | `acabou distendendo as costas…` | ✅ Validado |
 | `#1748 [76]` | `0x0218` | `Cut it out! ` | `Pare com isso!` | ✅ Validado |
@@ -1628,10 +1628,10 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1748 [80]` | `0x0218` | `No way, Master! You're not going` | `De jeito nenhum, Mestre!` | ✅ Validado |
 | `#1748 [81]` | `0x0218` | `down there.` | `Você não vai lá embaixo.` | ✅ Validado |
 | `#1748 [82]` | `0x0218` | `(Shrug…)` | `(Encolher os ombros…)` | ✅ Validado |
-| `#1748 [83]` | `0x0218` | `So, I'm asking ya ta help me out,` | `Então, estou pedindo que você me ajude,` | ✅ Validado |
+| `#1748 [83]` | `0x0218` | `So, I'm asking ya ta help me out,` | `Tô te pedindo pra me dar uma mão!` | ✅ Validado |
 | `#1748 [84]` | `0x0218` | `{PLAYER}.` | `{PLAYER}.` | ✅ Validado |
 | `#1748 [85]` | `0x0218` | `This is the next technique.` | `Esta é a próxima técnica.` | ✅ Validado |
-| `#1748 [86]` | `0x0218` | `Yer gonna need something like this` | `Você vai precisar de algo assim para estar` | ✅ Validado |
+| `#1748 [86]` | `0x0218` | `Yer gonna need something like this` | `Vai precisar disso pra se virar!` | ✅ Validado |
 | `#1748 [87]` | `0x0218` | `to be on par with yer enemies.` | `no mesmo nível de seus inimigos.` | ✅ Validado |
 | `#1748 [88]` | `0x0218` | `Good luck! I'm countin' on ya!` | `Boa sorte! Estou contando com você!` | ✅ Validado |
 
@@ -1669,7 +1669,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1751 [27]` | `0x0218` | `Of course!` | `Claro!` | ✅ Validado |
 | `#1751 [28]` | `0x0218` | `Okay!` | `Certo!` | ✅ Validado |
 | `#1751 [29]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1751 [30]` | `0x0218` | `Let's check out some other places…` | `Vamos conferir alguns outros lugares…` | ✅ Validado |
+| `#1751 [30]` | `0x0218` | `Let's check out some other places…` | `Vamos procurar em outro canto…` | ✅ Validado |
 
 ---
 
@@ -1701,11 +1701,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1752 [22]` | `0x0218` | `(Oh yeah, I met her on the day` | `(Ah sim, eu a conheci no dia` | ✅ Validado |
 | `#1752 [23]` | `0x0218` | `of the opening ceremony…)` | `da cerimônia de abertura…)` | ✅ Validado |
 | `#1752 [24]` | `0x0218` | `You're trying to become a Craftlord,` | `Você está tentando se` | ✅ Validado |
-| `#1752 [25]` | `0x0218` | `aren't you?` | `tornar um Craftlord, não é?` | ✅ Validado |
+| `#1752 [25]` | `0x0218` | `aren't you?` | `tornar um Lorde, não é?` | ✅ Validado |
 | `#1752 [26]` | `0x0218` | `Y-Yes, ma'am.` | `S-Sim, senhora.` | ✅ Validado |
 | `#1752 [27]` | `0x0218` | `This sword belonged to a man who` | `Esta espada pertenceu a um` | ✅ Validado |
 | `#1752 [28]` | `0x0218` | `once protected Wystern, the City` | `homem que já protegeu` | ✅ Validado |
-| `#1752 [29]` | `0x0218` | `of Swords.` | `Wystern, a City of Swords.` | ✅ Validado |
+| `#1752 [29]` | `0x0218` | `of Swords.` | `Wystern, a Cidade das Espadas.` | ✅ Validado |
 | `#1752 [30]` | `0x0218` | `It isn't an understatement to say` | `Não é um eufemismo dizer que` | ✅ Validado |
 | `#1752 [31]` | `0x0218` | `that Wystern still stands above the` | `Wystern ainda está acima do` | ✅ Validado |
 | `#1752 [32]` | `0x0218` | `ocean today thanks to this man,` | `oceano hoje graças a este` | ✅ Validado |
@@ -1722,7 +1722,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1752 [43]` | `0x0218` | `me you don't understand what` | `diz que você não entende do` | ✅ Validado |
 | `#1752 [44]` | `0x0218` | `I'm talking about.` | `que estou falando.` | ✅ Validado |
 | `#1752 [45]` | `0x0218` | `Uh…` | `Ah…` | ✅ Validado |
-| `#1752 [46]` | `0x0218` | `You don't have to understand it now.` | `Você não precisa entender isso agora.` | ✅ Validado |
+| `#1752 [46]` | `0x0218` | `You don't have to understand it now.` | `Não precisa entender isso agora.` | ✅ Validado |
 | `#1752 [47]` | `0x0218` | `But, just remember…` | `Mas, lembre-se…` | ✅ Validado |
 | `#1752 [48]` | `0x0218` | `The man who forged this sword` | `O homem que forjou esta` | ✅ Validado |
 | `#1752 [49]` | `0x0218` | `was a great man…` | `espada era um grande homem…` | ✅ Validado |
@@ -1737,12 +1737,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1752 [58]` | `0x0218` | `like a voice…` | `parecido com uma voz…` | ✅ Validado |
 | `#1752 [59]` | `0x0218` | `Are you looking for a friend of` | `Você está` | ✅ Validado |
 | `#1752 [60]` | `0x0218` | `yours?` | `procurando um amigo seu?` | ✅ Validado |
-| `#1752 [61]` | `0x0218` | `He's not really a friend, but my` | `Ele não é realmente um amigo, mas meu` | ✅ Validado |
+| `#1752 [61]` | `0x0218` | `He's not really a friend, but my` | `Ele nem é amigo, mas meu pai` | ✅ Validado |
 | `#1752 [62]` | `0x0218` | `master asked us to find him…` | `mestre nos pediu para encontrá-lo…` | ✅ Validado |
-| `#1752 [63]` | `0x0218` | `He's not really a friend, but my` | `Ele não é realmente um amigo, mas meu` | ✅ Validado |
+| `#1752 [63]` | `0x0218` | `He's not really a friend, but my` | `Ele nem é amigo, mas meu pai` | ✅ Validado |
 | `#1752 [64]` | `0x0218` | `master asked us to find him…` | `mestre nos pediu para encontrá-lo…` | ✅ Validado |
 | `#1752 [65]` | `0x0218` | `I see…` | `Entendo…` | ✅ Validado |
-| `#1752 [66]` | `0x0218` | `Then I suggest you see for yourself.` | `Então sugiro que você veja por si mesmo.` | ✅ Validado |
+| `#1752 [66]` | `0x0218` | `Then I suggest you see for yourself.` | `Sugiro que veja com seus olhos.` | ✅ Validado |
 | `#1752 [67]` | `0x0218` | `I heard it from the crack over` | `Eu ouvi da` | ✅ Validado |
 | `#1752 [68]` | `0x0218` | `there.` | `fenda ali.` | ✅ Validado |
 | `#1752 [69]` | `0x0218` | `Um… are you Razzy by any chance?` | `Hum… você é Razzy por acaso?` | ✅ Validado |
@@ -1756,12 +1756,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1752 [77]` | `0x0218` | `voices? Our master asked us` | `voz? Nosso mestre nos pediu` | ✅ Validado |
 | `#1752 [78]` | `0x0218` | `to find someone…` | `para encontrar alguém…` | ✅ Validado |
 | `#1752 [79]` | `0x0218` | `I see…` | `Entendo…` | ✅ Validado |
-| `#1752 [80]` | `0x0218` | `Then I suggest you see for yourself.` | `Então sugiro que você veja por si mesmo.` | ✅ Validado |
+| `#1752 [80]` | `0x0218` | `Then I suggest you see for yourself.` | `Sugiro que veja com seus olhos.` | ✅ Validado |
 | `#1752 [81]` | `0x0218` | `I surely heard something ` | `Certamente ouvi algo` | ✅ Validado |
 | `#1752 [82]` | `0x0218` | `like a voice.` | `parecido com uma voz.` | ✅ Validado |
 | `#1752 [83]` | `0x0218` | `It came from that crack there.` | `Veio daquela fenda ali.` | ✅ Validado |
-| `#1752 [84]` | `0x0218` | `I hope you find this person. I sense` | `Espero que você encontre essa pessoa.` | ✅ Validado |
-| `#1752 [85]` | `0x0218` | `that this individual will become a` | `Sinto que esse indivíduo se tornará um` | ✅ Validado |
+| `#1752 [84]` | `0x0218` | `I hope you find this person. I sense` | `Tomara que encontre essa pessoa.` | ✅ Validado |
+| `#1752 [85]` | `0x0218` | `that this individual will become a` | `Sinto que ela será muito leal.` | ✅ Validado |
 | `#1752 [86]` | `0x0218` | `special friend to you…` | `amigo especial para você…` | ✅ Validado |
 
 ---
@@ -1772,8 +1772,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | :--- | :--- | :--- | :--- | :---: |
 | `#1753 [0]` | `0x0218` | `This crack is way too small for me` | `Essa fenda é pequena` | ✅ Validado |
 | `#1753 [1]` | `0x0218` | `to get through. ` | `demais para eu passar.` | ✅ Validado |
-| `#1753 [2]` | `0x0218` | `It's such a tiny crack, there's no` | `É uma rachadura tão pequena que não vou` | ✅ Validado |
-| `#1753 [3]` | `0x0218` | `way I'll get through…` | `conseguir passar de jeito nenhum…` | ✅ Validado |
+| `#1753 [2]` | `0x0218` | `It's such a tiny crack, there's no` | `Essa fresta é tão apertada que` | ✅ Validado |
+| `#1753 [3]` | `0x0218` | `way I'll get through…` | `não consigo passar por ela.` | ✅ Validado |
 | `#1753 [4]` | `0x0218` | `Don't tell me I gained weight!?` | `Não me diga que ganhei peso!?` | ✅ Validado |
 | `#1753 [5]` | `0x0218` | `I know I could've crawled through` | `Eu sei que poderia ter` | ✅ Validado |
 | `#1753 [6]` | `0x0218` | `back when I was little…` | `rastejado quando era pequeno…` | ✅ Validado |
@@ -1800,12 +1800,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1754 [4]` | `0x0218` | `Hey, are you alright?` | `Ei, você está bem?` | ✅ Validado |
 | `#1754 [6]` | `0x0218` | `Oh, man…` | `Ah, cara…` | ✅ Validado |
 | `#1754 [7]` | `0x0218` | `You're such a troublemaker…` | `Você é um encrenqueiro…` | ✅ Validado |
-| `#1754 [8]` | `0x0218` | `Oh good, you're awake now…` | `Ah, que bom, você está acordado agora…` | ✅ Validado |
+| `#1754 [8]` | `0x0218` | `Oh good, you're awake now…` | `Ah, que alívio! Você acordou…` | ✅ Validado |
 | `#1754 [9]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1754 [10]` | `0x0218` | `I'm sorry…` | `Me desculpe…` | ✅ Validado |
 | `#1754 [11]` | `0x0218` | `I'm alright…` | `Estou bem…` | ✅ Validado |
 | `#1754 [12]` | `0x0218` | `We carried you here together.` | `Nós carregamos vocês aqui juntos.` | ✅ Validado |
-| `#1754 [13]` | `0x0218` | `I think you owe us some thanks.` | `Acho que você nos deve alguns agradecimentos.` | ✅ Validado |
+| `#1754 [13]` | `0x0218` | `I think you owe us some thanks.` | `Acho que você nos deve um obrigado!` | ✅ Validado |
 | `#1754 [14]` | `0x0218` | `It was pretty tough you know!` | `Foi bem difícil, sabe!` | ✅ Validado |
 | `#1754 [15]` | `0x0218` | `I'm sorry…` | `Me desculpe…` | ✅ Validado |
 | `#1754 [16]` | `0x0218` | `I must have passed out.` | `Devo ter desmaiado.` | ✅ Validado |
@@ -1816,7 +1816,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1754 [21]` | `0x0218` | `I mean, Bron's?` | `Quero dizer, Bron?` | ✅ Validado |
 | `#1754 [22]` | `0x0218` | `Yes!` | `Sim!` | ✅ Validado |
 | `#1754 [23]` | `0x0218` | `Bron is my uncle!` | `Bron é meu tio!` | ✅ Validado |
-| `#1754 [24]` | `0x0218` | `Oh, did you come here to rescue me?` | `Ah, você veio aqui para me resgatar?` | ✅ Validado |
+| `#1754 [24]` | `0x0218` | `Oh, did you come here to rescue me?` | `Veio até aqui pra me salvar?` | ✅ Validado |
 | `#1754 [25]` | `0x0218` | `Nice to meet you!` | `Prazer em conhecê-lo!` | ✅ Validado |
 | `#1754 [26]` | `0x0218` | `I'm Razzy!` | `Sou Razzy!` | ✅ Validado |
 | `#1754 [27]` | `0x0218` | `Oh, and by the way!` | `Ah, e por falar nisso!` | ✅ Validado |
@@ -1844,7 +1844,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1755 [0]` | `0x0218` | `Look, that big ol' Summon Creature` | `Olha, aquela enorme Summon Creature` | ✅ Validado |
+| `#1755 [0]` | `0x0218` | `Look, that big ol' Summon Creature` | `Olha aquela Criatura Invocada` | ✅ Validado |
 | `#1755 [1]` | `0x0218` | `is blocking our way.` | `está bloqueando nosso caminho.` | ✅ Validado |
 | `#1755 [2]` | `0x0218` | `Whoa… That's huge!` | `Uau… Isso é enorme!` | ✅ Validado |
 | `#1755 [3]` | `0x0218` | `What are we going to do?` | `O que vamos fazer?` | ✅ Validado |
@@ -1853,7 +1853,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1755 [6]` | `0x0221` | `Let's turn back!` | `Vamos voltar!` | ✅ Validado |
 | `#1755 [7]` | `0x0218` | `If there's no other way out, then` | `Se não há outra saída, então` | ✅ Validado |
 | `#1755 [8]` | `0x0218` | `we fight it out! We can't let some` | `lutamos! Não podemos deixar que` | ✅ Validado |
-| `#1755 [9]` | `0x0218` | `Summon Creature stop us!` | `alguma Summon Creature nos pare!` | ✅ Validado |
+| `#1755 [9]` | `0x0218` | `Summon Creature stop us!` | `alguma Criatura Invocada nos pare!` | ✅ Validado |
 | `#1755 [10]` | `0x0218` | `Good luck to you!` | `Boa sorte para você!` | ✅ Validado |
 | `#1755 [11]` | `0x0218` | `So I suppose you're not going` | `Então suponho que` | ✅ Validado |
 | `#1755 [12]` | `0x0218` | `to help…` | `você não vai ajudar…` | ✅ Validado |
@@ -1868,7 +1868,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1755 [21]` | `0x0218` | `Let's turn back!` | `Vamos voltar!` | ✅ Validado |
 | `#1755 [22]` | `0x0218` | `Let's turn back!` | `Vamos voltar!` | ✅ Validado |
 | `#1755 [23]` | `0x0218` | `There's no point in heading back.` | `Não adianta voltar.` | ✅ Validado |
-| `#1755 [24]` | `0x0218` | `A Craftknight is bound to fight!` | `Um Craftknight está fadado a lutar!` | ✅ Validado |
+| `#1755 [24]` | `0x0218` | `A Craftknight is bound to fight!` | `Um forjador está fadado a lutar!` | ✅ Validado |
 | `#1755 [25]` | `0x0218` | `Good luck!` | `Boa sorte!` | ✅ Validado |
 | `#1755 [26]` | `0x0218` | `I guess you're right.` | `Acho que você está certo.` | ✅ Validado |
 | `#1755 [27]` | `0x0218` | `Looks like that's the only way out,` | `Parece que essa é a única saída,` | ✅ Validado |
@@ -1876,7 +1876,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1755 [29]` | `0x0218` | `What?` | `O quê?` | ✅ Validado |
 | `#1755 [30]` | `0x0218` | `Okay, okay! Fine, you want me to go` | `Ok, ok! Tudo bem, você quer que eu` | ✅ Validado |
 | `#1755 [31]` | `0x0218` | `fight it alone, right!? I'm not` | `lute sozinho, certo!? Não tenho` | ✅ Validado |
-| `#1755 [32]` | `0x0218` | `afraid of a Summon Creature!` | `medo de uma Summon Creature!` | ✅ Validado |
+| `#1755 [32]` | `0x0218` | `afraid of a Summon Creature!` | `medo de uma Criatura Invocada!` | ✅ Validado |
 | `#1755 [33]` | `0x0218` | `That's the spirit!` | `Esse é o espírito!` | ✅ Validado |
 | `#1755 [35]` | `0x0218` | `Good luck!` | `Boa sorte!` | ✅ Validado |
 
@@ -1888,13 +1888,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | :--- | :--- | :--- | :--- | :---: |
 | `#1756 [0]` | `0x0228` | `Big Bro` | `Grande irmão` | ✅ Validado |
 | `#1756 [1]` | `0x0228` | `Big Sis` | `Irmã mais velha` | ✅ Validado |
-| `#1756 [2]` | `0x0218` | `(That creature was pretty weakened.` | `(Essa criatura estava bastante enfraquecida.` | ✅ Validado |
+| `#1756 [2]` | `0x0218` | `(That creature was pretty weakened.` | `(Essa criatura já tava fraca…)` | ✅ Validado |
 | `#1756 [3]` | `0x0218` | `I guess Razzy had been fighting` | `Acho que a Razzy também` | ✅ Validado |
 | `#1756 [4]` | `0x0218` | `it, too…)` | `estava lutando contra isso…)` | ✅ Validado |
 | `#1756 [5]` | `0x0218` | `You guys are great!` | `Vocês são ótimos!` | ✅ Validado |
 | `#1756 [6]` | `0x0218` | `You totally defeated it!` | `Você o derrotou totalmente!` | ✅ Validado |
 | `#1756 [7]` | `0x0218` | `Hey…` | `Ei…` | ✅ Validado |
-| `#1756 [8]` | `0x0218` | `May I call you {SIBLING}?` | `Posso ligar para você como {SIBLING}?` | ✅ Validado |
+| `#1756 [8]` | `0x0218` | `May I call you {SIBLING}?` | `Posso te chamar de {SIBLING}?` | ✅ Validado |
 | `#1756 [9]` | `0x0218` | `What!?` | `O quê!?` | ✅ Validado |
 | `#1756 [10]` | `0x0218` | `That's it!` | `É isso!` | ✅ Validado |
 | `#1756 [11]` | `0x0218` | `I've decided to call you {SIBLING}` | `Decidi chamá-lo de` | ✅ Validado |
@@ -1922,7 +1922,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1757 [11]` | `0x0218` | `Let's head back and figure out` | `Vamos voltar e` | ✅ Validado |
 | `#1757 [12]` | `0x0218` | `some other way!` | `descobrir outra maneira!` | ✅ Validado |
 | `#1757 [13]` | `0x0218` | `It's a dead end…` | `É um beco sem saída…` | ✅ Validado |
-| `#1757 [14]` | `0x0218` | `Hmm… I've no clue what to do next.` | `Hmm… não tenho ideia do que fazer a seguir.` | ✅ Validado |
+| `#1757 [14]` | `0x0218` | `Hmm… I've no clue what to do next.` | `Hmm… não sei o que fazer agora.` | ✅ Validado |
 | `#1757 [15]` | `0x0218` | `Let's return and figure out a plan!` | `Vamos voltar e traçar um plano!` | ✅ Validado |
 | `#1757 [16]` | `0x0218` | `He's gone again…` | `Ele se foi de novo…` | ✅ Validado |
 | `#1757 [17]` | `0x0218` | `Shall we head back too?` | `Vamos voltar também?` | ✅ Validado |
@@ -1930,7 +1930,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1757 [19]` | `0x0218` | `Shall we head back too?` | `Vamos voltar também?` | ✅ Validado |
 | `#1757 [20]` | `0x0218` | `No, I don't want to…` | `Não, eu não quero…` | ✅ Validado |
 | `#1757 [21]` | `0x0218` | `Why?` | `Por quê?` | ✅ Validado |
-| `#1757 [22]` | `0x0218` | `Haven't you noticed something yet?` | `Você ainda não percebeu alguma coisa?` | ✅ Validado |
+| `#1757 [22]` | `0x0218` | `Haven't you noticed something yet?` | `Você ainda não reparou em nada?` | ✅ Validado |
 | `#1757 [23]` | `0x0218` | `If you haven't, that's okay…` | `Se ainda não, tudo bem…` | ✅ Validado |
 | `#1757 [24]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1757 [25]` | `0x0218` | `It's just a dead end…` | `É apenas um beco sem saída…` | ✅ Validado |
@@ -1939,7 +1939,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1757 [28]` | `0x0218` | `Don't get mad at me!!` | `Não fique bravo comigo!!` | ✅ Validado |
 | `#1757 [29]` | `0x0218` | `Hey, that's not fair! ` | `Ei, isso não é justo!` | ✅ Validado |
 | `#1757 [30]` | `0x0218` | `Don't get mad at me!!` | `Não fique bravo comigo!!` | ✅ Validado |
-| `#1757 [31]` | `0x0218` | `Your Guardian Beast is` | `Sua Guardian Beast` | ✅ Validado |
+| `#1757 [31]` | `0x0218` | `Your Guardian Beast is` | `Sua Fera Guardiã` | ✅ Validado |
 | `#1757 [32]` | `0x0218` | `cheerful and cute.` | `é alegre e fofo.` | ✅ Validado |
 | `#1757 [33]` | `0x0218` | `Yeah, I guess…` | `Sim, eu acho…` | ✅ Validado |
 | `#1757 [34]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
@@ -1973,9 +1973,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1758 [14]` | `0x0218` | `either look around some more, or` | `uma olhada mais um pouco, ou` | ✅ Validado |
 | `#1758 [15]` | `0x0218` | `rest up and resume tomorrow.` | `descansar e retomar amanhã.` | ✅ Validado |
 | `#1758 [17]` | `0x0218` | `Heh.` | `Eh.` | ✅ Validado |
-| `#1758 [18]` | `0x0218` | `I guess we could try either one…` | `Acho que poderíamos tentar qualquer um…` | ✅ Validado |
-| `#1758 [20]` | `0x0218` | `I know it's not the quickest way` | `Eu sei que não é o caminho mais rápido` | ✅ Validado |
-| `#1758 [21]` | `0x0218` | `out of here for sure, but it's the` | `para sair daqui com certeza, mas é o` | ✅ Validado |
+| `#1758 [18]` | `0x0218` | `I guess we could try either one…` | `Dá pra tentar qualquer um…` | ✅ Validado |
+| `#1758 [20]` | `0x0218` | `I know it's not the quickest way` | `Sei que não é o caminho mais` | ✅ Validado |
+| `#1758 [21]` | `0x0218` | `out of here for sure, but it's the` | `rápido pra sair, mas é seguro!` | ✅ Validado |
 | `#1758 [22]` | `0x0218` | `only one we have for now.` | `único que temos por enquanto.` | ✅ Validado |
 | `#1758 [23]` | `0x0218` | `Unless someone can come up` | `A menos que alguém consiga` | ✅ Validado |
 | `#1758 [24]` | `0x0218` | `with a better one, that is.` | `encontrar um melhor, claro.` | ✅ Validado |
@@ -1983,11 +1983,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1758 [26]` | `0x0218` | `the opening ceremony, weren't you?` | `cerimônia de abertura, não estava?` | ✅ Validado |
 | `#1758 [27]` | `0x0218` | `What's this all of a sudden?` | `O que é isso de repente?` | ✅ Validado |
 | `#1758 [28]` | `0x0218` | `Me too, my dream is to win the` | `Eu também, meu sonho é vencer o` | ✅ Validado |
-| `#1758 [29]` | `0x0218` | `tournament and become a Craftlord!` | `torneio e me tornar um Craftlord!` | ✅ Validado |
+| `#1758 [29]` | `0x0218` | `tournament and become a Craftlord!` | `torneio e me tornar um Lorde!` | ✅ Validado |
 | `#1758 [30]` | `0x0218` | `That means that you're` | `Isso significa que você é` | ✅ Validado |
 | `#1758 [31]` | `0x0218` | `my rival, {SIBLING}.` | `meu rival, {SIBLING}.` | ✅ Validado |
 | `#1758 [32]` | `0x0218` | `(…So Razzy's also working to` | `(…Então a Razzy também está` | ✅ Validado |
-| `#1758 [33]` | `0x0218` | `become a Craftlord…)` | `trabalhando para se tornar um Craftlord…)` | ✅ Validado |
+| `#1758 [33]` | `0x0218` | `become a Craftlord…)` | `lutando pra ser um Lorde…)` | ✅ Validado |
 | `#1758 [34]` | `0x0218` | `It's all fair game in the` | `É tudo um jogo justo no` | ✅ Validado |
 | `#1758 [35]` | `0x0218` | `tournament, so whoever` | `torneio, então quem quer que` | ✅ Validado |
 | `#1758 [36]` | `0x0218` | `wins, no hard feelings!` | `ganhe, não há ressentimentos!` | ✅ Validado |
@@ -1995,7 +1995,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1758 [38]` | `0x0218` | `to face each other until much later` | `tenhamos que nos enfrentar até` | ✅ Validado |
 | `#1758 [39]` | `0x0218` | `in the tournament!` | `muito mais tarde no torneio!` | ✅ Validado |
 | `#1758 [40]` | `0x0218` | `You're so strong that you could` | `Você é tão forte que poderia até` | ✅ Validado |
-| `#1758 [41]` | `0x0218` | `even defeat the Summon Creature!` | `derrotar a Summon Creature!` | ✅ Validado |
+| `#1758 [41]` | `0x0218` | `even defeat the Summon Creature!` | `derrotar a Criatura Invocada!` | ✅ Validado |
 | `#1758 [42]` | `0x0218` | `It was because…` | `Foi porque…` | ✅ Validado |
 | `#1758 [43]` | `0x0218` | `(Razzy, you were the one who` | `(Razzy, foi você quem` | ✅ Validado |
 | `#1758 [44]` | `0x0218` | `weakened the monster enough` | `enfraqueceu o monstro o` | ✅ Validado |
@@ -2006,10 +2006,10 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1758 [49]` | `0x0218` | `by that time, you know!` | `forte nessa hora, sabe!` | ✅ Validado |
 | `#1758 [50]` | `0x0218` | `Sure.` | `Claro.` | ✅ Validado |
 | `#1758 [51]` | `0x0218` | `Hey, what are you going to do` | `Ei, o que você fará depois de` | ✅ Validado |
-| `#1758 [52]` | `0x0218` | `after you become a Craftlord,` | `se tornar um Craftlord,` | ✅ Validado |
+| `#1758 [52]` | `0x0218` | `after you become a Craftlord,` | `se tornar um Lorde,` | ✅ Validado |
 | `#1758 [53]` | `0x0218` | `{SIBLING}?` | `{SIBLING}?` | ✅ Validado |
 | `#1758 [54]` | `0x0218` | `Huh?` | `Hã?` | ✅ Validado |
-| `#1758 [55]` | `0x0218` | `I'll plant a huge flower field!` | `Vou plantar um enorme campo de flores!` | ✅ Validado |
+| `#1758 [55]` | `0x0218` | `I'll plant a huge flower field!` | `Vou plantar um mar de flores!` | ✅ Validado |
 | `#1758 [56]` | `0x0218` | `I'll make Wystern into the` | `Farei de Wystern a capital` | ✅ Validado |
 | `#1758 [57]` | `0x0218` | `capital of swords and flowers!` | `das espadas e das flores!` | ✅ Validado |
 | `#1758 [58]` | `0x0218` | `You think it's impossible, right?` | `Você acha que é impossível, certo?` | ✅ Validado |
@@ -2024,7 +2024,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1758 [71]` | `0x0218` | `Huh?` | `Hã?` | ✅ Validado |
 | `#1758 [72]` | `0x0218` | `I heard a female voice!` | `Ouvi uma voz feminina!` | ✅ Validado |
 | `#1758 [73]` | `0x0218` | `It must be Sanary.` | `Deve ser Sanary.` | ✅ Validado |
-| `#1758 [74]` | `0x0218` | `If somebody's there, say something!` | `Se alguém estiver lá, diga alguma coisa!` | ✅ Validado |
+| `#1758 [74]` | `0x0218` | `If somebody's there, say something!` | `Tem alguém aí? Fala alguma coisa!` | ✅ Validado |
 | `#1758 [75]` | `0x0218` | `Hey!` | `Ei!` | ✅ Validado |
 | `#1758 [76]` | `0x0218` | `We're over here, just wait for us!` | `Chegamos, espere por nós!` | ✅ Validado |
 | `#1758 [77]` | `0x0218` | `C'mon Razzy, let's go!` | `Vamos Razzy, vamos lá!` | ✅ Validado |
@@ -2040,15 +2040,15 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1759 [1]` | `0x0218` | `Didn't mind it at all…` | `Não me importei nem um pouco…` | ✅ Validado |
 | `#1759 [2]` | `0x0218` | `I wasn't worried about you.` | `Eu não estava preocupado com você.` | ✅ Validado |
 | `#1759 [3]` | `0x0218` | `(Sanary…` | `(Sanary…` | ✅ Validado |
-| `#1759 [4]` | `0x0218` | `You really were worried about us.)` | `Você realmente estava preocupado conosco.)` | ✅ Validado |
+| `#1759 [4]` | `0x0218` | `You really were worried about us.)` | `(Ela tava preocupada com a gente.)` | ✅ Validado |
 | `#1759 [5]` | `0x0218` | `Thank you.` | `Obrigado.` | ✅ Validado |
-| `#1759 [6]` | `0x0218` | `(Sanary was worried about us.` | `(A Sanary estava preocupada conosco.` | ✅ Validado |
+| `#1759 [6]` | `0x0218` | `(Sanary was worried about us.` | `(Sanary se preocupou com a gente.)` | ✅ Validado |
 | `#1759 [7]` | `0x0218` | `She just doesn't want to admit it.)` | `Ela simplesmente não quer admitir.)` | ✅ Validado |
 | `#1759 [8]` | `0x0218` | `Thank you, Sanary!` | `Obrigado, Sanary!` | ✅ Validado |
 | `#1759 [9]` | `0x0218` | `I said that it's okay!` | `Eu disse que está tudo bem!` | ✅ Validado |
 | `#1759 [10]` | `0x0218` | `But here, this is for you.` | `Mas aqui, isto é para você.` | ✅ Validado |
 | `#1759 [11]` | `0x0218` | `A letter?` | `Uma carta?` | ✅ Validado |
-| `#1759 [12]` | `0x0218` | `It was delivered when you were away!` | `Foi entregue quando você estava fora!` | ✅ Validado |
+| `#1759 [12]` | `0x0218` | `It was delivered when you were away!` | `Chegou enquanto você tava fora!` | ✅ Validado |
 | `#1759 [13]` | `0x0218` | `I don't know what it is, but` | `Não sei o que é, mas` | ✅ Validado |
 | `#1759 [14]` | `0x0218` | `I was visiting your workshop` | `estava visitando sua` | ✅ Validado |
 | `#1759 [15]` | `0x0218` | `at the time, and I received it` | `oficina naquela época e` | ✅ Validado |
@@ -2069,7 +2069,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1759 [30]` | `0x0218` | `Huh?` | `Hã?` | ✅ Validado |
 | `#1759 [31]` | `0x0218` | `Uh, yeah…` | `Ah, sim…` | ✅ Validado |
 | `#1759 [32]` | `0x0218` | `Hey, you, little kid! We need to` | `Ei, você, garotinho! Precisamos ir` | ✅ Validado |
-| `#1759 [33]` | `0x0218` | `go now or Master will be worried!` | `agora ou o Mestre ficará preocupado!` | ✅ Validado |
+| `#1759 [33]` | `0x0218` | `go now or Master will be worried!` | `senão o Mestre vai pirar!` | ✅ Validado |
 | `#1759 [34]` | `0x0218` | `I'm not that little!` | `Eu não sou tão pequeno!` | ✅ Validado |
 | `#1759 [35]` | `0x0218` | `Just come with me!` | `Apenas venha comigo!` | ✅ Validado |
 | `#1759 [36]` | `0x0218` | `Waaaah!` | `Uau!` | ✅ Validado |
@@ -2105,7 +2105,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1759 [69]` | `0x0218` | `Well then…` | `Bem, então…` | ✅ Validado |
 | `#1759 [70]` | `0x0218` | `Good! Give it to me!` | `Que bom! Dê para mim!` | ✅ Validado |
 | `#1759 [71]` | `0x0218` | `Wait! What are you doing!?` | `Espere! O que você está fazendo!?` | ✅ Validado |
-| `#1759 [72]` | `0x0218` | `Hey! What are you trying to do!?` | `Ei! O que você está tentando fazer!?` | ✅ Validado |
+| `#1759 [72]` | `0x0218` | `Hey! What are you trying to do!?` | `Ei! O que tá tentando fazer!?` | ✅ Validado |
 | `#1759 [73]` | `0x0218` | `Shut up!` | `Cale a boca!` | ✅ Validado |
 | `#1759 [74]` | `0x0218` | `You're too slow, so I'll just open` | `Você é muito lento, então` | ✅ Validado |
 | `#1759 [75]` | `0x0218` | `that for you…` | `vou abrir isso para você…` | ✅ Validado |
@@ -2116,7 +2116,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1759 [80]` | `0x0218` | `Razzy!?` | `Razzy!?` | ✅ Validado |
 | `#1759 [81]` | `0x0218` | `You gotta be kidding me!` | `Você deve estar brincando comigo!` | ✅ Validado |
 | `#1759 [82]` | `0x0218` | `It's really Razzy!?` | `É realmente Razzy!?` | ✅ Validado |
-| `#1759 [83]` | `0x0218` | `What the heck… the Craftlords are` | `Que diabos… os Craftlords são cruéis` | ✅ Validado |
+| `#1759 [83]` | `0x0218` | `What the heck… the Craftlords are` | `Que droga… os Lordes são duros!` | ✅ Validado |
 | `#1759 [84]` | `0x0218` | `cruel to make a match like this…` | `para fazer uma combinação dessas…` | ✅ Validado |
 | `#1759 [85]` | `0x0218` | `Hey, let's get going!` | `Ei, vamos indo!` | ✅ Validado |
 | `#1759 [86]` | `0x0218` | `You need to make a weapon before` | `Você precisa fazer uma arma antes` | ✅ Validado |
@@ -2144,14 +2144,14 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1759 [108]` | `0x0218` | `The next opponent is…` | `O próximo oponente é…` | ✅ Validado |
 | `#1759 [109]` | `0x0218` | `Razzy…` | `Razzy…` | ✅ Validado |
 | `#1759 [110]` | `0x0218` | `Whether you win or lose, you'll` | `Quer você ganhe ou perca, você` | ✅ Validado |
-| `#1759 [111]` | `0x0218` | `definitely feel bad about it…` | `definitivamente se sentirá mal por isso…` | ✅ Validado |
+| `#1759 [111]` | `0x0218` | `definitely feel bad about it…` | `vai se sentir mal com isso…` | ✅ Validado |
 | `#1759 [112]` | `0x0218` | `Whether you win or not… You're ` | `Quer você ganhe ou não…` | ✅ Validado |
 | `#1759 [113]` | `0x0218` | `bound to have these conflicting ` | `Você certamente terá essas` | ✅ Validado |
 | `#1759 [114]` | `0x0218` | `emotions.` | `emoções conflitantes.` | ✅ Validado |
 | `#1759 [115]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1759 [116]` | `0x0218` | `That's right, {PARTNER}.` | `Isso mesmo, {PARTNER}.` | ✅ Validado |
 | `#1759 [117]` | `0x0218` | `We must always be serious when` | `Devemos sempre ser sérios quando` | ✅ Validado |
-| `#1759 [118]` | `0x0218` | `we're fighting. I'll do my best!` | `estamos lutando. Farei o meu melhor!` | ✅ Validado |
+| `#1759 [118]` | `0x0218` | `we're fighting. I'll do my best!` | `estamos lutando. Vou dar o meu gás!` | ✅ Validado |
 | `#1759 [119]` | `0x0218` | `No worries!` | `Não se preocupe!` | ✅ Validado |
 | `#1759 [120]` | `0x0218` | `I'll definitely win even if I` | `Com certeza vencerei mesmo que` | ✅ Validado |
 | `#1759 [121]` | `0x0218` | `have to fight Razzy.` | `tenha que lutar contra a Razzy.` | ✅ Validado |
@@ -2173,8 +2173,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1760 [5]` | `0x0218` | `rescuin' Razzy. Sanary and Razzy` | `resgatar a Razzy. Sanary e` | ✅ Validado |
 | `#1760 [6]` | `0x0218` | `told me everything.` | `Razzy me contaram tudo.` | ✅ Validado |
 | `#1760 [7]` | `0x0218` | `Thank you…` | `Obrigado…` | ✅ Validado |
-| `#1760 [8]` | `0x0218` | `(He seems to be crying a little…)` | `(Ele parece estar chorando um pouco…)` | ✅ Validado |
-| `#1760 [9]` | `0x0218` | `(He must've really been worried.)` | `(Ele devia estar realmente preocupado.)` | ✅ Validado |
+| `#1760 [8]` | `0x0218` | `(He seems to be crying a little…)` | `(Ele tá até lacrimejando…)` | ✅ Validado |
+| `#1760 [9]` | `0x0218` | `(He must've really been worried.)` | `(Ele tava preocupado de verdade.)` | ✅ Validado |
 | `#1760 [10]` | `0x0218` | `So… Have ya found out yer` | `Então… Você descobriu` | ✅ Validado |
 | `#1760 [11]` | `0x0218` | `next opponent?` | `seu próximo oponente?` | ✅ Validado |
 | `#1760 [13]` | `0x0218` | `It's Razzy…` | `É Razzy…` | ✅ Validado |
@@ -2200,14 +2200,14 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1760 [34]` | `0x0218` | `But…` | `Mas…` | ✅ Validado |
 | `#1760 [36]` | `0x0218` | `Kutty…` | `Kutty…` | ✅ Validado |
 | `#1760 [37]` | `0x0218` | `What?` | `O quê?` | ✅ Validado |
-| `#1760 [38]` | `0x0218` | `Do ya understand how I'm feelin'?` | `Você entende como estou me sentindo?` | ✅ Validado |
+| `#1760 [38]` | `0x0218` | `Do ya understand how I'm feelin'?` | `Entende o que tô sentindo?` | ✅ Validado |
 | `#1760 [39]` | `0x0218` | `Master…` | `Mestre…` | ✅ Validado |
 | `#1760 [40]` | `0x0218` | `Master…` | `Mestre…` | ✅ Validado |
-| `#1760 [41]` | `0x0218` | `What's wrong with all of you!?` | `O que há de errado com todos vocês!?` | ✅ Validado |
+| `#1760 [41]` | `0x0218` | `What's wrong with all of you!?` | `Qual é o problema de vocês!?` | ✅ Validado |
 | `#1760 [42]` | `0x0218` | `Stop lookin' so sad!` | `Pare de parecer tão triste!` | ✅ Validado |
 | `#1760 [44]` | `0x0218` | `Hey, {PLAYER}! Ya'll win,` | `Ei, {PLAYER}! Você vai vencer, não` | ✅ Validado |
-| `#1760 [45]` | `0x0218` | `no matter what! I'll tell Razzy that` | `importa o que aconteça! Direi isso à` | ✅ Validado |
-| `#1760 [46]` | `0x0218` | `as well, so you'll both have to ` | `Razzy também, então vocês dois terão` | ✅ Validado |
+| `#1760 [45]` | `0x0218` | `no matter what! I'll tell Razzy that` | `vença o que houver! Direi isso` | ✅ Validado |
+| `#1760 [46]` | `0x0218` | `as well, so you'll both have to ` | `à Razzy também, lutem pra valer!` | ✅ Validado |
 | `#1760 [47]` | `0x0218` | `work really hard to win` | `que trabalhar muito para vencer` | ✅ Validado |
 | `#1760 [48]` | `0x0218` | `no matter the cost!` | `não importa o custo!` | ✅ Validado |
 | `#1760 [49]` | `0x0218` | `Uh… yes!` | `Ah… sim!` | ✅ Validado |
@@ -2218,7 +2218,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1761 [0]` | `0x0218` | `You're late, {SIBLING}! Remember,` | `Você está atrasado, {SIBLING}! Lembre-se,` | ✅ Validado |
+| `#1761 [0]` | `0x0218` | `You're late, {SIBLING}! Remember,` | `Atrasou, {SIBLING}! Lembre-se,` | ✅ Validado |
 | `#1761 [1]` | `0x0218` | `fight me with all you've got!` | `lute comigo com tudo que você tem!` | ✅ Validado |
 | `#1761 [2]` | `0x0218` | `Yes!` | `Sim!` | ✅ Validado |
 | `#1761 [3]` | `0x0218` | `All right, here we go!` | `Tudo bem, vamos lá!` | ✅ Validado |
@@ -2227,7 +2227,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1761 [6]` | `0x0218` | `Yes.` | `Sim.` | ✅ Validado |
 | `#1761 [7]` | `0x0218` | `Yes…` | `Sim…` | ✅ Validado |
 | `#1761 [8]` | `0x0218` | `Place your pride as a Craftknight` | `Coloque seu orgulho de ser um` | ✅ Validado |
-| `#1761 [9]` | `0x0218` | `on the line and do your best!!` | `Craftknight em jogo e dê o seu melhor!!` | ✅ Validado |
+| `#1761 [9]` | `0x0218` | `on the line and do your best!!` | `honra de forjador em jogo!` | ✅ Validado |
 | `#1761 [10]` | `0x0218` | `The 16th match in the tournament!` | `A 16ª partida do torneio!` | ✅ Validado |
 | `#1761 [11]` | `0x0218` | `Razzy against {PLAYER}…` | `Razzy contra {PLAYER}…` | ✅ Validado |
 | `#1761 [12]` | `0x0218` | `Ready, fight!` | `Pronto, lute!` | ✅ Validado |
@@ -2259,11 +2259,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [8]` | `0x0218` | `a long time ago?` | `pai há muito tempo?` | ✅ Validado |
 | `#1763 [9]` | `0x0218` | `You went there with my father` | `Você foi lá com meu` | ✅ Validado |
 | `#1763 [10]` | `0x0218` | `a long time ago?` | `pai há muito tempo?` | ✅ Validado |
-| `#1763 [11]` | `0x0218` | `The fourth floor of the Central` | `O quarto andar da Central` | ✅ Validado |
-| `#1763 [12]` | `0x0218` | `Tower? I've never been there…` | `Tower? Eu nunca estive lá…` | ✅ Validado |
+| `#1763 [11]` | `0x0218` | `The fourth floor of the Central` | `O quarto andar da Torre` | ✅ Validado |
+| `#1763 [12]` | `0x0218` | `Tower? I've never been there…` | `Central? Eu nunca estive lá…` | ✅ Validado |
 | `#1763 [13]` | `0x0218` | `How did you get up there?` | `Como você chegou lá?` | ✅ Validado |
 | `#1763 [15]` | `0x0218` | `There's a staircase in the room` | `Tem uma escada no quarto do` | ✅ Validado |
-| `#1763 [16]` | `0x0218` | `on the third floor, right?` | `terceiro andar, certo?` | ✅ Validado |
+| `#1763 [16]` | `0x0218` | `on the third floor, right?` | `no terceiro andar, né?` | ✅ Validado |
 | `#1763 [17]` | `0x0218` | `All right! Let's go!` | `Tudo bem! Vamos!` | ✅ Validado |
 | `#1763 [18]` | `0x0218` | `Razzy looked pretty down…` | `Razzy parecia bem desanimado…` | ✅ Validado |
 | `#1763 [19]` | `0x0218` | `What's wrong? Do you have a` | `O que há de errado? Você está com` | ✅ Validado |
@@ -2282,8 +2282,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [32]` | `0x0218` | `Then reality hit. You can't possibly` | `Então a realidade bateu. Você` | ✅ Validado |
 | `#1763 [33]` | `0x0218` | `imagine what it's like to have your` | `não pode imaginar como é ter` | ✅ Validado |
 | `#1763 [34]` | `0x0218` | `dreams crushed.` | `seus sonhos destruídos.` | ✅ Validado |
-| `#1763 [35]` | `0x0218` | `I'd feel too awkward to see Razzy.` | `Eu me sentiria muito estranho em ver a Razzy.` | ✅ Validado |
-| `#1763 [36]` | `0x0218` | `I'd feel too awkward to see Razzy.` | `Eu me sentiria muito estranho em ver a Razzy.` | ✅ Validado |
+| `#1763 [35]` | `0x0218` | `I'd feel too awkward to see Razzy.` | `Ficaria sem graça de ver a Razzy.` | ✅ Validado |
+| `#1763 [36]` | `0x0218` | `I'd feel too awkward to see Razzy.` | `Ficaria sem graça de ver a Razzy.` | ✅ Validado |
 | `#1763 [37]` | `0x0218` | `We only just became friends` | `Nós nos tornamos` | ✅ Validado |
 | `#1763 [38]` | `0x0218` | `recently…` | `amigos recentemente…` | ✅ Validado |
 | `#1763 [39]` | `0x0218` | `What would you do, {PARTNER}?` | `O que você faria, {PARTNER}?` | ✅ Validado |
@@ -2317,7 +2317,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [68]` | `0x0218` | `until we find Razzy!` | `até encontrarmos a Razzy!` | ✅ Validado |
 | `#1763 [69]` | `0x0218` | `Ugh… okay, all right. The place` | `Ugh… ok, tudo bem. O local com` | ✅ Validado |
 | `#1763 [70]` | `0x0218` | `with all the blossoms is on the` | `todas as flores fica no quarto` | ✅ Validado |
-| `#1763 [71]` | `0x0218` | `fourth floor of the Central Tower.` | `andar da Central Tower.` | ✅ Validado |
+| `#1763 [71]` | `0x0218` | `fourth floor of the Central Tower.` | `no quarto andar da Torre Central.` | ✅ Validado |
 | `#1763 [72]` | `0x0218` | `Shintetsu and I went there before.` | `Shintetsu e eu fomos lá antes.` | ✅ Validado |
 | `#1763 [73]` | `0x0218` | `Thanks, {PARTNER}!` | `Obrigado, {PARTNER}!` | ✅ Validado |
 | `#1763 [74]` | `0x0218` | `So… How can we get up to the` | `Então… Como podemos` | ✅ Validado |
@@ -2330,13 +2330,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [81]` | `0x0218` | `All right! Let's go!` | `Tudo bem! Vamos!` | ✅ Validado |
 | `#1763 [82]` | `0x0218` | `Razzy seemed pretty down…` | `Razzy parecia bastante desanimado…` | ✅ Validado |
 | `#1763 [83]` | `0x0218` | `Do you think so?` | `Você acha?` | ✅ Validado |
-| `#1763 [84]` | `0x0218` | `If you do, you should go after her.` | `Se você fizer isso, você deve ir atrás dela.` | ✅ Validado |
+| `#1763 [84]` | `0x0218` | `If you do, you should go after her.` | `Se sente isso, devia ir atrás dela.` | ✅ Validado |
 | `#1763 [85]` | `0x0218` | `Huh?` | `Hã?` | ✅ Validado |
 | `#1763 [86]` | `0x0218` | `Please…` | `Por favor…` | ✅ Validado |
 | `#1763 [87]` | `0x0218` | `You need to understand a` | `Você precisa entender os` | ✅ Validado |
 | `#1763 [88]` | `0x0218` | `girl's feelings…` | `sentimentos de uma garota…` | ✅ Validado |
 | `#1763 [89]` | `0x0218` | `A girl's feelings?` | `Os sentimentos de uma garota?` | ✅ Validado |
-| `#1763 [90]` | `0x0218` | `You say "a girl's feelings"…` | `Você diz “os sentimentos de uma garota”…` | ✅ Validado |
+| `#1763 [90]` | `0x0218` | `You say "a girl's feelings"…` | `Diz 'os sentimentos dela'…` | ✅ Validado |
 | `#1763 [91]` | `0x0218` | `But, I'm a girl too…` | `Mas eu também sou uma menina…` | ✅ Validado |
 | `#1763 [92]` | `0x0218` | `Have you really not noticed?` | `Você realmente não percebeu?` | ✅ Validado |
 | `#1763 [93]` | `0x0218` | `If not… please just forget it. ` | `Se não… por favor, esqueça.` | ✅ Validado |
@@ -2344,11 +2344,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [95]` | `0x0218` | `that she mentioned before.` | `secreto que ela mencionou antes.` | ✅ Validado |
 | `#1763 [96]` | `0x0218` | `This part of Wystern has ` | `Esta parte de Wystern tem` | ✅ Validado |
 | `#1763 [97]` | `0x0218` | `a lot of flowers blooming in it…` | `muitas flores desabrochando…` | ✅ Validado |
-| `#1763 [98]` | `0x0218` | `It's probably the fourth floor of` | `Provavelmente é o quarto` | ✅ Validado |
-| `#1763 [99]` | `0x0218` | `Central Tower.` | `andar da Central Tower.` | ✅ Validado |
+| `#1763 [98]` | `0x0218` | `It's probably the fourth floor of` | `Provavelmente no quarto andar!` | ✅ Validado |
+| `#1763 [99]` | `0x0218` | `Central Tower.` | `andar da Torre Central.` | ✅ Validado |
 | `#1763 [100]` | `0x0218` | `I've been there ` | `Já estive lá com` | ✅ Validado |
 | `#1763 [101]` | `0x0218` | `with Shintetsu before…` | `Shintetsu antes…` | ✅ Validado |
-| `#1763 [102]` | `0x0218` | `The fourth floor?` | `O quarto andar?` | ✅ Validado |
+| `#1763 [102]` | `0x0218` | `The fourth floor?` | `No quarto andar?` | ✅ Validado |
 | `#1763 [103]` | `0x0218` | `Is there a way up there?` | `Existe um caminho até lá?` | ✅ Validado |
 | `#1763 [104]` | `0x0218` | `There are some stairs in a room` | `Existem algumas escadas em uma` | ✅ Validado |
 | `#1763 [105]` | `0x0218` | `on the third floor.` | `sala do terceiro andar.` | ✅ Validado |
@@ -2363,11 +2363,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [114]` | `0x0218` | `Aren't you going after the child?` | `Você não vai atrás da criança?` | ✅ Validado |
 | `#1763 [115]` | `0x0218` | `(Oh… the strange person from` | `(Oh… a pessoa estranha` | ✅ Validado |
 | `#1763 [116]` | `0x0218` | `the sword room…)` | `da sala da espada…)` | ✅ Validado |
-| `#1763 [117]` | `0x0218` | `You mean… I should chase Razzy?` | `Você quer dizer… eu deveria perseguir a Razzy?` | ✅ Validado |
+| `#1763 [117]` | `0x0218` | `You mean… I should chase Razzy?` | `Quer dizer… devia ir atrás dela?` | ✅ Validado |
 | `#1763 [118]` | `0x0218` | `But…` | `Mas…` | ✅ Validado |
 | `#1763 [119]` | `0x0218` | `I've no clue where to look.` | `Não tenho ideia de onde procurar.` | ✅ Validado |
-| `#1763 [120]` | `0x0218` | `I saw the child on the third floor.` | `Vi a criança no terceiro andar.` | ✅ Validado |
-| `#1763 [121]` | `0x0218` | `What? The third floor?` | `O quê? O terceiro andar?` | ✅ Validado |
+| `#1763 [120]` | `0x0218` | `I saw the child on the third floor.` | `Vi ela no terceiro andar!` | ✅ Validado |
+| `#1763 [121]` | `0x0218` | `What? The third floor?` | `O quê!? No terceiro andar?` | ✅ Validado |
 | `#1763 [122]` | `0x0218` | `Why up there?` | `Por que lá em cima?` | ✅ Validado |
 | `#1763 [123]` | `0x0218` | `Isn't there a secret place?` | `Não existe um lugar secreto?` | ✅ Validado |
 | `#1763 [124]` | `0x0218` | `A secret place…` | `Um lugar secreto…` | ✅ Validado |
@@ -2376,13 +2376,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1763 [127]` | `0x0218` | `flowers in bloom.` | `muitas flores desabrochando.` | ✅ Validado |
 | `#1763 [128]` | `0x0218` | `there is a place with lots of` | `tem um lugar com muitas flores` | ✅ Validado |
 | `#1763 [129]` | `0x0218` | `flowers blooming, or something…` | `desabrochando, ou algo assim…` | ✅ Validado |
-| `#1763 [130]` | `0x0218` | `I wonder if it's on the fourth floor` | `Será que fica no quarto` | ✅ Validado |
-| `#1763 [131]` | `0x0218` | `of the Central Tower?` | `andar da Central Tower?` | ✅ Validado |
-| `#1763 [132]` | `0x0218` | `The fourth floor?` | `O quarto andar?` | ✅ Validado |
+| `#1763 [130]` | `0x0218` | `I wonder if it's on the fourth floor` | `Será que fica no quarto andar?` | ✅ Validado |
+| `#1763 [131]` | `0x0218` | `of the Central Tower?` | `andar da Torre Central?` | ✅ Validado |
+| `#1763 [132]` | `0x0218` | `The fourth floor?` | `No quarto andar?` | ✅ Validado |
 | `#1763 [133]` | `0x0218` | `How can we get up there?` | `Como podemos chegar lá?` | ✅ Validado |
 | `#1763 [134]` | `0x0218` | `The only thing I can tell you is ` | `A única coisa que posso dizer é` | ✅ Validado |
 | `#1763 [135]` | `0x0218` | `that there are stairs from the third` | `que há escadas do terceiro andar` | ✅ Validado |
-| `#1763 [136]` | `0x0218` | `floor in the Craftlord's room…` | `na sala do Craftlord…` | ✅ Validado |
+| `#1763 [136]` | `0x0218` | `floor in the Craftlord's room…` | `na sala do Lorde…` | ✅ Validado |
 | `#1763 [137]` | `0x0218` | `Are you sure!?` | `Tem certeza!?` | ✅ Validado |
 | `#1763 [138]` | `0x0218` | `I'll go find them!` | `Eu irei procurá-los!` | ✅ Validado |
 | `#1763 [139]` | `0x0218` | `Thank you very much!` | `Muito obrigado!` | ✅ Validado |
@@ -2395,13 +2395,13 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
 | `#1764 [1]` | `0x0218` | `I got it!` | `Entendi!` | ✅ Validado |
-| `#1764 [2]` | `0x0218` | `We can go to the fourth floor from a` | `Podemos ir para o quarto andar` | ✅ Validado |
+| `#1764 [2]` | `0x0218` | `We can go to the fourth floor from a` | `Dá para subir ao quarto andar!` | ✅ Validado |
 | `#1764 [3]` | `0x0218` | `staircase in this room.` | `por uma escada nesta sala.` | ✅ Validado |
-| `#1764 [4]` | `0x0218` | `The stairs to the fourth floor` | `As escadas para o quarto andar` | ✅ Validado |
+| `#1764 [4]` | `0x0218` | `The stairs to the fourth floor` | `A escada pro quarto andar fica lá!` | ✅ Validado |
 | `#1764 [5]` | `0x0218` | `should be in this room.` | `devem estar nesta sala.` | ✅ Validado |
 | `#1764 [6]` | `0x0218` | `Thank you!` | `Obrigado!` | ✅ Validado |
 | `#1764 [7]` | `0x0218` | `We should be able to go to the` | `Devemos poder ir para o` | ✅ Validado |
-| `#1764 [8]` | `0x0218` | `fourth floor from the stairs in this` | `quarto andar pelas` | ✅ Validado |
+| `#1764 [8]` | `0x0218` | `fourth floor from the stairs in this` | `quarto andar por aquela sala!` | ✅ Validado |
 | `#1764 [9]` | `0x0218` | `room…` | `escadas desta sala…` | ✅ Validado |
 | `#1764 [10]` | `0x0218` | `I get it!` | `Entendi!` | ✅ Validado |
 | `#1764 [11]` | `0x0218` | `Thank you!` | `Obrigado!` | ✅ Validado |
@@ -2427,17 +2427,17 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1765 [10]` | `0x0218` | `Razzy must be on the other side!` | `Razzy deve estar do outro lado!` | ✅ Validado |
 | `#1765 [11]` | `0x0218` | `But no one can go in here…` | `Mas ninguém pode entrar aqui…` | ✅ Validado |
 | `#1765 [12]` | `0x0218` | `Flowers in Wystern… it's` | `Flores em Wystern… deve` | ✅ Validado |
-| `#1765 [13]` | `0x0218` | `got to be on the fourth floor…` | `ser no quarto andar…` | ✅ Validado |
+| `#1765 [13]` | `0x0218` | `got to be on the fourth floor…` | `deve ser no quarto andar…` | ✅ Validado |
 | `#1765 [14]` | `0x0218` | `But, no one can enter here…` | `Mas ninguém pode entrar aqui…` | ✅ Validado |
 | `#1765 [15]` | `0x0218` | `That's strange…` | `Isso é estranho…` | ✅ Validado |
 | `#1765 [16]` | `0x0218` | `Flowers in Wystern… it's` | `Flores em Wystern… deve` | ✅ Validado |
-| `#1765 [17]` | `0x0218` | `got to be the fourth floor…` | `ser o quarto andar…` | ✅ Validado |
+| `#1765 [17]` | `0x0218` | `got to be the fourth floor…` | `tem que ser no quarto andar…` | ✅ Validado |
 | `#1765 [18]` | `0x0218` | `But, no one can enter here…` | `Mas ninguém pode entrar aqui…` | ✅ Validado |
 | `#1765 [19]` | `0x0218` | `Kutty?` | `Kutty?` | ✅ Validado |
 | `#1765 [20]` | `0x0218` | `Are you sure Razzy is on the other ` | `Tem certeza de que Razzy está` | ✅ Validado |
 | `#1765 [21]` | `0x0218` | `side, {PARTNER}?` | `do outro lado, {PARTNER}?` | ✅ Validado |
 | `#1765 [22]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1765 [23]` | `0x0218` | `Does that mean Razzy's here?` | `Isso significa que a Razzy está aqui?` | ✅ Validado |
+| `#1765 [23]` | `0x0218` | `Does that mean Razzy's here?` | `Quer dizer que a Razzy tá aqui?` | ✅ Validado |
 | `#1765 [25]` | `0x0218` | `There might be another entrance…` | `Pode haver outra entrada…` | ✅ Validado |
 
 ---
@@ -2447,7 +2447,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
 | `#1766 [0]` | `0x0218` | `Wow!` | `Uau!` | ✅ Validado |
-| `#1766 [1]` | `0x0218` | `There really is a flower field!` | `Realmente existe um campo de flores!` | ✅ Validado |
+| `#1766 [1]` | `0x0218` | `There really is a flower field!` | `Tem mesmo um campo de flores!` | ✅ Validado |
 | `#1766 [3]` | `0x0218` | `See!?` | `Viu!?` | ✅ Validado |
 | `#1766 [4]` | `0x0218` | `It's just as I told you!` | `É exatamente como eu te disse!` | ✅ Validado |
 | `#1766 [5]` | `0x0218` | `I'm happy.` | `Estou feliz.` | ✅ Validado |
@@ -2476,7 +2476,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1766 [30]` | `0x0218` | `{SIBLING}, you think it's ` | `{SIBLING}, você também` | ✅ Validado |
 | `#1766 [31]` | `0x0218` | `beautiful too, don't you?` | `acha lindo, não é?` | ✅ Validado |
 | `#1766 [32]` | `0x0218` | `Yes.` | `Sim.` | ✅ Validado |
-| `#1766 [33]` | `0x0218` | `We need to keep this place safe` | `Precisamos manter este lugar seguro para` | ✅ Validado |
+| `#1766 [33]` | `0x0218` | `We need to keep this place safe` | `Temos que proteger este lugar` | ✅ Validado |
 | `#1766 [34]` | `0x0218` | `for your dream to come true.` | `que seu sonho se torne realidade.` | ✅ Validado |
 | `#1766 [35]` | `0x0218` | `Huh…` | `Hã…` | ✅ Validado |
 | `#1766 [36]` | `0x0218` | `Because I know your dream is to` | `Porque eu sei que o seu sonho é` | ✅ Validado |
@@ -2487,7 +2487,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1766 [41]` | `0x0218` | `both swords and flowers, right?` | `espadas e das flores, certo?` | ✅ Validado |
 | `#1766 [42]` | `0x0218` | `Yeah…` | `Sim…` | ✅ Validado |
 | `#1766 [43]` | `0x0218` | `But I want {SIBLING} to become a` | `Mas quero que o {SIBLING}` | ✅ Validado |
-| `#1766 [44]` | `0x0218` | `Craftlord.` | `se torne um Craftlord.` | ✅ Validado |
+| `#1766 [44]` | `0x0218` | `Craftlord.` | `se torne um Lorde.` | ✅ Validado |
 | `#1766 [45]` | `0x0218` | `I can sense that {SIBLING} can` | `Posso sentir que o {SIBLING} pode` | ✅ Validado |
 | `#1766 [46]` | `0x0218` | `listen to the wishes of the people,` | `ouvir os desejos das pessoas e` | ✅ Validado |
 | `#1766 [47]` | `0x0218` | `and make it a better place.` | `torná-lo um lugar melhor.` | ✅ Validado |
@@ -2497,14 +2497,14 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1766 [51]` | `0x0218` | `Because, {SIBLING} remembered` | `Porque, {SIBLING}` | ✅ Validado |
 | `#1766 [52]` | `0x0218` | `my wish…` | `lembrou do meu desejo…` | ✅ Validado |
 | `#1766 [53]` | `0x0218` | `I mean…` | `Quero dizer…` | ✅ Validado |
-| `#1766 [54]` | `0x0218` | `It's beautiful. I'd love to grow a` | `É lindo. Eu adoraria cultivar um campo` | ✅ Validado |
+| `#1766 [54]` | `0x0218` | `It's beautiful. I'd love to grow a` | `É lindo. Adoraria ter um campo` | ✅ Validado |
 | `#1766 [55]` | `0x0218` | `flower field like this someday.` | `de flores como este algum dia.` | ✅ Validado |
-| `#1766 [56]` | `0x0218` | `It's beautiful. I'd love to grow a` | `É lindo. Eu adoraria cultivar um campo` | ✅ Validado |
+| `#1766 [56]` | `0x0218` | `It's beautiful. I'd love to grow a` | `É lindo. Adoraria ter um campo` | ✅ Validado |
 | `#1766 [57]` | `0x0218` | `flower field like this someday.` | `de flores como este algum dia.` | ✅ Validado |
 | `#1766 [59]` | `0x0218` | `What's that?` | `O que é isso?` | ✅ Validado |
 | `#1766 [60]` | `0x0218` | `Hmm.` | `Hum.` | ✅ Validado |
 | `#1766 [61]` | `0x0218` | `I'd be happy if {SIBLING}` | `Eu ficaria feliz se o {SIBLING}` | ✅ Validado |
-| `#1766 [62]` | `0x0218` | `became a Craftlord.` | `se tornasse um Craftlord.` | ✅ Validado |
+| `#1766 [62]` | `0x0218` | `became a Craftlord.` | `se tornasse um Lorde.` | ✅ Validado |
 | `#1766 [63]` | `0x0218` | `It's because…` | `É porque…` | ✅ Validado |
 | `#1766 [64]` | `0x0218` | `I can sense that you can make my` | `Posso sentir que você pode` | ✅ Validado |
 | `#1766 [65]` | `0x0218` | `dream come true, {SIBLING}.` | `realizar meu sonho, {SIBLING}.` | ✅ Validado |
@@ -2518,27 +2518,27 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1766 [73]` | `0x0218` | `Why do we have lots of flowers` | `Por que temos tantas flores` | ✅ Validado |
 | `#1766 [74]` | `0x0218` | `blooming in this place?` | `desabrochando neste lugar?` | ✅ Validado |
 | `#1766 [75]` | `0x0218` | `Hmm… I don't know, but` | `Hmm… não sei, mas talvez um` | ✅ Validado |
-| `#1766 [76]` | `0x0218` | `maybe a Craftlord let them grow.` | `Craftlord os tenha deixado crescer.` | ✅ Validado |
-| `#1766 [77]` | `0x0218` | `If so, it'll be our job to keep` | `Nesse caso, será nosso trabalho mantê-los` | ✅ Validado |
-| `#1766 [78]` | `0x0218` | `them when we become a Craftlord.` | `quando nos tornarmos um Craftlord.` | ✅ Validado |
+| `#1766 [76]` | `0x0218` | `maybe a Craftlord let them grow.` | `Lorde os tenha deixado crescer.` | ✅ Validado |
+| `#1766 [77]` | `0x0218` | `If so, it'll be our job to keep` | `Nosso dever será protegê-los` | ✅ Validado |
+| `#1766 [78]` | `0x0218` | `them when we become a Craftlord.` | `quando nos tornarmos um Lorde.` | ✅ Validado |
 | `#1766 [79]` | `0x0218` | `Yeah…` | `Sim…` | ✅ Validado |
 | `#1766 [80]` | `0x0218` | `{SIBLING}, when you become a` | `{SIBLING}, quando você se` | ✅ Validado |
-| `#1766 [81]` | `0x0218` | `Craftlord, you'll let me in here,` | `tornar um Craftlord, você me` | ✅ Validado |
+| `#1766 [81]` | `0x0218` | `Craftlord, you'll let me in here,` | `tornar um Lorde, você me` | ✅ Validado |
 | `#1766 [82]` | `0x0218` | `right?` | `deixará entrar aqui, certo?` | ✅ Validado |
 | `#1766 [83]` | `0x0218` | `That's right.` | `Isso mesmo.` | ✅ Validado |
 | `#1766 [84]` | `0x0218` | `If so, it'll be an important job` | `Nesse caso, será um trabalho` | ✅ Validado |
 | `#1766 [85]` | `0x0218` | `to do when one of us becomes` | `importante quando um de nós` | ✅ Validado |
-| `#1766 [86]` | `0x0218` | `a Craftlord.` | `se tornar um Craftlord.` | ✅ Validado |
+| `#1766 [86]` | `0x0218` | `a Craftlord.` | `se tornar um Lorde.` | ✅ Validado |
 | `#1766 [87]` | `0x0218` | `Yes…` | `Sim…` | ✅ Validado |
 | `#1766 [88]` | `0x0218` | `When {SIBLING} becomes` | `Quando a {SIBLING} se tornar` | ✅ Validado |
-| `#1766 [89]` | `0x0218` | `a Craftlord, I can come here` | `um Craftlord, posso vir aqui` | ✅ Validado |
+| `#1766 [89]` | `0x0218` | `a Craftlord, I can come here` | `um Lorde, posso vir aqui` | ✅ Validado |
 | `#1766 [90]` | `0x0218` | `with no problem, right?` | `sem problemas, certo?` | ✅ Validado |
 | `#1766 [91]` | `0x0218` | `Yes, we'll let you in!` | `Sim, vamos deixar você entrar!` | ✅ Validado |
 | `#1766 [92]` | `0x0218` | `I hope {SIBLING}` | `Espero que o {SIBLING} se` | ✅ Validado |
-| `#1766 [93]` | `0x0218` | `becomes a Craftlord!` | `torne um Craftlord!` | ✅ Validado |
+| `#1766 [93]` | `0x0218` | `becomes a Craftlord!` | `torne um Lorde!` | ✅ Validado |
 | `#1766 [94]` | `0x0218` | `You defeated me, you know!` | `Você me derrotou, você sabe!` | ✅ Validado |
 | `#1766 [95]` | `0x0218` | `So you need to promise to become a` | `Então você precisa prometer` | ✅ Validado |
-| `#1766 [96]` | `0x0218` | `Craftlord!` | `se tornar um Craftlord!` | ✅ Validado |
+| `#1766 [96]` | `0x0218` | `Craftlord!` | `se tornar um Lorde!` | ✅ Validado |
 | `#1766 [97]` | `0x0218` | `Yes.` | `Sim.` | ✅ Validado |
 | `#1766 [98]` | `0x0218` | `Good! I'll get going now!` | `Que bom! Eu vou indo agora!` | ✅ Validado |
 | `#1766 [99]` | `0x0218` | `Oh, {SIBLING}!` | `Ah, {SIBLING}!` | ✅ Validado |
@@ -2569,20 +2569,20 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1767 [16]` | `0x0218` | `Thanks again.` | `Obrigado novamente.` | ✅ Validado |
 | `#1767 [17]` | `0x0218` | `See ya later.` | `Até logo.` | ✅ Validado |
 | `#1767 [18]` | `0x0218` | `Master…` | `Mestre…` | ✅ Validado |
-| `#1767 [19]` | `0x0218` | `He was really worried about Razzy.` | `Ele estava realmente preocupado com a Razzy.` | ✅ Validado |
+| `#1767 [19]` | `0x0218` | `He was really worried about Razzy.` | `Ele tava muito preocupado com ela.` | ✅ Validado |
 | `#1767 [20]` | `0x0218` | `All right!` | `Tudo bem!` | ✅ Validado |
 | `#1767 [21]` | `0x0218` | `It's starting to become a routine,` | `Está começando a virar` | ✅ Validado |
 | `#1767 [22]` | `0x0218` | `but I'll go for a walk…` | `rotina, mas vou dar uma volta…` | ✅ Validado |
 | `#1767 [23]` | `0x0218` | `Master…` | `Mestre…` | ✅ Validado |
-| `#1767 [24]` | `0x0218` | `He was really worried about Razzy.` | `Ele estava realmente preocupado com a Razzy.` | ✅ Validado |
+| `#1767 [24]` | `0x0218` | `He was really worried about Razzy.` | `Ele tava muito preocupado com ela.` | ✅ Validado |
 | `#1767 [25]` | `0x0218` | `He seems to have recovered from ` | `Ele parece ter se recuperado` | ✅ Validado |
 | `#1767 [26]` | `0x0218` | `his strained back.` | `da distensão nas costas.` | ✅ Validado |
 | `#1767 [27]` | `0x0218` | `All right!` | `Tudo bem!` | ✅ Validado |
 | `#1767 [28]` | `0x0218` | `It's starting to become a routine,` | `Está começando a virar` | ✅ Validado |
 | `#1767 [29]` | `0x0218` | `but I'll go for a walk…` | `rotina, mas vou dar uma volta…` | ✅ Validado |
-| `#1767 [30]` | `0x0218` | `We keep hearing these things about ` | `Continuamos ouvindo essas coisas sobre a` | ✅ Validado |
-| `#1767 [31]` | `0x0218` | `Razzy. I wonder if we'd feel better ` | `Razzy. Eu me pergunto se nos sentiríamos` | ✅ Validado |
-| `#1767 [32]` | `0x0218` | `if we talked to someone about it.` | `melhor se falássemos com alguém sobre isso.` | ✅ Validado |
+| `#1767 [30]` | `0x0218` | `We keep hearing these things about ` | `A gente não para de ouvir sobre a` | ✅ Validado |
+| `#1767 [31]` | `0x0218` | `Razzy. I wonder if we'd feel better ` | `Razzy. Desabafar com alguém` | ✅ Validado |
+| `#1767 [32]` | `0x0218` | `if we talked to someone about it.` | `ajudaria a clarear as ideias.` | ✅ Validado |
 | `#1767 [33]` | `0x0221` | `{PARTNER}` | `{PARTNER}` | ✅ Validado |
 | `#1767 [34]` | `0x0221` | `Sanary` | `Sanary` | ✅ Validado |
 | `#1767 [35]` | `0x0221` | `Varil` | `Varil` | ✅ Validado |
@@ -2594,7 +2594,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1767 [42]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1767 [43]` | `0x0218` | `I'll go to the undersea observatory.` | `Irei ao observatório submarino.` | ✅ Validado |
 | `#1767 [44]` | `0x0218` | `I'll go to the park.` | `Vou ao parque.` | ✅ Validado |
-| `#1767 [45]` | `0x0218` | `I'll go to the Central Tower.` | `Vou para a Central Tower.` | ✅ Validado |
+| `#1767 [45]` | `0x0218` | `I'll go to the Central Tower.` | `Vou para a Torre Central.` | ✅ Validado |
 
 ---
 
@@ -2608,14 +2608,14 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [4]` | `0x0218` | `You don't get what I'm saying,` | `Você não entende o que` | ✅ Validado |
 | `#1795 [5]` | `0x0218` | `do you?` | `estou dizendo, não é?` | ✅ Validado |
 | `#1795 [6]` | `0x0218` | `I think that Razzy would make a` | `Acho que a Razzy seria um` | ✅ Validado |
-| `#1795 [7]` | `0x0218` | `better Craftlord than I would.` | `Craftlord melhor do que eu.` | ✅ Validado |
+| `#1795 [7]` | `0x0218` | `better Craftlord than I would.` | `Lorde melhor do que eu.` | ✅ Validado |
 | `#1795 [9]` | `0x0218` | `Thank you for saying that.` | `Obrigado por dizer isso.` | ✅ Validado |
 | `#1795 [10]` | `0x0218` | `But…` | `Mas…` | ✅ Validado |
-| `#1795 [11]` | `0x0218` | `Razzy doesn't want a capital known` | `Razzy não quer uma capital conhecida apenas` | ✅ Validado |
-| `#1795 [12]` | `0x0218` | `only for swords, but for flowers ` | `pelas espadas, mas também pelas flores. Esse` | ✅ Validado |
+| `#1795 [11]` | `0x0218` | `Razzy doesn't want a capital known` | `Razzy não quer só espadas,` | ✅ Validado |
+| `#1795 [12]` | `0x0218` | `only for swords, but for flowers ` | `quer flores. É o sonho dela.` | ✅ Validado |
 | `#1795 [13]` | `0x0218` | `too. That dream might come true.` | `sonho pode se tornar realidade.` | ✅ Validado |
 | `#1795 [14]` | `0x0218` | `On the other hand, I just want to be` | `Por outro lado, só quero ser um` | ✅ Validado |
-| `#1795 [15]` | `0x0218` | `a Craftlord like my dad. And that's` | `Craftlord como meu pai. E isso é` | ✅ Validado |
+| `#1795 [15]` | `0x0218` | `a Craftlord like my dad. And that's` | `Lorde como meu pai. E isso é` | ✅ Validado |
 | `#1795 [16]` | `0x0218` | `all I want, you know?` | `tudo que eu quero, sabe?` | ✅ Validado |
 | `#1795 [17]` | `0x0218` | `I don't even know what he was like.` | `Eu nem sei como ele era.` | ✅ Validado |
 | `#1795 [19]` | `0x0218` | `Huh…` | `Hã…` | ✅ Validado |
@@ -2623,9 +2623,9 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [22]` | `0x0218` | `Making everyone's dreams come true,` | `Realizar os sonhos de todos,` | ✅ Validado |
 | `#1795 [23]` | `0x0218` | `was that his dream?` | `esse era o sonho dele?` | ✅ Validado |
 | `#1795 [25]` | `0x0218` | `I see!` | `Entendo!` | ✅ Validado |
-| `#1795 [26]` | `0x0218` | `To be a true Craftknight, I need to` | `Para ser um verdadeiro Craftknight,` | ✅ Validado |
-| `#1795 [27]` | `0x0218` | `become a person who can take in` | `preciso me tornar uma pessoa que possa` | ✅ Validado |
-| `#1795 [28]` | `0x0218` | `the dream of those I fought against,` | `realizar o sonho daqueles contra quem` | ✅ Validado |
+| `#1795 [26]` | `0x0218` | `To be a true Craftknight, I need to` | `Para ser um verdadeiro forjador,` | ✅ Validado |
+| `#1795 [27]` | `0x0218` | `become a person who can take in` | `preciso honrar os sonhos de quem` | ✅ Validado |
+| `#1795 [28]` | `0x0218` | `the dream of those I fought against,` | `enfrentei nesta arena.` | ✅ Validado |
 | `#1795 [29]` | `0x0218` | `and make it a reality.` | `lutei e torná-lo realidade.` | ✅ Validado |
 | `#1795 [31]` | `0x0218` | `I think I feel better now that we've` | `Acho que me sinto melhor agora que` | ✅ Validado |
 | `#1795 [32]` | `0x0218` | `talked. Thanks, {PARTNER}.` | `conversamos. Obrigado, {PARTNER}.` | ✅ Validado |
@@ -2635,15 +2635,15 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [36]` | `0x0218` | `that particular battle?` | `batalha em particular?` | ✅ Validado |
 | `#1795 [38]` | `0x0218` | `You don't understand me, do you?` | `Você não me entende, não é?` | ✅ Validado |
 | `#1795 [39]` | `0x0218` | `I think that Razzy would make a` | `Acho que a Razzy seria um` | ✅ Validado |
-| `#1795 [40]` | `0x0218` | `better Craftlord than I would.` | `Craftlord melhor do que eu.` | ✅ Validado |
+| `#1795 [40]` | `0x0218` | `better Craftlord than I would.` | `Lorde melhor do que eu.` | ✅ Validado |
 | `#1795 [42]` | `0x0218` | `You don't think so?` | `Você não acha?` | ✅ Validado |
 | `#1795 [43]` | `0x0218` | `Thank you for saying so.` | `Obrigado por dizer isso.` | ✅ Validado |
 | `#1795 [44]` | `0x0218` | `But…` | `Mas…` | ✅ Validado |
-| `#1795 [45]` | `0x0218` | `Razzy doesn't want a capital known` | `Razzy não quer uma capital conhecida apenas` | ✅ Validado |
-| `#1795 [46]` | `0x0218` | `only for swords, but for flowers ` | `pelas espadas, mas também pelas flores. Esse` | ✅ Validado |
+| `#1795 [45]` | `0x0218` | `Razzy doesn't want a capital known` | `Razzy quer uma capital florida,` | ✅ Validado |
+| `#1795 [46]` | `0x0218` | `only for swords, but for flowers ` | `não só de espadas. Belo sonho.` | ✅ Validado |
 | `#1795 [47]` | `0x0218` | `too. That dream may come true.` | `sonho pode se tornar realidade.` | ✅ Validado |
-| `#1795 [48]` | `0x0218` | `By contrast, I just want to become a` | `Por outro lado, eu só quero me tornar` | ✅ Validado |
-| `#1795 [49]` | `0x0218` | `great Craftlord like my father. ` | `um grande Craftlord como meu pai.` | ✅ Validado |
+| `#1795 [48]` | `0x0218` | `By contrast, I just want to become a` | `Já eu, só quero me tornar um` | ✅ Validado |
+| `#1795 [49]` | `0x0218` | `great Craftlord like my father. ` | `um grande Lorde como meu pai.` | ✅ Validado |
 | `#1795 [50]` | `0x0218` | `And that's all I want, you know?` | `E isso é tudo que eu quero, sabe?` | ✅ Validado |
 | `#1795 [51]` | `0x0218` | `I don't even know what he was like.` | `Eu nem sei como ele era.` | ✅ Validado |
 | `#1795 [53]` | `0x0218` | `Huh…` | `Hã…` | ✅ Validado |
@@ -2655,7 +2655,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [62]` | `0x0218` | `Yeah, I'll become so good that ` | `Sim, vou me tornar tão` | ✅ Validado |
 | `#1795 [63]` | `0x0218` | `I can make Razzy's dream come` | `bom que poderei realizar` | ✅ Validado |
 | `#1795 [64]` | `0x0218` | `true.` | `o sonho da Razzy.` | ✅ Validado |
-| `#1795 [65]` | `0x0218` | `I feel a bit better after this talk.` | `Sinto-me um pouco melhor depois desta conversa.` | ✅ Validado |
+| `#1795 [65]` | `0x0218` | `I feel a bit better after this talk.` | `Tô bem melhor depois desse papo.` | ✅ Validado |
 | `#1795 [66]` | `0x0218` | `Thank you, {PARTNER}.` | `Obrigado, {PARTNER}.` | ✅ Validado |
 | `#1795 [67]` | `0x0218` | `What's wrong with you?` | `O que há de errado com você?` | ✅ Validado |
 | `#1795 [68]` | `0x0218` | `Are you still feeling down about` | `Você ainda está` | ✅ Validado |
@@ -2668,29 +2668,29 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [75]` | `0x0218` | `much smaller than I am,` | `menor que eu, a Razzy já estava` | ✅ Validado |
 | `#1795 [76]` | `0x0218` | `Razzy was already thinking of what` | `pensando no que deveria fazer` | ✅ Validado |
 | `#1795 [77]` | `0x0218` | `one should do after becoming a` | `depois de se tornar um` | ✅ Validado |
-| `#1795 [78]` | `0x0218` | `Craftlord.` | `Craftlord.` | ✅ Validado |
+| `#1795 [78]` | `0x0218` | `Craftlord.` | `Lorde.` | ✅ Validado |
 | `#1795 [79]` | `0x0218` | `Hey, have you forgotten something?` | `Ei, você esqueceu alguma coisa?` | ✅ Validado |
 | `#1795 [80]` | `0x0218` | `Wasn't it you who said that you want` | `Não foi você quem disse que queria` | ✅ Validado |
 | `#1795 [81]` | `0x0218` | `to become just like Shintetsu?` | `se tornar igual ao Shintetsu?` | ✅ Validado |
 | `#1795 [82]` | `0x0218` | `That's pretty vague…` | `Isso é muito vago…` | ✅ Validado |
 | `#1795 [83]` | `0x0218` | `But that's just about wanting to` | `Mas isso é só querer se` | ✅ Validado |
-| `#1795 [84]` | `0x0218` | `become a Craftlord, right?` | `tornar um Craftlord, certo?` | ✅ Validado |
+| `#1795 [84]` | `0x0218` | `become a Craftlord, right?` | `tornar um Lorde, certo?` | ✅ Validado |
 | `#1795 [85]` | `0x0218` | `That's a vague idea.` | `Essa é uma ideia vaga.` | ✅ Validado |
 | `#1795 [86]` | `0x0218` | `That's okay. You may not understand` | `Tudo bem. Você pode não entender` | ✅ Validado |
 | `#1795 [87]` | `0x0218` | `this now, but the best goals need to` | `isso agora, mas os melhores` | ✅ Validado |
 | `#1795 [88]` | `0x0218` | `to be like that one.` | `objetivos precisam ser assim.` | ✅ Validado |
 | `#1795 [89]` | `0x0218` | `Why is that?` | `Por que isso?` | ✅ Validado |
-| `#1795 [90]` | `0x0218` | `Shintetsu was like that too, saying ` | `Shintetsu também estava assim, dizendo` | ✅ Validado |
+| `#1795 [90]` | `0x0218` | `Shintetsu was like that too, saying ` | `Shintetsu vivia dizendo o mesmo…` | ✅ Validado |
 | `#1795 [91]` | `0x0218` | `that he'd like to help others.` | `que gostaria de ajudar os outros.` | ✅ Validado |
 | `#1795 [92]` | `0x0218` | `Someone with such a unique goal` | `Alguém com um objetivo tão único` | ✅ Validado |
 | `#1795 [93]` | `0x0218` | `will be the one who best listens` | `será aquele que melhor ouvirá o` | ✅ Validado |
 | `#1795 [94]` | `0x0218` | `to what others have to say…` | `que os outros têm a dizer…` | ✅ Validado |
-| `#1795 [95]` | `0x0218` | `Take Razzy for instance. The kid's` | `Veja a Razzy, por exemplo. O sonho da` | ✅ Validado |
-| `#1795 [96]` | `0x0218` | `dream is making a Flower Capital.` | `criança é fazer uma Capital das Flores.` | ✅ Validado |
+| `#1795 [95]` | `0x0218` | `Take Razzy for instance. The kid's` | `Olha a Razzy, por exemplo.` | ✅ Validado |
+| `#1795 [96]` | `0x0218` | `dream is making a Flower Capital.` | `O sonho dela é fazer uma`<br>`Capital das Flores.` | ✅ Validado |
 | `#1795 [97]` | `0x0218` | `Perhaps growing flowers would be` | `Talvez cultivar flores fosse` | ✅ Validado |
 | `#1795 [98]` | `0x0218` | `the only thing the kid would` | `a única coisa em que o` | ✅ Validado |
 | `#1795 [99]` | `0x0218` | `be good at after becoming` | `garoto seria bom depois de` | ✅ Validado |
-| `#1795 [100]` | `0x0218` | `a Craftlord.` | `se tornar um Craftlord.` | ✅ Validado |
+| `#1795 [100]` | `0x0218` | `a Craftlord.` | `se tornar um Lorde.` | ✅ Validado |
 | `#1795 [101]` | `0x0218` | `But, {PLAYER}, you can take` | `Mas, {PLAYER}, você pode` | ✅ Validado |
 | `#1795 [102]` | `0x0218` | `both Razzy's and your dreams,` | `pegar a Razzy e seus sonhos` | ✅ Validado |
 | `#1795 [103]` | `0x0218` | `and make them come true.` | `e torná-los realidade.` | ✅ Validado |
@@ -2702,8 +2702,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [109]` | `0x0218` | `Are you concerned about` | `Você está preocupado com` | ✅ Validado |
 | `#1795 [110]` | `0x0218` | `Razzy's defeat?` | `a derrota da Razzy?` | ✅ Validado |
 | `#1795 [111]` | `0x0218` | `Or…` | `Ou…` | ✅ Validado |
-| `#1795 [112]` | `0x0218` | `Are you concerned about the fact ` | `Você está preocupado com o fato de o` | ✅ Validado |
-| `#1795 [113]` | `0x0218` | `that Razzy's dream was torn apart?` | `sonho da Razzy ter sido destruído?` | ✅ Validado |
+| `#1795 [112]` | `0x0218` | `Are you concerned about the fact ` | `Te preocupa o fato de o torneio` | ✅ Validado |
+| `#1795 [113]` | `0x0218` | `that Razzy's dream was torn apart?` | `ficar mais difícil?` | ✅ Validado |
 | `#1795 [114]` | `0x0218` | `Or…` | `Ou…` | ✅ Validado |
 | `#1795 [115]` | `0x0218` | `Are you concerned that you're` | `Você está preocupado por ter` | ✅ Validado |
 | `#1795 [116]` | `0x0218` | `the one who tore it?` | `sido você quem o rasgou?` | ✅ Validado |
@@ -2729,7 +2729,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [137]` | `0x0218` | `Oh, did I?` | `Ah, eu fiz?` | ✅ Validado |
 | `#1795 [138]` | `0x0218` | `I didn't realize it.` | `Eu não percebi isso.` | ✅ Validado |
 | `#1795 [139]` | `0x0218` | `Master {PLAYER},` | `Mestre {PLAYER}, você se` | ✅ Validado |
-| `#1795 [140]` | `0x0218` | `you'll become a Craftlord and ` | `tornará um Craftlord e tornará` | ✅ Validado |
+| `#1795 [140]` | `0x0218` | `you'll become a Craftlord and ` | `tornará um Lorde e tornará` | ✅ Validado |
 | `#1795 [141]` | `0x0218` | `make Razzy's dream come true!` | `o sonho da Razzy realidade!` | ✅ Validado |
 | `#1795 [142]` | `0x0218` | `It's no good to be able to help` | `Não adianta poder` | ✅ Validado |
 | `#1795 [143]` | `0x0218` | `but not do it.` | `ajudar, mas não fazê-lo.` | ✅ Validado |
@@ -2740,17 +2740,17 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [150]` | `0x0218` | `She had a dream of making` | `Ela sonhava em transformar` | ✅ Validado |
 | `#1795 [151]` | `0x0218` | `Wystern into a capital of both` | `Wystern em uma capital de` | ✅ Validado |
 | `#1795 [152]` | `0x0218` | `swords and flowers.` | `espadas e flores.` | ✅ Validado |
-| `#1795 [153]` | `0x0218` | `But, I don't have any dream. I ` | `Mas eu não tenho nenhum sonho. Eu só` | ✅ Validado |
-| `#1795 [154]` | `0x0218` | `just want to become a Craftlord` | `quero me tornar um Craftlord como meu` | ✅ Validado |
+| `#1795 [153]` | `0x0218` | `But, I don't have any dream. I ` | `Mas eu não tenho sonho nenhum…` | ✅ Validado |
+| `#1795 [154]` | `0x0218` | `just want to become a Craftlord` | `Só quero ser Lorde feito o pai!` | ✅ Validado |
 | `#1795 [155]` | `0x0218` | `like my dad. That's all I want.` | `pai. Isso é tudo que eu quero.` | ✅ Validado |
 | `#1795 [156]` | `0x0218` | `I feel that Razzy is more apt` | `Eu sinto que a Razzy é mais` | ✅ Validado |
-| `#1795 [157]` | `0x0218` | `for a Craftlord and she'll ` | `adequada para um Craftlord e ela` | ✅ Validado |
+| `#1795 [157]` | `0x0218` | `for a Craftlord and she'll ` | `adequada para um Lorde e ela` | ✅ Validado |
 | `#1795 [158]` | `0x0218` | `do better than I will…` | `se sairá melhor do que eu…` | ✅ Validado |
 | `#1795 [159]` | `0x0218` | `But, I don't have such a dream. I ` | `Mas eu não tenho esse sonho. Eu só` | ✅ Validado |
-| `#1795 [160]` | `0x0218` | `just want to become a Craftlord` | `quero me tornar um Craftlord como meu` | ✅ Validado |
+| `#1795 [160]` | `0x0218` | `just want to become a Craftlord` | `Só quero ser Lorde feito o pai!` | ✅ Validado |
 | `#1795 [161]` | `0x0218` | `like my father. That's all I want.` | `pai. Isso é tudo que eu quero.` | ✅ Validado |
 | `#1795 [162]` | `0x0218` | `I feel that Razzy would make a` | `Eu sinto que a Razzy seria um` | ✅ Validado |
-| `#1795 [163]` | `0x0218` | `better Craftlord and she'll` | `Craftlord melhor e ela se` | ✅ Validado |
+| `#1795 [163]` | `0x0218` | `better Craftlord and she'll` | `Lorde melhor e ela se` | ✅ Validado |
 | `#1795 [164]` | `0x0218` | `do better than I will…` | `sairá melhor do que eu…` | ✅ Validado |
 | `#1795 [165]` | `0x0218` | `(Cuddle…)` | `(Abraço…)` | ✅ Validado |
 | `#1795 [166]` | `0x0218` | `Thank you, {PARTNER}.` | `Obrigado, {PARTNER}.` | ✅ Validado |
@@ -2759,7 +2759,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1795 [169]` | `0x0218` | `Whether we have a clear goal or not,` | `Quer tenhamos ou não um` | ✅ Validado |
 | `#1795 [170]` | `0x0218` | `we must win.` | `objetivo claro, devemos vencer.` | ✅ Validado |
 | `#1795 [171]` | `0x0218` | `I must be victorious… and become` | `Devo ser vitorioso… e me` | ✅ Validado |
-| `#1795 [172]` | `0x0218` | `a Craftlord so that I can make` | `tornar um Craftlord para poder` | ✅ Validado |
+| `#1795 [172]` | `0x0218` | `a Craftlord so that I can make` | `tornar um Lorde para poder` | ✅ Validado |
 | `#1795 [173]` | `0x0218` | `Razzy's wish come true.` | `realizar o desejo da Razzy.` | ✅ Validado |
 | `#1795 [174]` | `0x0218` | `We'll work hard,` | `Vamos trabalhar duro,` | ✅ Validado |
 | `#1795 [175]` | `0x0218` | `{PARTNER}…` | `{PARTNER}…` | ✅ Validado |
@@ -2775,7 +2775,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | :--- | :--- | :--- | :--- | :---: |
 | `#1796 [0]` | `0x0218` | `Oh, there you are.` | `Ah, aí está você.` | ✅ Validado |
 | `#1796 [1]` | `0x0218` | `Am I intruding?` | `Estou me intrometendo?` | ✅ Validado |
-| `#1796 [2]` | `0x0218` | `Is this a bad time to visit you?` | `Este é um momento ruim para visitá-lo?` | ✅ Validado |
+| `#1796 [2]` | `0x0218` | `Is this a bad time to visit you?` | `Cheguei numa hora ruim?` | ✅ Validado |
 | `#1796 [3]` | `0x0218` | `Not really.` | `Na verdade não.` | ✅ Validado |
 | `#1796 [4]` | `0x0218` | `I was expecting you guys to` | `Eu esperava que vocês aparecessem` | ✅ Validado |
 | `#1796 [5]` | `0x0218` | `show up here sooner or later.` | `aqui mais cedo ou mais tarde.` | ✅ Validado |
@@ -2791,12 +2791,12 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1796 [15]` | `0x0218` | `Razzy was a strong opponent,` | `Razzy era um adversário` | ✅ Validado |
 | `#1796 [16]` | `0x0218` | `I couldn't afford to hold back.` | `forte, não pude me conter.` | ✅ Validado |
 | `#1796 [17]` | `0x0218` | `You're right. Everybody's setting` | `Você está certo. Todo mundo está` | ✅ Validado |
-| `#1796 [18]` | `0x0218` | `their minds on becoming a Craftlord.` | `decidido a se tornar um Craftlord.` | ✅ Validado |
+| `#1796 [18]` | `0x0218` | `their minds on becoming a Craftlord.` | `decidido a se tornar um Lorde.` | ✅ Validado |
 | `#1796 [19]` | `0x0218` | `You can't ease up.` | `Você não pode relaxar.` | ✅ Validado |
 | `#1796 [20]` | `0x0218` | `Hey, {PLAYER}. Promise me` | `Olá, {PLAYER}. Prometa-me que` | ✅ Validado |
 | `#1796 [21]` | `0x0218` | `that you won't make any allowances` | `não fará nenhuma concessão` | ✅ Validado |
 | `#1796 [22]` | `0x0218` | `for me when we fight.` | `para mim quando brigarmos.` | ✅ Validado |
-| `#1796 [23]` | `0x0218` | `Of course not! If I don't fight you` | `Claro que não! Se eu não lutar com você` | ✅ Validado |
+| `#1796 [23]` | `0x0218` | `Of course not! If I don't fight you` | `Claro que não! Quero lutar contigo!` | ✅ Validado |
 | `#1796 [24]` | `0x0218` | `with all I have, I'll be killed!` | `com tudo que tenho, serei morto!` | ✅ Validado |
 | `#1796 [25]` | `0x0218` | `And what do you mean by that!?` | `E o que você quer dizer com isso!?` | ✅ Validado |
 | `#1796 [26]` | `0x0218` | `I'm just kidding.` | `Estou só brincando.` | ✅ Validado |
@@ -2807,7 +2807,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1796 [31]` | `0x0218` | `I'm just kidding.` | `Estou só brincando.` | ✅ Validado |
 | `#1796 [32]` | `0x0218` | `But, we can't make any allowances` | `Mas também não podemos fazer` | ✅ Validado |
 | `#1796 [33]` | `0x0218` | `for you, either.` | `nenhuma concessão a você.` | ✅ Validado |
-| `#1796 [34]` | `0x0218` | `…Because you're always serious.` | `…Porque você está sempre falando sério.` | ✅ Validado |
+| `#1796 [34]` | `0x0218` | `…Because you're always serious.` | `…Você tá sempre sério demais.` | ✅ Validado |
 | `#1796 [35]` | `0x0218` | `I get it… All right, see you later!` | `Entendi… Tudo bem, até logo!` | ✅ Validado |
 | `#1796 [36]` | `0x0218` | `See you later!` | `Até logo!` | ✅ Validado |
 
@@ -2817,10 +2817,10 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 
 | ID / Offset | Opcode | Texto Original (EN-US) | Tradução Sugerida (PT-BR) | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1797 [0]` | `0x0218` | `Here's someone I wasn't expecting.` | `Aqui está alguém que eu não esperava.` | ✅ Validado |
+| `#1797 [0]` | `0x0218` | `Here's someone I wasn't expecting.` | `Ora, alguém que eu não esperava.` | ✅ Validado |
 | `#1797 [1]` | `0x0218` | `What is that supposed to mean?` | `O que isso significa?` | ✅ Validado |
 | `#1797 [2]` | `0x0218` | `What do you mean by that!?` | `O que você quer dizer com isso!?` | ✅ Validado |
-| `#1797 [3]` | `0x0218` | `You can't greet us like that!` | `Você não pode nos cumprimentar assim!` | ✅ Validado |
+| `#1797 [3]` | `0x0218` | `You can't greet us like that!` | `Não precisa falar desse jeito!` | ✅ Validado |
 | `#1797 [4]` | `0x0218` | `Who'd you think was coming!?` | `Quem você achou que viria!?` | ✅ Validado |
 | `#1797 [5]` | `0x0218` | `What's the matter with you?` | `Qual é o problema com você?` | ✅ Validado |
 | `#1797 [6]` | `0x0218` | `Do you want me to console you` | `Você quer que eu te console por` | ✅ Validado |
@@ -2828,30 +2828,30 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1797 [8]` | `0x0218` | `How did you know about that?` | `Como você soube disso?` | ✅ Validado |
 | `#1797 [9]` | `0x0218` | `Ugh… you're pretty keen on getting` | `Ugh… você está muito interessado` | ✅ Validado |
 | `#1797 [10]` | `0x0218` | `the latest gossip.` | `em saber as últimas fofocas.` | ✅ Validado |
-| `#1797 [11]` | `0x0218` | `I'm the eldest son of the Gold` | `Sou o filho mais velho da Gold Guild.` | ✅ Validado |
+| `#1797 [11]` | `0x0218` | `I'm the eldest son of the Gold` | `Sou o mais velho da Guilda Dourada.` | ✅ Validado |
 | `#1797 [12]` | `0x0218` | `Guild. I can get any information` | `Posso obter qualquer informação que` | ✅ Validado |
 | `#1797 [13]` | `0x0218` | `I want any time.` | `quiser a qualquer momento.` | ✅ Validado |
 | `#1797 [14]` | `0x0218` | `For instance, Razzy is a little` | `Por exemplo, Razzy é uma` | ✅ Validado |
 | `#1797 [15]` | `0x0218` | `girl who's madly fond of you,` | `garotinha que gosta loucamente` | ✅ Validado |
 | `#1797 [16]` | `0x0218` | `among other things…` | `de você, entre outras coisas…` | ✅ Validado |
-| `#1797 [17]` | `0x0218` | `You've got to be kidding me!` | `Você só pode estar brincando comigo!` | ✅ Validado |
+| `#1797 [17]` | `0x0218` | `You've got to be kidding me!` | `Está brincando comigo!?` | ✅ Validado |
 | `#1797 [18]` | `0x0218` | `No way!` | `De jeito nenhum!` | ✅ Validado |
 | `#1797 [19]` | `0x0218` | `I'm just kidding!` | `Estou só brincando!` | ✅ Validado |
 | `#1797 [21]` | `0x0218` | `…That was a joke?` | `…Isso foi uma piada?` | ✅ Validado |
-| `#1797 [22]` | `0x0218` | `Hmm. I thought you'd feel better if` | `Hum. Achei que você se sentiria melhor` | ✅ Validado |
-| `#1797 [23]` | `0x0218` | `I made a joke, but I guess it didn't` | `se eu fizesse uma piada, mas acho que` | ✅ Validado |
+| `#1797 [22]` | `0x0218` | `Hmm. I thought you'd feel better if` | `Achei que ia rir de uma piada,` | ✅ Validado |
+| `#1797 [23]` | `0x0218` | `I made a joke, but I guess it didn't` | `mas acho que não deu certo…` | ✅ Validado |
 | `#1797 [24]` | `0x0218` | `work out like I had hoped…` | `não funcionou como eu esperava…` | ✅ Validado |
 | `#1797 [25]` | `0x0218` | `Forget it.` | `Esqueça.` | ✅ Validado |
 | `#1797 [26]` | `0x0218` | `Oh, but, thank you…` | `Ah, mas, obrigado…` | ✅ Validado |
 | `#1797 [27]` | `0x0218` | `I see… I didn't expect that from` | `Entendo… eu não` | ✅ Validado |
 | `#1797 [28]` | `0x0218` | `you.` | `esperava isso de você.` | ✅ Validado |
 | `#1797 [29]` | `0x0218` | `Hmm.` | `Hum.` | ✅ Validado |
-| `#1797 [30]` | `0x0218` | `I don't have any close friends, so I` | `Eu não tenho nenhum amigo próximo, então` | ✅ Validado |
-| `#1797 [31]` | `0x0218` | `can't understand how you're feeling` | `não consigo entender como você está se` | ✅ Validado |
+| `#1797 [30]` | `0x0218` | `I don't have any close friends, so I` | `Não tenho muitos amigos, então não` | ✅ Validado |
+| `#1797 [31]` | `0x0218` | `can't understand how you're feeling` | `sei bem o que você tá sentindo.` | ✅ Validado |
 | `#1797 [32]` | `0x0218` | `after defeating Razzy…` | `sentindo depois de derrotar Razzy…` | ✅ Validado |
 | `#1797 [33]` | `0x0218` | `But, I guess you'll have to get` | `Mas acho que você terá que` | ✅ Validado |
 | `#1797 [34]` | `0x0218` | `over the pain in order to become` | `superar a dor para se tornar` | ✅ Validado |
-| `#1797 [35]` | `0x0218` | `a great Craftlord.` | `um grande Craftlord.` | ✅ Validado |
+| `#1797 [35]` | `0x0218` | `a great Craftlord.` | `um grande Lorde.` | ✅ Validado |
 | `#1797 [36]` | `0x0218` | `So I guess, in that sense, you're` | `Então acho que, nesse sentido, você` | ✅ Validado |
 | `#1797 [37]` | `0x0218` | `one step ahead of me.` | `está um passo à minha frente.` | ✅ Validado |
 | `#1797 [39]` | `0x0218` | `Don't worry about it.` | `Não se preocupe com isso.` | ✅ Validado |
@@ -2873,7 +2873,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1798 [7]` | `0x0218` | `if I came.` | `aqui se eu fosse.` | ✅ Validado |
 | `#1798 [8]` | `0x0218` | `I see. {SIBLING},` | `Entendo. {SIBLING}, você é` | ✅ Validado |
 | `#1798 [9]` | `0x0218` | `you're always welcome here.` | `sempre bem-vindo aqui.` | ✅ Validado |
-| `#1798 [10]` | `0x0218` | `You look a bit down, Razzy.` | `Você parece um pouco desanimado, Razzy.` | ✅ Validado |
+| `#1798 [10]` | `0x0218` | `You look a bit down, Razzy.` | `Você parece meio pra baixo, Razzy.` | ✅ Validado |
 | `#1798 [11]` | `0x0218` | `Maybe I shouldn't have come…` | `Talvez eu não devesse ter vindo…` | ✅ Validado |
 | `#1798 [12]` | `0x0218` | `Oh, {SIBLING}!` | `Ah, {SIBLING}!` | ✅ Validado |
 | `#1798 [13]` | `0x0218` | `Don't get me wrong!` | `Não me interpretem mal!` | ✅ Validado |
@@ -2882,19 +2882,19 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1798 [16]` | `0x0218` | `It's just that I won't be` | `É que não` | ✅ Validado |
 | `#1798 [17]` | `0x0218` | `participating in the tournament` | `participarei` | ✅ Validado |
 | `#1798 [18]` | `0x0218` | `any longer…` | `mais do torneio…` | ✅ Validado |
-| `#1798 [19]` | `0x0218` | `I'm just being a bit emotional.` | `Estou apenas sendo um pouco emocionado.` | ✅ Validado |
+| `#1798 [19]` | `0x0218` | `I'm just being a bit emotional.` | `Tô só meio emotiva, nada mais…` | ✅ Validado |
 | `#1798 [20]` | `0x0218` | `Listen, {SIBLING}!` | `Ouça, {SIBLING}!` | ✅ Validado |
 | `#1798 [21]` | `0x0218` | `What is it?` | `O que é isso?` | ✅ Validado |
 | `#1798 [22]` | `0x0218` | `I'll support you!` | `Eu vou te apoiar!` | ✅ Validado |
 | `#1798 [23]` | `0x0218` | `I'll cheer you on so that you can` | `Vou torcer por você` | ✅ Validado |
 | `#1798 [24]` | `0x0218` | `win!` | `para que você vença!` | ✅ Validado |
-| `#1798 [25]` | `0x0218` | `You can become a Craftlord now.` | `Você pode se tornar um Craftlord agora.` | ✅ Validado |
+| `#1798 [25]` | `0x0218` | `You can become a Craftlord now.` | `Você já pode ser um Lorde!` | ✅ Validado |
 | `#1798 [26]` | `0x0218` | `I'll be the next one the next` | `Serei o próximo na próxima` | ✅ Validado |
 | `#1798 [27]` | `0x0218` | `time there's a tournament!` | `vez que houver um torneio!` | ✅ Validado |
 | `#1798 [28]` | `0x0218` | `All right.` | `Tudo bem.` | ✅ Validado |
 | `#1798 [29]` | `0x0218` | `I'll be waiting for you.` | `Estarei esperando por você.` | ✅ Validado |
 | `#1798 [30]` | `0x0218` | `It's a promise, Razzy!` | `É uma promessa, Razzy!` | ✅ Validado |
-| `#1798 [31]` | `0x0218` | `Yes, we'll all be waiting for you!` | `Sim, estaremos todos esperando por você!` | ✅ Validado |
+| `#1798 [31]` | `0x0218` | `Yes, we'll all be waiting for you!` | `Sim! Estaremos torcendo por você!` | ✅ Validado |
 | `#1798 [32]` | `0x0218` | `It's a promise!` | `É uma promessa!` | ✅ Validado |
 
 ---
@@ -2910,7 +2910,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [4]` | `0x0218` | `too long ago…` | `um há pouco tempo…` | ✅ Validado |
 | `#1799 [5]` | `0x0218` | `Personally, I agree with you,` | `Pessoalmente,` | ✅ Validado |
 | `#1799 [6]` | `0x0218` | `however…` | `concordo com você, porém…` | ✅ Validado |
-| `#1799 [7]` | `0x0218` | `Only the Craftlords can set` | `Somente os Craftlords pode` | ✅ Validado |
+| `#1799 [7]` | `0x0218` | `Only the Craftlords can set` | `Somente os Lordes pode` | ✅ Validado |
 | `#1799 [8]` | `0x0218` | `up the matches.` | `configurar as correspondências.` | ✅ Validado |
 | `#1799 [9]` | `0x0218` | `Don't worry about that!` | `Não se preocupe com isso!` | ✅ Validado |
 | `#1799 [10]` | `0x0218` | `I'd like to know who my next ` | `Gostaria de saber quem é` | ✅ Validado |
@@ -2919,11 +2919,11 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [13]` | `0x0218` | `Please take a look at` | `Por favor, dê uma` | ✅ Validado |
 | `#1799 [14]` | `0x0218` | `this.` | `olhada nisso.` | ✅ Validado |
 | `#1799 [15]` | `0x0218` | `Ariel and Mariel?` | `Ariel e Mariel?` | ✅ Validado |
-| `#1799 [16]` | `0x0218` | `I'm fighting two people at once?` | `Estou lutando com duas pessoas ao mesmo tempo?` | ✅ Validado |
+| `#1799 [16]` | `0x0218` | `I'm fighting two people at once?` | `Vou lutar contra dois de uma vez!?` | ✅ Validado |
 | `#1799 [17]` | `0x0218` | `They're beautiful twins who` | `São lindos gêmeos que` | ✅ Validado |
-| `#1799 [18]` | `0x0218` | `belong to the Silver Guild.` | `pertencem à Silver Guild.` | ✅ Validado |
+| `#1799 [18]` | `0x0218` | `belong to the Silver Guild.` | `pertencem à Guilda Prateada.` | ✅ Validado |
 | `#1799 [19]` | `0x0218` | `Mariel will take the place of a` | `Mariel substituirá` | ✅ Validado |
-| `#1799 [20]` | `0x0218` | `Guardian Beast.` | `uma Guardian Beast.` | ✅ Validado |
+| `#1799 [20]` | `0x0218` | `Guardian Beast.` | `uma Fera Guardiã.` | ✅ Validado |
 | `#1799 [21]` | `0x0218` | `Really?` | `Sério?` | ✅ Validado |
 | `#1799 [22]` | `0x0218` | `That's right. So I hope you'll do` | `Isso mesmo. Então espero que você` | ✅ Validado |
 | `#1799 [23]` | `0x0218` | `your best against them.` | `faça o seu melhor contra eles.` | ✅ Validado |
@@ -2933,7 +2933,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [27]` | `0x0218` | `I don't know why, but I think` | `Não sei porquê, mas acho` | ✅ Validado |
 | `#1799 [28]` | `0x0218` | `it'll be tough…` | `que vai ser difícil…` | ✅ Validado |
 | `#1799 [30]` | `0x0218` | `They'll be battling together, so` | `Eles estarão lutando juntos, então` | ✅ Validado |
-| `#1799 [31]` | `0x0218` | `we'll need to be extra careful?` | `precisaremos ser extremamente cuidadosos?` | ✅ Validado |
+| `#1799 [31]` | `0x0218` | `we'll need to be extra careful?` | `vamos ter que tomar muito cuidado?` | ✅ Validado |
 | `#1799 [32]` | `0x0218` | `I hear you, {PARTNER}.` | `Eu ouço você, {PARTNER}.` | ✅ Validado |
 | `#1799 [33]` | `0x0218` | `Huh? Watch out for them using` | `Hein? Cuidado com eles usando` | ✅ Validado |
 | `#1799 [34]` | `0x0218` | `combinations during the battle?` | `combinações durante a batalha?` | ✅ Validado |
@@ -2953,8 +2953,8 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [49]` | `0x0218` | `Why are you proud of that?` | `Por que você está orgulhoso disso?` | ✅ Validado |
 | `#1799 [50]` | `0x0218` | `You had a fifty percent chance of` | `Você tinha cinquenta por cento` | ✅ Validado |
 | `#1799 [51]` | `0x0218` | `being right.` | `de chance de estar certo.` | ✅ Validado |
-| `#1799 [52]` | `0x0218` | `Anyway, it's a bit of a pain…` | `De qualquer forma, é um pouco chato…` | ✅ Validado |
-| `#1799 [53]` | `0x0218` | `I know you're feeling relieved.` | `Eu sei que você está se sentindo aliviado.` | ✅ Validado |
+| `#1799 [52]` | `0x0218` | `Anyway, it's a bit of a pain…` | `Enfim, isso dá uma canseira…` | ✅ Validado |
+| `#1799 [53]` | `0x0218` | `I know you're feeling relieved.` | `Sei que bateu um alívio agora.` | ✅ Validado |
 | `#1799 [54]` | `0x0218` | `You chicken…` | `Sua galinha…` | ✅ Validado |
 | `#1799 [55]` | `0x0218` | `Heh heh.` | `Ei, ei.` | ✅ Validado |
 | `#1799 [56]` | `0x0218` | `Don't laugh!` | `Não ria!` | ✅ Validado |
@@ -2966,7 +2966,7 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [62]` | `0x0218` | `if you battled with Varil now` | `se lutasse com o Varil agora,` | ✅ Validado |
 | `#1799 [63]` | `0x0218` | `anyway.` | `de qualquer maneira.` | ✅ Validado |
 | `#1799 [64]` | `0x0218` | `You should just be grateful` | `Você deveria estar grato por ter` | ✅ Validado |
-| `#1799 [65]` | `0x0218` | `you survived that first battle.` | `sobrevivido àquela primeira batalha.` | ✅ Validado |
+| `#1799 [65]` | `0x0218` | `you survived that first battle.` | `ter passado da primeira batalha.` | ✅ Validado |
 | `#1799 [66]` | `0x0218` | `Ugh…` | `Ah…` | ✅ Validado |
 | `#1799 [67]` | `0x0218` | `I know that's true… but…` | `Eu sei que é verdade… mas…` | ✅ Validado |
 | `#1799 [68]` | `0x0218` | `Somehow…` | `De alguma forma…` | ✅ Validado |
@@ -3017,18 +3017,18 @@ seguindo o glossário oficial validado (termos técnicos, nomes de armas, itens,
 | `#1799 [113]` | `0x0218` | `(Squeeze!)` | `(Aperte!)` | ✅ Validado |
 | `#1799 [114]` | `0x0218` | `What?` | `O quê?` | ✅ Validado |
 | `#1799 [115]` | `0x0218` | `What's happening, {PARTNER}?` | `O que está acontecendo, {PARTNER}?` | ✅ Validado |
-| `#1799 [116]` | `0x0218` | `Why are you holding me so tight?` | `Por que você está me segurando com tanta força?` | ✅ Validado |
+| `#1799 [116]` | `0x0218` | `Why are you holding me so tight?` | `Por que tá me apertando tanto!?` | ✅ Validado |
 | `#1799 [117]` | `0x0218` | `I'm not telling…` | `Não vou contar…` | ✅ Validado |
 | `#1799 [118]` | `0x0218` | `I don't know why, but I get the ` | `Não sei porquê, mas tenho` | ✅ Validado |
 | `#1799 [119]` | `0x0218` | `feeling something bad is going to` | `a sensação de que algo` | ✅ Validado |
 | `#1799 [120]` | `0x0218` | `happen.` | `ruim vai acontecer.` | ✅ Validado |
-| `#1799 [121]` | `0x0218` | `Well, we've got to do it anyway!` | `Bem, temos que fazer isso de qualquer maneira!` | ✅ Validado |
+| `#1799 [121]` | `0x0218` | `Well, we've got to do it anyway!` | `Temos que encarar de todo jeito!` | ✅ Validado |
 | `#1799 [122]` | `0x0218` | `Because they are twins, I get the ` | `Por serem gêmeos, tenho a ideia` | ✅ Validado |
 | `#1799 [123]` | `0x0218` | `idea that they'd even breathe` | `de que eles respirariam em` | ✅ Validado |
 | `#1799 [124]` | `0x0218` | `in synch with each other.` | `sincronia um com o outro.` | ✅ Validado |
 | `#1799 [125]` | `0x0218` | `That sounds tough…` | `Isso parece difícil…` | ✅ Validado |
 | `#1799 [126]` | `0x0218` | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1799 [127]` | `0x0218` | `Yeah, you're right… The two of us` | `Sim, você está certo… Nós dois somos pelo` | ✅ Validado |
+| `#1799 [127]` | `0x0218` | `Yeah, you're right… The two of us` | `Pois é… Nós dois somos pela honra!` | ✅ Validado |
 | `#1799 [128]` | `0x0218` | `are at least as good as the twins!` | `menos tão bons quanto os gêmeos!` | ✅ Validado |
 | `#1799 [129]` | `0x0218` | `Yeah, right. ` | `Sim, certo.` | ✅ Validado |
 | `#1799 [130]` | `0x0218` | `I have got you by my side,` | `Eu tenho você ao meu lado,` | ✅ Validado |

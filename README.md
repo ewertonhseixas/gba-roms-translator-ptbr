@@ -28,33 +28,48 @@ Este ambiente foi projetado para operar com **localização sem limites de texto
 ```
 gba-roms-translator-ptbr/
 │
+├── 📁 protocolo_extracao/        # 📜 PROTOCOLO OFICIAL DE EXTRAÇÃO E LOCALIZAÇÃO
+│   ├── PROTOCOLO_MESTRE_EXTRACAO.md # Diretrizes completas, regras de VRAM e multi-console
+│   ├── README.md                 # Guia rápido de uso e comandos da suíte
+│   ├── 📁 templates/             # Modelos oficiais de arquivos .md (Glossário, Sistema, Itens...)
+│   └── 📁 tools/                 # Ferramentas automáticas (Métricas, Detector de ROM, Imagens, Token Economy)
+│       ├── metrics_analyzer.py        # Análise estatística de limites de caracteres e overflow
+│       ├── rom_feature_detector.py    # Varredura de cabeçalho, vídeos (Mobiclip) e compressão
+│       ├── image_text_auditor.py      # Catalogação e auditoria de integridade de imagens
+│       └── token_optimizer_batcher.py # Fatiador com injeção cirúrgica de contexto para IA
+│
 ├── 📁 _ferramentas_gerais/       # Softwares utilitários independentes de jogo
 │   ├── mGBA/                    # Emulador de alta precisão com depurador integrado
 │   └── crystaltile2/            # Editor hexadecimal e visualizador de tiles/paletas GBA
 │
 ├── 📁 jogos/                     # Diretórios individuais de cada ROM
 │   │
-│   ├── 📁 Summon_Night_Swordcraft_Story_1/  # Projeto completo de Summon Night 1
-│   │   ├── ARQUIVOS md/         # Textos extraídos e traduzidos em Markdown (Lotes 01 a 06 e Tabelas)
-│   │   ├── docs/                # Mapeamento técnico de memória e arquitetura ARM/Thumb
+│   ├── 📁 Summon_Night_Swordcraft_Story_1/  # [v0.2.5] 100% dos textos traduzidos e auditados
+│   │   ├── ARQUIVOS md/         # Textos traduzidos em Markdown (Lotes 01 a 06 e Tabelas)
+│   │   ├── docs/                # Mapeamento técnico de memória e auditoria da ROM
 │   │   ├── extracted/           # Pacotes JSON de tradução e dados extraídos
-│   │   ├── releases/            # Patches de tradução distribuíveis (.ips)
-│   │   ├── rom/                 # Local reservado para as ROMs (USA original e PT-BR gerada)
-│   │   ├── tools/               # Conjunto completo de scripts de engenharia e rebuild
+│   │   ├── releases/            # Patches de tradução distribuíveis (.ips v0.1, v0.2, v0.2.5)
+│   │   ├── tools/               # Scripts de engenharia, fontes e rebuild
 │   │   ├── Compilar_ROM_PTBR.bat        # Compilação da ROM traduzida em 1 clique
 │   │   ├── Iniciar_Validador_Traducao.bat # Interface visual de validação no navegador
 │   │   ├── CHANGELOG.md         # Histórico de versões e marcos
 │   │   └── VERSION.json         # Controle semântico de versão da tradução
 │   │
-│   └── 📁 _MODELO_NOVO_JOGO/    # Template limpo para clonar e traduzir novas ROMs
-│       ├── ARQUIVOS md/         # Pasta destino dos textos a serem extraídos
-│       ├── docs/                # Anotações técnicas da nova ROM
-│       ├── releases/            # Onde serão gerados os patches IPS do novo jogo
-│       ├── rom/                 # Onde inserir o arquivo .gba original
+│   ├── 📁 Summon_Night_Swordcraft_Story_2/  # [Em Andamento] Lotes 01 a 18 extraídos
+│   │   ├── ARQUIVOS md/         # Diálogos e menus extraídos
+│   │   ├── releases/            # Patch v0.1 inicial
+│   │   └── tools/               # Suíte de extração e tradução
+│   │
+│   ├── 📁 Summon_Night_Swordcraft_Story_3/  # [Estrutura Inicial] Preparação de ambiente
+│   │
+│   └── 📁 _MODELO_NOVO_JOGO/    # Template oficial padronizado com o Protocolo v1.0
+│       ├── ARQUIVOS md/         # Templates essenciais (Glossário, Sistema, Itens, Personagens...)
+│       ├── docs/                # Relatório de extração padrão
+│       ├── releases/            # Destino dos patches gerados
 │       ├── tools/               # Scripts específicos da ROM
-│       └── README.md            # Guia passo a passo para o novo jogo
+│       └── README.md            # Guia passo a passo com o Protocolo
 │
-├── .gitignore                   # Proteção para não versionar ROMs comerciais protegidas
+├── .gitignore                   # Proteção rigorosa contra versionamento de ROMs comerciais e zips
 └── README.md                    # Esta documentação
 ```
 
@@ -63,6 +78,16 @@ gba-roms-translator-ptbr/
 ## 🛠️ Catálogo Completo das Ferramentas
 
 Todas as ferramentas do repositório foram escritas em Python 3 e foram concebidas de forma modular. Abaixo está o catálogo técnico detalhado de cada ferramenta:
+
+### 0. Protocolo de Extração de ROMs e Token Economy (`protocolo_extracao/`)
+
+| Arquivo | Finalidade Técnica |
+| :--- | :--- |
+| [`PROTOCOLO_MESTRE_EXTRACAO.md`](protocolo_extracao/PROTOCOLO_MESTRE_EXTRACAO.md) | **Especificação Mestre do Protocolo.** Define as regras para organização textual em Markdown, estudo de métricas de caracteres, catálogo de personagens com biografia híbrida (in-game + web), regras de VRAM para imagens com texto, detecção de vídeos e matriz de expansão multi-console (SNES, Mega Drive, NDS, PS1). |
+| [`metrics_analyzer.py`](protocolo_extracao/tools/metrics_analyzer.py) | **Analisador Estatístico de Métricas de Caracteres.** Analisa arquivos Markdown de diálogo, calculando médias de caracteres por linha, percentis e sinalizando linhas com potencial risco de transbordamento (*overflow*) antes da compilação. |
+| [`rom_feature_detector.py`](protocolo_extracao/tools/rom_feature_detector.py) | **Detector de Recursos e Fingerprint de ROM.** Identifica cabeçalhos oficiais, codecs de vídeo FMV (Mobiclip `MOC4`/`MOC5`, Actimagine), compressões de BIOS (LZ77, Huffman, RLE) e tabelas sequenciais de ponteiros de 32 bits. |
+| [`image_text_auditor.py`](protocolo_extracao/tools/image_text_auditor.py) | **Auditor e Catalogador Gráfico.** Gera a planilha de controle de imagens com texto (`controle-de-imagens-com-texto.md`) e audita PNGs editados para impedir alterações indevidas de dimensões ou corrupção da cor 0 da paleta (transparência de hardware). |
+| [`token_optimizer_batcher.py`](protocolo_extracao/tools/token_optimizer_batcher.py) | **Fatiador com Injeção Cirúrgica de Contexto (Token Economy).** Divide lotes longos em blocos enxutos de 30-50 falas e injeta *exclusivamente* os termos de glossário e personagens ativos no trecho, economizando até 75% dos tokens em requisições a LLMs. |
 
 ### 1. Compilação e Geração de Patches
 

@@ -41,7 +41,7 @@ from psi3_rebuilder import (
 sys.stdout.reconfigure(encoding="utf-8")
 
 
-PROJECT_VERSION = "v0.1"
+PROJECT_VERSION = "v0.2.5"
 
 
 def create_ips_patch(src_bytes: bytes, dst_bytes: bytes, out_path: Path) -> int:

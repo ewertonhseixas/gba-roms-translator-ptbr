@@ -15,7 +15,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1601 [4]` | Protagonista | `Huh!?` | `Hã!?` | ✅ Validado |
 | `#1601 [5]` | Protagonista | `It wasn't you that screamed?` | `Não foi você que gritou?` | ✅ Validado |
 | `#1601 [6]` | Amariss | `Of course it was! I just wanted to` | `Claro que fui eu! Só queria ter` | ✅ Validado |
-| `#1601 [7]` | Amariss | `make sure you were awake.` | `certeza de que estava acordado.` | ✅ Validado |
+| `#1601 [7]` | Amariss | `make sure you were awake.` | `certeza de que você acordou.` | ✅ Validado |
 | `#1601 [8]` | Protagonista | `Don't DO that! I thought you were` | `Não FAÇA isso! Achei que estava` | ✅ Validado |
 | `#1601 [9]` | Protagonista | `hurt, or worse--` | `ferida, ou pior--` | ✅ Validado |
 | `#1601 [10]` | Cleru | `WHAAAA!!` | `UAAAAH!!` | ✅ Validado |
@@ -25,9 +25,9 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1601 [14]` | Cleru | `I tink my node id bwoken…` | `Acho que quebwei meu nawiz…` | ✅ Validado |
 | `#1601 [15]` | Amariss | `That looked like it hurt!` | `Isso pareceu doer!` | ✅ Validado |
 | `#1601 [16]` | Amariss | `Are you alright?` | `Você está bem?` | ✅ Validado |
-| `#1601 [17]` | Pratty | `Yeah, I'm okay. Just a little` | `Sim, estou bem. Só um pouco` | ✅ Validado |
-| `#1601 [18]` | Pratty | `embarrassed, that's all…` | `envergonhada, só isso…` | ✅ Validado |
-| `#1601 [19]` | Cleru | `Are you kidding!? Of course not!` | `Tá brincando!? Claro que não!` | ✅ Validado |
+| `#1601 [17]` | Protagonista | `Yeah, I'm okay. Just a little` | `Sim, estou bem. Só com um` | ✅ Validado |
+| `#1601 [18]` | Protagonista | `embarrassed, that's all…` | `pouco de vergonha, só isso…` | ✅ Validado |
+| `#1601 [19]` | Cleru | `Are you kidding!? Of course not!` | `Está brincando!? Claro que não!` | ✅ Validado |
 | `#1601 [20]` | Cleru | `Who put those there!?` | `Quem colocou essa escada aí!?` | ✅ Validado |
 | `#1601 [21]` | Amariss | `I'm guessing it was the carpenters` | `Imagino que tenham sido os` | ✅ Validado |
 | `#1601 [22]` | Amariss | `who built the house.` | `carpinteiros que fizeram a casa.` | ✅ Validado |
@@ -59,22 +59,22 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1602 [3]` | Pratty | `As if I could forget that!` | `Como se eu fosse esquecer isso!` | ✅ Validado |
 | `#1602 [4]` | Amariss | `Next question!` | `Próxima pergunta!` | ✅ Validado |
 | `#1602 [5]` | Amariss | `What is your job?` | `Qual é o seu trabalho?` | ✅ Validado |
-| `#1602 [6]` | Cleru | `(Why is Mom asking me such silly` | `(Por que a Mãe tá fazendo perguntas` | ✅ Validado |
-| `#1602 [7]` | Cleru | `questions? That fall must have` | `tão bobas? Aquele tombo deve ter` | ✅ Validado |
-| `#1602 [8]` | Cleru | `looked worse than it felt…)` | `parecido mais feio do que foi…)` | ✅ Validado |
-| `#1602 [9]` | Cleru | `I work for a Craftknight, of course!` | `Trabalho p/ um Craftknight, claro!` | ✅ Validado |
-| `#1602 [10]` | Pratty | `(Why is Mother asking me such absurd` | `(Por que a Mamãe faz perguntas tão` | ✅ Validado |
-| `#1602 [11]` | Pratty | `questions? One little accident and` | `absurdas? Um pequeno acidente e` | ✅ Validado |
+| `#1602 [6]` | Cleru | `(Why is Mom asking me such silly` | `(Por que a mamãe está fazendo` | ✅ Validado |
+| `#1602 [7]` | Cleru | `questions? That fall must have` | `essas perguntas? O tombo deve` | ✅ Validado |
+| `#1602 [8]` | Cleru | `looked worse than it felt…)` | `ter parecido pior do que foi…)` | ✅ Validado |
+| `#1602 [9]` | Cleru | `I work for a Craftknight, of course!` | `Trabalho para um forjador, claro!` | ✅ Validado |
+| `#1602 [10]` | Pratty | `(Why is Mother asking me such absurd` | `(Por que a mamãe está me fazendo` | ✅ Validado |
+| `#1602 [11]` | Pratty | `questions? One little accident and` | `perguntas absurdas? Um tombo e` | ✅ Validado |
 | `#1602 [12]` | Pratty | `she fears the worst!)` | `ela já teme o pior!)` | ✅ Validado |
-| `#1602 [13]` | Pratty | `I work for a Craftknight, Mother!` | `Trabalho p/ um Craftknight, Mamãe!` | ✅ Validado |
+| `#1602 [13]` | Pratty | `I work for a Craftknight, Mother!` | `Trabalho para um forjador, mãe!` | ✅ Validado |
 | `#1602 [14]` | Amariss | `And what do you do for this` | `E o que você faz para esse` | ✅ Validado |
-| `#1602 [15]` | Amariss | `Craftknight?` | `Craftknight?` | ✅ Validado |
+| `#1602 [15]` | Amariss | `Craftknight?` | `Cavaleiro Forjador?` | ✅ Validado |
 | `#1602 [16]` | Protagonista | `I'm his apprentice.` | `Sou aprendiz dele.` | ✅ Validado |
-| `#1602 [17]` | Amariss | `And what does this Craftknight do?` | `E o que faz esse Craftknight?` | ✅ Validado |
+| `#1602 [17]` | Amariss | `And what does this Craftknight do?` | `E o que esse Cavaleiro faz?` | ✅ Validado |
 | `#1602 [18]` | Cleru | `He forges different types of metal.` | `Ele forja vários tipos de metal.` | ✅ Validado |
-| `#1602 [19]` | Cleru | `He's teaching me to forge weapons.` | `Está me ensinando a forjar armas.` | ✅ Validado |
+| `#1602 [19]` | Cleru | `He's teaching me to forge weapons.` | `E está me ensinando a forjar armas.` | ✅ Validado |
 | `#1602 [20]` | Pratty | `He forges metal into weapons, and he` | `Ele forja armas de metal e me` | ✅ Validado |
-| `#1602 [21]` | Pratty | `teaches me how to do it, too.` | `ensina como fazer isso também.` | ✅ Validado |
+| `#1602 [21]` | Pratty | `teaches me how to do it, too.` | `ensina a fazer isso também.` | ✅ Validado |
 | `#1602 [22]` | Protagonista | `Satisfied yet?` | `Satisfeita agora?` | ✅ Validado |
 | `#1602 [23]` | Amariss | `No, not yet.` | `Não, ainda não.` | ✅ Validado |
 | `#1602 [24]` | Amariss | `What's MY name?` | `Qual é o MEU nome?` | ✅ Validado |
@@ -96,14 +96,14 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1602 [40]` | Protagonista | `Of course I do!` | `É claro que lembro!` | ✅ Validado |
 | `#1602 [41]` | Protagonista | `Today is the opening ceremony of` | `Hoje é a cerimônia de abertura` | ✅ Validado |
 | `#1602 [42]` | Protagonista | `the tournament that determines the` | `do torneio que vai definir o` | ✅ Validado |
-| `#1602 [43]` | Protagonista | `new Craftlord!` | `novo Craftlord!` | ✅ Validado |
-| `#1602 [44]` | Protagonista | `The Craftlord becomes a knight` | `O Craftlord se torna cavaleiro` | ✅ Validado |
+| `#1602 [43]` | Protagonista | `new Craftlord!` | `novo Lorde Forjador!` | ✅ Validado |
+| `#1602 [44]` | Protagonista | `The Craftlord becomes a knight` | `O Lorde Forjador se torna cavaleiro` | ✅ Validado |
 | `#1602 [45]` | Protagonista | `of Wystern, the legendary` | `de Wystern, a lendária` | ✅ Validado |
-| `#1602 [46]` | Protagonista | `City of Swords…` | `City of Swords…` | ✅ Validado |
+| `#1602 [46]` | Protagonista | `City of Swords…` | `Cidade das Espadas…` | ✅ Validado |
 | `#1602 [47]` | Protagonista | `…and is given the honored task of ` | `…e recebe a honrada missão de` | ✅ Validado |
 | `#1602 [48]` | Protagonista | `guarding Parista, the sacred spirit` | `proteger Parista, o espírito` | ✅ Validado |
-| `#1602 [49]` | Protagonista | `of the holy sword.` | `sagrado da espada santa.` | ✅ Validado |
-| `#1602 [50]` | Protagonista | `I never thought I would be chosen` | `Nunca pensei que seria escolhido` | ✅ Validado |
+| `#1602 [49]` | Protagonista | `of the holy sword.` | `da espada sagrada.` | ✅ Validado |
+| `#1602 [50]` | Protagonista | `I never thought I would be chosen` | `Nunca pensei que me escolheriam` | ✅ Validado |
 | `#1602 [51]` | Protagonista | `to participate in the tournament.` | `para participar do torneio.` | ✅ Validado |
 | `#1602 [52]` | Protagonista | `It almost feels like a dream…` | `Quase parece um sonho…` | ✅ Validado |
 | `#1602 [53]` | Cleru | `But now that I've been picked,` | `Mas agora que fui escolhido,` | ✅ Validado |
@@ -125,7 +125,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1602 [69]` | Amariss | `went. Until one day… three years` | `lugar. Até que um dia… três anos` | ✅ Validado |
 | `#1602 [70]` | Amariss | `ago…` | `atrás…` | ✅ Validado |
 | `#1602 [71]` | Amariss | `………` | `………` | ✅ Validado |
-| `#1602 [72]` | Amariss | `Perhaps he left it here on purpose.` | `Talvez ele tenha deixado aqui de <br>propósito.` | ✅ Validado |
+| `#1602 [72]` | Amariss | `Perhaps he left it here on purpose.` | `Talvez ele tenha deixado aqui de`<br>`propósito.` | ✅ Validado |
 | `#1602 [73]` | Cleru | `Mom?` | `Mãe?` | ✅ Validado |
 | `#1602 [74]` | Pratty | `Mother?` | `Mamãe?` | ✅ Validado |
 | `#1602 [75]` | Amariss | `Your training is about to become` | `Seu treinamento vai ficar muito` | ✅ Validado |
@@ -139,7 +139,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1602 [83]` | Pratty | `care of it.` | `muito bem dele.` | ✅ Validado |
 | `#1602 [84]` | Amariss | `You'd better go. You don't want` | `É melhor ir. Não vai querer` | ✅ Validado |
 | `#1602 [85]` | Amariss | `to miss it! Good luck…` | `se atrasar! Boa sorte…` | ✅ Validado |
-| `#1602 [86]` | Protagonista | `You can count on me!` | `Pode contar comigo!` | ✅ Validado |
+| `#1602 [86]` | Protagonista | `You can count on me!` | `Pode deixar comigo!` | ✅ Validado |
 
 ---
 
@@ -147,28 +147,28 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 
 | ID | Personagem | Texto Original (EN) | Tradução PT-BR | Status |
 | :--- | :--- | :--- | :--- | :---: |
-| `#1603 [0]` | Protagonista | `The Central Tower!` | `A Central Tower!` | ✅ Validado |
-| `#1603 [1]` | Protagonista | `I'm starting to get nervous…` | `Estou começando a ficar nervoso…` | ✅ Validado |
+| `#1603 [0]` | Protagonista | `The Central Tower!` | `A Torre Central!` | ✅ Validado |
+| `#1603 [1]` | Protagonista | `I'm starting to get nervous…` | `O nervosismo começou a bater…` | ✅ Validado |
 | `#1603 [2]` | Mestre Bron | `{PLAYER}!` | `{PLAYER}!` | ✅ Validado |
-| `#1603 [3]` | Mestre Bron | `What're ya doin'?` | `O que cê tá fazendo?` | ✅ Validado |
-| `#1603 [4]` | Mestre Bron | `Why're ya just standin' there!?` | `Por que tá aí parado desse jeito!?` | ✅ Validado |
-| `#1603 [5]` | Mestre Bron | `Yer gonna be late!` | `Cê vai se atrasar!` | ✅ Validado |
+| `#1603 [3]` | Mestre Bron | `What're ya doin'?` | `O que você tá fazendo?` | ✅ Validado |
+| `#1603 [4]` | Mestre Bron | `Why're ya just standin' there!?` | `Por que está parado desse jeito!?` | ✅ Validado |
+| `#1603 [5]` | Mestre Bron | `Yer gonna be late!` | `Você vai se atrasar!` | ✅ Validado |
 | `#1603 [6]` | Escolha | `Good morning!` | `Bom dia!` | ✅ Validado |
 | `#1603 [7]` | Escolha | `Uh… who are you, again?` | `Ér… quem é você mesmo?` | ✅ Validado |
 | `#1603 [8]` | Cleru | `Oh, it's you, Master!` | `Ah, é você, Mestre!` | ✅ Validado |
 | `#1603 [9]` | Cleru | `Good morning!` | `Bom dia!` | ✅ Validado |
 | `#1603 [10]` | Pratty | `Hello, Master! Good morning!` | `Olá, Mestre! Bom dia!` | ✅ Validado |
-| `#1603 [11]` | Mestre Bron | `Yer cuttin' it a little close,` | `Cê tá chegando em cima da hora,` | ✅ Validado |
+| `#1603 [11]` | Mestre Bron | `Yer cuttin' it a little close,` | `Você tá chegando em cima da hora,` | ✅ Validado |
 | `#1603 [12]` | Mestre Bron | `aren't ya?` | `não acha, não?` | ✅ Validado |
 | `#1603 [13]` | Protagonista | `Do I know you?` | `Eu conheço você?` | ✅ Validado |
-| `#1603 [14]` | Mestre Bron | `What're ya talkin' about!?` | `Do que cê tá falando!?` | ✅ Validado |
+| `#1603 [14]` | Mestre Bron | `What're ya talkin' about!?` | `Do que você tá falando!?` | ✅ Validado |
 | `#1603 [15]` | Mestre Bron | `How could ya forget Bron!?` | `Como pôde se esquecer do Bron!?` | ✅ Validado |
 | `#1603 [16]` | Cleru | `Oh… hello, Master!` | `Ah… oi, Mestre!` | ✅ Validado |
 | `#1603 [17]` | Pratty | `Oh… it's you, Master!` | `Ah… é o senhor, Mestre!` | ✅ Validado |
-| `#1603 [18]` | Mestre Bron | `Are ya feelin' alright? Yer` | `Cê tá se sentindo bem? Tá` | ✅ Validado |
+| `#1603 [18]` | Mestre Bron | `Are ya feelin' alright? Yer` | `Você tá se sentindo bem? Tá` | ✅ Validado |
 | `#1603 [19]` | Mestre Bron | `actin' like yer brain fell out` | `agindo como se o seu cérebro` | ✅ Validado |
 | `#1603 [20]` | Mestre Bron | `of yer head.` | `tivesse caído da cabeça.` | ✅ Validado |
-| `#1603 [21]` | Mestre Bron | `And, yer cuttin' it a little too` | `E cê tá chegando bem em cima` | ✅ Validado |
+| `#1603 [21]` | Mestre Bron | `And, yer cuttin' it a little too` | `E você tá chegando bem em cima` | ✅ Validado |
 | `#1603 [22]` | Mestre Bron | `close, aren't ya? ` | `da hora, não tá, não?` | ✅ Validado |
 | `#1603 [23]` | Escolha | `I'm sorry, Master! I'll hurry up!` | `Desculpe, Mestre! Vou me apressar!` | ✅ Validado |
 | `#1603 [24]` | Mestre Bron | `Yer father was a slowpoke, too.` | `Seu pai também era um lerdo.` | ✅ Validado |
@@ -194,17 +194,17 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1603 [44]` | Pratty | `I think I should tell Mother of` | `Acho que vou contar à Mamãe sobre` | ✅ Validado |
 | `#1603 [45]` | Pratty | `your poor attitude towards the` | `essa sua péssima atitude em relação` | ✅ Validado |
 | `#1603 [46]` | Pratty | `female gender.` | `às mulheres.` | ✅ Validado |
-| `#1603 [47]` | Mestre Bron | `Now why would ya go an' do` | `Ora, por que cê iria fazer uma` | ✅ Validado |
+| `#1603 [47]` | Mestre Bron | `Now why would ya go an' do` | `Ora, por que você iria fazer uma` | ✅ Validado |
 | `#1603 [48]` | Mestre Bron | `somethin' cruel like that!?` | `maldade dessas comigo!?` | ✅ Validado |
 | `#1603 [49]` | Protagonista | `Just kidding, Master!` | `Brincadeirinha, Mestre!` | ✅ Validado |
 | `#1603 [50]` | Protagonista | `Not that you and Mother get` | `Não que você e minha mãe se` | ✅ Validado |
 | `#1603 [51]` | Protagonista | `along well anyway.` | `deem muito bem mesmo.` | ✅ Validado |
-| `#1603 [52]` | Mestre Bron | `Do ya really think so?` | `Cê acha isso mesmo?` | ✅ Validado |
+| `#1603 [52]` | Mestre Bron | `Do ya really think so?` | `Você acha isso mesmo?` | ✅ Validado |
 | `#1603 [53]` | Protagonista | `Yes.` | `Sim.` | ✅ Validado |
 | `#1603 [54]` | Mestre Bron | `Thank ya for yer honesty,` | `Obrigado pela sinceridade,` | ✅ Validado |
 | `#1603 [55]` | Mestre Bron | `however depressin' it is…` | `por mais deprimente que seja…` | ✅ Validado |
 | `#1603 [56]` | Mestre Bron | `Well, I'm headin' back to the` | `Bom, tô voltando lá pra` | ✅ Validado |
-| `#1603 [57]` | Mestre Bron | `Silver Guild.` | `Silver Guild.` | ✅ Validado |
+| `#1603 [57]` | Mestre Bron | `Silver Guild.` | `Guilda Prateada.` | ✅ Validado |
 | `#1603 [58]` | Mestre Bron | `Come an' find me after the` | `Vá me procurar depois da` | ✅ Validado |
 | `#1603 [59]` | Mestre Bron | `opening ceremony.` | `cerimônia de abertura.` | ✅ Validado |
 | `#1603 [60]` | Mestre Bron | `And ya better win the tournament,` | `E é bom vencer esse torneio,` | ✅ Validado |
@@ -214,7 +214,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1603 [64]` | Protagonista | `Master Bron isn't exactly filling` | `O Mestre Bron não está exatamente` | ✅ Validado |
 | `#1603 [65]` | Protagonista | `me with confidence.)` | `me enchendo de confiança.)` | ✅ Validado |
 | `#1603 [66]` | Protagonista | `(Anyway, I'll head to the ` | `(Enfim, vou direto para a` | ✅ Validado |
-| `#1603 [67]` | Protagonista | `Silver Guild right after` | `Silver Guild logo após` | ✅ Validado |
+| `#1603 [67]` | Protagonista | `Silver Guild right after` | `Guilda Prateada logo após` | ✅ Validado |
 | `#1603 [68]` | Protagonista | `the ceremony.)` | `a cerimônia.)` | ✅ Validado |
 | `#1603 [69]` | Protagonista | `(I've been there so much` | `(Tenho ido tanto lá ultimamente` | ✅ Validado |
 | `#1603 [70]` | Protagonista | `lately, it almost feels like` | `que já quase parece a minha` | ✅ Validado |
@@ -227,25 +227,25 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | ID | Personagem | Texto Original (EN) | Tradução PT-BR | Status |
 | :--- | :--- | :--- | :--- | :---: |
 | `#1604 [0]` | Mestre de Cerimônias | `Welcome to the opening ceremony of` | `Bem-vindos à cerimônia de abertura` | ✅ Validado |
-| `#1604 [1]` | Mestre de Cerimônias | `the Craftlord tournament!` | `do torneio de Craftlords!` | ✅ Validado |
+| `#1604 [1]` | Mestre de Cerimônias | `the Craftlord tournament!` | `do torneio de Lordes Forjadores!` | ✅ Validado |
 | `#1604 [2]` | Protagonista | `(Well, this is it!` | `(Bem, chegou a hora!` | ✅ Validado |
-| `#1604 [3]` | Protagonista | `I'm getting nervous…)` | `Estou ficando nervoso…)` | ✅ Validado |
-| `#1604 [4]` | Mestre de Cerimônias | `Lubert, the Craftlord of Amber…` | `Lubert, o Craftlord de Âmbar…` | ✅ Validado |
-| `#1604 [5]` | Mestre de Cerimônias | `Ureksa, the Craftlord of Jade…` | `Ureksa, o Craftlord de Jade…` | ✅ Validado |
-| `#1604 [6]` | Mestre de Cerimônias | `And Sakuro, the Craftlord of` | `E Sakuro, o Craftlord of` | ✅ Validado |
-| `#1604 [7]` | Mestre de Cerimônias | `Sapphire.` | `Sapphire.` | ✅ Validado |
+| `#1604 [3]` | Protagonista | `I'm getting nervous…)` | `Que frio na barriga…)` | ✅ Validado |
+| `#1604 [4]` | Mestre de Cerimônias | `Lubert, the Craftlord of Amber…` | `Lubert, o Lorde Forjador de Âmbar…` | ✅ Validado |
+| `#1604 [5]` | Mestre de Cerimônias | `Ureksa, the Craftlord of Jade…` | `Ureksa, a Lorde Forjador de Jade…` | ✅ Validado |
+| `#1604 [6]` | Mestre de Cerimônias | `And Sakuro, the Craftlord of` | `E Sakuro, o Lorde Forjador de` | ✅ Validado |
+| `#1604 [7]` | Mestre de Cerimônias | `Safira.` | `Safira.` | ✅ Validado |
 | `#1604 [8]` | Mestre de Cerimônias | `These three masters have deigned` | `Estes três mestres dignaram-se` | ✅ Validado |
 | `#1604 [9]` | Mestre de Cerimônias | `to address you, and you would be` | `a dirigir-lhes a palavra; façam` | ✅ Validado |
 | `#1604 [10]` | Mestre de Cerimônias | `wise to heed their words.` | `o favor de ouvir com atenção.` | ✅ Validado |
-| `#1604 [11]` | Craftlord Sakuro | `Welcome, apprentices. Welcome,` | `Bem-vindos, aprendizes. Bem-vindos,` | ✅ Validado |
-| `#1604 [12]` | Craftlord Sakuro | `children of the Craftknights who` | `filhos dos Craftknights que` | ✅ Validado |
-| `#1604 [13]` | Craftlord Sakuro | `defend the City of Swords.` | `defendem a City of Swords.` | ✅ Validado |
+| `#1604 [11]` | Craftlord Sakuro | `Welcome, apprentices. Welcome,` | `Bem-vindos, aprendizes.` | ✅ Validado |
+| `#1604 [12]` | Craftlord Sakuro | `children of the Craftknights who` | `Filhos dos Cavaleiros que` | ✅ Validado |
+| `#1604 [13]` | Craftlord Sakuro | `defend the City of Swords.` | `defendem a Cidade das Espadas.` | ✅ Validado |
 | `#1604 [14]` | Craftlord Sakuro | `Today begins the tournament in ` | `Hoje começa o torneio em que` | ✅ Validado |
 | `#1604 [15]` | Craftlord Sakuro | `which the skills you have learned` | `as habilidades que aprenderam` | ✅ Validado |
 | `#1604 [16]` | Craftlord Sakuro | `will be tested.` | `serão postas à prova.` | ✅ Validado |
 | `#1604 [17]` | Craftlord Sakuro | `It was three years ago that we` | `Foi há três anos que perdemos` | ✅ Validado |
 | `#1604 [18]` | Craftlord Sakuro | `lost Shintetsu, our strongest and` | `Shintetsu, o nosso mais forte e` | ✅ Validado |
-| `#1604 [19]` | Craftlord Sakuro | `most respected Craftlord.` | `respeitado Craftlord.` | ✅ Validado |
+| `#1604 [19]` | Craftlord Sakuro | `most respected Craftlord.` | `respeitado Lorde Forjador.` | ✅ Validado |
 | `#1604 [20]` | Cleru | `(Dad…)` | `(Pai…)` | ✅ Validado |
 | `#1604 [21]` | Pratty | `(Three years…)` | `(Três anos…)` | ✅ Validado |
 | `#1604 [22]` | Cleru | `(It's been three years since the` | `(Já faz três anos desde a` | ✅ Validado |
@@ -256,10 +256,10 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [27]` | Protagonista | `and pay attention!)` | `prestar atenção!)` | ✅ Validado |
 | `#1604 [28]` | Craftlord Sakuro | `And Shintetsu's loss was followed` | `E à perda de Shintetsu seguiu-se` | ✅ Validado |
 | `#1604 [29]` | Craftlord Sakuro | `by the disappearance of Tyram, the` | `o desaparecimento de Tyram, o` | ✅ Validado |
-| `#1604 [30]` | Craftlord Sakuro | `Craftlord of Crystal.` | `Craftlord de Cristal.` | ✅ Validado |
-| `#1604 [31]` | Craftlord Sakuro | `We need to find a replacement` | `Precisamos encontrar um substituto` | ✅ Validado |
-| `#1604 [32]` | Craftlord Sakuro | `for these men, to join the other` | `para esses homens, para unir-se` | ✅ Validado |
-| `#1604 [33]` | Craftlord Sakuro | `Craftlords of Wystern…` | `aos outros Craftlords de Wystern…` | ✅ Validado |
+| `#1604 [30]` | Craftlord Sakuro | `Craftlord of Crystal.` | `Lorde de Cristal.` | ✅ Validado |
+| `#1604 [31]` | Craftlord Sakuro | `We need to find a replacement` | `Precisamos de um substituto` | ✅ Validado |
+| `#1604 [32]` | Craftlord Sakuro | `for these men, to join the other` | `para eles, que se junte` | ✅ Validado |
+| `#1604 [33]` | Craftlord Sakuro | `Craftlords of Wystern…` | `aos outros Lordes de Wystern…` | ✅ Validado |
 | `#1604 [34]` | Craftlord Sakuro | `as the guardians and protectors` | `como guardiões e protetores de` | ✅ Validado |
 | `#1604 [35]` | Craftlord Sakuro | `of Parista, the spirit that dwells` | `Parista, o espírito que habita` | ✅ Validado |
 | `#1604 [36]` | Craftlord Sakuro | `within the holy sword.` | `o interior da espada sagrada.` | ✅ Validado |
@@ -271,15 +271,15 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [42]` | Craftlord Sakuro | `of claiming this position.` | `de reivindicar este posto.` | ✅ Validado |
 | `#1604 [43]` | Craftlord Ureksa | `The majority of you lack the` | `A maioria de vocês não tem` | ✅ Validado |
 | `#1604 [44]` | Craftlord Ureksa | `skill to be a worthy apprentice,` | `habilidade nem para ser aprendiz,` | ✅ Validado |
-| `#1604 [45]` | Craftlord Ureksa | `let alone a Craftlord.` | `quem dirá um Craftlord.` | ✅ Validado |
+| `#1604 [45]` | Craftlord Ureksa | `let alone a Craftlord.` | `quem dirá um Lorde.` | ✅ Validado |
 | `#1604 [46]` | Craftlord Ureksa | `But all of you possess the gift` | `Mas todos possuem a dádiva da` | ✅ Validado |
 | `#1604 [47]` | Craftlord Ureksa | `of youth, and a few of you, the` | `juventude, e alguns poucos, o` | ✅ Validado |
 | `#1604 [48]` | Craftlord Ureksa | `potential that comes with it.` | `potencial que vem com ela.` | ✅ Validado |
 | `#1604 [49]` | Craftlord Ureksa | `We must harness that potential` | `Devemos lapidar esse potencial` | ✅ Validado |
 | `#1604 [50]` | Craftlord Ureksa | `to protect Wystern.` | `para proteger Wystern.` | ✅ Validado |
 | `#1604 [51]` | Craftlord Ureksa | `We must do whatever is needed` | `Faremos o que for preciso para` | ✅ Validado |
-| `#1604 [52]` | Craftlord Ureksa | `to fortify the City of Swords!` | `fortificar a City of Swords!` | ✅ Validado |
-| `#1604 [53]` | Varil | `I should think a Craftlord would` | `Eu esperava que um Craftlord` | ✅ Validado |
+| `#1604 [52]` | Craftlord Ureksa | `to fortify the City of Swords!` | `fortificar a Cidade das Espadas!` | ✅ Validado |
+| `#1604 [53]` | Varil | `I should think a Craftlord would` | `Eu esperava que um Lorde` | ✅ Validado |
 | `#1604 [54]` | Varil | `know better than to have such` | `tivesse mais bom senso do que` | ✅ Validado |
 | `#1604 [55]` | Varil | `a flawed opinion.` | `sustentar uma opinião tão falha.` | ✅ Validado |
 | `#1604 [56]` | Varil | `How does he explain all the` | `Como ele explica tantos adultos` | ✅ Validado |
@@ -290,8 +290,8 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [61]` | Cleru | `doesn't lack confidence!)` | `não lhe falta!)` | ✅ Validado |
 | `#1604 [62]` | Pratty | `(Who is that, and why is he so` | `(Quem é esse, e por que é tão` | ✅ Validado |
 | `#1604 [63]` | Pratty | `full of himself? Doesn't he know` | `convencido? Ele não sabe o quanto` | ✅ Validado |
-| `#1604 [64]` | Pratty | `how unattractive that is?)` | `isso é antipático?)` | ✅ Validado |
-| `#1604 [65]` | Sanary | `The next Craftlord should be strong` | `O próximo Craftlord deve ser forte` | ✅ Validado |
+| `#1604 [64]` | Pratty | `how unattractive that is?)` | `O próximo Lorde deve ser forte` | ✅ Validado |
+| `#1604 [65]` | Sanary | `The next Craftlord should be strong` | `O próximo Lorde deve ser forte` | ✅ Validado |
 | `#1604 [66]` | Sanary | `and beautiful… just like me.` | `e belo… exatamente como eu.` | ✅ Validado |
 | `#1604 [67]` | Cleru | `(That girl is almost as full of` | `(Essa garota consegue ser quase` | ✅ Validado |
 | `#1604 [68]` | Cleru | `herself as that boy was…)` | `tão convencida quanto aquele cara…)` | ✅ Validado |
@@ -312,10 +312,10 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [83]` | Pratty | `I hope he doesn't get hurt…)` | `Espero que não se machuque…)` | ✅ Validado |
 | `#1604 [84]` | Pratty | `(…But I need to stop letting` | `(…Mas preciso parar de viajar` | ✅ Validado |
 | `#1604 [85]` | Pratty | `my mind wander and start` | `nos pensamentos e começar a` | ✅ Validado |
-| `#1604 [86]` | Pratty | `listening to the Craftlords!)` | `ouvir os Craftlords!)` | ✅ Validado |
+| `#1604 [86]` | Pratty | `listening to the Craftlords!)` | `ouvir os Lordes!)` | ✅ Validado |
 | `#1604 [87]` | Craftlord Lubert | `To test your skills and to` | `Para testar suas habilidades e` | ✅ Validado |
 | `#1604 [88]` | Craftlord Lubert | `see which of you is worthy` | `ver quem dentre vocês é digno` | ✅ Validado |
-| `#1604 [89]` | Craftlord Lubert | `of becoming a Craftlord,` | `de se tornar um Craftlord,` | ✅ Validado |
+| `#1604 [89]` | Craftlord Lubert | `of becoming a Craftlord,` | `de se tornar um Lorde,` | ✅ Validado |
 | `#1604 [90]` | Craftlord Lubert | `you are allowed to fight` | `vocês só têm permissão para` | ✅ Validado |
 | `#1604 [91]` | Craftlord Lubert | `only with weapons that you` | `lutar usando armas que vocês` | ✅ Validado |
 | `#1604 [92]` | Craftlord Lubert | `have crafted yourself.` | `mesmos tenham forjado.` | ✅ Validado |
@@ -326,8 +326,8 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [97]` | Cleru | `I know I can craft a weapon` | `Sei que posso forjar uma arma` | ✅ Validado |
 | `#1604 [98]` | Cleru | `strong enough to see me through!)` | `forte o suficiente para vencer!)` | ✅ Validado |
 | `#1604 [99]` | Pratty | `(I'll prove to everyone in Wystern` | `(Vou provar a todos em Wystern` | ✅ Validado |
-| `#1604 [100]` | Pratty | `that I'm worthy of being the` | `que sou digna de me tornar a` | ✅ Validado |
-| `#1604 [101]` | Pratty | `next Craftlord.)` | `próxima Craftlord.)` | ✅ Validado |
+| `#1604 [100]` | Pratty | `that I'm worthy of being the` | `que mereço alcançar o posto` | ✅ Validado |
+| `#1604 [101]` | Pratty | `next Craftlord.)` | `de grande Lorde.)` | ✅ Validado |
 | `#1604 [102]` | Craftlord Lubert | `We will allow your masters` | `Permitiremos que seus mestres` | ✅ Validado |
 | `#1604 [103]` | Craftlord Lubert | `to aid you in the forging of` | `os auxiliem na forja de` | ✅ Validado |
 | `#1604 [104]` | Craftlord Lubert | `your weapons.` | `suas armas.` | ✅ Validado |
@@ -336,26 +336,26 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [107]` | Craftlord Lubert | `But only one partner is allowed` | `Mas apenas um parceiro poderá` | ✅ Validado |
 | `#1604 [108]` | Craftlord Lubert | `to accompany you into combat.` | `acompanhá-los em combate.` | ✅ Validado |
 | `#1604 [109]` | Protagonista | `(A partner? I bet he's referring` | `(Um parceiro? Aposto que ele fala` | ✅ Validado |
-| `#1604 [110]` | Protagonista | `to a Guardian Beast. I wonder how` | `de uma Guardian Beast. Quantos` | ✅ Validado |
+| `#1604 [110]` | Protagonista | `to a Guardian Beast. I wonder how` | `de uma Fera Guardiã. Quantos` | ✅ Validado |
 | `#1604 [111]` | Protagonista | `many of these people have one…)` | `aqui será que têm uma…?)` | ✅ Validado |
 | `#1604 [112]` | Craftlord Lubert | `All of you are hereby granted` | `A todos vocês fica concedida a` | ✅ Validado |
-| `#1604 [113]` | Craftlord Lubert | `passage into the dungeon of the` | `passagem para o calabouço da` | ✅ Validado |
-| `#1604 [114]` | Craftlord Lubert | `Central Tower.` | `Central Tower.` | ✅ Validado |
+| `#1604 [113]` | Craftlord Lubert | `passage into the dungeon of the` | `passagem para o labirinto da` | ✅ Validado |
+| `#1604 [114]` | Craftlord Lubert | `Central Tower.` | `Torre Central.` | ✅ Validado |
 | `#1604 [115]` | Craftlord Lubert | `There, you can collect` | `Lá, poderão coletar os` | ✅ Validado |
 | `#1604 [116]` | Craftlord Lubert | `materials with which to` | `materiais com os quais` | ✅ Validado |
 | `#1604 [117]` | Craftlord Lubert | `craft your weapons.` | `forjarão suas armas.` | ✅ Validado |
 | `#1604 [118]` | Craftlord Lubert | `The person who possesses the` | `A pessoa que guarda as chaves` | ✅ Validado |
-| `#1604 [119]` | Craftlord Lubert | `keys to the dungeon will bring ` | `do calabouço entregará uma` | ✅ Validado |
+| `#1604 [119]` | Craftlord Lubert | `keys to the dungeon will bring ` | `do Labirinto entregará uma` | ✅ Validado |
 | `#1604 [120]` | Craftlord Lubert | `one to each of you later on.` | `a cada um de vocês mais tarde.` | ✅ Validado |
-| `#1604 [121]` | Protagonista | `(The dungeon of the Central Tower` | `(O calabouço da Central Tower` | ✅ Validado |
+| `#1604 [121]` | Protagonista | `(The dungeon of the Central Tower` | `(O Labirinto da Torre Central` | ✅ Validado |
 | `#1604 [122]` | Protagonista | `leads to the shrine of Parista.)` | `leva ao santuário de Parista.)` | ✅ Validado |
-| `#1604 [123]` | Protagonista | `(I've heard stories of Summon` | `(Ouvi histórias sobre Summon` | ✅ Validado |
-| `#1604 [124]` | Protagonista | `Creatures that were summoned to` | `Creatures que foram invocadas` | ✅ Validado |
-| `#1604 [125]` | Protagonista | `protect Parista…)` | `para proteger Parista…)` | ✅ Validado |
+| `#1604 [123]` | Protagonista | `(I've heard stories of Summon` | `(Ouvi lendas de Criaturas` | ✅ Validado |
+| `#1604 [124]` | Protagonista | `Creatures that were summoned to` | `Invocadas para proteger` | ✅ Validado |
+| `#1604 [125]` | Protagonista | `protect Parista…)` | `o santuário de Parista…)` | ✅ Validado |
 | `#1604 [126]` | Protagonista | `(…and no longer listen to their` | `(…e que não obedecem mais aos` | ✅ Validado |
 | `#1604 [127]` | Protagonista | `masters.)` | `seus mestres.)` | ✅ Validado |
 | `#1604 [128]` | Craftlord Ureksa | `There are many dangers in this` | `Há muitos perigos naquele` | ✅ Validado |
-| `#1604 [129]` | Craftlord Ureksa | `dungeon, placed there to insure` | `calabouço, postos lá para garantir` | ✅ Validado |
+| `#1604 [129]` | Craftlord Ureksa | `dungeon, placed there to insure` | `labirinto, postos lá para garantir` | ✅ Validado |
 | `#1604 [130]` | Craftlord Ureksa | `the safety of the great Parista.` | `a segurança do grande Parista.` | ✅ Validado |
 | `#1604 [131]` | Craftlord Ureksa | `These dangers will not be` | `Esses perigos não serão` | ✅ Validado |
 | `#1604 [132]` | Craftlord Ureksa | `lessened or removed for you.` | `reduzidos nem removidos por vocês.` | ✅ Validado |
@@ -368,17 +368,17 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [139]` | Craftlord Sakuro | `As for who you will fight in` | `Quanto a quem enfrentarão em` | ✅ Validado |
 | `#1604 [140]` | Craftlord Sakuro | `each round of the tournament…` | `cada rodada do torneio…` | ✅ Validado |
 | `#1604 [141]` | Craftlord Sakuro | `Your opponent will be announced` | `Seu oponente será anunciado` | ✅ Validado |
-| `#1604 [142]` | Craftlord Sakuro | `by the Central Tower before the` | `pela Central Tower antes do` | ✅ Validado |
+| `#1604 [142]` | Craftlord Sakuro | `by the Central Tower before the` | `pela Torre Central antes do` | ✅ Validado |
 | `#1604 [143]` | Craftlord Sakuro | `start of your battle.` | `início de sua batalha.` | ✅ Validado |
 | `#1604 [144]` | Protagonista | `(So we won't know who we're` | `(Então não saberemos contra quem` | ✅ Validado |
 | `#1604 [145]` | Protagonista | `fighting until the last minute?) ` | `vamos lutar até o último minuto?)` | ✅ Validado |
 | `#1604 [146]` | Protagonista | `(That seems like a strange way` | `(Parece um jeito estranho de` | ✅ Validado |
 | `#1604 [147]` | Protagonista | `to arrange the tournament.)` | `organizar o torneio.)` | ✅ Validado |
 | `#1604 [148]` | Craftlord Sakuro | `You must always remember the` | `Lembrem-se sempre do código` | ✅ Validado |
-| `#1604 [149]` | Craftlord Sakuro | `Craftknight's code.` | `dos Craftknights.` | ✅ Validado |
+| `#1604 [149]` | Craftlord Sakuro | `Craftknight's code.` | `dos Cavaleiros Forjadores.` | ✅ Validado |
 | `#1604 [150]` | Craftlord Sakuro | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1604 [151]` | Craftlord Sakuro | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1604 [152]` | Craftlord Sakuro | `A sword is not fellowship` | `A espada não é companheirismo` | ✅ Validado |
+| `#1604 [152]` | Craftlord Sakuro | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
 | `#1604 [153]` | Craftlord Sakuro | `Let the code guide your efforts.` | `Deixem o código guiar seus atos.` | ✅ Validado |
 | `#1604 [154]` | Craftlord Sakuro | `They will be rewarded.` | `Eles serão recompensados.` | ✅ Validado |
 | `#1604 [155]` | Craftlord Sakuro | `Friendships will be forged` | `Amizades serão forjadas` | ✅ Validado |
@@ -388,7 +388,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1604 [159]` | Craftlord Sakuro | `you will be your own master.` | `você será seu próprio mestre.` | ✅ Validado |
 | `#1604 [160]` | Craftlord Sakuro | `I sincerely hope that one of you` | `Espero sinceramente que um de` | ✅ Validado |
 | `#1604 [161]` | Craftlord Sakuro | `will become our equal, and join us` | `vocês se torne nosso igual e se` | ✅ Validado |
-| `#1604 [162]` | Craftlord Sakuro | `as a Craftlord.` | `junte a nós como Craftlord.` | ✅ Validado |
+| `#1604 [162]` | Craftlord Sakuro | `as a Craftlord.` | `junte a nós como Lorde Forjador.` | ✅ Validado |
 | `#1604 [163]` | Mestre de Cerimônias | `That is all!` | `Isso é tudo!` | ✅ Validado |
 | `#1604 [164]` | Mestre de Cerimônias | `The ceremony is complete!` | `A cerimônia está encerrada!` | ✅ Validado |
 
@@ -411,19 +411,19 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1605 [10]` | Pratty | `Why are you laughing, Mother?` | `Por que está rindo, Mamãe?` | ✅ Validado |
 | `#1605 [11]` | Amariss | `I was so worried when you told` | `Fiquei tão preocupada quando` | ✅ Validado |
 | `#1605 [12]` | Amariss | `me that you wanted to become a ` | `você me disse que queria se` | ✅ Validado |
-| `#1605 [13]` | Amariss | `Craftlord.` | `tornar um Craftlord.` | ✅ Validado |
+| `#1605 [13]` | Amariss | `Craftlord.` | `tornar um Lorde.` | ✅ Validado |
 | `#1605 [14]` | Amariss | `But now I see the strength of` | `Mas agora vejo a força do seu` | ✅ Validado |
 | `#1605 [15]` | Amariss | `your father in you, and I realize` | `pai em você, e percebo que não` | ✅ Validado |
 | `#1605 [16]` | Amariss | `I don't have to worry anymore.` | `preciso mais me preocupar.` | ✅ Validado |
 | `#1605 [17]` | Cleru | `Thanks, Mom!` | `Obrigado, Mãe!` | ✅ Validado |
 | `#1605 [18]` | Pratty | `Hehe, what else did you expect` | `Hehe, o que mais esperava da` | ✅ Validado |
 | `#1605 [19]` | Pratty | `from the daughter of Shintetsu,` | `filha de Shintetsu, o` | ✅ Validado |
-| `#1605 [20]` | Pratty | `the Craftlord of Iron?` | `Craftlord do Ferro?` | ✅ Validado |
+| `#1605 [20]` | Pratty | `the Craftlord of Iron?` | `Lorde do Ferro?` | ✅ Validado |
 | `#1605 [21]` | Amariss | `That's true… you were always` | `É verdade… você sempre foi do` | ✅ Validado |
 | `#1605 [22]` | Amariss | `the type to break boys' noses,` | `tipo que quebra o nariz dos` | ✅ Validado |
 | `#1605 [23]` | Amariss | `not their hearts.` | `garotos, e não o coração deles.` | ✅ Validado |
 | `#1605 [24]` | Pratty | `What!? That's got nothing to do` | `O quê!? Isso não tem nada a ver!` | ✅ Validado |
-| `#1605 [25]` | Pratty | `with it! I hear the Craftlord` | `Ouvi dizer que a Craftlord of` | ✅ Validado |
+| `#1605 [25]` | Pratty | `with it! I hear the Craftlord` | `Ouvi dizer que a Lorde of` | ✅ Validado |
 | `#1605 [26]` | Pratty | `of Ruby is a beautiful woman!` | `Ruby é uma mulher belíssima!` | ✅ Validado |
 | `#1605 [27]` | Amariss | `Perhaps, dear, but beauty is in` | `Talvez, querida, mas a beleza` | ✅ Validado |
 | `#1605 [28]` | Amariss | `the eye of the beholder…` | `está nos olhos de quem vê…` | ✅ Validado |
@@ -432,15 +432,15 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1605 [31]` | Amariss | `Weren't you supposed to meet` | `Você não devia se encontrar` | ✅ Validado |
 | `#1605 [32]` | Amariss | `with him after the ceremony?` | `com ele depois da cerimônia?` | ✅ Validado |
 | `#1605 [33]` | Cleru | `Oh, yeah! He told me to drop` | `Ah, é mesmo! Ele me disse para` | ✅ Validado |
-| `#1605 [34]` | Cleru | `by the Silver Guild.` | `dar uma passada na Silver Guild.` | ✅ Validado |
+| `#1605 [34]` | Cleru | `by the Silver Guild.` | `dar uma passada na Guilda Prateada.` | ✅ Validado |
 | `#1605 [35]` | Pratty | `That's right! He told me to` | `É verdade! Ele me pediu para` | ✅ Validado |
-| `#1605 [36]` | Pratty | `visit him at the Silver Guild.` | `visitá-lo lá na Silver Guild.` | ✅ Validado |
+| `#1605 [36]` | Pratty | `visit him at the Silver Guild.` | `visitá-lo lá na Guilda Prateada.` | ✅ Validado |
 | `#1605 [37]` | Amariss | `I feel sorry for Bron. Has there` | `Sinto pena do Bron. Teve alguma` | ✅ Validado |
 | `#1605 [38]` | Amariss | `ever been a time when you` | `vez na vida em que você não se` | ✅ Validado |
 | `#1605 [39]` | Amariss | `weren't late to meet him?` | `atrasou para encontrar com ele?` | ✅ Validado |
 | `#1605 [40]` | Protagonista | `I'm going! I'm going!` | `Já vou! Já estou indo!` | ✅ Validado |
 | `#1605 [41]` | Amariss | `Bron is waiting for you at` | `O Bron está esperando por você` | ✅ Validado |
-| `#1605 [42]` | Amariss | `the Silver Guild, remember?` | `na Silver Guild, lembra?` | ✅ Validado |
+| `#1605 [42]` | Amariss | `the Silver Guild, remember?` | `na Guilda Prateada, lembra?` | ✅ Validado |
 | `#1605 [43]` | Amariss | `Now get moving!` | `Agora vá andando!` | ✅ Validado |
 
 ---
@@ -460,7 +460,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [8]` | Cleru | `Sure thing, Master!` | `Com certeza, Mestre!` | ✅ Validado |
 | `#1606 [9]` | Pratty | `(I've never seen Master Bron` | `(Nunca vi o Mestre Bron` | ✅ Validado |
 | `#1606 [10]` | Pratty | `quite so serious…)` | `tão sério assim…)` | ✅ Validado |
-| `#1606 [11]` | Mestre Bron | `Answer me this. Do ya have` | `Me responda uma coisa. Cê tem` | ✅ Validado |
+| `#1606 [11]` | Mestre Bron | `Answer me this. Do ya have` | `Me responda uma coisa. Você tem` | ✅ Validado |
 | `#1606 [12]` | Mestre Bron | `the skill an' the confidence to` | `a técnica e a confiança pra` | ✅ Validado |
 | `#1606 [13]` | Mestre Bron | `win this tournament?` | `vencer este torneio?` | ✅ Validado |
 | `#1606 [14]` | Escolha (Cleru) | `Of course I do, Master!` | `É claro que tenho, Mestre!` | ✅ Validado |
@@ -469,12 +469,12 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [17]` | Escolha (Pratty) | `I'm not sure that I do…` | `Não tenho tanta certeza…` | ✅ Validado |
 | `#1606 [18]` | Cleru | `Of course, Master! I'm the` | `Claro, Mestre! Eu sou o` | ✅ Validado |
 | `#1606 [19]` | Cleru | `son of Shintetsu, the` | `filho de Shintetsu, o` | ✅ Validado |
-| `#1606 [20]` | Cleru | `Craftlord of Iron!` | `Craftlord do Ferro!` | ✅ Validado |
+| `#1606 [20]` | Cleru | `Craftlord of Iron!` | `Lorde do Ferro!` | ✅ Validado |
 | `#1606 [21]` | Cleru | `I'm guaranteed to win the` | `É garantido que vou vencer o` | ✅ Validado |
 | `#1606 [22]` | Cleru | `tournament and make you proud!` | `torneio e te deixar orgulhoso!` | ✅ Validado |
 | `#1606 [23]` | Pratty | `Of course, Master! I'm the` | `Claro, Mestre! Eu sou a` | ✅ Validado |
 | `#1606 [24]` | Pratty | `daughter of Shintetsu, the` | `filha de Shintetsu, o` | ✅ Validado |
-| `#1606 [25]` | Pratty | `Craftlord of Iron!` | `Craftlord do Ferro!` | ✅ Validado |
+| `#1606 [25]` | Pratty | `Craftlord of Iron!` | `Lorde do Ferro!` | ✅ Validado |
 | `#1606 [26]` | Pratty | `I'll win the tournament no` | `Vencerei o torneio não importa` | ✅ Validado |
 | `#1606 [27]` | Pratty | `matter who stands in my way!` | `quem entre no meu caminho!` | ✅ Validado |
 | `#1606 [28]` | Mestre Bron | `I admire yer confidence.` | `Admiro a sua confiança.` | ✅ Validado |
@@ -484,13 +484,13 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [32]` | Mestre Bron | `But ya can't expect to win the` | `Mas não ache que vai vencer o` | ✅ Validado |
 | `#1606 [33]` | Mestre Bron | `tournament just 'cause yer his kin.` | `torneio só por ter o sangue dele.` | ✅ Validado |
 | `#1606 [34]` | Cleru | `…What do you mean, Master?` | `…Como assim, Mestre?` | ✅ Validado |
-| `#1606 [35]` | Pratty | `…I realize that, Master.` | `…Eu tenho consciência disso, Mestre.` | ✅ Validado |
-| `#1606 [36]` | Mestre Bron | `I'm gonna be blunt. Ya don't` | `Vou ser direto. Cê não tem` | ✅ Validado |
+| `#1606 [35]` | Pratty | `…I realize that, Master.` | `…Tenho consciência disso, Mestre.` | ✅ Validado |
+| `#1606 [36]` | Mestre Bron | `I'm gonna be blunt. Ya don't` | `Vou ser direto. Você não tem` | ✅ Validado |
 | `#1606 [37]` | Mestre Bron | `have the skill or the brains` | `a habilidade nem o juízo pra` | ✅ Validado |
 | `#1606 [38]` | Mestre Bron | `to win this tournament.` | `vencer este torneio.` | ✅ Validado |
-| `#1606 [39]` | Mestre Bron | `Ya don't even have the skill` | `Cê não tem habilidade nem pra` | ✅ Validado |
+| `#1606 [39]` | Mestre Bron | `Ya don't even have the skill` | `Você não tem habilidade nem pra` | ✅ Validado |
 | `#1606 [40]` | Mestre Bron | `to win yer first battle.` | `vencer a sua primeira luta.` | ✅ Validado |
-| `#1606 [41]` | Cleru | `…Thanks for your brutal` | `…Obrigado pela sinceridade` | ✅ Validado |
+| `#1606 [41]` | Protagonista | `…Thanks for your brutal` | `…Valeu pela sinceridade` | ✅ Validado |
 | `#1606 [42]` | Cleru | `honesty, Master… I think.` | `brutal, Mestre… eu acho.` | ✅ Validado |
 | `#1606 [43]` | Pratty | `…Is that really how you feel,` | `…É assim mesmo que pensa,` | ✅ Validado |
 | `#1606 [44]` | Pratty | `Master? I'm sorry to hear it.` | `Mestre? Lamento ouvir isso.` | ✅ Validado |
@@ -500,13 +500,13 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [48]` | Cleru | `You can count` | `Pode contar` | ✅ Validado |
 | `#1606 [49]` | Cleru | `on me, Master!` | `comigo, Mestre!` | ✅ Validado |
 | `#1606 [50]` | Cleru | `That's what I want to say… but` | `Era o que eu queria dizer… mas` | ✅ Validado |
-| `#1606 [51]` | Cleru | `even you admit I'm the weakest` | `até você admite que sou o mais` | ✅ Validado |
+| `#1606 [51]` | Cleru | `even you admit I'm the weakest` | `Você vai ser um Lorde,` | ✅ Validado |
 | `#1606 [52]` | Cleru | `person in the tournament!` | `fraco de todo o torneio!` | ✅ Validado |
-| `#1606 [53]` | Mestre Bron | `What're ya talkin' about!?` | `Do que cê tá falando!?` | ✅ Validado |
-| `#1606 [54]` | Mestre Bron | `Yer gonna be a Craftlord,` | `Cê vai se tornar um Craftlord,` | ✅ Validado |
+| `#1606 [53]` | Mestre Bron | `What're ya talkin' about!?` | `Do que você tá falando!?` | ✅ Validado |
+| `#1606 [54]` | Mestre Bron | `Yer gonna be a Craftlord,` | `Você vai se tornar um Lorde,` | ✅ Validado |
 | `#1606 [55]` | Mestre Bron | `just like yer father!` | `igualzinho ao seu pai!` | ✅ Validado |
-| `#1606 [56]` | Mestre Bron | `Yer the son of Shintetsu, the` | `Cê é o filho de Shintetsu, o` | ✅ Validado |
-| `#1606 [57]` | Mestre Bron | `strongest Craftlord that` | `Craftlord mais forte que` | ✅ Validado |
+| `#1606 [56]` | Mestre Bron | `Yer the son of Shintetsu, the` | `Você é o filho de Shintetsu, o` | ✅ Validado |
+| `#1606 [57]` | Mestre Bron | `strongest Craftlord that` | `Lorde mais forte que` | ✅ Validado |
 | `#1606 [58]` | Mestre Bron | `Wystern ever knew!` | `Wystern já conheceu!` | ✅ Validado |
 | `#1606 [59]` | Mestre Bron | `If nothin' else, ya gotta' try…` | `No mínimo, cê tem que tentar…` | ✅ Validado |
 | `#1606 [60]` | Cleru | `Yes, but…` | `Sim, mas…` | ✅ Validado |
@@ -516,13 +516,13 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [64]` | Cleru | `Put your faith in me, Master!` | `Confie em mim, Mestre!` | ✅ Validado |
 | `#1606 [65]` | Cleru | `I can do it!` | `Eu consigo!` | ✅ Validado |
 | `#1606 [66]` | Pratty | `…I wish I believed those words.` | `…Queria acreditar nessas palavras.` | ✅ Validado |
-| `#1606 [67]` | Pratty | `But I'm weak, and everyone else` | `Mas sou fraca, e todos os outros` | ✅ Validado |
+| `#1606 [67]` | Pratty | `But I'm weak, and everyone else` | `Você vai ser uma Lorde Forjadora,` | ✅ Validado |
 | `#1606 [68]` | Pratty | `in the tournament is so strong…` | `no torneio são tão fortes…` | ✅ Validado |
-| `#1606 [69]` | Mestre Bron | `What're ya talkin' about!?` | `Do que cê tá falando!?` | ✅ Validado |
-| `#1606 [70]` | Mestre Bron | `Yer gonna be a Craftlord,` | `Cê vai se tornar uma Craftlord,` | ✅ Validado |
+| `#1606 [69]` | Mestre Bron | `What're ya talkin' about!?` | `Do que você tá falando!?` | ✅ Validado |
+| `#1606 [70]` | Mestre Bron | `Yer gonna be a Craftlord,` | `Você vai se tornar uma Lorde,` | ✅ Validado |
 | `#1606 [71]` | Mestre Bron | `just like yer father was!` | `igualzinho ao seu pai!` | ✅ Validado |
-| `#1606 [72]` | Mestre Bron | `Yer the daughter of Shintetsu!` | `Cê é a filha de Shintetsu!` | ✅ Validado |
-| `#1606 [73]` | Mestre Bron | `A Craftlord an' a legend!` | `Um Craftlord e uma lenda!` | ✅ Validado |
+| `#1606 [72]` | Mestre Bron | `Yer the daughter of Shintetsu!` | `Você é a filha de Shintetsu!` | ✅ Validado |
+| `#1606 [73]` | Mestre Bron | `A Craftlord an' a legend!` | `Um Lorde e uma lenda!` | ✅ Validado |
 | `#1606 [74]` | Mestre Bron | `For his sake, ya gotta do yer` | `Por ele, cê tem que dar o seu` | ✅ Validado |
 | `#1606 [75]` | Mestre Bron | `best to win this.` | `melhor pra vencer isso.` | ✅ Validado |
 | `#1606 [76]` | Pratty | `You're a great teacher, but I'm` | `O senhor é um ótimo mestre, mas` | ✅ Validado |
@@ -530,17 +530,17 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1606 [78]` | Pratty | `I'm alright if I'm not.` | `dizer que estou pronta sem estar.` | ✅ Validado |
 | `#1606 [79]` | Mestre Bron | `Yer right to speak the truth.` | `Faz bem em falar a verdade.` | ✅ Validado |
 | `#1606 [80]` | Mestre Bron | `Ya don't need to worry. I'll tell` | `Não precisa temer. Vou te contar` | ✅ Validado |
-| `#1606 [81]` | Mestre Bron | `ya everythin' ya need to know` | `tudinho o que cê precisa saber` | ✅ Validado |
+| `#1606 [81]` | Mestre Bron | `ya everythin' ya need to know` | `tudinho o que você precisa saber` | ✅ Validado |
 | `#1606 [82]` | Mestre Bron | `to win the tournament!` | `pra vencer o torneio!` | ✅ Validado |
 | `#1606 [83]` | Pratty | `Is that so, Master?` | `É mesmo, Mestre?` | ✅ Validado |
-| `#1606 [84]` | Protagonista | `But I've never crafted a weapon` | `Mas nunca forjei uma arma sozinho!` | ✅ Validado |
+| `#1606 [84]` | Protagonista | `But I've never crafted a weapon` | `Nunca forjei uma arma sem ajuda!` | ✅ Validado |
 | `#1606 [85]` | Protagonista | `on my own! I've only helped you` | `Até hoje eu só ajudei você a` | ✅ Validado |
 | `#1606 [86]` | Protagonista | `make them.` | `fazer as suas.` | ✅ Validado |
 | `#1606 [87]` | Mestre Bron | `Do ya think ya would be in the` | `Acha mesmo que estaria no` | ✅ Validado |
 | `#1606 [88]` | Mestre Bron | `tournament if ya couldn't forge` | `torneio se não pudesse forjar` | ✅ Validado |
 | `#1606 [89]` | Mestre Bron | `a weapon on yer own!?` | `uma arma por conta própria!?` | ✅ Validado |
 | `#1606 [90]` | Mestre Bron | `Don't worry so much.` | `Não se preocupe tanto.` | ✅ Validado |
-| `#1606 [91]` | Mestre Bron | `Ya might win this thing yet!` | `Cê ainda pode vencer essa parada!` | ✅ Validado |
+| `#1606 [91]` | Mestre Bron | `Ya might win this thing yet!` | `Você ainda pode vencer essa parada!` | ✅ Validado |
 | `#1606 [92]` | Mestre Bron | `Also, ya should remember that` | `E lembre-se também de que` | ✅ Validado |
 | `#1606 [93]` | Mestre Bron | `I've got other apprentices in` | `tenho outros aprendizes nesse` | ✅ Validado |
 | `#1606 [94]` | Mestre Bron | `the tournament too…` | `torneio além de você…` | ✅ Validado |
@@ -564,12 +564,12 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [4]` | Mestre Bron | `He's a summoner.` | `Ele é um invocador.` | ✅ Validado |
 | `#1608 [5]` | Mestre Bron | `I brought 'im to Wystern for` | `Trouxe ele a Wystern com um` | ✅ Validado |
 | `#1608 [6]` | Mestre Bron | `one purpose, and one only.` | `único propósito, e só um.` | ✅ Validado |
-| `#1608 [7]` | Mestre Bron | `He's gonna summon the Guardian` | `Ele vai invocar a Guardian` | ✅ Validado |
-| `#1608 [8]` | Mestre Bron | `Beast that'll become yer partner` | `Beast que será sua parceira` | ✅ Validado |
-| `#1608 [9]` | Mestre Bron | `in battle.` | `de batalha.` | ✅ Validado |
-| `#1608 [10]` | Mestre Bron | `And I've gotta help 'im get ready.` | `E preciso ajudá-lo nos preparativos.` | ✅ Validado |
+| `#1608 [7]` | Mestre Bron | `He's gonna summon the Guardian` | `Ele vai invocar a Fera Guardiã` | ✅ Validado |
+| `#1608 [8]` | Mestre Bron | `Beast that'll become yer partner` | `que lutará ao seu lado` | ✅ Validado |
+| `#1608 [9]` | Mestre Bron | `in battle.` | `em batalha.` | ✅ Validado |
+| `#1608 [10]` | Mestre Bron | `And I've gotta help 'im get ready.` | `Preciso ajudá-lo nos preparativos.` | ✅ Validado |
 | `#1608 [11]` | Cleru | `Alright…` | `Certo…` | ✅ Validado |
-| `#1608 [12]` | Cleru | `I'm going to have a Guardian` | `Vou ter uma Guardian Beast` | ✅ Validado |
+| `#1608 [12]` | Cleru | `I'm going to have a Guardian` | `Vou ter uma Fera Guardiã` | ✅ Validado |
 | `#1608 [13]` | Cleru | `Beast at my side…` | `ao meu lado…` | ✅ Validado |
 | `#1608 [14]` | Cleru | `Am I worthy of this, Master?` | `Será que sou digno disso, Mestre?` | ✅ Validado |
 | `#1608 [15]` | Cleru | `And is it even necessary?` | `E será mesmo necessário?` | ✅ Validado |
@@ -577,27 +577,27 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [17]` | Pratty | `this, Master. I'm still in shock.` | `Mestre. Ainda estou em choque.` | ✅ Validado |
 | `#1608 [18]` | Mestre Bron | `Why're ya so surprised?` | `Por que tanta surpresa?` | ✅ Validado |
 | `#1608 [19]` | Mestre Bron | `Did ya think ya would win the` | `Achou mesmo que ia vencer o` | ✅ Validado |
-| `#1608 [20]` | Mestre Bron | `tournament all by yerself?` | `torneio todinho sozinho?` | ✅ Validado |
+| `#1608 [20]` | Mestre Bron | `tournament all by yerself?` | `torneio sem ajuda de ninguém?` | ✅ Validado |
 | `#1608 [21]` | Cleru | `Well… I'm just not sure if a` | `Bom… só não sei se uma` | ✅ Validado |
-| `#1608 [22]` | Cleru | `Guardian Beast is something` | `Guardian Beast é algo que` | ✅ Validado |
-| `#1608 [23]` | Cleru | `I should have.` | `eu já deveria ter.` | ✅ Validado |
+| `#1608 [22]` | Cleru | `Guardian Beast is something` | `Fera Guardiã é algo que` | ✅ Validado |
+| `#1608 [23]` | Cleru | `I should have.` | `eu deveria ter.` | ✅ Validado |
 | `#1608 [24]` | Pratty | `No… but I'm not sure that a` | `Não… mas não sei se uma` | ✅ Validado |
-| `#1608 [25]` | Pratty | `Guardian Beast is something` | `Guardian Beast é algo que` | ✅ Validado |
+| `#1608 [25]` | Pratty | `Guardian Beast is something` | `Fera Guardiã é algo que` | ✅ Validado |
 | `#1608 [26]` | Pratty | `I deserve to have.` | `eu já mereça ter.` | ✅ Validado |
-| `#1608 [27]` | Protagonista | `I was taught that only a skilled` | `Aprendi que só um Craftknight` | ✅ Validado |
-| `#1608 [28]` | Protagonista | `Craftknight should possess a` | `experiente deveria possuir uma` | ✅ Validado |
-| `#1608 [29]` | Protagonista | `Guardian Beast.` | `Guardian Beast.` | ✅ Validado |
+| `#1608 [27]` | Protagonista | `I was taught that only a skilled` | `Aprendi que só um forjador` | ✅ Validado |
+| `#1608 [28]` | Protagonista | `Craftknight should possess a` | `experiente pode ter uma` | ✅ Validado |
+| `#1608 [29]` | Protagonista | `Guardian Beast.` | `Fera Guardiã.` | ✅ Validado |
 | `#1608 [30]` | Mestre Bron | `The only way yer gonna win this` | `O único jeito de vencer este` | ✅ Validado |
 | `#1608 [31]` | Mestre Bron | `tournament is if you stop playin'` | `torneio é parando de jogar` | ✅ Validado |
 | `#1608 [32]` | Mestre Bron | `by the rules.` | `sempre conforme as regras.` | ✅ Validado |
-| `#1608 [33]` | Mestre Bron | `Take the Guardian Beast.` | `Aceite a Guardian Beast.` | ✅ Validado |
-| `#1608 [34]` | Mestre Bron | `Yer gonna need it.` | `Cê vai precisar dela.` | ✅ Validado |
+| `#1608 [33]` | Mestre Bron | `Take the Guardian Beast.` | `Aceite a Fera Guardiã.` | ✅ Validado |
+| `#1608 [34]` | Mestre Bron | `Yer gonna need it.` | `Você vai precisar dela.` | ✅ Validado |
 | `#1608 [35]` | Protagonista | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
 | `#1608 [36]` | Mestre Bron | `Do what ya came here to do,` | `Faça o que veio fazer aqui,` | ✅ Validado |
 | `#1608 [37]` | Mestre Bron | `Summoner.` | `Invocador.` | ✅ Validado |
 | `#1608 [38]` | Invocador | `Indeed, Bron.` | `Pois bem, Bron.` | ✅ Validado |
 | `#1608 [39]` | Invocador | `Tell me, child.` | `Diga-me, criança.` | ✅ Validado |
-| `#1608 [40]` | Cleru | `(I'm getting nervous again…)` | `(Estou ficando nervoso de novo…)` | ✅ Validado |
+| `#1608 [40]` | Protagonista | `(I'm getting nervous again…)` | `(O nervosismo bateu de novo…)` | ✅ Validado |
 | `#1608 [41]` | Pratty | `Yes, sir?` | `Sim, senhor?` | ✅ Validado |
 | `#1608 [42]` | Invocador | `What do you think of` | `O que você pensa sobre` | ✅ Validado |
 | `#1608 [43]` | Invocador | `Shintetsu?` | `Shintetsu?` | ✅ Validado |
@@ -613,15 +613,15 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [53]` | Escolha (Pratty) | `I want to be more like him.` | `Quero ser mais parecida com ele.` | ✅ Validado |
 | `#1608 [54]` | Escolha (Pratty) | `I want to know more about him.` | `Quero saber mais sobre ele.` | ✅ Validado |
 | `#1608 [55]` | Cleru | `I want to be like my dad,` | `Quero ser como o meu pai` | ✅ Validado |
-| `#1608 [56]` | Cleru | `and become a Craftlord.` | `e me tornar um Craftlord.` | ✅ Validado |
+| `#1608 [56]` | Cleru | `and become a Craftlord.` | `e me tornar um Lorde.` | ✅ Validado |
 | `#1608 [57]` | Pratty | `My goal is to follow in the` | `Meu objetivo é seguir os` | ✅ Validado |
 | `#1608 [58]` | Pratty | `footsteps of my father, and` | `passos do meu pai e me` | ✅ Validado |
-| `#1608 [59]` | Pratty | `become a Craftlord.` | `tornar uma Craftlord.` | ✅ Validado |
+| `#1608 [59]` | Pratty | `become a Craftlord.` | `tornar uma Lorde.` | ✅ Validado |
 | `#1608 [60]` | Invocador | `Hmm…` | `Hmm…` | ✅ Validado |
 | `#1608 [61]` | Invocador | `The child has been raised well.` | `A criança foi bem criada.` | ✅ Validado |
 | `#1608 [62]` | Invocador | `I have another question.` | `Tenho outra pergunta.` | ✅ Validado |
 | `#1608 [63]` | Invocador | `What is most important` | `O que é mais importante` | ✅ Validado |
-| `#1608 [64]` | Invocador | `to a Craftknight?` | `para um Craftknight?` | ✅ Validado |
+| `#1608 [64]` | Invocador | `to a Craftknight?` | `para um Cavaleiro?` | ✅ Validado |
 | `#1608 [65]` | Protagonista | `(How would my father have` | `(Como será que o meu pai` | ✅ Validado |
 | `#1608 [66]` | Protagonista | `answered this question?)` | `teria respondido a isso?)` | ✅ Validado |
 | `#1608 [67]` | Escolha | `The ability to forge weapons.` | `A habilidade de forjar armas.` | ✅ Validado |
@@ -633,7 +633,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [73]` | Cleru | `him… so that I can be more like` | `ele… para poder ser mais como` | ✅ Validado |
 | `#1608 [74]` | Cleru | `him someday.` | `ele algum dia.` | ✅ Validado |
 | `#1608 [75]` | Cleru | `And so I can become a` | `E assim me tornar um` | ✅ Validado |
-| `#1608 [76]` | Cleru | `Craftlord!` | `Craftlord!` | ✅ Validado |
+| `#1608 [76]` | Cleru | `Craftlord!` | `Lorde!` | ✅ Validado |
 | `#1608 [77]` | Pratty | `I always hear about the respect` | `Sempre ouço falar do respeito` | ✅ Validado |
 | `#1608 [78]` | Pratty | `that was afforded my father, but` | `que todos tinham por meu pai, mas` | ✅ Validado |
 | `#1608 [79]` | Pratty | `I know very little about him.` | `sei muito pouco sobre ele.` | ✅ Validado |
@@ -649,7 +649,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [89]` | Invocador | `their children are very special.` | `filhos são muito especiais.` | ✅ Validado |
 | `#1608 [90]` | Invocador | `What do you mean?` | `O que pensa de sua mãe?` | ✅ Validado |
 | `#1608 [91]` | Mestre Bron | `Yer mother was the best teacher` | `Sua mãe foi a melhor professora` | ✅ Validado |
-| `#1608 [92]` | Mestre Bron | `ya could've had.` | `que cê poderia ter tido.` | ✅ Validado |
+| `#1608 [92]` | Mestre Bron | `ya could've had.` | `que você poderia ter tido.` | ✅ Validado |
 | `#1608 [93]` | Mestre Bron | `She taught ya how to survive,` | `Ela te ensinou a sobreviver` | ✅ Validado |
 | `#1608 [94]` | Mestre Bron | `an' how to thrive.` | `e a vencer na vida.` | ✅ Validado |
 | `#1608 [95]` | Escolha | `She's a bit over protective.` | `Ela é um pouco superprotetora.` | ✅ Validado |
@@ -661,24 +661,24 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [101]` | Mestre Bron | `A weapon is only a thing,` | `Uma arma é só um objeto,` | ✅ Validado |
 | `#1608 [102]` | Mestre Bron | `an' a life is always worth more` | `e uma vida sempre vale mais` | ✅ Validado |
 | `#1608 [103]` | Mestre Bron | `than a possession.` | `do que um bem material.` | ✅ Validado |
-| `#1608 [104]` | Mestre Bron | `But at least yer serious about` | `Mas pelo menos cê tá levando` | ✅ Validado |
+| `#1608 [104]` | Mestre Bron | `But at least yer serious about` | `Mas pelo menos você tá levando` | ✅ Validado |
 | `#1608 [105]` | Mestre Bron | `the tournament.` | `o torneio a sério.` | ✅ Validado |
 | `#1608 [106]` | Mestre Bron | `Now let's call forth a` | `Agora vamos invocar uma` | ✅ Validado |
-| `#1608 [107]` | Mestre Bron | `Guardian Beast!` | `Guardian Beast!` | ✅ Validado |
+| `#1608 [107]` | Mestre Bron | `Guardian Beast!` | `Fera Guardiã!` | ✅ Validado |
 | `#1608 [108]` | Invocador | `Soon. But I have one more` | `Em breve. Mas antes tenho mais` | ✅ Validado |
 | `#1608 [109]` | Invocador | `question of the child first.` | `uma pergunta para a criança.` | ✅ Validado |
 | `#1608 [110]` | Invocador | `During the tournament, into what` | `Durante o torneio, em que você` | ✅ Validado |
 | `#1608 [111]` | Invocador | `will you place more trust?` | `depositará maior confiança?` | ✅ Validado |
-| `#1608 [112]` | Invocador | `The weapon that you have forged,` | `Na arma que você forjou ou` | ✅ Validado |
+| `#1608 [112]` | Invocador | `The weapon that you have forged,` | `Um forjador não pode criar armas` | ✅ Validado |
 | `#1608 [113]` | Invocador | `or the skill that you possess?` | `na habilidade que possui?` | ✅ Validado |
 | `#1608 [114]` | Escolha | `My weapon.` | `Na minha arma.` | ✅ Validado |
 | `#1608 [115]` | Escolha | `My skill!` | `Na minha habilidade!` | ✅ Validado |
-| `#1608 [116]` | Protagonista | `A Craftknight can't make a weapon` | `Um Craftknight não pode criar armas` | ✅ Validado |
-| `#1608 [117]` | Protagonista | `without taking the natural order` | `sem levar a ordem natural` | ✅ Validado |
+| `#1608 [116]` | Protagonista | `A Craftknight can't make a weapon` | `Um forjador não pode criar armas` | ✅ Validado |
+| `#1608 [117]` | Protagonista | `without taking the natural order` | `Verdade… mas um forjador tem` | ✅ Validado |
 | `#1608 [118]` | Protagonista | `into account.` | `em consideração.` | ✅ Validado |
 | `#1608 [119]` | Protagonista | `He has to embrace nature into` | `Ele deve acolher a natureza em` | ✅ Validado |
 | `#1608 [120]` | Protagonista | `his creations, not reject it.` | `suas criações, e não rejeitá-la.` | ✅ Validado |
-| `#1608 [121]` | Mestre Bron | `True, true… but a Craftknight has` | `Verdade… mas um Craftknight tem` | ✅ Validado |
+| `#1608 [121]` | Mestre Bron | `True, true… but a Craftknight has` | `Verdade… mas um forjador tem` | ✅ Validado |
 | `#1608 [122]` | Mestre Bron | `gotta be more of a fighter than` | `que ser mais guerreiro do que` | ✅ Validado |
 | `#1608 [123]` | Mestre Bron | `a tree-hugger.` | `abraçador de árvores.` | ✅ Validado |
 | `#1608 [124]` | Mestre Bron | `If ya don't have a strong` | `Se não tiver uma arma forte,` | ✅ Validado |
@@ -686,7 +686,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [126]` | Mestre Bron | `nature… or yerself!` | `e nem a si mesmo!` | ✅ Validado |
 | `#1608 [127]` | Invocador | `That is correct.` | `Isso está correto.` | ✅ Validado |
 | `#1608 [128]` | Mestre Bron | `Now it's time to get ya` | `Agora é hora de conseguir` | ✅ Validado |
-| `#1608 [129]` | Mestre Bron | `a Guardian Beast!` | `a sua Guardian Beast!` | ✅ Validado |
+| `#1608 [129]` | Mestre Bron | `a Guardian Beast!` | `a sua Fera Guardiã!` | ✅ Validado |
 | `#1608 [130]` | Invocador | `In a moment, Bron. I have` | `Só um momento, Bron. Tenho` | ✅ Validado |
 | `#1608 [131]` | Invocador | `one final question to ask.` | `uma última pergunta a fazer.` | ✅ Validado |
 | `#1608 [132]` | Invocador | `What does love mean to you?` | `O que o amor significa para você?` | ✅ Validado |
@@ -700,7 +700,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [140]` | Cleru | `she didn't hold back!` | `dava, ela não pegava leve!` | ✅ Validado |
 | `#1608 [141]` | Pratty | `Mother rarely scolded me when` | `Mamãe raramente me repreendia` | ✅ Validado |
 | `#1608 [142]` | Pratty | `I was growing up… but I always` | `na infância… mas eu sempre` | ✅ Validado |
-| `#1608 [143]` | Pratty | `paid attention when she did!` | `prestava atenção quando ela o fazia!` | ✅ Validado |
+| `#1608 [143]` | Pratty | `paid attention when she did!` | `prestava atenção quando ela fazia!` | ✅ Validado |
 | `#1608 [144]` | Protagonista | `And boy, was she strict…` | `E nossa, como ela era rígida…` | ✅ Validado |
 | `#1608 [145]` | Invocador | `Remember that Amariss has had` | `Lembre-se de que Amariss teve` | ✅ Validado |
 | `#1608 [146]` | Invocador | `to be both a mother and a father` | `de ser mãe e pai ao mesmo tempo` | ✅ Validado |
@@ -711,7 +711,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [151]` | Protagonista | `their children with spankings?` | `filhos com umas palmadas?` | ✅ Validado |
 | `#1608 [152]` | Mestre Bron | `Only the smart ones.` | `Só as espertas.` | ✅ Validado |
 | `#1608 [153]` | Mestre Bron | `And now it's time to get` | `E agora chegou a hora de` | ✅ Validado |
-| `#1608 [154]` | Mestre Bron | `yer Guardian Beast!` | `invocar sua Guardian Beast!` | ✅ Validado |
+| `#1608 [154]` | Mestre Bron | `yer Guardian Beast!` | `invocar sua Fera Guardiã!` | ✅ Validado |
 | `#1608 [155]` | Invocador | `Not quite yet, Bron. I have` | `Ainda não, Bron. Tenho mais` | ✅ Validado |
 | `#1608 [156]` | Invocador | `another question.` | `uma pergunta.` | ✅ Validado |
 | `#1608 [157]` | Invocador | `Did you grow up preferring the` | `Você cresceu preferindo a` | ✅ Validado |
@@ -724,21 +724,21 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [164]` | Cleru | `watching me.` | `sempre olhando por mim.` | ✅ Validado |
 | `#1608 [165]` | Cleru | `And to protect her, I have to` | `E, para protegê-la, preciso` | ✅ Validado |
 | `#1608 [166]` | Cleru | `take my dad's place as a` | `assumir o lugar do meu pai` | ✅ Validado |
-| `#1608 [167]` | Cleru | `Craftlord.` | `como um Craftlord.` | ✅ Validado |
+| `#1608 [167]` | Cleru | `Craftlord.` | `como um Lorde.` | ✅ Validado |
 | `#1608 [168]` | Pratty | `My mother was always there to` | `Minha mãe sempre esteve lá para` | ✅ Validado |
 | `#1608 [169]` | Pratty | `look after me, and to help me` | `cuidar de mim e me ajudar a` | ✅ Validado |
 | `#1608 [170]` | Pratty | `do my very best.` | `dar o meu melhor.` | ✅ Validado |
 | `#1608 [171]` | Pratty | `To keep my mother safe, I must` | `Para manter minha mãe segura,` | ✅ Validado |
-| `#1608 [172]` | Pratty | `become as strong as my father.` | `devo ficar tão forte quanto meu pai.` | ✅ Validado |
-| `#1608 [173]` | Mestre Bron | `Ya make that sound real sweet,` | `Cê faz isso soar muito bonito,` | ✅ Validado |
+| `#1608 [172]` | Pratty | `become as strong as my father.` | `devo ser tão forte quanto meu pai.` | ✅ Validado |
+| `#1608 [173]` | Mestre Bron | `Ya make that sound real sweet,` | `Você faz isso soar muito bonito,` | ✅ Validado |
 | `#1608 [174]` | Mestre Bron | `but don't worry yerself 'bout it.` | `mas não esquenta a cabeça com isso.` | ✅ Validado |
 | `#1608 [175]` | Mestre Bron | `I'll protect Amariss for ya!` | `Eu protejo a Amariss pra você!` | ✅ Validado |
 | `#1608 [176]` | Protagonista | `You don't have to do` | `Não precisa fazer isso,` | ✅ Validado |
 | `#1608 [177]` | Protagonista | `that, Master. In fact--` | `Mestre. Na verdade--` | ✅ Validado |
-| `#1608 [178]` | Mestre Bron | `Did ya say something!?` | `Cê disse alguma coisa!?` | ✅ Validado |
+| `#1608 [178]` | Mestre Bron | `Did ya say something!?` | `Você disse alguma coisa!?` | ✅ Validado |
 | `#1608 [179]` | Protagonista | `Uh… no.` | `Ér… não.` | ✅ Validado |
 | `#1608 [180]` | Mestre Bron | `Right. Now let's get ya` | `Certo. Agora vamos conseguir` | ✅ Validado |
-| `#1608 [181]` | Mestre Bron | `a Guardian Beast!` | `a sua Guardian Beast!` | ✅ Validado |
+| `#1608 [181]` | Mestre Bron | `a Guardian Beast!` | `a sua Fera Guardiã!` | ✅ Validado |
 | `#1608 [182]` | Invocador | `One more question.` | `Mais uma pergunta.` | ✅ Validado |
 | `#1608 [183]` | Protagonista | `Alright. What is it?` | `Tudo bem. Qual é?` | ✅ Validado |
 | `#1608 [184]` | Invocador | `Would you rather have a` | `Você preferiria ter um bichinho` | ✅ Validado |
@@ -799,11 +799,11 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [239]` | Invocador | `let us begin the ritual.` | `vamos iniciar o ritual.` | ✅ Validado |
 | `#1608 [240]` | Protagonista | `I'd rather have a stuffed animal.` | `Prefiro um bichinho de pelúcia.` | ✅ Validado |
 | `#1608 [241]` | Protagonista | `They're just so cute…` | `Eles são tão fofinhos…` | ✅ Validado |
-| `#1608 [242]` | Mestre Bron | `What're ya talkin' about!?` | `Do que cê tá falando!?` | ✅ Validado |
-| `#1608 [243]` | Mestre Bron | `Are ya not the child of Shintetsu?` | `Cê não é sangue de Shintetsu?` | ✅ Validado |
+| `#1608 [242]` | Mestre Bron | `What're ya talkin' about!?` | `Do que você tá falando!?` | ✅ Validado |
+| `#1608 [243]` | Mestre Bron | `Are ya not the child of Shintetsu?` | `Você não é sangue de Shintetsu?` | ✅ Validado |
 | `#1608 [244]` | Mestre Bron | `Come to yer senses!` | `Vê se cria juízo!` | ✅ Validado |
 | `#1608 [245]` | Mestre Bron | `A stuffed toy ain't gonna do` | `Um bichinho de pelúcia não vai` | ✅ Validado |
-| `#1608 [246]` | Mestre Bron | `you any good on the battlefield!` | `servir pra nada no campo de batalha!` | ✅ Validado |
+| `#1608 [246]` | Mestre Bron | `you any good on the battlefield!` | `não serve pra nada numa batalha!` | ✅ Validado |
 | `#1608 [247]` | Mestre Bron | `If yer enemy sees yer fragile` | `Se o inimigo vir esse espírito` | ✅ Validado |
 | `#1608 [248]` | Mestre Bron | `spirit, you've lost the fight before` | `frágil, cê perde a luta antes` | ✅ Validado |
 | `#1608 [249]` | Mestre Bron | `it starts! Do ya understand?` | `de começar! Entendeu bem?` | ✅ Validado |
@@ -814,13 +814,13 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [254]` | Mestre Bron | `Even if it means ya enter the` | `Mesmo que signifique entrar no` | ✅ Validado |
 | `#1608 [255]` | Mestre Bron | `tournament with a pooky-bear` | `torneio com um ursinho fofo` | ✅ Validado |
 | `#1608 [256]` | Mestre Bron | `tucked under yer arm…` | `debaixo do braço…` | ✅ Validado |
-| `#1608 [257]` | Protagonista | `Okay, Master!` | `Tá bom, Mestre!` | ✅ Validado |
-| `#1608 [258]` | Invocador | `Are you ready?` | `Você está pronto?` | ✅ Validado |
+| `#1608 [257]` | Protagonista | `Okay, Master!` | `Tudo bem, Mestre!` | ✅ Validado |
+| `#1608 [258]` | Invocador | `Are you ready?` | `Está tudo pronto?` | ✅ Validado |
 | `#1608 [259]` | Invocador | `Let us begin the ritual.` | `Vamos iniciar o ritual.` | ✅ Validado |
 | `#1608 [260]` | Invocador | `I need something that is` | `Preciso de algo que seja` | ✅ Validado |
 | `#1608 [261]` | Invocador | `important to you…` | `muito importante para você…` | ✅ Validado |
 | `#1608 [262]` | Invocador | `…in order to call forth a` | `…para poder invocar uma` | ✅ Validado |
-| `#1608 [263]` | Invocador | `Guardian Beast that is` | `Guardian Beast que tenha` | ✅ Validado |
+| `#1608 [263]` | Invocador | `Guardian Beast that is` | `Fera Guardiã que tenha` | ✅ Validado |
 | `#1608 [264]` | Invocador | `bonded with you.` | `afinidade com você.` | ✅ Validado |
 | `#1608 [265]` | Protagonista | `Something important…` | `Algo importante…` | ✅ Validado |
 | `#1608 [266]` | Protagonista | `Oh, I know!` | `Ah, já sei!` | ✅ Validado |
@@ -829,12 +829,12 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [269]` | Mestre Bron | `How did ya come to have it?` | `Como ele veio parar com você?` | ✅ Validado |
 | `#1608 [270]` | Protagonista | `It was a gift…` | `Foi um presente…` | ✅ Validado |
 | `#1608 [271]` | Invocador | `Alright. Now take hold` | `Muito bem. Agora segure` | ✅ Validado |
-| `#1608 [272]` | Invocador | `of the Summonite Gem.` | `a Summonite Gem.` | ✅ Validado |
-| `#1608 [273]` | Protagonista | `Summonite Gem? What's that?` | `Summonite Gem? O que é isso?` | ✅ Validado |
+| `#1608 [272]` | Invocador | `of the Summonite Gem.` | `a Gema de Invocação.` | ✅ Validado |
+| `#1608 [273]` | Protagonista | `Summonite Gem? What's that?` | `Gema de Invocação? O que é isso?` | ✅ Validado |
 | `#1608 [274]` | Invocador | `The magical stone with which` | `A pedra mágica com a qual` | ✅ Validado |
-| `#1608 [275]` | Invocador | `a Summon Beast is called forth.` | `uma Summon Beast é invocada.` | ✅ Validado |
+| `#1608 [275]` | Invocador | `a Summon Beast is called forth.` | `se desperta uma Invocação.` | ✅ Validado |
 | `#1608 [276]` | Invocador | `Focus your thoughts…` | `Concentre seus pensamentos…` | ✅ Validado |
-| `#1608 [277]` | Invocador | `and wish for a Guardian Beast` | `e deseje uma Guardian Beast` | ✅ Validado |
+| `#1608 [277]` | Invocador | `and wish for a Guardian Beast` | `e deseje uma Fera Guardiã` | ✅ Validado |
 | `#1608 [278]` | Invocador | `to aid you in your battles.` | `para auxiliá-lo em suas lutas.` | ✅ Validado |
 | `#1608 [279]` | Invocador | `Concentrate!` | `Concentre-se!` | ✅ Validado |
 | `#1608 [280]` | Protagonista | `Yes!` | `Sim!` | ✅ Validado |
@@ -845,7 +845,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [285]` | Invocador | `Hear me and submit to my power!` | `Ouve-me e curva-te ao meu poder!` | ✅ Validado |
 | `#1608 [286]` | Invocador | `And now, shout thy name!` | `E agora, brada o teu nome!` | ✅ Validado |
 | `#1608 [287]` | Invocador | `The name of the new bond!` | `O nome do novo laço!` | ✅ Validado |
-| `#1608 [288]` | Invocador | `Thy master shall be…` | `Teu mestre será…` | ✅ Validado |
+| `#1608 [288]` | Invocador | `Thy master shall be…` | `Quem te guiará será…` | ✅ Validado |
 | `#1608 [289]` | Invocador | `{PLAYER}!!` | `{PLAYER}!!` | ✅ Validado |
 | `#1608 [290]` | Zantek | `…☆★☆!?` | `…☆★☆!?` | ✅ Validado |
 | `#1608 [291]` | Protagonista | `A robot!?` | `Um robô!?` | ✅ Validado |
@@ -859,7 +859,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1608 [299]` | Rasho | `Bron? If you are here,` | `Bron? Se você está aqui,` | ✅ Validado |
 | `#1608 [300]` | Rasho | `that means only one thing…` | `isso só significa uma coisa…` | ✅ Validado |
 | `#1608 [301]` | Rasho | `I have been summoned` | `Fui invocado até aqui` | ✅ Validado |
-| `#1608 [302]` | Rasho | `here by a Craftknight, again…` | `por um Craftknight, de novo…` | ✅ Validado |
+| `#1608 [302]` | Rasho | `here by a Craftknight, again…` | `por um Cavaleiro, de novo…` | ✅ Validado |
 | `#1608 [303]` | Protagonista | `What's going on, Master?` | `O que está havendo, Mestre?` | ✅ Validado |
 | `#1608 [304]` | Protagonista | `And who is he?` | `E quem é ele?` | ✅ Validado |
 | `#1608 [305]` | Sugar | `………` | `………` | ✅ Validado |
@@ -891,18 +891,18 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [11]` | Mestre Bron | `I don't think he understood` | `Acho que ele não entendeu` | ✅ Validado |
 | `#1609 [12]` | Mestre Bron | `yer last command.` | `esse seu último comando.` | ✅ Validado |
 | `#1609 [13]` | Cleru | `I don't know if I did, either…` | `Acho que nem eu entendi…` | ✅ Validado |
-| `#1609 [14]` | Mestre Bron | `But ya understand what` | `Mas cê entende o que ele tá` | ✅ Validado |
+| `#1609 [14]` | Mestre Bron | `But ya understand what` | `Mas você entende o que ele tá` | ✅ Validado |
 | `#1609 [15]` | Mestre Bron | `he's saying to ya, don'tcha?` | `dizendo pra você, não entende?` | ✅ Validado |
 | `#1609 [16]` | Cleru | `Don't you understand` | `Você também não consegue` | ✅ Validado |
 | `#1609 [17]` | Cleru | `him too, Master?` | `entendê-lo, Mestre?` | ✅ Validado |
 | `#1609 [18]` | Pratty | `What, Master? Can't you` | `Como assim, Mestre? O senhor` | ✅ Validado |
 | `#1609 [19]` | Pratty | `understand him, too?` | `não consegue entendê-lo também?` | ✅ Validado |
 | `#1609 [20]` | Mestre Bron | `Nah, I don't. But I understand` | `Não, não entendo. Mas sei por` | ✅ Validado |
-| `#1609 [21]` | Mestre Bron | `why ya can communicate with him.` | `que cê consegue falar com ele.` | ✅ Validado |
+| `#1609 [21]` | Mestre Bron | `why ya can communicate with him.` | `que você consegue falar com ele.` | ✅ Validado |
 | `#1609 [22]` | Mestre Bron | `Yer father had the same ability.` | `Seu pai tinha o mesmo dom.` | ✅ Validado |
 | `#1609 [23]` | Cleru | `What do you mean?` | `Como assim?` | ✅ Validado |
 | `#1609 [24]` | Pratty | `What do you mean, Master?` | `O que quer dizer, Mestre?` | ✅ Validado |
-| `#1609 [25]` | Mestre Bron | `He's the Guardian Beast that` | `Ele é a Guardian Beast que o` | ✅ Validado |
+| `#1609 [25]` | Mestre Bron | `He's the Guardian Beast that` | `Ele é a Fera Guardiã que o` | ✅ Validado |
 | `#1609 [26]` | Mestre Bron | `yer father used to command.` | `seu pai costumava comandar.` | ✅ Validado |
 | `#1609 [27]` | Protagonista | `Is that right?` | `Isso é verdade?` | ✅ Validado |
 | `#1609 [28]` | Zantek | `…☆……☆!` | `…☆……☆!` | ✅ Validado |
@@ -913,17 +913,17 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [33]` | Zantek | `Heh, heh…` | `Heh, heh…` | ✅ Validado |
 | `#1609 [34]` | Zantek | `♪…` | `♪…` | ✅ Validado |
 | `#1609 [35]` | Mestre Bron | `Hey!` | `Ei!` | ✅ Validado |
-| `#1609 [36]` | Mestre Bron | `You, just laughed, didn't ya!` | `Cê acabou de rir de mim, né!?` | ✅ Validado |
+| `#1609 [36]` | Mestre Bron | `You, just laughed, didn't ya!` | `Você acabou de rir de mim, né!?` | ✅ Validado |
 | `#1609 [37]` | Pratty | `Do you have any memories` | `Você tem alguma lembrança` | ✅ Validado |
 | `#1609 [38]` | Pratty | `of my father?` | `do meu pai?` | ✅ Validado |
 | `#1609 [39]` | Zantek | `☆☆☆!` | `☆☆☆!` | ✅ Validado |
 | `#1609 [40]` | Mestre Bron | `Hey! ` | `Ei!` | ✅ Validado |
 | `#1609 [41]` | Mestre Bron | `Stop ignorin' me!` | `Pare de me ignorar!` | ✅ Validado |
 | `#1609 [42]` | Pratty | `It's nice to meet you, too.` | `Prazer em conhecer você também.` | ✅ Validado |
-| `#1609 [43]` | Pratty | `I look forward to working` | `Estou ansiosa para trabalharmos` | ✅ Validado |
+| `#1609 [43]` | Protagonista | `I look forward to working` | `Vai ser ótimo trabalharmos` | ✅ Validado |
 | `#1609 [44]` | Pratty | `together!` | `juntos!` | ✅ Validado |
 | `#1609 [45]` | Invocador | `{PLAYER} has called forth` | `{PLAYER} invocou a` | ✅ Validado |
-| `#1609 [46]` | Invocador | `the same Guardian Beast` | `mesma Guardian Beast` | ✅ Validado |
+| `#1609 [46]` | Invocador | `the same Guardian Beast` | `mesma Fera Guardiã` | ✅ Validado |
 | `#1609 [47]` | Invocador | `as Shintetsu…` | `de Shintetsu…` | ✅ Validado |
 | `#1609 [48]` | Mestre Bron | `Which reflects the strength of` | `O que mostra a força do` | ✅ Validado |
 | `#1609 [49]` | Mestre Bron | `the bond between Shintetsu an'` | `laço entre Shintetsu e` | ✅ Validado |
@@ -940,7 +940,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [60]` | Rasho | `Wipe that foolish expression off` | `Tire essa expressão patética` | ✅ Validado |
 | `#1609 [61]` | Rasho | `your face.` | `do rosto.` | ✅ Validado |
 | `#1609 [62]` | Rasho | `If your only desire is to stand` | `Se o seu único desejo é ficar` | ✅ Validado |
-| `#1609 [63]` | Rasho | `and stare at me, then return me` | `aí parada me encarando, então` | ✅ Validado |
+| `#1609 [63]` | Rasho | `and stare at me, then return me` | `aí só me encarando, então` | ✅ Validado |
 | `#1609 [64]` | Rasho | `to my world.` | `devolva-me ao meu mundo.` | ✅ Validado |
 | `#1609 [65]` | Protagonista | `Return you?` | `Devolver você?` | ✅ Validado |
 | `#1609 [66]` | Rasho | `Surely you aren't so ignorant` | `Não me diga que é ignorante` | ✅ Validado |
@@ -948,7 +948,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [68]` | Rasho | `talking about?` | `que estou falando?` | ✅ Validado |
 | `#1609 [69]` | Mestre Bron | `We're not sendin' ya back to` | `Não vamos mandar você de volta` | ✅ Validado |
 | `#1609 [70]` | Mestre Bron | `yer world.` | `pro seu mundo.` | ✅ Validado |
-| `#1609 [71]` | Mestre Bron | `And when did ya come to` | `E desde quando cê passou a` | ✅ Validado |
+| `#1609 [71]` | Mestre Bron | `And when did ya come to` | `E desde quando você passou a` | ✅ Validado |
 | `#1609 [72]` | Mestre Bron | `think so highly of yerself?` | `se achar tanta coisa assim?` | ✅ Validado |
 | `#1609 [73]` | Rasho | `I see you've changed as well.` | `Vejo que você também mudou.` | ✅ Validado |
 | `#1609 [74]` | Rasho | `You must weigh fifty pounds more` | `Deve estar uns vinte quilos mais` | ✅ Validado |
@@ -959,7 +959,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [79]` | Protagonista | `I don't care if you fight Bron` | `Não ligo se vai brigar com o Bron` | ✅ Validado |
 | `#1609 [80]` | Protagonista | `or not, but I wish you'd at` | `ou não, mas bem que podia ao` | ✅ Validado |
 | `#1609 [81]` | Protagonista | `least explain who you are!` | `menos explicar quem é você!` | ✅ Validado |
-| `#1609 [82]` | Rasho | `Is this really the Craftknight` | `Este é mesmo o Craftknight` | ✅ Validado |
+| `#1609 [82]` | Rasho | `Is this really the Craftknight` | `Este é mesmo o Cavaleiro` | ✅ Validado |
 | `#1609 [83]` | Rasho | `who summoned me, Bron?` | `que me invocou, Bron?` | ✅ Validado |
 | `#1609 [84]` | Mestre Bron | `Aye, he is.` | `É ele mesmo.` | ✅ Validado |
 | `#1609 [85]` | Rasho | `And this is not some sort` | `E isto não é algum tipo` | ✅ Validado |
@@ -969,10 +969,10 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [89]` | Rasho | `Enough! I'm returning to` | `Basta! Vou voltar para` | ✅ Validado |
 | `#1609 [90]` | Rasho | `Silturn at once.` | `Silturn imediatamente.` | ✅ Validado |
 | `#1609 [91]` | Mestre Bron | `Cool down, {PARTNER}!` | `Esfria a cabeça, {PARTNER}!` | ✅ Validado |
-| `#1609 [92]` | Mestre Bron | `Yer addressin' the` | `Cê tá falando com o` | ✅ Validado |
+| `#1609 [92]` | Mestre Bron | `Yer addressin' the` | `Você tá falando com o` | ✅ Validado |
 | `#1609 [93]` | Mestre Bron | `son of Shintetsu!` | `filho de Shintetsu!` | ✅ Validado |
 | `#1609 [94]` | Rasho | `…Oh?` | `…Oh?` | ✅ Validado |
-| `#1609 [95]` | Cleru | `Wh-what are you looking at?` | `O-o que foi? Tá olhando o quê?` | ✅ Validado |
+| `#1609 [95]` | Cleru | `Wh-what are you looking at?` | `O que foi? Está olhando o quê?` | ✅ Validado |
 | `#1609 [96]` | Rasho | `I've changed my mind. I'm going` | `Mudei de ideia. Vou ser o seu` | ✅ Validado |
 | `#1609 [97]` | Rasho | `to be your partner… and we're` | `parceiro… e nós vamos nos` | ✅ Validado |
 | `#1609 [98]` | Rasho | `going to have fun, you and I.` | `divertir muito, você e eu.` | ✅ Validado |
@@ -1004,12 +1004,12 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [124]` | Rasho | `I laid eyes upon you, but now you` | `que a vi, mas agora tornou-se` | ✅ Validado |
 | `#1609 [125]` | Rasho | `are a beautiful young woman.` | `uma bela jovem.` | ✅ Validado |
 | `#1609 [126]` | Rasho | `I'm going to be your partner,` | `Serei o seu parceiro e farei` | ✅ Validado |
-| `#1609 [127]` | Rasho | `and I'll make you the best` | `de você a melhor Craftknight` | ✅ Validado |
+| `#1609 [127]` | Rasho | `and I'll make you the best` | `de você a melhor Cavaleiro` | ✅ Validado |
 | `#1609 [128]` | Rasho | `Craftknight in the world.` | `de todo o mundo.` | ✅ Validado |
 | `#1609 [129]` | Pratty | `He's not lacking for confidence…` | `Confiança não falta para ele…` | ✅ Validado |
 | `#1609 [130]` | Rasho | `Why do you stand there, Bron?` | `Por que está aí parado, Bron?` | ✅ Validado |
 | `#1609 [131]` | Rasho | `Take us to the workshop! Now!` | `Leve-nos à oficina! Agora!` | ✅ Validado |
-| `#1609 [132]` | Mestre Bron | `Alright! Follow me to` | `Tá bom! Sigam-me até` | ✅ Validado |
+| `#1609 [132]` | Mestre Bron | `Alright! Follow me to` | `Tudo bem! Sigam-me até` | ✅ Validado |
 | `#1609 [133]` | Mestre Bron | `the second floor!` | `o segundo andar!` | ✅ Validado |
 | `#1609 [134]` | Sugar | `………` | `………` | ✅ Validado |
 | `#1609 [135]` | Protagonista | `………` | `………` | ✅ Validado |
@@ -1018,9 +1018,9 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [138]` | Sugar | `Please… be kind to me.` | `Por favor… seja gentil comigo.` | ✅ Validado |
 | `#1609 [139]` | Cleru | `…No problem!` | `…Sem problemas!` | ✅ Validado |
 | `#1609 [140]` | Pratty | `…Huh? I mean, uh, of course.` | `…Hã? Digo, ér, claro.` | ✅ Validado |
-| `#1609 [141]` | Mestre Bron | `How 'bout that…I didn't expect ya` | `Olha só… não esperava que cê` | ✅ Validado |
-| `#1609 [142]` | Mestre Bron | `to call forth th' same Guardian` | `fosse invocar a mesma Guardian` | ✅ Validado |
-| `#1609 [143]` | Mestre Bron | `Beast as yer father!` | `Beast do seu pai!` | ✅ Validado |
+| `#1609 [141]` | Mestre Bron | `How 'bout that…I didn't expect ya` | `Olha só… não esperava que você` | ✅ Validado |
+| `#1609 [142]` | Mestre Bron | `to call forth th' same Guardian` | `fosse invocar a mesma Fera` | ✅ Validado |
+| `#1609 [143]` | Mestre Bron | `Beast as yer father!` | `Guardiã do seu pai!` | ✅ Validado |
 | `#1609 [144]` | Protagonista | `You've seen her before?` | `Você já a viu antes?` | ✅ Validado |
 | `#1609 [145]` | Mestre Bron | `Aye. In fact, she's…` | `Sim. Na verdade, ela é…` | ✅ Validado |
 | `#1609 [146]` | Mestre Bron | `Well, I don't know` | `Bom, nem sei como explicar` | ✅ Validado |
@@ -1031,15 +1031,15 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [151]` | Sugar | `That's wonderful!` | `Isso é maravilhoso!` | ✅ Validado |
 | `#1609 [152]` | Protagonista | `(Why is it so good?` | `(Por que isso é tão bom?` | ✅ Validado |
 | `#1609 [153]` | Protagonista | `And why is she blushing?)` | `E por que ela está corando?)` | ✅ Validado |
-| `#1609 [154]` | Mestre Bron | `Now that ya've got yer Summon` | `Agora que já tem sua Summon` | ✅ Validado |
-| `#1609 [155]` | Mestre Bron | `Beast with ya, follow me up to` | `Beast, siga-me até` | ✅ Validado |
+| `#1609 [154]` | Mestre Bron | `Now that ya've got yer Summon` | `Agora que já tem sua Fera` | ✅ Validado |
+| `#1609 [155]` | Mestre Bron | `Beast with ya, follow me up to` | `Guardiã, siga-me até` | ✅ Validado |
 | `#1609 [156]` | Mestre Bron | `the second floor!` | `o segundo andar!` | ✅ Validado |
 | `#1609 [157]` | Sugar | `Good…` | `Que bom…` | ✅ Validado |
 | `#1609 [158]` | Sugar | `Very good…` | `Muito bom mesmo…` | ✅ Validado |
 | `#1609 [159]` | Sugar | `◎smack◎` | `◎chuac◎` | ✅ Validado |
 | `#1609 [160]` | Protagonista | `What was THAT for!?` | `Pra que foi ISSO!?` | ✅ Validado |
 | `#1609 [161]` | Mestre Bron | `I think she likes ya…` | `Acho que ela gostou de você…` | ✅ Validado |
-| `#1609 [162]` | Mestre Bron | `Anyway! Ya got your Guardian Beast.` | `Enfim! Já tem sua Guardian Beast.` | ✅ Validado |
+| `#1609 [162]` | Mestre Bron | `Anyway! Ya got your Guardian Beast.` | `Enfim! Já tem sua Fera Guardiã.` | ✅ Validado |
 | `#1609 [163]` | Mestre Bron | `Now follow me to the second floor!` | `Agora siga-me ao segundo andar!` | ✅ Validado |
 | `#1609 [164]` | Cleru | `That was my first kiss…` | `Esse foi o meu primeiro beijo…` | ✅ Validado |
 | `#1609 [165]` | Pratty | `That was my first kiss!` | `Esse foi o meu primeiro beijo!` | ✅ Validado |
@@ -1060,11 +1060,11 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [180]` | Protagonista | `workshop, alright? Alright!` | `nova oficina, tá? Vamos lá!` | ✅ Validado |
 | `#1609 [181]` | Pratty | `(Sigh…)` | `(Suspiro…)` | ✅ Validado |
 | `#1609 [182]` | Mestre Bron | `Well! What a surprise!` | `Ora! Mas que surpresa!` | ✅ Validado |
-| `#1609 [183]` | Mestre Bron | `Ya summoned {PARTNER}.` | `Cê invocou {PARTNER}.` | ✅ Validado |
+| `#1609 [183]` | Mestre Bron | `Ya summoned {PARTNER}.` | `Você invocou {PARTNER}.` | ✅ Validado |
 | `#1609 [184]` | Protagonista | `Huh? What's so surprising` | `Hã? O que há de tão` | ✅ Validado |
 | `#1609 [185]` | Protagonista | `about it, Master?` | `surpreendente nisso, Mestre?` | ✅ Validado |
-| `#1609 [186]` | Mestre Bron | `{PARTNER} is the Guardian` | `{PARTNER} é a Guardian` | ✅ Validado |
-| `#1609 [187]` | Mestre Bron | `Beast that your father` | `Beast que o seu pai` | ✅ Validado |
+| `#1609 [186]` | Mestre Bron | `{PARTNER} is the Guardian` | `{PARTNER} é a Fera Guardiã` | ✅ Validado |
+| `#1609 [187]` | Mestre Bron | `Beast that your father` | `que o seu pai` | ✅ Validado |
 | `#1609 [188]` | Mestre Bron | `used to command.` | `costumava comandar.` | ✅ Validado |
 | `#1609 [189]` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1609 [190]` | Invocador | `This can't be a coincidence.` | `Isto não pode ser coincidência.` | ✅ Validado |
@@ -1088,7 +1088,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1609 [208]` | Protagonista | `So… {PARTNER}?` | `Então… {PARTNER}?` | ✅ Validado |
 | `#1609 [209]` | Protagonista | `Do you want to go upstairs?` | `Quer subir para o andar de cima?` | ✅ Validado |
 | `#1609 [210]` | Sistema | `{PARTNER} can be summoned!` | `{PARTNER} pode ser invocado!` | ✅ Validado |
-| `#1609 [211]` | Sistema | `Talk to your Guardian Beast` | `Fale com sua Guardian Beast` | ✅ Validado |
+| `#1609 [211]` | Sistema | `Talk to your Guardian Beast` | `Fale com sua Fera Guardiã` | ✅ Validado |
 | `#1609 [212]` | Sistema | `by pressing SELECT.` | `pressionando SELECT.` | ✅ Validado |
 
 ---
@@ -1102,22 +1102,22 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1610 [2]` | Pratty | `Wow…` | `Uau…` | ✅ Validado |
 | `#1610 [3]` | Pratty | `This is my workshop!` | `Esta é a minha oficina!` | ✅ Validado |
 | `#1610 [4]` | Mestre Bron | `I hope ya like it…` | `Espero que tenha gostado…` | ✅ Validado |
-| `#1610 [5]` | Mestre Bron | `B'cause yer gonna be working` | `Porque cê vai trabalhar aqui` | ✅ Validado |
+| `#1610 [5]` | Mestre Bron | `B'cause yer gonna be working` | `Porque você vai trabalhar aqui` | ✅ Validado |
 | `#1610 [6]` | Mestre Bron | `here day and night from now on.` | `dia e noite de agora em diante.` | ✅ Validado |
-| `#1610 [7]` | Protagonista | `Are you kidding!?` | `Tá brincando!?` | ✅ Validado |
-| `#1610 [8]` | Mestre Bron | `Don't ya wanna win the` | `Cê não quer vencer o` | ✅ Validado |
+| `#1610 [7]` | Protagonista | `Are you kidding!?` | `Está brincando!?` | ✅ Validado |
+| `#1610 [8]` | Mestre Bron | `Don't ya wanna win the` | `Você não quer vencer o` | ✅ Validado |
 | `#1610 [9]` | Mestre Bron | `tournament? Don't ya wanna` | `torneio? Não quer se tornar` | ✅ Validado |
-| `#1610 [10]` | Mestre Bron | `be a Craftlord?` | `um Craftlord?` | ✅ Validado |
+| `#1610 [10]` | Mestre Bron | `be a Craftlord?` | `um Lorde?` | ✅ Validado |
 | `#1610 [11]` | Mestre Bron | `Then stop complainin'` | `Então pare de reclamar` | ✅ Validado |
 | `#1610 [12]` | Mestre Bron | `like a spoiled little brat!` | `feito um pirralho mimado!` | ✅ Validado |
 | `#1610 [13]` | Protagonista | `But… but…` | `Mas… mas…` | ✅ Validado |
-| `#1610 [14]` | Mestre Bron | `Yer mother agreed that ya should` | `Sua mãe concordou que cê deve` | ✅ Validado |
+| `#1610 [14]` | Mestre Bron | `Yer mother agreed that ya should` | `Sua mãe concordou que você deve` | ✅ Validado |
 | `#1610 [15]` | Mestre Bron | `live here durin' the tournament.` | `morar aqui durante o torneio.` | ✅ Validado |
 | `#1610 [16]` | Mestre Bron | `So the decision's already` | `Então a decisão já foi` | ✅ Validado |
 | `#1610 [17]` | Mestre Bron | `been made for ya.` | `tomada por você.` | ✅ Validado |
 | `#1610 [18]` | Protagonista | `Yes, Master.` | `Sim, Mestre.` | ✅ Validado |
 | `#1610 [19]` | Mestre Bron | `Why are ya so depressed?` | `Por que essa cara tão desanimada?` | ✅ Validado |
-| `#1610 [20]` | Mestre Bron | `Yer followin' in yer father's` | `Cê tá seguindo os passos do seu` | ✅ Validado |
+| `#1610 [20]` | Mestre Bron | `Yer followin' in yer father's` | `Você tá seguindo os passos do seu` | ✅ Validado |
 | `#1610 [21]` | Mestre Bron | `footsteps, just like ya wanted!` | `pai, do jeitinho que queria!` | ✅ Validado |
 | `#1610 [22]` | Mestre Bron | `Ya should be proud, not sad!` | `Devia ter orgulho, não tristeza!` | ✅ Validado |
 | `#1610 [23]` | Protagonista | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
@@ -1179,7 +1179,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1610 [79]` | Protagonista | `Where do you want to go?` | `Aonde você quer ir?` | ✅ Validado |
 | `#1610 [80]` | Protagonista | `How about the park?` | `Que tal ir ao parque?` | ✅ Validado |
 | `#1610 [81]` | Kutty | `Kuu…` | `Kuu…` | ✅ Validado |
-| `#1610 [82]` | Protagonista | `How about Central Tower?` | `Que tal à Central Tower?` | ✅ Validado |
+| `#1610 [82]` | Protagonista | `How about Central Tower?` | `Que tal à Torre Central?` | ✅ Validado |
 | `#1610 [83]` | Kutty | `Kutty…` | `Kutty…` | ✅ Validado |
 | `#1610 [84]` | Protagonista | `We can't go everywhere.` | `Não dá para ir a todo lugar.` | ✅ Validado |
 | `#1610 [85]` | Protagonista | `We need to choose just one!` | `Precisamos escolher um só!` | ✅ Validado |
@@ -1207,7 +1207,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1611 [1]` | Cleru | `Hello…` | `Olá…` | ✅ Validado |
 | `#1611 [2]` | Pratty | `Hello!` | `Olá!` | ✅ Validado |
 | `#1611 [3]` | Protagonista | `(Wow… she's beautiful!)` | `(Uau… ela é linda!)` | ✅ Validado |
-| `#1611 [4]` | Kouren | `You're excited, aren't you?` | `Está animado, não está?` | ✅ Validado |
+| `#1611 [4]` | Kouren | `You're excited, aren't you?` | `Bateu a empolgação, não foi?` | ✅ Validado |
 | `#1611 [5]` | Protagonista | `Huh? ` | `Hã?` | ✅ Validado |
 | `#1611 [6]` | Kouren | `Heh, heh…` | `Heh, heh…` | ✅ Validado |
 | `#1611 [7]` | Protagonista | `What…?` | `O quê…?` | ✅ Validado |
@@ -1295,11 +1295,11 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [66]` | Pratty | `that Father never explored.` | `que o Papai nunca explorou.` | ✅ Validado |
 | `#1645 [67]` | Zantek | `☆……!` | `☆……!` | ✅ Validado |
 | `#1645 [68]` | Protagonista | `That's true. I'll never be a` | `É verdade. Nunca serei um` | ✅ Validado |
-| `#1645 [69]` | Protagonista | `Craftlord if I become a` | `Craftlord se virar um` | ✅ Validado |
+| `#1645 [69]` | Protagonista | `Craftlord if I become a` | `Lorde se virar um` | ✅ Validado |
 | `#1645 [70]` | Protagonista | `vagabond instead!` | `andarilho antes da hora!` | ✅ Validado |
 | `#1645 [71]` | Protagonista | `How about we travel the` | `Que tal viajarmos pelo` | ✅ Validado |
 | `#1645 [72]` | Protagonista | `world after I become a` | `mundo depois que eu me tornar` | ✅ Validado |
-| `#1645 [73]` | Protagonista | `Craftlord, not before?` | `um Craftlord, e não antes?` | ✅ Validado |
+| `#1645 [73]` | Protagonista | `Craftlord, not before?` | `um Lorde, e não antes?` | ✅ Validado |
 | `#1645 [74]` | Zantek | `☆☆☆♪` | `☆☆☆♪` | ✅ Validado |
 | `#1645 [75]` | Protagonista | `That's a promise!` | `É uma promessa!` | ✅ Validado |
 | `#1645 [76]` | Rasho | `The breeze smells the same` | `A brisa tem o mesmo cheiro` | ✅ Validado |
@@ -1307,17 +1307,17 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [78]` | Rasho | `I never thought I would` | `Nunca pensei que voltaria` | ✅ Validado |
 | `#1645 [79]` | Rasho | `come back to Wystern…` | `a colocar os pés em Wystern…` | ✅ Validado |
 | `#1645 [80]` | Cleru | `Hey, {PARTNER}.` | `Ei, {PARTNER}.` | ✅ Validado |
-| `#1645 [81]` | Cleru | `You were my dad's Guardian` | `Você era a Guardian Beast` | ✅ Validado |
+| `#1645 [81]` | Cleru | `You were my dad's Guardian` | `Você era a Fera Guardiã` | ✅ Validado |
 | `#1645 [82]` | Cleru | `Beast, weren't you?` | `do meu pai, não era?` | ✅ Validado |
 | `#1645 [83]` | Cleru | `Did you think he was a` | `Você achava que ele era` | ✅ Validado |
-| `#1645 [84]` | Cleru | `good Craftlord?` | `um bom Craftlord?` | ✅ Validado |
+| `#1645 [84]` | Cleru | `good Craftlord?` | `um bom Lorde?` | ✅ Validado |
 | `#1645 [85]` | Pratty | `Excuse me, {PARTNER}.` | `Com licença, {PARTNER}.` | ✅ Validado |
-| `#1645 [86]` | Pratty | `You were my father's` | `Você era a Guardian Beast` | ✅ Validado |
+| `#1645 [86]` | Pratty | `You were my father's` | `Você era a Fera Guardiã` | ✅ Validado |
 | `#1645 [87]` | Pratty | `Guardian Beast, correct?` | `do meu pai, correto?` | ✅ Validado |
 | `#1645 [88]` | Pratty | `Did you feel that he was a` | `Você achava que ele era` | ✅ Validado |
-| `#1645 [89]` | Pratty | `good Craftlord?` | `um bom Craftlord?` | ✅ Validado |
+| `#1645 [89]` | Pratty | `good Craftlord?` | `um bom Lorde?` | ✅ Validado |
 | `#1645 [90]` | Rasho | `Are you asking about what` | `Está perguntando como era` | ✅ Validado |
-| `#1645 [91]` | Rasho | `your father was like as a ` | `o seu pai como Craftlord,` | ✅ Validado |
+| `#1645 [91]` | Rasho | `your father was like as a ` | `o seu pai como Lorde,` | ✅ Validado |
 | `#1645 [92]` | Rasho | `Craftlord, or as a person?` | `ou como pessoa?` | ✅ Validado |
 | `#1645 [93]` | Rasho | `Don't worry. I'll tell you what` | `Não se preocupe. Vou lhe contar` | ✅ Validado |
 | `#1645 [94]` | Rasho | `Shintetsu and I accomplished,` | `tudo o que Shintetsu e eu fizemos,` | ✅ Validado |
@@ -1333,7 +1333,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [104]` | Rasho | `but I'll give you parts of the` | `mas revelarei partes do relato` | ✅ Validado |
 | `#1645 [105]` | Rasho | `tale as your skills improve.` | `conforme sua técnica evoluir.` | ✅ Validado |
 | `#1645 [106]` | Cleru | `Ah…` | `Ah…` | ✅ Validado |
-| `#1645 [107]` | Cleru | `Thank you.` | `Obrigado.` | ✅ Validado |
+| `#1645 [107]` | Protagonista | `Thank you.` | `Agradeço.` | ✅ Validado |
 | `#1645 [108]` | Rasho | `Huh? ` | `Hã?` | ✅ Validado |
 | `#1645 [109]` | Protagonista | `If you're going to tell me` | `Se vai me contar a história,` | ✅ Validado |
 | `#1645 [110]` | Protagonista | `the story, that means you're` | `isso significa que continuará` | ✅ Validado |
@@ -1356,11 +1356,11 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [127]` | Sugar | `Master {PLAYER}.` | `Mestre {PLAYER}.` | ✅ Validado |
 | `#1645 [128]` | Protagonista | `I'm glad I met you, too!` | `Também estou feliz em conhecê-la!` | ✅ Validado |
 | `#1645 [129]` | Cleru | `I want to be a great` | `Quero ser um grande` | ✅ Validado |
-| `#1645 [130]` | Cleru | `Craftlord, just like Dad.` | `Craftlord, igual ao Pai.` | ✅ Validado |
+| `#1645 [130]` | Cleru | `Craftlord, just like Dad.` | `Lorde, igual ao Pai.` | ✅ Validado |
 | `#1645 [131]` | Cleru | `Will you help me?` | `Você vai me ajudar?` | ✅ Validado |
 | `#1645 [132]` | Sugar | `Yes, I will.` | `Sim, vou ajudar.` | ✅ Validado |
 | `#1645 [133]` | Pratty | `I want to win this tournament` | `Quero vencer este torneio` | ✅ Validado |
-| `#1645 [134]` | Pratty | `and be a great Craftlord,` | `e ser uma grande Craftlord,` | ✅ Validado |
+| `#1645 [134]` | Pratty | `and be a great Craftlord,` | `e ser uma grande Lorde,` | ✅ Validado |
 | `#1645 [135]` | Pratty | `like Father. Will you help me?` | `como o Papai. Vai me ajudar?` | ✅ Validado |
 | `#1645 [136]` | Protagonista | `And why don't you stop calling` | `E por que não para de me` | ✅ Validado |
 | `#1645 [137]` | Protagonista | `me Master {PLAYER}?` | `chamar de Mestre {PLAYER}?` | ✅ Validado |
@@ -1402,7 +1402,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [173]` | Cleru | `Are you serious?` | `Está falando sério?` | ✅ Validado |
 | `#1645 [174]` | Sugar | `Absolutely. But I won't marry` | `Com toda certeza. Mas não vou` | ✅ Validado |
 | `#1645 [175]` | Sugar | `you right away… you have to` | `casar agora mesmo… você tem` | ✅ Validado |
-| `#1645 [176]` | Sugar | `tell me when you're ready.` | `que me dizer quando estiver pronto.` | ✅ Validado |
+| `#1645 [176]` | Sugar | `tell me when you're ready.` | `me avisar quando for a hora.` | ✅ Validado |
 | `#1645 [177]` | Cleru | `Uh… never?` | `Ér… nunca?` | ✅ Validado |
 | `#1645 [178]` | Pratty | `I can't be your husband!` | `Não posso ser seu marido!` | ✅ Validado |
 | `#1645 [179]` | Pratty | `I'm a girl!!` | `Eu sou uma garota!!` | ✅ Validado |
@@ -1431,7 +1431,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [202]` | Cleru | `I'll need to get a ship, and to` | `Vou precisar conseguir um navio` | ✅ Validado |
 | `#1645 [203]` | Cleru | `become stronger…` | `e ficar mais forte…` | ✅ Validado |
 | `#1645 [204]` | Cleru | `But I'll take you there even` | `Mas vou te levar lá mesmo que` | ✅ Validado |
-| `#1645 [205]` | Cleru | `if I don't become a Craftlord.` | `eu não me torne um Craftlord.` | ✅ Validado |
+| `#1645 [205]` | Cleru | `if I don't become a Craftlord.` | `eu não me torne um Lorde.` | ✅ Validado |
 | `#1645 [206]` | Pratty | `This is nice. ` | `Aqui é tão agradável.` | ✅ Validado |
 | `#1645 [207]` | Pratty | `It brings back memories of the` | `Traz lembranças da viagem` | ✅ Validado |
 | `#1645 [208]` | Pratty | `trip that Father and I took to` | `que o Papai e eu fizemos a` | ✅ Validado |
@@ -1447,7 +1447,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1645 [218]` | Protagonista | `Well… perhaps a little.` | `Bom… talvez um pouquinho.` | ✅ Validado |
 | `#1645 [219]` | Kutty | `Kutty.` | `Kutty.` | ✅ Validado |
 | `#1645 [220]` | Pratty | `Hey, {PARTNER}… if I become` | `Ei, {PARTNER}… se eu virar` | ✅ Validado |
-| `#1645 [221]` | Pratty | `a Craftlord, I'll take you` | `uma Craftlord, levarei você` | ✅ Validado |
+| `#1645 [221]` | Pratty | `a Craftlord, I'll take you` | `uma Lorde, levarei você` | ✅ Validado |
 | `#1645 [222]` | Pratty | `all over the world.` | `pelo mundo inteiro.` | ✅ Validado |
 | `#1645 [223]` | Pratty | `We'll visit more places than you ` | `Visitaremos mais lugares do que` | ✅ Validado |
 | `#1645 [224]` | Pratty | `and Father ever saw.` | `você e o Papai jamais viram.` | ✅ Validado |
@@ -1475,46 +1475,46 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1646 [8]` | Mestre Bron | `Quit yer jibber-jabber!` | `Deixa de falação!` | ✅ Validado |
 | `#1646 [9]` | Mestre Bron | `This ain't no inn!` | `Isto aqui não é pousada!` | ✅ Validado |
 | `#1646 [10]` | Pratty | `Grrr…` | `Grrr…` | ✅ Validado |
-| `#1646 [11]` | Mestre Bron | `The folks from Central Tower ` | `O pessoal da Central Tower` | ✅ Validado |
+| `#1646 [11]` | Mestre Bron | `The folks from Central Tower ` | `O pessoal da Torre Central` | ✅ Validado |
 | `#1646 [12]` | Mestre Bron | `have arrived. Behave yerself.` | `chegou. Comporte-se.` | ✅ Validado |
 | `#1646 [13]` | Mensageiro | `Hello, hello!` | `Olá, olá!` | ✅ Validado |
 | `#1646 [14]` | Mensageiro | `Greetings, {PLAYER}.` | `Saudações, {PLAYER}.` | ✅ Validado |
 | `#1646 [15]` | Mensageiro | `I have a delivery for you!` | `Tenho uma entrega para você!` | ✅ Validado |
-| `#1646 [16]` | Mensageiro | `Here is your "Labyrinth Key."` | `Aqui está a sua "Labyrinth Key".` | ✅ Validado |
+| `#1646 [16]` | Mensageiro | `Here is your "Labyrinth Key."` | `Aqui está sua "Chave do Labirinto".` | ✅ Validado |
 | `#1646 [17]` | Mensageiro | `Show this key to the guard in the` | `Mostre esta chave ao guarda no` | ✅ Validado |
-| `#1646 [18]` | Mensageiro | `first floor of the Central Tower,` | `1º andar da Central Tower,` | ✅ Validado |
+| `#1646 [18]` | Mensageiro | `first floor of the Central Tower,` | `1º andar da Torre Central,` | ✅ Validado |
 | `#1646 [19]` | Mensageiro | `and you can enter the Labyrinth.` | `e poderá entrar no Labirinto.` | ✅ Validado |
 | `#1646 [20]` | Mensageiro | `I must get going. Excuse me now.` | `Preciso ir agora. Com licença.` | ✅ Validado |
-| `#1646 [21]` | Protagonista | `So this is the Labyrinth Key…` | `Então esta é a Labyrinth Key…` | ✅ Validado |
-| `#1646 [22]` | Mestre Bron | `That Labyrinth under the Central` | `Esse Labirinto sob a Central` | ✅ Validado |
-| `#1646 [23]` | Mestre Bron | `Tower is a treasure mine for` | `Tower é uma mina de tesouros` | ✅ Validado |
-| `#1646 [24]` | Mestre Bron | `Craftknights.` | `para os Craftknights.` | ✅ Validado |
-| `#1646 [25]` | Mestre Bron | `If yer gonna be a skilled` | `Se quiser ser um Craftknight` | ✅ Validado |
+| `#1646 [21]` | Protagonista | `So this is the Labyrinth Key…` | `Então esta é a Chave do Labirinto…` | ✅ Validado |
+| `#1646 [22]` | Mestre Bron | `That Labyrinth under the Central` | `Esse Labirinto sob a Torre` | ✅ Validado |
+| `#1646 [23]` | Mestre Bron | `Tower is a treasure mine for` | `Central é uma mina de tesouros` | ✅ Validado |
+| `#1646 [24]` | Mestre Bron | `Craftknights.` | `para os Cavaleiros.` | ✅ Validado |
+| `#1646 [25]` | Mestre Bron | `If yer gonna be a skilled` | `Se quiser ser um Cavaleiro` | ✅ Validado |
 | `#1646 [26]` | Mestre Bron | `Craftknight, ya gotta find` | `habilidoso, terá que buscar` | ✅ Validado |
 | `#1646 [27]` | Mestre Bron | `yer own materials.` | `seus próprios materiais.` | ✅ Validado |
 | `#1646 [28]` | Mestre Bron | `That's all I gotta say.` | `É só o que tenho a dizer.` | ✅ Validado |
 | `#1646 [29]` | Protagonista | `But, I heard that there are tons of` | `Mas ouvi dizer que há dezenas de` | ✅ Validado |
-| `#1646 [30]` | Protagonista | `Summon Creatures and Stray Summons` | `Summon Creatures e Stray Summons` | ✅ Validado |
+| `#1646 [30]` | Protagonista | `Summon Creatures and Stray Summons` | `Invocadas e Criaturas Errantes` | ✅ Validado |
 | `#1646 [31]` | Protagonista | `protecting the Holy Spirit Parista` | `protegendo o Espírito Sagrado` | ✅ Validado |
 | `#1646 [32]` | Protagonista | `from evil in the Labyrinth.` | `Parista contra o mal no Labirinto.` | ✅ Validado |
 | `#1646 [33]` | Protagonista | `Isn't that right?` | `Não é verdade?` | ✅ Validado |
 | `#1646 [34]` | Protagonista | `I'm a bit scared…` | `Estou com um pouco de medo…` | ✅ Validado |
-| `#1646 [35]` | Mestre Bron | `A skilled Craftknight needs to be` | `Um bom Craftknight precisa ser` | ✅ Validado |
+| `#1646 [35]` | Mestre Bron | `A skilled Craftknight needs to be` | `Um bom forjador precisa ser` | ✅ Validado |
 | `#1646 [36]` | Mestre Bron | `a master at wielding weapons as` | `mestre tanto em manejar armas` | ✅ Validado |
 | `#1646 [37]` | Mestre Bron | `well as makin' them.` | `quanto em forjá-las.` | ✅ Validado |
-| `#1646 [38]` | Mestre Bron | `Ya gotta be able to handle 100 or` | `Cê tem que dar conta de 100 ou` | ✅ Validado |
-| `#1646 [39]` | Mestre Bron | `200 strays by yerself!` | `200 Strays sozinho!` | ✅ Validado |
+| `#1646 [38]` | Mestre Bron | `Ya gotta be able to handle 100 or` | `Você tem que dar conta de 100 ou` | ✅ Validado |
+| `#1646 [39]` | Mestre Bron | `200 strays by yerself!` | `200 Errantes sem ajuda!` | ✅ Validado |
 | `#1646 [40]` | Protagonista | `You've gotta be kidding!` | `Você só pode estar brincando!` | ✅ Validado |
-| `#1646 [41]` | Mestre Bron | `Yer gonna' be a Craftlord, guardian` | `Cê vai ser um Craftlord, guardião` | ✅ Validado |
-| `#1646 [42]` | Mestre Bron | `of the Holy Spirit Parista, right?` | `do Espírito Sagrado Parista, né?` | ✅ Validado |
-| `#1646 [43]` | Mestre Bron | `Either way, if ya ever end up` | `De todo modo, se cê acabar` | ✅ Validado |
-| `#1646 [44]` | Mestre Bron | `becoming a Craftlord…` | `mesmo virando um Craftlord…` | ✅ Validado |
+| `#1646 [41]` | Mestre Bron | `Yer gonna' be a Craftlord, guardian` | `Você vai ser um Lorde, guardião` | ✅ Validado |
+| `#1646 [42]` | Mestre Bron | `of the Holy Spirit Parista, right?` | `do Espírito Sagrado, não é?` | ✅ Validado |
+| `#1646 [43]` | Mestre Bron | `Either way, if ya ever end up` | `De todo modo, se você acabar` | ✅ Validado |
+| `#1646 [44]` | Mestre Bron | `becoming a Craftlord…` | `mesmo virando um Lorde…` | ✅ Validado |
 | `#1646 [45]` | Mestre Bron | `You'll be going to the shrine of ` | `Terá que ir todo mês ao santuário` | ✅ Validado |
 | `#1646 [46]` | Mestre Bron | `Parista every month, located in` | `de Parista, localizado nas` | ✅ Validado |
 | `#1646 [47]` | Mestre Bron | `the depths of the labyrinth.` | `profundezas do Labirinto.` | ✅ Validado |
 | `#1646 [48]` | Mestre Bron | `If ya can't make it to the Holy` | `Se não conseguir chegar até o` | ✅ Validado |
 | `#1646 [49]` | Mestre Bron | `Spirit, you'd be shamed as a` | `Espírito Sagrado, será uma` | ✅ Validado |
-| `#1646 [50]` | Mestre Bron | `Craftlord.` | `vergonha como Craftlord.` | ✅ Validado |
+| `#1646 [50]` | Mestre Bron | `Craftlord.` | `vergonha como Lorde.` | ✅ Validado |
 | `#1646 [51]` | Cleru | `I guess you're right, Master.` | `Acho que tem razão, Mestre.` | ✅ Validado |
 | `#1646 [52]` | Pratty | `I agree with you on that…` | `Concordo com o senhor nisso…` | ✅ Validado |
 | `#1646 [53]` | Mestre Bron | `Anyway, the battle's already begun!` | `Enfim, a batalha já começou!` | ✅ Validado |
@@ -1522,24 +1522,24 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1646 [55]` | Mestre Bron | `Alright! Let's begin!` | `Muito bem! Vamos começar!` | ✅ Validado |
 | `#1646 [56]` | Mestre Bron | `I, Master Bron, will teach ya the` | `Eu, Mestre Bron, vou te ensinar` | ✅ Validado |
 | `#1646 [57]` | Mestre Bron | `techniques of crafting weapons!!` | `as técnicas de forjar armas!!` | ✅ Validado |
-| `#1646 [58]` | Mestre Bron | `The very first weapon that` | `A primeira arma que cê` | ✅ Validado |
+| `#1646 [58]` | Mestre Bron | `The very first weapon that` | `A primeira arma que você` | ✅ Validado |
 | `#1646 [59]` | Mestre Bron | `yer gonna craft is this!!!` | `vai forjar é esta aqui!!!` | ✅ Validado |
 | `#1646 [60]` | Cleru | `Wow!` | `Uau!` | ✅ Validado |
-| `#1646 [61]` | Pratty | `I'm nervous… ` | `Estou nervosa…` | ✅ Validado |
+| `#1646 [61]` | Protagonista | `I'm nervous… ` | `Que nervosismo…` | ✅ Validado |
 | `#1646 [62]` | Pratty | `This'll be my very first craft…` | `Será a minha primeira forja…` | ✅ Validado |
-| `#1646 [63]` | Mestre Bron | `Don't be so nervous!` | `Não fique tão nervoso!` | ✅ Validado |
-| `#1646 [64]` | Mestre Bron | `You've got {PARTNER} to` | `Cê tem {PARTNER} pra` | ✅ Validado |
+| `#1646 [63]` | Mestre Bron | `Don't be so nervous!` | `Não precisa desse nervosismo!` | ✅ Validado |
+| `#1646 [64]` | Mestre Bron | `You've got {PARTNER} to` | `Você tem {PARTNER} pra` | ✅ Validado |
 | `#1646 [65]` | Mestre Bron | `assist ya.` | `te ajudar.` | ✅ Validado |
 | `#1646 [66]` | Protagonista | `Yes! I'll do it!!` | `Sim! Eu vou conseguir!!` | ✅ Validado |
 | `#1646 [67]` | Cleru | `Woohoooo!` | `Uhuuuuu!` | ✅ Validado |
-| `#1646 [68]` | Mestre Bron | `…Now ya got me worried.` | `…Agora cê me deixou preocupado.` | ✅ Validado |
+| `#1646 [68]` | Mestre Bron | `…Now ya got me worried.` | `…Agora você me deixou preocupado.` | ✅ Validado |
 | `#1646 [69]` | Mestre Bron | `{PARTNER}, I know I can count` | `{PARTNER}, sei que posso` | ✅ Validado |
 | `#1646 [70]` | Mestre Bron | `on ya.` | `contar com você.` | ✅ Validado |
 | `#1646 [71]` | Zantek | `☆ !` | `☆ !` | ✅ Validado |
 | `#1646 [72]` | Rasho | `Heh, don't tell me what to do.` | `Heh, não me diga o que fazer.` | ✅ Validado |
 | `#1646 [73]` | Sugar | `Yes, you can count on me.` | `Sim, pode contar comigo.` | ✅ Validado |
 | `#1646 [74]` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1646 [75]` | Mestre Bron | `Now, let's see if ya remember ` | `Agora vamos ver se cê lembra` | ✅ Validado |
+| `#1646 [75]` | Mestre Bron | `Now, let's see if ya remember ` | `Agora vamos ver se você lembra` | ✅ Validado |
 | `#1646 [76]` | Mestre Bron | `the basics of makin' a weapon.` | `do básico de como criar uma arma.` | ✅ Validado |
 | `#1646 [77]` | Escolha | `I remember perfectly!` | `Lembro perfeitamente!` | ✅ Validado |
 | `#1646 [78]` | Escolha | `I don't remember a thing!` | `Não lembro de nadinha!` | ✅ Validado |
@@ -1556,7 +1556,7 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1646 [89]` | Cleru | `Hehehe.` | `Hehehe.` | ✅ Validado |
 | `#1646 [90]` | Pratty | `Hahaha…` | `Hahaha…` | ✅ Validado |
 | `#1646 [91]` | Protagonista | `I don't remember a thing!` | `Não lembro de nadinha!` | ✅ Validado |
-| `#1646 [92]` | Mestre Bron | `Gah! What've you been listenin' to!?` | `Argh! Onde cê tava com a cabeça!?` | ✅ Validado |
+| `#1646 [92]` | Mestre Bron | `Gah! What've you been listenin' to!?` | `Argh! Onde você tava com a cabeça!?` | ✅ Validado |
 | `#1646 [93]` | Mestre Bron | `Ugh, alright…` | `Aff, tá bom…` | ✅ Validado |
 | `#1646 [94]` | Mestre Bron | `I'll teach ya this once more.` | `Vou te ensinar mais uma vez.` | ✅ Validado |
 | `#1646 [95]` | Mestre Bron | `And don't forget this time!` | `E vê se não esquece agora!` | ✅ Validado |
@@ -1591,25 +1591,25 @@ Este documento contém a tradução 100% fiel, revisada e localizada em Portugu�
 | `#1646 [124]` | Protagonista | `by Master anymore…` | `no meu pé o tempo todo…` | ✅ Validado |
 | `#1646 [125]` | Mestre Bron | `Hey! I heard that!` | `Ei! Eu ouvi isso!` | ✅ Validado |
 | `#1646 [126]` | Mestre Bron | `Anyhow…` | `De qualquer forma…` | ✅ Validado |
-| `#1646 [127]` | Mestre Bron | `Go buy some "Iron Ore" at the` | `Vá comprar um pouco de "Iron Ore"` | ✅ Validado |
+| `#1646 [127]` | Mestre Bron | `Go buy some "Iron Ore" at the` | `Vá comprar Minério de Ferro` | ✅ Validado |
 | `#1646 [128]` | Mestre Bron | `Item Shop this time.` | `na Loja de Itens desta vez.` | ✅ Validado |
 | `#1646 [129]` | Cleru | `Huh? Aren't we supposed to collect ` | `Hã? A gente não devia coletar` | ✅ Validado |
 | `#1646 [130]` | Cleru | `materials in the Labyrinth?` | `materiais lá no Labirinto?` | ✅ Validado |
 | `#1646 [131]` | Pratty | `Um, Master? Weren't we supposed` | `Ér, Mestre? Não deveríamos` | ✅ Validado |
 | `#1646 [132]` | Pratty | `to gather materials from the` | `coletar os materiais lá no` | ✅ Validado |
-| `#1646 [133]` | Pratty | `Labyrinth at the Central Tower?` | `Labirinto da Central Tower?` | ✅ Validado |
-| `#1646 [134]` | Mestre Bron | `Aye, that's correct. But were ya` | `Sim, isso mesmo. Mas cê ia` | ✅ Validado |
+| `#1646 [133]` | Pratty | `Labyrinth at the Central Tower?` | `Labirinto da Torre Central?` | ✅ Validado |
+| `#1646 [134]` | Mestre Bron | `Aye, that's correct. But were ya` | `Sim, isso mesmo. Mas você ia` | ✅ Validado |
 | `#1646 [135]` | Mestre Bron | `gonna head in there without any` | `entrar lá sem nenhuma` | ✅ Validado |
 | `#1646 [136]` | Mestre Bron | `weapons?` | `arma nas mãos?` | ✅ Validado |
 | `#1646 [137]` | Mestre Bron | `That would be very tough.` | `Isso seria bem difícil.` | ✅ Validado |
 | `#1646 [138]` | Mestre Bron | `So, ya gotta make a weapon first.` | `Então precisa fazer a arma antes.` | ✅ Validado |
 | `#1646 [139]` | Mestre Bron | `The biggest reason I told ya to` | `E o maior motivo pra eu mandar` | ✅ Validado |
-| `#1646 [140]` | Mestre Bron | `buy them is 'cause…  ` | `cê comprar na loja é que…` | ✅ Validado |
-| `#1646 [141]` | Mestre Bron | `…Iron Ore is on sale today.` | `…Iron Ore tá em promoção hoje.` | ✅ Validado |
+| `#1646 [140]` | Mestre Bron | `buy them is 'cause…  ` | `você comprar lá é que o…` | ✅ Validado |
+| `#1646 [141]` | Mestre Bron | `…Iron Ore is on sale today.` | `…Minério de Ferro está em promoção.` | ✅ Validado |
 | `#1646 [142]` | Cleru | `I see…` | `Entendi…` | ✅ Validado |
 | `#1646 [143]` | Pratty | `On sale!?` | `Em promoção!?` | ✅ Validado |
-| `#1646 [144]` | Mestre Bron | `The price is 10 boam for each!!` | `Tá custando 10 boam cada!!` | ✅ Validado |
-| `#1646 [145]` | Cleru | `That's cheap!` | `Tá muito barato!` | ✅ Validado |
+| `#1646 [144]` | Mestre Bron | `The price is 10 boam for each!!` | `Está custando 10 boam cada!!` | ✅ Validado |
+| `#1646 [145]` | Cleru | `That's cheap!` | `Está muito barato!` | ✅ Validado |
 | `#1646 [146]` | Mestre Bron | `Here's some cash. Now run off` | `Toma aqui uma grana. Agora corre` | ✅ Validado |
 | `#1646 [147]` | Mestre Bron | `and buy as much as ya can.` | `lá e compra o máximo que puder.` | ✅ Validado |
 | `#1646 [148]` | Mestre Bron | `There'll be hordes of bargain` | `Vai ter uma horda de caçadores de` | ✅ Validado |

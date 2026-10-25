@@ -161,7 +161,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1652 5` | Bron | `To a mean girl?` | `Para uma garota malvada?` | ✅ Validado |
 | `#1652 6` | {PLAYER} (Prat) | `That's correct.` | `Isso mesmo.` | ✅ Validado |
 | `#1652 7` | {PLAYER} | `She said, "I can't believe that` | `Ela disse: "Não acredito que` | ✅ Validado |
-| `#1652 8` | {PLAYER} | `someone as spaced out as you` | `alguém tão avoado quanto você` | ✅ Validado |
+| `#1652 8` | {PLAYER} | `someone as spaced out as you` | `alguém sem noção como você` | ✅ Validado |
 | `#1652 9` | {PLAYER} | `could enter the tournament!"` | `pôde entrar no torneio!"` | ✅ Validado |
 | `#1652 10` | {PLAYER} | `or something like that…` | `ou algo do tipo…` | ✅ Validado |
 | `#1652 11` | Bron | `I see…` | `Entendo…` | ✅ Validado |
@@ -174,19 +174,19 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1652 18` | Bron | `She's a contestant, just like you.` | `É uma competidora, igual a você.` | ✅ Validado |
 | `#1652 19` | Bron | `I told her about the sales as well…` | `Eu falei da liquidação pra ela…` | ✅ Validado |
 | `#1652 20` | {PLAYER} | `How come…` | `Por quê…` | ✅ Validado |
-| `#1652 21` | Bron | `What'd ya expect?` | `O que cê esperava?` | ✅ Validado |
-| `#1652 22` | Bron | `Ya aren't the only trainee here.` | `Cê não é o único aprendiz aqui.` | ✅ Validado |
+| `#1652 21` | Bron | `What'd ya expect?` | `O que você esperava?` | ✅ Validado |
+| `#1652 22` | Bron | `Ya aren't the only trainee here.` | `Você não é o único aprendiz aqui.` | ✅ Validado |
 | `#1652 23` | Bron | `I gotta be fair, ya know.` | `Tenho que ser justo, sabe.` | ✅ Validado |
 | `#1652 24` | {PLAYER} (Prat) | `You're right…` | `Você tem razão…` | ✅ Validado |
 | `#1652 25` | {PLAYER} (Bost) | `That's for sure.` | `Com certeza.` | ✅ Validado |
 | `#1652 26` | Bron | `Anyway… Sanary tends to be tough` | `Enfim… A Sanary pega pesado` | ✅ Validado |
 | `#1652 27` | Bron | `on others, so I can imagine that she` | `com os outros, então imagino que` | ✅ Validado |
-| `#1652 28` | Bron | `picked on ya, too.` | `tenha implicado com cê também.` | ✅ Validado |
+| `#1652 28` | Bron | `picked on ya, too.` | `tenha implicado com você também.` | ✅ Validado |
 | `#1652 29` | {PLAYER} | `But, don't you think that she` | `Mas não acha que ela` | ✅ Validado |
 | `#1652 30` | {PLAYER} | `could've sold at least one of` | `podia ter vendido pelo menos` | ✅ Validado |
 | `#1652 31` | {PLAYER} | `her ores?` | `um dos minérios dela?` | ✅ Validado |
 | `#1652 32` | Bron | `Nah, what Sanary did was correct.` | `Qual nada, a Sanary fez certo.` | ✅ Validado |
-| `#1652 33` | Bron | `Ya two are rivals now.` | `Cês dois são rivais agora.` | ✅ Validado |
+| `#1652 33` | Bron | `Ya two are rivals now.` | `Vocês dois são rivais agora.` | ✅ Validado |
 | `#1652 34` | Bron | `The battle's already begun` | `A batalha já começou` | ✅ Validado |
 | `#1652 35` | Bron | `in and out of the arena.` | `dentro e fora da arena.` | ✅ Validado |
 | `#1652 36` | {PLAYER} | `Yes…` | `Sim…` | ✅ Validado |
@@ -201,14 +201,14 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1652 45` | {PLAYER} (Bost) | `to go there without any weapons!` | `ir até lá sem nenhuma arma!` | ✅ Validado |
 | `#1652 46` | {PLAYER} | `Can we at least borrow a…` | `Podemos ao menos pegar emprestada…` | ✅ Validado |
 | `#1652 47` | Bron | `Shut yer trap!` | `Fecha essa matraca!` | ✅ Validado |
-| `#1652 48` | Bron | `If you wanna be a Craftlord,` | `Se quer ser um Craftlord,` | ✅ Validado |
+| `#1652 48` | Bron | `If you wanna be a Craftlord,` | `Se quer ser um Lorde,` | ✅ Validado |
 | `#1652 49` | Bron | `never ever say yer gonna' borrow` | `nunca mais diga que vai pegar` | ✅ Validado |
 | `#1652 50` | Bron | `a weapon that someone else made` | `emprestada a arma de outro` | ✅ Validado |
 | `#1652 51` | Bron | `to go hunting for materials!` | `para caçar materiais!` | ✅ Validado |
 | `#1652 52` | {PLAYER} | `Errr…` | `Ugh…` | ✅ Validado |
 | `#1652 53` | Bron | `Besides, ya already have the` | `Além disso, cê já tem a` | ✅ Validado |
 | `#1652 54` | Bron | `mightiest Craftknight weapon` | `arma mais poderosa de todo` | ✅ Validado |
-| `#1652 55` | Bron | `of all.` | `Craftknight.` | ✅ Validado |
+| `#1652 55` | Bron | `of all.` | `Cavaleiro.` | ✅ Validado |
 | `#1652 56` | {PLAYER} | `Huh?` | `Hã?` | ✅ Validado |
 | `#1652 57` | Bron | `Yer hammer, of course!` | `O seu martelo, é claro!` | ✅ Validado |
 | `#1652 58` | {PLAYER} | `But this, this is just a hammer we` | `Mas este é só um martelo que` | ✅ Validado |
@@ -243,8 +243,8 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1653 2` | Guarda | `The Labyrinth is way too dangerous.` | `O Labirinto é perigoso demais.` | ✅ Validado |
 | `#1653 3` | Guarda | `I can't let you go down there` | `Não posso deixar você descer` | ✅ Validado |
 | `#1653 4` | Guarda | `unarmed, even if you are a` | `desarmado, mesmo sendo um` | ✅ Validado |
-| `#1653 5` | Guarda | `Craftlord candidate escorted by a` | `candidato a Craftlord escoltado` | ✅ Validado |
-| `#1653 6` | Guarda | `Guardian Beast.` | `por uma Fera Guardiã.` | ✅ Validado |
+| `#1653 5` | Guarda | `Craftlord candidate escorted by a` | `candidato a Lorde escoltado` | ✅ Validado |
+| `#1653 6` | Guarda | `Guardian Beast.` | `por uma Guardiã.` | ✅ Validado |
 | `#1653 7` | Guarda | `Come back after you're properly` | `Volte quando estiver devidamente` | ✅ Validado |
 | `#1653 8` | Guarda | `equipped.` | `equipado.` | ✅ Validado |
 | `#1653 9` | Guarda | `Hey, I already told you not to` | `Ei, eu já disse para você não` | ✅ Validado |
@@ -257,7 +257,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1653 16` | {PLAYER} | `hammer!!` | `martelo!!` | ✅ Validado |
 | `#1653 17` | Guarda | `That's a smithy hammer, isn't it?` | `Isso é um martelo de forja, não é?` | ✅ Validado |
 | `#1653 18` | Guarda | `You need to take care of your` | `Você precisa cuidar das suas` | ✅ Validado |
-| `#1653 19` | Guarda | `tools as a Craftknight.` | `ferramentas como Craftknight.` | ✅ Validado |
+| `#1653 19` | Guarda | `tools as a Craftknight.` | `candidato a Lorde escoltado` | ✅ Validado |
 | `#1653 20` | {PLAYER} | `Weapons aren't the only things that` | `Armas não são a única coisa que` | ✅ Validado |
 | `#1653 21` | {PLAYER} | `this hammer can forge…` | `este martelo pode forjar…` | ✅ Validado |
 | `#1653 22` | {PLAYER} (Prat) | `It can forge a man!` | `Ele pode forjar um homem!` | ✅ Validado |
@@ -271,7 +271,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1653 30` | Guarda | `Go show us how far you can go` | `Vá e mostre até onde consegue ir` | ✅ Validado |
 | `#1653 31` | Guarda | `with just a hammer in hand!!` | `apenas com um martelo na mão!!` | ✅ Validado |
 | `#1653 32` | {PLAYER} | `Y-Yes, sir!` | `S-Sim, senhor!` | ✅ Validado |
-| `#1653 33` | Guarda | `Don't worry!` | `Não se preocupe!` | ✅ Validado |
+| `#1653 33` | Guarda | `Don't worry!` | `ferramentas como forjador.` | ✅ Validado |
 | `#1653 34` | Guarda | `If something happens, we'll tell` | `Se algo acontecer, diremos à` | ✅ Validado |
 | `#1653 35` | Guarda | `your folks how brave you were!` | `sua família o quão bravo você foi!` | ✅ Validado |
 | `#1653 36` | {PLAYER} | `Huh?` | `Hã?` | ✅ Validado |
@@ -318,7 +318,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 33` | {PLAYER} (Bost) | `Don't just make things up!` | `Não saia inventando coisas!` | ✅ Validado |
 | `#1654 34` | Sanary | `Now, now. You don't have to thank` | `Calma, calma. Não precisa agradecer` | ✅ Validado |
 | `#1654 35` | Sanary | `me yet. Here's the first question!` | `ainda. Lá vai a primeira pergunta!` | ✅ Validado |
-| `#1654 36` | Sanary | `A female Craftknight is greater than` | `Uma Craftknight mulher é melhor que` | ✅ Validado |
+| `#1654 36` | Sanary | `A female Craftknight is greater than` | `Uma forjadora é melhor que` | ✅ Validado |
 | `#1654 37` | Sanary | `a male one. True or false?` | `um homem. Verdadeiro ou falso?` | ✅ Validado |
 | `#1654 38` | Escolha (Prat) | `What kind of a question is that!?` | `Que tipo de pergunta é essa!?` | ✅ Validado |
 | `#1654 39` | Escolha (Prat) | `True!` | `Verdadeiro!` | ✅ Validado |
@@ -331,7 +331,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 46` | Sanary | `Wrong.` | `Errado.` | ✅ Validado |
 | `#1654 47` | Sanary | `A female one is greater!` | `Uma mulher é muito melhor!` | ✅ Validado |
 | `#1654 48` | Sanary | `If you're a girl, be more confident` | `Se você é garota, tenha mais` | ✅ Validado |
-| `#1654 49` | Sanary | `in yourself.` | `confiança em si mesma.` | ✅ Validado |
+| `#1654 49` | Sanary | `in yourself.` | `Uma mulher forjadora é melhor que` | ✅ Validado |
 | `#1654 50` | {PLAYER} | `!?` | `!?` | ✅ Validado |
 | `#1654 51` | {PLAYER} (Prat) | `…A female one is greater.` | `…Uma mulher é melhor.` | ✅ Validado |
 | `#1654 52` | Sanary | `Correct!` | `Correto!` | ✅ Validado |
@@ -341,7 +341,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 56` | {PLAYER} (Bost) | `wants me to say…)` | `quer que eu diga…)` | ✅ Validado |
 | `#1654 57` | Sanary | `You sure got that right!` | `Acertou em cheio!` | ✅ Validado |
 | `#1654 58` | Sanary | `Now here's the second question.` | `Agora a segunda pergunta.` | ✅ Validado |
-| `#1654 59` | Sanary | `A female Craftknight looks cooler` | `Uma Craftknight mulher é mais legal` | ✅ Validado |
+| `#1654 59` | Sanary | `A female Craftknight looks cooler` | `Uma forjadora é mais legal` | ✅ Validado |
 | `#1654 60` | Sanary | `than a male one! True or false?` | `que um homem! Verdadeiro ou falso?` | ✅ Validado |
 | `#1654 61` | Escolha (Prat) | `They're both the same.` | `Os dois são iguais.` | ✅ Validado |
 | `#1654 62` | Escolha (Prat) | `A female one looks cooler…` | `Uma mulher é mais legal…` | ✅ Validado |
@@ -354,7 +354,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 69` | Sanary | `A female one looks cooler of course.` | `Uma mulher é mais legal, óbvio.` | ✅ Validado |
 | `#1654 70` | Sanary | `Didn't you know that?` | `Você não sabia disso?` | ✅ Validado |
 | `#1654 71` | {PLAYER} | `!?` | `!?` | ✅ Validado |
-| `#1654 72` | {PLAYER} (Bost) | `What a stupid quiz.` | `Que quiz mais bobo.` | ✅ Validado |
+| `#1654 72` | {PLAYER} (Bost) | `What a stupid quiz.` | `Uma mulher forjadora é mais legal` | ✅ Validado |
 | `#1654 73` | {PLAYER} (Bost) | `Gender doesn't matter, does it?` | `Gênero não importa, importa?` | ✅ Validado |
 | `#1654 74` | {PLAYER} (Bost) | `You call this a quiz?` | `Você chama isso de quiz?` | ✅ Validado |
 | `#1654 75` | Sanary | `Wrong!` | `Errado!` | ✅ Validado |
@@ -369,7 +369,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 84` | Sanary | `aren't you?` | `não é?` | ✅ Validado |
 | `#1654 85` | {PLAYER} | `…` | `…` | ✅ Validado |
 | `#1654 86` | {PLAYER} (Bost) | `I think a female one looks cooler.` | `Acho uma mulher mais legal.` | ✅ Validado |
-| `#1654 87` | Sanary | `You're right. Male Craftknights are` | `Tem razão. Craftknights homens` | ✅ Validado |
+| `#1654 87` | Sanary | `You're right. Male Craftknights are` | `Tem razão. forjadores homens` | ✅ Validado |
 | `#1654 88` | Sanary | `all just brutes with muscles all` | `são todos uns brucutus com` | ✅ Validado |
 | `#1654 89` | Sanary | `the way up to their brains.` | `músculos até no cérebro.` | ✅ Validado |
 | `#1654 90` | Sanary | `(With the exception of my father,` | `(Com exceção do meu pai,` | ✅ Validado |
@@ -392,19 +392,19 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 107` | Sanary | `But…` | `Mas…` | ✅ Validado |
 | `#1654 108` | Sanary | `You don't really care, do you?` | `Você não se importa mesmo, né?` | ✅ Validado |
 | `#1654 109` | Sanary | `You have the nerve to throw away` | `Tem a cara de pau de jogar fora` | ✅ Validado |
-| `#1654 110` | Sanary | `the pride of a Craftknight just for` | `o orgulho de Craftknight por` | ✅ Validado |
+| `#1654 110` | Sanary | `the pride of a Craftknight just for` | `o orgulho de Cavaleiro por` | ✅ Validado |
 | `#1654 111` | Sanary | `a few measly materials?` | `alguns míseros materiais?` | ✅ Validado |
 | `#1654 112` | {PLAYER} | `What's that supposed to mean!?` | `O que quer dizer com isso!?` | ✅ Validado |
 | `#1654 113` | Sanary | `If you don't have the will to win` | `Se não tem vontade de vencer` | ✅ Validado |
 | `#1654 114` | Sanary | `the tournament, why don't you` | `o torneio, por que não fica` | ✅ Validado |
 | `#1654 115` | Sanary | `just stay out of it!?` | `logo de fora dele!?` | ✅ Validado |
-| `#1654 116` | {PLAYER} | `What the heck!? I'm pissed!!` | `Qual é a sua!? Fiquei furioso!!` | ✅ Validado |
+| `#1654 116` | {PLAYER} | `What the heck!? I'm pissed!!` | `Qual é a sua!? Que raiva!!` | ✅ Validado |
 | `#1654 117` | {PLAYER} (Bost) | `The answer is… Sanary.` | `A resposta é… Sanary.` | ✅ Validado |
 | `#1654 118` | Sanary | `Yes, you've got it!` | `Sim, você acertou!` | ✅ Validado |
 | `#1654 119` | Sanary | `You answered all correctly!` | `Respondeu todas corretamente!` | ✅ Validado |
 | `#1654 120` | Sanary | `You're really good!!` | `Você manda muito bem!!` | ✅ Validado |
 | `#1654 121` | Sanary | `You have the nerve to throw away` | `Tem a cara de pau de jogar fora` | ✅ Validado |
-| `#1654 122` | Sanary | `the pride of a Craftknight just for` | `o orgulho de Craftknight por` | ✅ Validado |
+| `#1654 122` | Sanary | `the pride of a Craftknight just for` | `o orgulho de Cavaleiro por` | ✅ Validado |
 | `#1654 123` | Sanary | `a few measly materials?` | `alguns míseros materiais?` | ✅ Validado |
 | `#1654 124` | Sanary | `How pathetic…` | `Que patético…` | ✅ Validado |
 | `#1654 125` | Sanary | `That's why men are so weak.` | `É por isso que homens são fracos.` | ✅ Validado |
@@ -420,7 +420,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 135` | {PLAYER} | `Oh, that would be me who's ` | `Ah, sou eu quem vai` | ✅ Validado |
 | `#1654 136` | {PLAYER} | `going to win! I won't yield!` | `vencer! Não vou ceder!` | ✅ Validado |
 | `#1654 137` | Sanary | `Pretty bold aren't we?` | `Bem ousada, não é?` | ✅ Validado |
-| `#1654 138` | Sanary | `Fine, I'll consider you my rival.` | `Certo, vou considerá-la minha rival.` | ✅ Validado |
+| `#1654 138` | Sanary | `Fine, I'll consider you my rival.` | `Certo, vou vê-la como minha rival.` | ✅ Validado |
 | `#1654 139` | Sanary | `Okay.` | `Tudo bem.` | ✅ Validado |
 | `#1654 140` | Sanary | `You can have these.` | `Pode ficar com isto.` | ✅ Validado |
 | `#1654 141` | Sanary | `Check it out.` | `Dê uma olhada.` | ✅ Validado |
@@ -456,11 +456,11 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 171` | Sanary (Guardiã) | `I've no interest whatsoever` | `Não tenho o menor interesse` | ✅ Validado |
 | `#1654 172` | Sanary (Guardiã) | `in rug rats like you.` | `em pirralhos como você.` | ✅ Validado |
 | `#1654 173` | Sanary (Guardiã) | `You gotta be at least as hot as` | `Tem que ser ao menos tão gata` | ✅ Validado |
-| `#1654 174` | Sanary (Guardiã) | `Kouren if you want my help.` | `quanto a Kouren pra ter minha ajuda.` | ✅ Validado |
+| `#1654 174` | Sanary (Guardiã) | `Kouren if you want my help.` | `quanto Kouren pra ter minha ajuda.` | ✅ Validado |
 | `#1654 175` | {PLAYER} | `Kouren?` | `Kouren?` | ✅ Validado |
 | `#1654 176` | {PLAYER} | `I only know of her by name…` | `Só a conheço de nome…` | ✅ Validado |
 | `#1654 177` | {PLAYER} | `But, are you talking about Kouren,` | `Mas está falando da Kouren,` | ✅ Validado |
-| `#1654 178` | {PLAYER} | `the Craftlord of Ruby?` | `a Craftlord de Rubi?` | ✅ Validado |
+| `#1654 178` | {PLAYER} | `the Craftlord of Ruby?` | `a Lorde de Rubi?` | ✅ Validado |
 | `#1654 179` | Sanary (Guardiã) | `Yeah!` | `Isso!` | ✅ Validado |
 | `#1654 180` | Sanary (Guardiã) | `I remember that she used to be ` | `Mas lembro que ela costumava` | ✅ Validado |
 | `#1654 181` | Sanary (Guardiã) | `a tomboy like Sanary, though.` | `ser moleca igual à Sanary.` | ✅ Validado |
@@ -507,11 +507,11 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1654 222` | Sanary (Guardiã) | `I've no interest whatsoever` | `Não tenho o menor interesse` | ✅ Validado |
 | `#1654 223` | Sanary (Guardiã) | `in rug rats like you.` | `em pirralhos como você.` | ✅ Validado |
 | `#1654 224` | Sanary (Guardiã) | `You gotta be at least as hot as` | `Tem que ser ao menos tão gata` | ✅ Validado |
-| `#1654 225` | Sanary (Guardiã) | `Kouren if you want my help.` | `quanto a Kouren pra ter minha ajuda.` | ✅ Validado |
+| `#1654 225` | Sanary (Guardiã) | `Kouren if you want my help.` | `quanto Kouren pra ter minha ajuda.` | ✅ Validado |
 | `#1654 226` | {PLAYER} | `Kouren?` | `Kouren?` | ✅ Validado |
 | `#1654 227` | {PLAYER} | `I only know of her by name…` | `Só a conheço de nome…` | ✅ Validado |
 | `#1654 228` | {PLAYER} | `But, are you talking about Kouren,` | `Mas está falando da Kouren,` | ✅ Validado |
-| `#1654 229` | {PLAYER} | `the Craftlord of Ruby?` | `a Craftlord de Rubi?` | ✅ Validado |
+| `#1654 229` | {PLAYER} | `the Craftlord of Ruby?` | `a Lorde de Rubi?` | ✅ Validado |
 | `#1654 230` | Sanary (Guardiã) | `Yeah!` | `Isso!` | ✅ Validado |
 | `#1654 231` | Sanary (Guardiã) | `Although… I remember that she used` | `Embora… eu lembre que ela era` | ✅ Validado |
 | `#1654 232` | Sanary (Guardiã) | `to be a tomboy, like Sanary.` | `bem moleca, igual à Sanary.` | ✅ Validado |
@@ -567,9 +567,9 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1655 14` | Sanary | `This place isn't mine, so I won't` | `Este lugar não é meu, então não` | ✅ Validado |
 | `#1655 15` | Sanary | `tell you to leave.` | `vou mandar você sair.` | ✅ Validado |
 | `#1655 16` | {PLAYER} | `Really?` | `Sério?` | ✅ Validado |
-| `#1655 17` | {PLAYER} | `Thanks…` | `Obrigado…` | ✅ Validado |
+| `#1655 17` | {PLAYER} | `Thanks…` | `Valeu…` | ✅ Validado |
 | `#1655 18` | {PLAYER} (Prat) | `Look how beautiful this place is.` | `Olha como este lugar é lindo.` | ✅ Validado |
-| `#1655 19` | {PLAYER} (Prat) | `I can see straight into the ocean…` | `Dá para ver direto o oceano…` | ✅ Validado |
+| `#1655 19` | {PLAYER} (Prat) | `I can see straight into the ocean…` | `Dá para ver o oceano daqui…` | ✅ Validado |
 | `#1655 20` | {PLAYER} (Bost) | `How pretty.` | `Que lindo.` | ✅ Validado |
 | `#1655 21` | {PLAYER} (Bost) | `It's like an undersea observatory.` | `Parece um observatório submarino.` | ✅ Validado |
 | `#1655 22` | Sanary | `Hmhm…` | `Hmhm…` | ✅ Validado |
@@ -607,7 +607,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | ID | Contexto | Texto Original (EN) | Tradução PT-BR | Status |
 | :--- | :--- | :--- | :--- | :---: |
 | `#1656 0` | Bron | `Yo, what's up?` | `E aí, que foi?` | ✅ Validado |
-| `#1656 1` | Bron | `Ya got something ya wanna ask?` | `Tem alguma coisa que quer perguntar?` | ✅ Validado |
+| `#1656 1` | Bron | `Ya got something ya wanna ask?` | `Quer me fazer alguma pergunta?` | ✅ Validado |
 | `#1656 2` | Escolha | `Ask how to make a weapon.` | `Perguntar como forjar uma arma.` | ✅ Validado |
 | `#1656 3` | Escolha | `That's all I need to ask.` | `Era só isso mesmo.` | ✅ Validado |
 | `#1656 4` | Bron | `First, collect items that can be` | `Primeiro, junte itens que possam` | ✅ Validado |
@@ -641,7 +641,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 10` | Bron | `Let me take a look!` | `Deixe-me dar uma olhada!` | ✅ Validado |
 | `#1657 11` | Bron | `I guess this'll pass…` | `Acho que dá pro gasto…` | ✅ Validado |
 | `#1657 12` | Bron | `I bet {PARTNER} did most of the` | `Mas aposto que {PARTNER} fez` | ✅ Validado |
-| `#1657 13` | Bron | `work for ya, though.` | `quase todo o trabalho por cê.` | ✅ Validado |
+| `#1657 13` | Bron | `work for ya, though.` | `quase todo o trabalho por você.` | ✅ Validado |
 | `#1657 14` | {PLAYER} (Prat) | `Hehehe.` | `Hehehe.` | ✅ Validado |
 | `#1657 15` | {PLAYER} (Prat) | `But I'm still happy.` | `Mas ainda assim estou feliz.` | ✅ Validado |
 | `#1657 16` | {PLAYER} (Bost) | `But, it's all good!` | `Mas está tudo ótimo!` | ✅ Validado |
@@ -651,8 +651,8 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 20` | Bron | `Always remember that feeling,` | `Lembre-se sempre dessa sensação,` | ✅ Validado |
 | `#1657 21` | Bron | `{PLAYER}!` | `{PLAYER}!` | ✅ Validado |
 | `#1657 22` | Bron | `The satisfaction ya feel now is` | `A satisfação que sente agora é` | ✅ Validado |
-| `#1657 23` | Bron | `the drive that'll push ya to become` | `o impulso que fará de cê` | ✅ Validado |
-| `#1657 24` | Bron | `a good Craftknight.` | `um bom Craftknight.` | ✅ Validado |
+| `#1657 23` | Bron | `the drive that'll push ya to become` | `o impulso que fará de você` | ✅ Validado |
+| `#1657 24` | Bron | `a good Craftknight.` | `um bom Cavaleiro.` | ✅ Validado |
 | `#1657 25` | {PLAYER} (Prat) | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
 | `#1657 26` | {PLAYER} (Bost) | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
 | `#1657 27` | Bron | `I guess this'll pass…` | `Acho que dá pro gasto…` | ✅ Validado |
@@ -661,7 +661,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 30` | Sanary (Guardiã) | `couldn't have done it without me.` | `não conseguiria sem mim.` | ✅ Validado |
 | `#1657 31` | Bron | `Shut yer trap!` | `Fecha essa matraca!` | ✅ Validado |
 | `#1657 32` | Bron | `{PARTNER}!` | `{PARTNER}!` | ✅ Validado |
-| `#1657 33` | Bron | `You were slackin', weren't ya!?` | `Cê tava fazendo corpo mole, né!?` | ✅ Validado |
+| `#1657 33` | Bron | `You were slackin', weren't ya!?` | `Você tava fazendo corpo mole, né!?` | ✅ Validado |
 | `#1657 34` | Bron | `If you'd helped out for real, we'd` | `Se tivesse ajudado de verdade,` | ✅ Validado |
 | `#1657 35` | Bron | `have a much finer piece!` | `teríamos uma peça muito melhor!` | ✅ Validado |
 | `#1657 36` | Sanary (Guardiã) | `Aww, shut up! Cut me some slack!` | `Ah, cala a boca! Me dá um desconto!` | ✅ Validado |
@@ -687,7 +687,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 56` | Bron | `Not bad.` | `Nada mal.` | ✅ Validado |
 | `#1657 57` | Bron | `I guess this'll pass…` | `Acho que dá pro gasto…` | ✅ Validado |
 | `#1657 58` | Bron | `{PARTNER} did almost all the` | `Mas {PARTNER} fez quase todo` | ✅ Validado |
-| `#1657 59` | Bron | `work for ya, though.` | `o trabalho por cê.` | ✅ Validado |
+| `#1657 59` | Bron | `work for ya, though.` | `o trabalho por você.` | ✅ Validado |
 | `#1657 60` | {PLAYER} (Prat) | `That's true, but I'm so happy that` | `É verdade, mas estou tão feliz por` | ✅ Validado |
 | `#1657 61` | {PLAYER} (Prat) | `I completed my very first weapon.` | `concluir minha primeira arma.` | ✅ Validado |
 | `#1657 62` | {PLAYER} (Bost) | `It's all good!` | `Está tudo ótimo!` | ✅ Validado |
@@ -696,7 +696,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 65` | Bron | `Always remember that feeling,` | `Lembre-se sempre dessa sensação,` | ✅ Validado |
 | `#1657 66` | Bron | `{PLAYER}!` | `{PLAYER}!` | ✅ Validado |
 | `#1657 67` | Bron | `The satisfaction you have now will` | `A satisfação que sente agora vai` | ✅ Validado |
-| `#1657 68` | Bron | `push you to make better, finer` | `impulsionar cê a fazer peças cada` | ✅ Validado |
+| `#1657 68` | Bron | `push you to make better, finer` | `impulsionar você a fazer peças cada` | ✅ Validado |
 | `#1657 69` | Bron | `pieces. Keep at it!` | `vez melhores. Continue assim!` | ✅ Validado |
 | `#1657 70` | {PLAYER} | `Yes, Master!` | `Sim, Mestre!` | ✅ Validado |
 | `#1657 71` | Kutty | `(Hmm, I wonder if my` | `(Hmm, será que o mestre` | ✅ Validado |
@@ -713,19 +713,19 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 82` | Sanary | `You think you can win with that` | `Acha que pode vencer nesse` | ✅ Validado |
 | `#1657 83` | Sanary | `kind of pace?` | `ritmo aí?` | ✅ Validado |
 | `#1657 84` | {PLAYER} | `!` | `!` | ✅ Validado |
-| `#1657 85` | Bron | `Cut it out, you two!` | `Parem já com isso, cês dois!` | ✅ Validado |
+| `#1657 85` | Bron | `Cut it out, you two!` | `Parem já com isso, vocês dois!` | ✅ Validado |
 | `#1657 86` | Sanary | `Yes, Master.` | `Sim, Mestre.` | ✅ Validado |
 | `#1657 87` | Sanary | `I guess that was unladylike of me.` | `Acho que não agi como uma dama.` | ✅ Validado |
 | `#1657 88` | Sanary | `{PLAYER} is a bad influence…` | `{PLAYER} é uma má influência…` | ✅ Validado |
 | `#1657 89` | {PLAYER} | `Me!?` | `Eu!?` | ✅ Validado |
 | `#1657 90` | {PLAYER} | `You're the one acting childish,` | `Você é quem está agindo como` | ✅ Validado |
 | `#1657 91` | {PLAYER} | `Sanary!` | `criança, Sanary!` | ✅ Validado |
-| `#1657 92` | Bron | `Hey, you two…` | `Ei, cês dois…` | ✅ Validado |
+| `#1657 92` | Bron | `Hey, you two…` | `Ei, vocês dois…` | ✅ Validado |
 | `#1657 93` | Bron | `When I say stop, STOP!` | `Quando eu digo parem, PAREM!` | ✅ Validado |
 | `#1657 94` | {PLAYER} & Sanary | `Yes, sir…` | `Sim, senhor…` | ✅ Validado |
 | `#1657 95` | Mensageiro | `Hello, hello.` | `Olá, olá.` | ✅ Validado |
 | `#1657 96` | Mensageiro | `I'm sorry to bother you, but…` | `Desculpe incomodar, mas…` | ✅ Validado |
-| `#1657 97` | Bron | `Whaddaya want!?` | `Que é que cê quer!?` | ✅ Validado |
+| `#1657 97` | Bron | `Whaddaya want!?` | `Que é que você quer!?` | ✅ Validado |
 | `#1657 98` | Mensageiro | `I'm here to deliver the notice for` | `Vim entregar a notificação da` | ✅ Validado |
 | `#1657 99` | Mensageiro | `{PLAYER}'s first round in the` | `primeira rodada de {PLAYER}` | ✅ Validado |
 | `#1657 100` | Mensageiro | `tournament.` | `no torneio.` | ✅ Validado |
@@ -761,17 +761,17 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 130` | {PLAYER} | `…You think so?` | `…Você acha?` | ✅ Validado |
 | `#1657 131` | {PLAYER} | `…` | `…` | ✅ Validado |
 | `#1657 132` | Bron | `I see…` | `Entendo…` | ✅ Validado |
-| `#1657 133` | Bron | `Alright. I'll teach ya` | `Certo. Vou ensinar a cê` | ✅ Validado |
+| `#1657 133` | Bron | `Alright. I'll teach ya` | `Certo. Vou te ensinar` | ✅ Validado |
 | `#1657 134` | Bron | `one more technique.` | `mais uma técnica.` | ✅ Validado |
 | `#1657 135` | {PLAYER} | `Really?` | `Sério?` | ✅ Validado |
 | `#1657 136` | {PLAYER} (Prat) | `You're mighty fat and generous` | `O senhor está bem gordo e generoso` | ✅ Validado |
 | `#1657 137` | {PLAYER} (Prat) | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
 | `#1657 138` | {PLAYER} (Bost) | `You're mighty fat and generous` | `O senhor está bem gordo e generoso` | ✅ Validado |
 | `#1657 139` | {PLAYER} (Bost) | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
-| `#1657 140` | Bron | `What'd you say?` | `O que foi que cê disse?` | ✅ Validado |
+| `#1657 140` | Bron | `What'd you say?` | `O que foi que você disse?` | ✅ Validado |
 | `#1657 141` | {PLAYER} | `I said you're really generous today!` | `Disse que está muito generoso hoje!` | ✅ Validado |
 | `#1657 142` | Bron | `Hmm…` | `Hmm…` | ✅ Validado |
-| `#1657 143` | Bron | `Alright. I'll teach ya` | `Certo. Vou ensinar a cê` | ✅ Validado |
+| `#1657 143` | Bron | `Alright. I'll teach ya` | `Certo. Vou te ensinar` | ✅ Validado |
 | `#1657 144` | Bron | `one more technique.` | `mais uma técnica.` | ✅ Validado |
 | `#1657 145` | {PLAYER} (Prat) | `You're mighty generous` | `O senhor está muito generoso` | ✅ Validado |
 | `#1657 146` | {PLAYER} (Prat) | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
@@ -782,35 +782,35 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1657 151` | Bron | `Stop laughing, {PLAYER}!` | `Pare de rir, {PLAYER}!` | ✅ Validado |
 | `#1657 152` | Sugar | `Yes, I don't think we're ready` | `É, acho que ainda não estamos` | ✅ Validado |
 | `#1657 153` | Sugar | `for battle yet…` | `prontos para a batalha…` | ✅ Validado |
-| `#1657 154` | Bron | `Alright. I'll teach ya` | `Certo. Vou ensinar a cê` | ✅ Validado |
+| `#1657 154` | Bron | `Alright. I'll teach ya` | `Certo. Vou te ensinar` | ✅ Validado |
 | `#1657 155` | Bron | `one more technique.` | `mais uma técnica.` | ✅ Validado |
 | `#1657 156` | {PLAYER} | `You're mighty generous` | `O senhor está muito generoso` | ✅ Validado |
 | `#1657 157` | {PLAYER} | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
 | `#1657 158` | Sugar | `I'm thankful for master being` | `Agradeço por o mestre ser` | ✅ Validado |
 | `#1657 159` | Sugar | `generous and all, but I wasn't` | `generoso e tudo, mas não achei` | ✅ Validado |
 | `#1657 160` | Sugar | `expecting it to come so soon…` | `que a barriga viria tão cedo…` | ✅ Validado |
-| `#1657 161` | Sugar | `Take his generosity, {PLAYER}.` | `Aceite a generosidade dele, {PLAYER}.` | ✅ Validado |
-| `#1657 162` | Bron | `What'd you say?` | `O que foi que cê disse?` | ✅ Validado |
+| `#1657 161` | Sugar | `Take his generosity, {PLAYER}.` | `Aceite a bondade dele, {PLAYER}.` | ✅ Validado |
+| `#1657 162` | Bron | `What'd you say?` | `O que foi que você disse?` | ✅ Validado |
 | `#1657 163` | Sugar | `Uh, nothing sir!` | `Ér, nada não, senhor!` | ✅ Validado |
 | `#1657 164` | {PLAYER} | `Do you think so?` | `Você acha mesmo?` | ✅ Validado |
 | `#1657 165` | Kutty | `Kuu…` | `Kuu…` | ✅ Validado |
 | `#1657 166` | Bron | `I see…` | `Entendo…` | ✅ Validado |
-| `#1657 167` | Bron | `Alright. I'll teach ya` | `Certo. Vou ensinar a cê` | ✅ Validado |
+| `#1657 167` | Bron | `Alright. I'll teach ya` | `Certo. Vou te ensinar` | ✅ Validado |
 | `#1657 168` | Bron | `one more technique.` | `mais uma técnica.` | ✅ Validado |
 | `#1657 169` | {PLAYER} | `Really?` | `Sério?` | ✅ Validado |
 | `#1657 170` | {PLAYER} (Prat) | `You're mighty fat and generous` | `O senhor está bem gordo e generoso` | ✅ Validado |
 | `#1657 171` | {PLAYER} (Prat) | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
 | `#1657 172` | {PLAYER} (Bost) | `You're mighty fat and generous` | `O senhor está bem gordo e generoso` | ✅ Validado |
 | `#1657 173` | {PLAYER} (Bost) | `today, Master!` | `hoje, Mestre!` | ✅ Validado |
-| `#1657 174` | Bron | `What'd you say?` | `O que foi que cê disse?` | ✅ Validado |
+| `#1657 174` | Bron | `What'd you say?` | `O que foi que você disse?` | ✅ Validado |
 | `#1657 175` | {PLAYER} | `I said you're really generous today!` | `Disse que está muito generoso hoje!` | ✅ Validado |
 | `#1657 176` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1657 177` | Bron | `When yer ready, head to the` | `Quando estiver pronto, vá para` | ✅ Validado |
+| `#1657 177` | Bron | `When yer ready, head to the` | `Quando estiver a postos, vá para` | ✅ Validado |
 | `#1657 178` | Bron | `arena on the first floor of` | `a arena no primeiro andar da` | ✅ Validado |
 | `#1657 179` | Bron | `the Central Tower.` | `Torre Central.` | ✅ Validado |
-| `#1657 180` | Bron | `Go show 'em what yer made of!` | `Vá mostrar do que cê é capaz!` | ✅ Validado |
+| `#1657 180` | Bron | `Go show 'em what yer made of!` | `Vá mostrar do que você é capaz!` | ✅ Validado |
 | `#1657 181` | {PLAYER} | `…` | `…` | ✅ Validado |
-| `#1657 182` | {PLAYER} | `I'm getting a bit nervous now…` | `Estou ficando meio nervoso agora…` | ✅ Validado |
+| `#1657 182` | {PLAYER} | `I'm getting a bit nervous now…` | `O nervosismo tá batendo agora…` | ✅ Validado |
 | `#1657 183` | Rasho | `☆…☆☆!` | `☆…☆☆!` | ✅ Validado |
 | `#1657 184` | Sanary (Guardiã) | `Come on, shape it up!` | `Qual é, recomponha-se!` | ✅ Validado |
 | `#1657 185` | Sanary (Guardiã) | `Look alive!` | `Mais ânimo!` | ✅ Validado |
@@ -865,7 +865,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1659 12` | Sugar | `Master {PLAYER}…` | `Mestre {PLAYER}…` | ✅ Validado |
 | `#1659 13` | Kutty | `Kuu…` | `Kuu…` | ✅ Validado |
 | `#1659 14` | Juiz | `Will you be summoning your ` | `Você vai invocar a sua` | ✅ Validado |
-| `#1659 15` | Juiz | `Guardian Beast, Chaves?` | `Fera Guardiã, Chaves?` | ✅ Validado |
+| `#1659 15` | Juiz | `Guardian Beast, Chaves?` | `Guardiã, Chaves?` | ✅ Validado |
 | `#1659 16` | Chaves | `I don't need no beast…` | `Não preciso de fera nenhuma…` | ✅ Validado |
 | `#1659 17` | Chaves | `I can handle this by myself.` | `Dou conta disso sozinho.` | ✅ Validado |
 | `#1659 18` | {PLAYER} | `Why you…!` | `Ora, seu…!` | ✅ Validado |
@@ -876,7 +876,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1659 23` | Juiz | `Are you both ready?` | `Ambos estão prontos?` | ✅ Validado |
 | `#1659 24` | {PLAYER} (Prat) | `Yes, I am.` | `Sim, estou.` | ✅ Validado |
 | `#1659 25` | {PLAYER} (Bost) | `Yes, I am!` | `Sim, estou!` | ✅ Validado |
-| `#1659 26` | Juiz | `As Craftknights of Wystern,` | `Como Craftknights de Wystern,` | ✅ Validado |
+| `#1659 26` | Juiz | `As Craftknights of Wystern,` | `Como forjadores de Wystern,` | ✅ Validado |
 | `#1659 27` | Juiz | `fight with honor and dignity!` | `lutem com honra e dignidade!` | ✅ Validado |
 | `#1659 28` | Juiz | `The fourth round of the tournament!` | `A quarta luta do torneio!` | ✅ Validado |
 | `#1659 29` | Juiz | `Chaves against {PLAYER}…` | `Chaves contra {PLAYER}…` | ✅ Validado |
@@ -899,7 +899,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1660 8` | Sugar | `Master {PLAYER}…` | `Mestre {PLAYER}…` | ✅ Validado |
 | `#1660 9` | Sugar | `That was a magnificent fight…◎` | `Foi uma luta magnífica…◎` | ✅ Validado |
 | `#1660 10` | Kutty | `Kutty!!` | `Kutty!!` | ✅ Validado |
-| `#1660 11` | {PLAYER} | `Thanks, {PARTNER}!` | `Obrigado, {PARTNER}!` | ✅ Validado |
+| `#1660 11` | {PLAYER} | `Thanks, {PARTNER}!` | `Valeu, {PARTNER}!` | ✅ Validado |
 | `#1660 12` | Chaves | `Damn it…` | `Maldição…` | ✅ Validado |
 | `#1660 13` | Chaves | `This fight is no contest!` | `Esta luta não valeu!` | ✅ Validado |
 | `#1660 14` | {PLAYER} | `(What?)` | `(O quê?)` | ✅ Validado |
@@ -912,18 +912,18 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1660 21` | Chaves | `nor her skill to handle it let her` | `nem a habilidade dela em usá-la` | ✅ Validado |
 | `#1660 22` | Chaves | `win this fight!` | `venceram esta luta!` | ✅ Validado |
 | `#1660 23` | Chaves | `It was all because of the` | `Foi tudo por causa da` | ✅ Validado |
-| `#1660 24` | Chaves | `Guardian Beast!` | `Fera Guardiã!` | ✅ Validado |
+| `#1660 24` | Chaves | `Guardian Beast!` | `Guardiã!` | ✅ Validado |
 | `#1660 25` | Chaves | `No contest!` | `Não valeu!` | ✅ Validado |
 | `#1660 26` | Chaves | `No contest!!` | `Não valeu!!` | ✅ Validado |
 | `#1660 27` | Chaves | `No contest!!!` | `Não valeu!!!` | ✅ Validado |
-| `#1660 28` | Sakuro | `Silence, Craftknight Chaves.` | `Silêncio, Craftknight Chaves.` | ✅ Validado |
+| `#1660 28` | Sakuro | `Silence, Craftknight Chaves.` | `Silêncio, forjador Chaves.` | ✅ Validado |
 | `#1660 29` | Chaves | `What!?` | `O quê!?` | ✅ Validado |
 | `#1660 30` | Sakuro | `Have you forgotten the Craftknight` | `Esqueceu-se do código dos` | ✅ Validado |
-| `#1660 31` | Sakuro | `code, the three tenets of` | `Craftknights, os três preceitos` | ✅ Validado |
-| `#1660 32` | Sakuro | `Craftknighthood?` | `de todo Craftknight?` | ✅ Validado |
+| `#1660 31` | Sakuro | `code, the three tenets of` | `forjadores, os três preceitos` | ✅ Validado |
+| `#1660 32` | Sakuro | `Craftknighthood?` | `de todo Cavaleiro?` | ✅ Validado |
 | `#1660 33` | Sakuro | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1660 34` | Sakuro | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1660 35` | Sakuro | `A sword is not fellowship` | `A espada não é união` | ✅ Validado |
+| `#1660 35` | Sakuro | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
 | `#1660 36` | Sakuro | `Recite these words and think over` | `Recite essas palavras e reflita` | ✅ Validado |
 | `#1660 37` | Sakuro | `what you have done wrong.` | `sobre o erro que cometeu.` | ✅ Validado |
 
@@ -938,8 +938,8 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1661 2` | Guarda | `The Labyrinth is way too dangerous.` | `O Labirinto é perigoso demais.` | ✅ Validado |
 | `#1661 3` | Guarda | `I can't let you go down there` | `Não posso deixar você descer` | ✅ Validado |
 | `#1661 4` | Guarda | `unarmed, even if you are a` | `desarmado, mesmo sendo um` | ✅ Validado |
-| `#1661 5` | Guarda | `Craftlord candidate escorted by a` | `candidato a Craftlord escoltado` | ✅ Validado |
-| `#1661 6` | Guarda | `Guardian Beast.` | `por uma Fera Guardiã.` | ✅ Validado |
+| `#1661 5` | Guarda | `Craftlord candidate escorted by a` | `candidato a Lorde escoltado` | ✅ Validado |
+| `#1661 6` | Guarda | `Guardian Beast.` | `por uma Guardiã.` | ✅ Validado |
 | `#1661 7` | Guarda | `Come back after you're properly` | `Volte quando estiver devidamente` | ✅ Validado |
 | `#1661 8` | Guarda | `equipped.` | `equipado.` | ✅ Validado |
 | `#1661 9` | Guarda | `Hey, I already told you.` | `Ei, eu já avisei você.` | ✅ Validado |
@@ -948,7 +948,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 
 ---
 
-## 12. Script `#1662` (`0x0865155C`) — Casa de Amariss: Apresentando a Fera Guardiã à Mãe
+## 12. Script `#1662` (`0x0865155C`) — Casa de Amariss: Apresentando a Guardiã à Mãe
 
 | ID | Contexto | Texto Original (EN) | Tradução PT-BR | Status |
 | :--- | :--- | :--- | :--- | :---: |
@@ -964,7 +964,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1662 9` | {PLAYER} (Prat) | `Mom, you know {PARTNER}?` | `Mãe, conhece {PARTNER}?` | ✅ Validado |
 | `#1662 10` | {PLAYER} (Bost) | `What?` | `O quê?` | ✅ Validado |
 | `#1662 11` | {PLAYER} (Bost) | `You know {PARTNER}, Mother?` | `Conhece {PARTNER}, Mãe?` | ✅ Validado |
-| `#1662 12` | Amariss | `{PARTNER} was your father's` | `{PARTNER} era a Fera Guardiã` | ✅ Validado |
+| `#1662 12` | Amariss | `{PARTNER} was your father's` | `{PARTNER} era a Guardiã` | ✅ Validado |
 | `#1662 13` | Amariss | `Guardian Beast.` | `do seu pai.` | ✅ Validado |
 | `#1662 14` | Amariss | `Of course I know her.` | `É claro que a conheço.` | ✅ Validado |
 | `#1662 15` | {PLAYER} | `Oh, I see…` | `Ah, entendi…` | ✅ Validado |
@@ -996,14 +996,14 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1662 41` | {PLAYER} | `Uh, sure!` | `Ér, claro!` | ✅ Validado |
 | `#1662 42` | Amariss | `My, it's you, {PARTNER}.` | `Ora, é você, {PARTNER}.` | ✅ Validado |
 | `#1662 43` | Amariss | `You're going to be {PLAYER}'s` | `Você vai ser de {PLAYER}` | ✅ Validado |
-| `#1662 44` | Amariss | `Guardian Beast?` | `a Fera Guardiã?` | ✅ Validado |
+| `#1662 44` | Amariss | `Guardian Beast?` | `a Guardiã?` | ✅ Validado |
 | `#1662 45` | Sugar | `It's been so long since we` | `Faz tanto tempo desde que` | ✅ Validado |
 | `#1662 46` | Sugar | `last met.` | `nos vimos pela última vez.` | ✅ Validado |
 | `#1662 47` | Sugar | `…` | `…` | ✅ Validado |
 | `#1662 48` | {PLAYER} | `Do you know each other?` | `Vocês se conhecem?` | ✅ Validado |
 | `#1662 49` | Amariss | `Of course.` | `É claro.` | ✅ Validado |
 | `#1662 50` | Amariss | `{PARTNER} used to be` | `{PARTNER} costumava ser` | ✅ Validado |
-| `#1662 51` | Amariss | `your father's Guardian Beast.` | `a Fera Guardiã do seu pai.` | ✅ Validado |
+| `#1662 51` | Amariss | `your father's Guardian Beast.` | `a Guardiã do seu pai.` | ✅ Validado |
 | `#1662 52` | Amariss | `Oh, by the way…` | `Ah, por falar nisso…` | ✅ Validado |
 | `#1662 53` | Amariss | `Bron stopped by for a little chat.` | `Bron passou aqui para conversar.` | ✅ Validado |
 | `#1662 54` | Amariss | `About your little kiss◎` | `Sobre o seu beijinho◎` | ✅ Validado |
@@ -1031,7 +1031,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1662 76` | {PLAYER} (Bost) | `Have you two met before?` | `Vocês dois já se viram antes?` | ✅ Validado |
 | `#1662 77` | Amariss | `Of course.` | `É claro.` | ✅ Validado |
 | `#1662 78` | Amariss | `{PARTNER} used to be ` | `{PARTNER} costumava ser` | ✅ Validado |
-| `#1662 79` | Amariss | `your father's Guardian Beast.` | `a Fera Guardiã do seu pai.` | ✅ Validado |
+| `#1662 79` | Amariss | `your father's Guardian Beast.` | `a Guardiã do seu pai.` | ✅ Validado |
 | `#1662 80` | Kutty | `Kutty, kutty!` | `Kutty, kutty!` | ✅ Validado |
 | `#1662 81` | Amariss | `You should pay respect when` | `Deve demonstrar respeito ao` | ✅ Validado |
 | `#1662 82` | Amariss | `addressing his name.` | `pronunciar o nome dele.` | ✅ Validado |
@@ -1046,7 +1046,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 
 ---
 
-## 13. Script `#1663` (`0x08651FDC`) — Visita de Amariss: O Passado da Fera Guardiã com Shintetsu
+## 13. Script `#1663` (`0x08651FDC`) — Visita de Amariss: O Passado da Guardiã com Shintetsu
 
 | ID | Contexto | Texto Original (EN) | Tradução PT-BR | Status |
 | :--- | :--- | :--- | :--- | :---: |
@@ -1068,7 +1068,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1663 15` | {PLAYER} (Bost) | `Do you know {PARTNER}, Mother?` | `Conhece {PARTNER}, Mãe?` | ✅ Validado |
 | `#1663 16` | Amariss | `Of course, I do.` | `É claro que conheço.` | ✅ Validado |
 | `#1663 17` | Amariss | `{PARTNER} used to be` | `{PARTNER} costumava ser` | ✅ Validado |
-| `#1663 18` | Amariss | `your father's Guardian Beast.` | `a Fera Guardiã do seu pai.` | ✅ Validado |
+| `#1663 18` | Amariss | `your father's Guardian Beast.` | `a Guardiã do seu pai.` | ✅ Validado |
 | `#1663 19` | {PLAYER} | `Oh, I see…` | `Ah, entendi…` | ✅ Validado |
 | `#1663 20` | Amariss | `With {PARTNER} at your side,` | `Com {PARTNER} ao seu lado,` | ✅ Validado |
 | `#1663 21` | Amariss | `you'll be just fine.` | `você ficará muito bem.` | ✅ Validado |
@@ -1080,7 +1080,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1663 27` | Amariss | `after {PLAYER} is going to be a` | `de {PLAYER} vai dar bastante` | ✅ Validado |
 | `#1663 28` | Amariss | `handful, but I'm counting on you.` | `trabalho, mas conto com você.` | ✅ Validado |
 | `#1663 29` | Sanary (Guardiã) | `Do you wish to say something?` | `Deseja dizer alguma coisa?` | ✅ Validado |
-| `#1663 30` | {PLAYER} | `You've been arrogant till just now…` | `Você estava tão arrogante até agora…` | ✅ Validado |
+| `#1663 30` | {PLAYER} | `You've been arrogant till just now…` | `Tava tão arrogante até agora…` | ✅ Validado |
 | `#1663 31` | {PLAYER} (Prat) | `Hey!` | `Ei!` | ✅ Validado |
 | `#1663 32` | {PLAYER} (Prat) | `What's that?` | `Que foi isso?` | ✅ Validado |
 | `#1663 33` | {PLAYER} (Prat) | `Ouch… what's that for!?` | `Ai… pra que foi isso!?` | ✅ Validado |
@@ -1097,21 +1097,21 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1663 44` | {PLAYER} (Prat) | `Uh.` | `Ér.` | ✅ Validado |
 | `#1663 45` | {PLAYER} (Bost) | `Sure!` | `Claro!` | ✅ Validado |
 | `#1663 46` | Amariss | `My, it's you, {PARTNER}.` | `Ora, é você, {PARTNER}.` | ✅ Validado |
-| `#1663 47` | Amariss | `You're going to be` | `Vai ser a Fera Guardiã` | ✅ Validado |
+| `#1663 47` | Amariss | `You're going to be` | `Vai ser a Guardiã` | ✅ Validado |
 | `#1663 48` | Amariss | `{PLAYER}'s Guardian Beast?` | `de {PLAYER}?` | ✅ Validado |
 | `#1663 49` | Sugar | `It's been so long since we` | `Faz tanto tempo desde que` | ✅ Validado |
 | `#1663 50` | Sugar | `last met.` | `nos vimos pela última vez.` | ✅ Validado |
 | `#1663 51` | Sugar | `…` | `…` | ✅ Validado |
 | `#1663 52` | {PLAYER} | `Do you know each other?` | `Vocês se conhecem?` | ✅ Validado |
 | `#1663 53` | Amariss | `Of course, I do. {PARTNER} used` | `É claro que sim. {PARTNER}` | ✅ Validado |
-| `#1663 54` | Amariss | `to be your father's` | `costumava ser a Fera Guardiã` | ✅ Validado |
+| `#1663 54` | Amariss | `to be your father's` | `costumava ser a Guardiã` | ✅ Validado |
 | `#1663 55` | Amariss | `Guardian Beast.` | `do seu pai.` | ✅ Validado |
 | `#1663 56` | Amariss | `Oh, by the way…` | `Ah, por falar nisso…` | ✅ Validado |
 | `#1663 57` | Amariss | `Bron stopped by for a little chat.` | `Bron passou aqui para conversar.` | ✅ Validado |
 | `#1663 58` | Amariss | `About your little kiss◎` | `Sobre o seu beijinho◎` | ✅ Validado |
 | `#1663 59` | {PLAYER} | `(Master… How can you find the time` | `(Mestre… Como arranja tempo para` | ✅ Validado |
 | `#1663 60` | {PLAYER} | `to tell her that kind of a story…)` | `contar esse tipo de história…)` | ✅ Validado |
-| `#1663 61` | Amariss | `I heard that you were quite worried` | `Soube que você ficou bem preocupado` | ✅ Validado |
+| `#1663 61` | Amariss | `I heard that you were quite worried` | `Soube que você se preocupou muito` | ✅ Validado |
 | `#1663 62` | Amariss | `about it, but you shouldn't be.` | `com isso, mas não deveria.` | ✅ Validado |
 | `#1663 63` | Amariss | `Because you got your first kiss ` | `Porque o seu primeiro beijo` | ✅ Validado |
 | `#1663 64` | Amariss | `from me, {PLAYER}.` | `foi comigo, {PLAYER}.` | ✅ Validado |
@@ -1132,7 +1132,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1663 79` | {PLAYER} (Bost) | `Do you know him, Mother?` | `A senhora o conhece, Mãe?` | ✅ Validado |
 | `#1663 80` | {PLAYER} (Bost) | `Have you two met before?` | `Vocês dois já se viram antes?` | ✅ Validado |
 | `#1663 81` | Amariss | `Of course, I do. {PARTNER} used` | `É claro que sim. {PARTNER}` | ✅ Validado |
-| `#1663 82` | Amariss | `to be your father's Guardian Beast.` | `era a Fera Guardiã do seu pai.` | ✅ Validado |
+| `#1663 82` | Amariss | `to be your father's Guardian Beast.` | `era a Guardiã do seu pai.` | ✅ Validado |
 | `#1663 83` | Kutty | `Kutty, kutty!` | `Kutty, kutty!` | ✅ Validado |
 | `#1663 84` | Amariss | `You should pay respect when` | `Deve demonstrar respeito ao` | ✅ Validado |
 | `#1663 85` | Amariss | `addressing his name.` | `pronunciar o nome dele.` | ✅ Validado |
@@ -1202,14 +1202,14 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1665 7` | Sanary (Guardiã) | `I see.` | `Entendo.` | ✅ Validado |
 | `#1665 8` | Sugar | `I'm glad to hear that.` | `Fico feliz em ouvir isso.` | ✅ Validado |
 | `#1665 9` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
-| `#1665 10` | Bron | `Yo, {PLAYER}! You here?` | `Ei, {PLAYER}! Cê tá aí?` | ✅ Validado |
+| `#1665 10` | Bron | `Yo, {PLAYER}! You here?` | `Ei, {PLAYER}! Você tá aí?` | ✅ Validado |
 | `#1665 11` | {PLAYER} | `Yes, Master.` | `Sim, Mestre.` | ✅ Validado |
 | `#1665 12` | Bron | `Hey there!` | `E aí!` | ✅ Validado |
 | `#1665 13` | Bron | `I heard ya won the first battle!` | `Soube que venceu a primeira luta!` | ✅ Validado |
 | `#1665 14` | {PLAYER} | `Hehehe, yeah!` | `Hehehe, é!` | ✅ Validado |
 | `#1665 15` | {PLAYER} | `Are we celebrating that ` | `Por acaso nós vamos` | ✅ Validado |
 | `#1665 16` | {PLAYER} | `by any chance?` | `comemorar isso?` | ✅ Validado |
-| `#1665 17` | Bron | `Don't be a fool! Ya only` | `Não seja tolo! Cê só` | ✅ Validado |
+| `#1665 17` | Bron | `Don't be a fool! Ya only` | `Não seja tolo! Você só` | ✅ Validado |
 | `#1665 18` | Bron | `won the first round!` | `venceu a primeira rodada!` | ✅ Validado |
 | `#1665 19` | {PLAYER} | `Uh…` | `Ér…` | ✅ Validado |
 | `#1665 20` | Bron | `Besides, others around ya` | `Além do mais, outros ao seu redor` | ✅ Validado |
@@ -1219,12 +1219,12 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1665 24` | Bron | `And even if they were to win,` | `E, mesmo que vençam,` | ✅ Validado |
 | `#1665 25` | Bron | `there can only be one champion.` | `só pode haver um campeão.` | ✅ Validado |
 | `#1665 26` | {PLAYER} | `…` | `…` | ✅ Validado |
-| `#1665 27` | Bron | `If yer gonna become a Craftlord,` | `Se vai se tornar um Craftlord,` | ✅ Validado |
+| `#1665 27` | Bron | `If yer gonna become a Craftlord,` | `Se vai se tornar um Lorde,` | ✅ Validado |
 | `#1665 28` | Bron | `learn to watch yer surroundings.` | `aprenda a olhar ao seu redor.` | ✅ Validado |
 | `#1665 29` | Bron | `Think outside yer shell.` | `Pense fora da sua bolha.` | ✅ Validado |
 | `#1665 30` | {PLAYER} | `I understand…` | `Eu entendo…` | ✅ Validado |
 | `#1665 31` | Bron | `With that said…` | `Dito isso…` | ✅ Validado |
-| `#1665 32` | Bron | `Ya deserve yer celebration today,` | `Cê merece comemorar hoje` | ✅ Validado |
+| `#1665 32` | Bron | `Ya deserve yer celebration today,` | `Você merece comemorar hoje` | ✅ Validado |
 | `#1665 33` | Bron | `for winning the first battle. ` | `por vencer a primeira luta.` | ✅ Validado |
 | `#1665 34` | Bron | `Keep up the great work,` | `Continue com o ótimo trabalho,` | ✅ Validado |
 | `#1665 35` | Bron | `{PLAYER}!` | `{PLAYER}!` | ✅ Validado |
@@ -1252,7 +1252,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 0` | {PLAYER} | `We did it, {PARTNER}!` | `Conseguimos, {PARTNER}!` | ✅ Validado |
 | `#1695 1` | {PLAYER} | `We won the first match!` | `Vencemos a primeira luta!` | ✅ Validado |
 | `#1695 2` | Rasho | `☆☆☆☆♪` | `☆☆☆☆♪` | ✅ Validado |
-| `#1695 3` | {PLAYER} | `Thanks!` | `Obrigado!` | ✅ Validado |
+| `#1695 3` | {PLAYER} | `Thanks!` | `Valeu!` | ✅ Validado |
 | `#1695 4` | {PLAYER} | `I owe it to you, {PARTNER}!` | `Devo isso a você, {PARTNER}!` | ✅ Validado |
 | `#1695 5` | {PLAYER} (Prat) | `Ahh, you're flattering me!` | `Ahh, assim você me lisonjeia!` | ✅ Validado |
 | `#1695 6` | Rasho | `…☆!` | `…☆!` | ✅ Validado |
@@ -1262,22 +1262,22 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 10` | {PLAYER} (Bost) | `Let's put it this way, then.` | `Digamos assim, então.` | ✅ Validado |
 | `#1695 11` | {PLAYER} (Bost) | `We took the victory together!` | `Conquistamos a vitória juntos!` | ✅ Validado |
 | `#1695 12` | Rasho | `☆☆☆♪` | `☆☆☆♪` | ✅ Validado |
-| `#1695 13` | {PLAYER} (Prat) | `This must be what the Craftlord` | `Deve ser isso que o Craftlord` | ✅ Validado |
+| `#1695 13` | {PLAYER} (Prat) | `This must be what the Craftlord` | `Deve ser isso que o Lorde` | ✅ Validado |
 | `#1695 14` | {PLAYER} (Prat) | `meant by those words he said at` | `quis dizer com aquelas palavras` | ✅ Validado |
 | `#1695 15` | {PLAYER} (Prat) | `the match today…` | `na luta de hoje…` | ✅ Validado |
-| `#1695 16` | {PLAYER} (Bost) | `This must be what the Craftlord` | `Deve ser isso que o Craftlord` | ✅ Validado |
+| `#1695 16` | {PLAYER} (Bost) | `This must be what the Craftlord` | `Deve ser isso que o Lorde` | ✅ Validado |
 | `#1695 17` | {PLAYER} (Bost) | `meant by those words he said at` | `quis dizer com aquelas palavras` | ✅ Validado |
 | `#1695 18` | {PLAYER} (Bost) | `the match today…` | `na luta de hoje…` | ✅ Validado |
 | `#1695 19` | {PLAYER} | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1695 20` | {PLAYER} | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1695 21` | {PLAYER} | `A sword is not fellowship` | `A espada não é união` | ✅ Validado |
+| `#1695 21` | {PLAYER} | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
 | `#1695 22` | {PLAYER} | `…I think…` | `…Acho que…` | ✅ Validado |
 | `#1695 23` | {PLAYER} | `Without craftsmanship, without` | `Sem a arte da forja, sem` | ✅ Validado |
 | `#1695 24` | {PLAYER} | `sword skills, without the aid of ` | `técnica de espada e sem a ajuda` | ✅ Validado |
-| `#1695 25` | {PLAYER} | `Guardian Beasts, we are not ` | `das Feras Guardiãs, não somos` | ✅ Validado |
+| `#1695 25` | {PLAYER} | `Guardian Beasts, we are not ` | `das Guardiãs, não somos` | ✅ Validado |
 | `#1695 26` | {PLAYER} | `complete…` | `completos…` | ✅ Validado |
 | `#1695 27` | {PLAYER} | `Without all three, we can't become` | `Sem os três, não podemos nos` | ✅ Validado |
-| `#1695 28` | {PLAYER} | `a full Craftknight.` | `tornar um Craftknight completo.` | ✅ Validado |
+| `#1695 28` | {PLAYER} | `a full Craftknight.` | `tornar um forjador completo.` | ✅ Validado |
 | `#1695 29` | {PLAYER} (Prat) | `I already have {PARTNER} with` | `Já tenho {PARTNER} comigo,` | ✅ Validado |
 | `#1695 30` | {PLAYER} (Prat) | `me, so I just have to work on my` | `então só preciso trabalhar minha` | ✅ Validado |
 | `#1695 31` | {PLAYER} (Prat) | `sword and forging skills!` | `técnica de espada e de forja!` | ✅ Validado |
@@ -1325,7 +1325,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 73` | {PLAYER} (Prat) | `That's because he was modest, right?` | `Porque ele era modesto, né?` | ✅ Validado |
 | `#1695 74` | {PLAYER} (Bost) | `My father and I are different…` | `Meu pai e eu somos diferentes…` | ✅ Validado |
 | `#1695 75` | {PLAYER} (Bost) | `And besides, he was…` | `E, além disso, ele era…` | ✅ Validado |
-| `#1695 76` | Sanary (Guardiã) | `He was a Craftlord?` | `Ele era um Craftlord?` | ✅ Validado |
+| `#1695 76` | Sanary (Guardiã) | `He was a Craftlord?` | `Ele era um Lorde?` | ✅ Validado |
 | `#1695 77` | Sanary (Guardiã) | `Listen…` | `Escute…` | ✅ Validado |
 | `#1695 78` | Sanary (Guardiã) | `Your father was also an apprentice` | `Seu pai também era um aprendiz` | ✅ Validado |
 | `#1695 79` | Sanary (Guardiã) | `when he started out.` | `quando começou.` | ✅ Validado |
@@ -1348,7 +1348,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 96` | {PLAYER} (Bost) | `Hee hee…` | `Hehehe…` | ✅ Validado |
 | `#1695 97` | {PLAYER} (Bost) | `You must have been humiliated.` | `Você deve ter passado vergonha.` | ✅ Validado |
 | `#1695 98` | {PLAYER} (Bost) | `I'll remember that one…` | `Vou me lembrar dessa…` | ✅ Validado |
-| `#1695 99` | Sanary (Guardiã) | `Now cut it out! Anyways,` | `Parem já! Enfim,` | ✅ Validado |
+| `#1695 99` | Sanary (Guardiã) | `Now cut it out! Anyways,` | `Deixa pra lá! Enfim,` | ✅ Validado |
 | `#1695 100` | Sanary (Guardiã) | `you did a good job today.` | `você fez um bom trabalho hoje.` | ✅ Validado |
 | `#1695 101` | {PLAYER} (Prat) | `Yes!` | `Sim!` | ✅ Validado |
 | `#1695 102` | {PLAYER} (Bost) | `You're trying to avoid the subject` | `Está tentando mudar de assunto` | ✅ Validado |
@@ -1369,12 +1369,12 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 117` | Sugar | `alongside Master Shintetsu…` | `ao lado do Mestre Shintetsu…` | ✅ Validado |
 | `#1695 118` | {PLAYER} | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1695 119` | {PLAYER} | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1695 120` | {PLAYER} | `A sword is not fellowship` | `A espada não é união` | ✅ Validado |
-| `#1695 121` | {PLAYER} | `That's what one of the Craftlords` | `Foi o que um dos Craftlords` | ✅ Validado |
+| `#1695 120` | {PLAYER} | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
+| `#1695 121` | {PLAYER} | `That's what one of the Craftlords` | `Foi o que um dos Lordes` | ✅ Validado |
 | `#1695 122` | {PLAYER} | `said today.` | `disse hoje.` | ✅ Validado |
-| `#1695 123` | Sugar | `The three tenets of Craftknighthood:` | `Os três preceitos do Craftknight:` | ✅ Validado |
+| `#1695 123` | Sugar | `The three tenets of Craftknighthood:` | `Os três preceitos do forjador:` | ✅ Validado |
 | `#1695 124` | Sugar | `craftsmanship, sword skills, and` | `arte da forja, técnica de espada` | ✅ Validado |
-| `#1695 125` | Sugar | `Guardian Beasts.` | `e Feras Guardiãs.` | ✅ Validado |
+| `#1695 125` | Sugar | `Guardian Beasts.` | `e Guardiãs.` | ✅ Validado |
 | `#1695 126` | {PLAYER} (Prat) | `Yes… I think I'm beginning` | `Sim… Acho que estou começando` | ✅ Validado |
 | `#1695 127` | {PLAYER} (Prat) | `to understand a little more` | `a entender um pouco melhor` | ✅ Validado |
 | `#1695 128` | {PLAYER} (Prat) | `of what these words mean.` | `o que essas palavras significam.` | ✅ Validado |
@@ -1391,7 +1391,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 139` | Sugar | `Yes, Master. Please remember that` | `Sim, Mestre. Lembre-se de que` | ✅ Validado |
 | `#1695 140` | Sugar | `I will always be with you, even` | `estarei sempre com você, mesmo` | ✅ Validado |
 | `#1695 141` | Sugar | `after we win the tournament.` | `depois de vencermos o torneio.` | ✅ Validado |
-| `#1695 142` | {PLAYER} (Prat) | `Thank you…` | `Obrigado…` | ✅ Validado |
+| `#1695 142` | {PLAYER} | `Thank you…` | `Valeu…` | ✅ Validado |
 | `#1695 143` | Sugar | `Even if you tell me no, I will be` | `Mesmo que diga não, ficarei` | ✅ Validado |
 | `#1695 144` | Sugar | `forever by your side.` | `para sempre ao seu lado.` | ✅ Validado |
 | `#1695 145` | {PLAYER} (Prat) | `Hehehe…` | `Hehehe…` | ✅ Validado |
@@ -1404,11 +1404,11 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 152` | {PLAYER} | `{PARTNER}.` | `{PARTNER}.` | ✅ Validado |
 | `#1695 153` | {PLAYER} | `But thanks to you, we won` | `Mas, graças a você, vencemos` | ✅ Validado |
 | `#1695 154` | {PLAYER} | `the first battle.` | `a primeira batalha.` | ✅ Validado |
-| `#1695 155` | {PLAYER} | `Thank you.` | `Obrigado.` | ✅ Validado |
+| `#1695 155` | {PLAYER} | `Thank you.` | `Agradeço muito.` | ✅ Validado |
 | `#1695 156` | {PLAYER} | `I'll buy you a nice meal next time.` | `Pago uma boa refeição na próxima.` | ✅ Validado |
 | `#1695 157` | {PLAYER} | `Say, do you know anything` | `Diga, você sabe alguma coisa` | ✅ Validado |
 | `#1695 158` | {PLAYER} | `about the three tenets that` | `sobre os três preceitos que` | ✅ Validado |
-| `#1695 159` | {PLAYER} | `the Craftlord said today?` | `o Craftlord citou hoje?` | ✅ Validado |
+| `#1695 159` | {PLAYER} | `the Craftlord said today?` | `o Lorde citou hoje?` | ✅ Validado |
 | `#1695 160` | Kutty | `(Cuddle…)` | `(Carinho…)` | ✅ Validado |
 | `#1695 161` | {PLAYER} (Prat) | `Hehehe, I guess that was` | `Hehehe, acho que isso era` | ✅ Validado |
 | `#1695 162` | {PLAYER} (Prat) | `too hard for {PARTNER}.` | `difícil demais para {PARTNER}.` | ✅ Validado |
@@ -1420,10 +1420,10 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 168` | {PLAYER} | `I didn't mean to make fun of you.` | `Não quis tirar sarro de você.` | ✅ Validado |
 | `#1695 169` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1695 170` | {PLAYER} | `Phew… So, about the three ` | `Ufa… Então, sobre os três` | ✅ Validado |
-| `#1695 171` | {PLAYER} | `tenets of the Craftknights…` | `preceitos dos Craftknights…` | ✅ Validado |
+| `#1695 171` | {PLAYER} | `tenets of the Craftknights…` | `preceitos dos forjadores…` | ✅ Validado |
 | `#1695 172` | {PLAYER} | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1695 173` | {PLAYER} | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1695 174` | {PLAYER} | `A sword is not fellowship` | `A espada não é união` | ✅ Validado |
+| `#1695 174` | {PLAYER} | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
 | `#1695 175` | {PLAYER} | `Let's see… Strength of the sword` | `Vejamos… A força da espada` | ✅ Validado |
 | `#1695 176` | {PLAYER} | `probably means our craftsmanship` | `deve significar nossa arte` | ✅ Validado |
 | `#1695 177` | {PLAYER} | `to make a good weapon.` | `de forjar uma boa arma.` | ✅ Validado |
@@ -1436,9 +1436,9 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1695 184` | {PLAYER} | `So in a nutshell…` | `Então, resumindo…` | ✅ Validado |
 | `#1695 185` | {PLAYER} | `The three treasures are…` | `Os três tesouros são…` | ✅ Validado |
 | `#1695 186` | {PLAYER} | `Forging skills, sword skills, and` | `Arte da forja, técnica de espada` | ✅ Validado |
-| `#1695 187` | {PLAYER} | `Guardian Beasts.` | `e Feras Guardiãs.` | ✅ Validado |
-| `#1695 188` | {PLAYER} | `A Craftknight must possess all` | `Um Craftknight deve possuir os` | ✅ Validado |
-| `#1695 189` | {PLAYER} | `three to be acknowledged…` | `três para ser reconhecido…` | ✅ Validado |
+| `#1695 187` | {PLAYER} | `Guardian Beasts.` | `e Guardiãs.` | ✅ Validado |
+| `#1695 188` | {PLAYER} | `A Craftknight must possess all` | `Um forjador deve possuir os` | ✅ Validado |
+| `#1695 189` | {PLAYER} | `three to be acknowledged…` | `três para ter reconhecimento…` | ✅ Validado |
 | `#1695 190` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1695 191` | {PLAYER} (Prat) | `Do you think so too, {PARTNER}?` | `Você também acha, {PARTNER}?` | ✅ Validado |
 | `#1695 192` | {PLAYER} (Prat) | `Yeah, that must be it.` | `É, deve ser isso mesmo.` | ✅ Validado |
@@ -1473,20 +1473,20 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1696 15` | Sanary | `what Master Sakuro said?` | `que o Mestre Sakuro disse?` | ✅ Validado |
 | `#1696 16` | Sanary | `A sword is not strength` | `A espada não é força` | ✅ Validado |
 | `#1696 17` | Sanary | `A sword is not skill` | `A espada não é técnica` | ✅ Validado |
-| `#1696 18` | Sanary | `A sword is not fellowship` | `A espada não é união` | ✅ Validado |
-| `#1696 19` | Sanary | `A Craftknight's true strength can't` | `A real força de um Craftknight` | ✅ Validado |
+| `#1696 18` | Sanary | `A sword is not fellowship` | `A espada não é amizade` | ✅ Validado |
+| `#1696 19` | Sanary | `A Craftknight's true strength can't` | `A real força de um forjador` | ✅ Validado |
 | `#1696 20` | Sanary | `be judged just by the quality of` | `não se mede só pela qualidade` | ✅ Validado |
 | `#1696 21` | Sanary | `his weapon, the skills to use it,` | `da arma, pela habilidade de uso` | ✅ Validado |
 | `#1696 22` | Sanary | `or by the strength of his` | `ou pela força de sua` | ✅ Validado |
-| `#1696 23` | Sanary | `Guardian Beast.` | `Fera Guardiã.` | ✅ Validado |
+| `#1696 23` | Sanary | `Guardian Beast.` | `Guardiã.` | ✅ Validado |
 | `#1696 24` | Sanary | `Only when one is endowed with` | `Só quando alguém possui todas` | ✅ Validado |
 | `#1696 25` | Sanary | `all of these qualities can one be` | `essas qualidades é que pode ser` | ✅ Validado |
-| `#1696 26` | Sanary | `considered a good Craftknight…` | `considerado um bom Craftknight…` | ✅ Validado |
+| `#1696 26` | Sanary | `considered a good Craftknight…` | `considerado um bom forjador…` | ✅ Validado |
 | `#1696 27` | Sanary | `You proved yourself today that you` | `Você provou hoje que é mesmo` | ✅ Validado |
-| `#1696 28` | Sanary | `really are the son of Craftlord` | `o filho do Craftlord` | ✅ Validado |
+| `#1696 28` | Sanary | `really are the son of Craftlord` | `o filho do Lorde` | ✅ Validado |
 | `#1696 29` | Sanary | `Shintetsu.` | `Shintetsu.` | ✅ Validado |
 | `#1696 30` | Sanary | `You proved yourself today that you` | `Você provou hoje que é mesmo` | ✅ Validado |
-| `#1696 31` | Sanary | `really are the daughter of Craftlord` | `a filha do Craftlord` | ✅ Validado |
+| `#1696 31` | Sanary | `really are the daughter of Craftlord` | `a filha do Lorde` | ✅ Validado |
 | `#1696 32` | Sanary | `Shintetsu.` | `Shintetsu.` | ✅ Validado |
 | `#1696 33` | {PLAYER} | `Hehehe.` | `Hehehe.` | ✅ Validado |
 | `#1696 34` | Sanary | `By the way, what brings you to` | `Aliás, o que traz você a` | ✅ Validado |
@@ -1528,7 +1528,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1696 70` | {PLAYER} (Bost) | `I see… I think I now know why` | `Entendo… Acho que agora sei por` | ✅ Validado |
 | `#1696 71` | {PLAYER} (Bost) | `you try to act so tough all the` | `que você tenta bancar a durona` | ✅ Validado |
 | `#1696 72` | {PLAYER} (Bost) | `time…` | `o tempo todo…` | ✅ Validado |
-| `#1696 73` | Sanary | `You're a strange one…` | `Você é uma figura estranha…` | ✅ Validado |
+| `#1696 73` | Sanary | `You're a strange one…` | `Você é uma pessoa estranha…` | ✅ Validado |
 | `#1696 74` | {PLAYER} | `You think so…?` | `Você acha…?` | ✅ Validado |
 | `#1696 75` | {PLAYER} (Prat) | `Say… I'm hungry. Would you like` | `Escuta… estou com fome. Quer` | ✅ Validado |
 | `#1696 76` | {PLAYER} (Prat) | `to come and eat with me?` | `ir comer alguma coisa comigo?` | ✅ Validado |
@@ -1587,7 +1587,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1697 13` | {PLAYER} (Bost) | `I have to keep practicing. How` | `Preciso continuar treinando. De` | ✅ Validado |
 | `#1697 14` | {PLAYER} (Bost) | `else am I going to compete with` | `que outro jeito vou competir com` | ✅ Validado |
 | `#1697 15` | {PLAYER} (Bost) | `that new record?` | `esse novo recorde?` | ✅ Validado |
-| `#1697 16` | Bron | `There ya are, {PLAYER}!` | `Aí está cê, {PLAYER}!` | ✅ Validado |
+| `#1697 16` | Bron | `There ya are, {PLAYER}!` | `Aí está você, {PLAYER}!` | ✅ Validado |
 | `#1697 17` | Bron | `Come with me!` | `Venha comigo!` | ✅ Validado |
 | `#1697 18` | {PLAYER} (Prat) | `Why, Master Bron?` | `Por quê, Mestre Bron?` | ✅ Validado |
 | `#1697 19` | {PLAYER} (Bost) | `What must I do, Master Bron?` | `O que devo fazer, Mestre Bron?` | ✅ Validado |
@@ -1595,8 +1595,8 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1697 21` | Rasho | `☆!!!` | `☆!!!` | ✅ Validado |
 | `#1697 22` | {PLAYER} | `It looks great!` | `Parece ótimo!` | ✅ Validado |
 | `#1697 23` | Rasho | `☆☆☆!` | `☆☆☆!` | ✅ Validado |
-| `#1697 24` | Bron | `What're ya sayin'?` | `Que é que cê tá dizendo?` | ✅ Validado |
-| `#1697 25` | Bron | `I don't understand ya!` | `Não entendo cê!` | ✅ Validado |
+| `#1697 24` | Bron | `What're ya sayin'?` | `Que é que você tá dizendo?` | ✅ Validado |
+| `#1697 25` | Bron | `I don't understand ya!` | `Não te entendo!` | ✅ Validado |
 | `#1697 26` | {PLAYER} (Prat) | `{PARTNER} is asking you` | `{PARTNER} está pedindo para` | ✅ Validado |
 | `#1697 27` | {PLAYER} (Prat) | `not to scream, Master Bron.` | `não gritar, Mestre Bron.` | ✅ Validado |
 | `#1697 28` | {PLAYER} (Bost) | `{PARTNER} said, "You don't` | `{PARTNER} disse: "Não precisa` | ✅ Validado |
@@ -1617,7 +1617,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1697 43` | {PLAYER} (Bost) | `Stop it, both of you!` | `Parem com isso, vocês dois!` | ✅ Validado |
 | `#1697 44` | {PLAYER} (Bost) | `Please don't fight!` | `Por favor, não briguem!` | ✅ Validado |
 | `#1697 45` | Bron | `…Sorry 'bout that. I didn't` | `…Desculpa por isso. Eu não` | ✅ Validado |
-| `#1697 46` | Bron | `mean to upset ya.` | `queria chatear cê.` | ✅ Validado |
+| `#1697 46` | Bron | `mean to upset ya.` | `queria te chatear.` | ✅ Validado |
 | `#1697 47` | Sanary (Guardiã) | `…My apologies.` | `…Minhas desculpas.` | ✅ Validado |
 | `#1697 48` | Bron | `And now that we've got that` | `E agora que resolvemos isso,` | ✅ Validado |
 | `#1697 49` | Bron | `outta the way, we've gotta go!` | `temos que ir!` | ✅ Validado |
@@ -1625,7 +1625,7 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1697 51` | Sugar | `{PLAYER} and I already have` | `{PLAYER} e eu já temos um` | ✅ Validado |
 | `#1697 52` | Sugar | `a dinner date.` | `encontro para jantar.` | ✅ Validado |
 | `#1697 53` | Bron | `Oh, don't worry 'bout that!` | `Ah, não esquenta com isso!` | ✅ Validado |
-| `#1697 54` | Bron | `I'll feed ya 'til yer gut is ready` | `Vou encher o bucho de cês até` | ✅ Validado |
+| `#1697 54` | Bron | `I'll feed ya 'til yer gut is ready` | `Vou encher o bucho de vocês até` | ✅ Validado |
 | `#1697 55` | Bron | `to burst. Now come with me!` | `quase explodir. Venham comigo!` | ✅ Validado |
 | `#1697 56` | Sugar | `You don't understand` | `Você não entendeu o` | ✅ Validado |
 | `#1697 57` | Sugar | `what I mean…` | `que eu quis dizer…` | ✅ Validado |
@@ -1643,13 +1643,13 @@ Este documento contém a tradução 100% completa, linha por linha (`id` exato),
 | `#1697 69` | Sugar | `That would be wonderful!` | `Isso seria maravilhoso!` | ✅ Validado |
 | `#1697 70` | Sugar | `Thank you, Master {PLAYER}.` | `Obrigada, Mestre {PLAYER}.` | ✅ Validado |
 | `#1697 71` | Kutty | `Kuuu?` | `Kuuu?` | ✅ Validado |
-| `#1697 72` | Bron | `Of course ya can come along!` | `Claro que cê pode vir junto!` | ✅ Validado |
+| `#1697 72` | Bron | `Of course ya can come along!` | `Claro que você pode vir junto!` | ✅ Validado |
 | `#1697 73` | Bron | `Now let's go!` | `Agora vamos!` | ✅ Validado |
 | `#1697 74` | Kutty | `Kutty!` | `Kutty!` | ✅ Validado |
 | `#1697 75` | {PLAYER} | `So… uh… where are` | `Então… ér… para onde` | ✅ Validado |
 | `#1697 76` | {PLAYER} | `you going, and what are` | `você vai, e o que` | ✅ Validado |
 | `#1697 77` | {PLAYER} | `you going to do?` | `vai fazer lá?` | ✅ Validado |
-| `#1697 78` | Bron | `Oh, didn't I tell ya?` | `Ah, eu não disse a cê?` | ✅ Validado |
+| `#1697 78` | Bron | `Oh, didn't I tell ya?` | `Ah, eu não disse pra você?` | ✅ Validado |
 | `#1697 79` | Bron | `I'm headed for Vance!` | `Tô indo para Vance!` | ✅ Validado |
 | `#1697 80` | Bron | `I'm personally deliverin' some` | `Vou entregar pessoalmente umas` | ✅ Validado |
 | `#1697 81` | Bron | `weapons that were crafted by me,` | `armas forjadas por mim,` | ✅ Validado |

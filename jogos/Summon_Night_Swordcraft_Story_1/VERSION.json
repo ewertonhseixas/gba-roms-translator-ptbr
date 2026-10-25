@@ -1,9 +1,9 @@
 {
-  "version": "v0.1",
-  "release_date": "2026-10-21",
+  "version": "v0.2.5",
+  "release_date": "2026-10-23",
   "game": "Summon Night: Swordcraft Story (GBA)",
   "game_code": "AB4E",
   "rom_size_bytes": 8388608,
-  "patch_file": "releases/Summon Night - Swordcraft Story (PT-BR) v0.1.ips",
-  "status": "playable_beta"
+  "patch_file": "releases/Summon Night - Swordcraft Story (PT-BR) v0.2.5.ips",
+  "status": "release_candidate_v0.3"
 }
