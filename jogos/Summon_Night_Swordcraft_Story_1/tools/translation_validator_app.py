@@ -170,6 +170,227 @@ def list_translation_md_files() -> List[Dict[str, Any]]:
     return result
 
 
+def canonicalize_character(raw_name: str) -> Tuple[str, str]:
+    """
+    Normaliza um nome de personagem bruto extraído de tabelas/contexto.
+    Retorna (id_canônico, nome_exibição).
+    """
+    if not raw_name:
+        return "geral", "Cena / Geral"
+    
+    clean = re.sub(r"\(.*?\)", "", raw_name).strip()
+    c_lower = clean.lower()
+
+    if any(k in c_lower for k in ("protagonista", "cleru", "pratty", "{player}", "protagonist")):
+        return "protagonist", "Protagonista (Cleru / Pratty)"
+    if any(k in c_lower for k in ("amariss", "mãe", "mother")):
+        return "amariss", "Amariss (Mãe)"
+    if any(k in c_lower for k in ("mestre bron", "bron", "master bron")):
+        return "bron", "Mestre Bron"
+    if "rasho" in c_lower:
+        return "rasho", "Rasho"
+    if "sanary" in c_lower:
+        return "sanary", "Sanary"
+    if "sugar" in c_lower:
+        return "sugar", "Sugar"
+    if "kutty" in c_lower:
+        return "kutty", "Kutty"
+    if "zantek" in c_lower:
+        return "zantek", "Zantek"
+    if "chaves" in c_lower:
+        return "chaves", "Chaves"
+    if "kenon" in c_lower:
+        return "kenon", "Kenon"
+    if "razzy" in c_lower:
+        return "razzy", "Razzy"
+    if "ariel" in c_lower:
+        return "ariel", "Ariel"
+    if "varil" in c_lower:
+        return "varil", "Varil"
+    if "sakuro" in c_lower:
+        return "sakuro", "Sakuro (Lord Safira)"
+    if "kouren" in c_lower:
+        return "kouren", "Kouren (Lorde Rubi)"
+    if any(k in c_lower for k in ("shintetsu", "pai", "father")):
+        return "shintetsu", "Shintetsu (Pai)"
+    if "lynn" in c_lower:
+        return "lynn", "Lynn"
+    if "blaire" in c_lower:
+        return "blaire", "Blaire"
+    if "zeed" in c_lower:
+        return "zeed", "Zeed"
+    if "parista" in c_lower:
+        return "parista", "Parista"
+    if any(k in c_lower for k in ("sistema", "aviso", "tela", "menu", "status", "system")):
+        return "system", "Sistema / Narração"
+    if any(k in c_lower for k in ("escolha", "choice")):
+        return "choice", "Escolha do Jogador"
+
+    c_name = clean.title() if clean.islower() else clean
+    return clean.lower().replace(" ", "_"), c_name
+
+
+def enrich_entries(entries: List[Dict[str, Any]], doc_title: str) -> List[Dict[str, Any]]:
+    """
+    Enriquece as entradas identificando Falante, Destinatário, se é Pensamento,
+    Script Group e estatísticas completas de personagens da cena.
+    """
+    if not entries:
+        return []
+
+    # 1ª Passada: detecta Script Group e Falante Bruto
+    for idx, e in enumerate(entries):
+        ref_id = e.get("ref_id", "")
+        sec = e.get("section", "")
+        ctx = e.get("context", "")
+        en = e.get("en_text", "")
+        pt = e.get("pt_text", "")
+
+        # Grupo de Script / Cena
+        m_scr = re.search(r"#(\d+)", ref_id) or re.search(r"#(\d+)", sec)
+        if m_scr:
+            s_group = f"Script #{m_scr.group(1)}"
+        elif sec:
+            s_group = sec.split("›")[0].strip()
+        else:
+            s_group = doc_title or "Geral"
+        e["script_group"] = s_group
+
+        # Extrai falante bruto
+        raw_speaker = ""
+        m_ctx = re.search(r"Personagem(?:\s*/\s*Contexto)?:\s*([^|]+)", ctx, re.I)
+        if m_ctx:
+            raw_speaker = m_ctx.group(1).strip()
+        elif "Falante:" in ctx:
+            raw_speaker = ctx.split("Falante:")[1].split("|")[0].strip()
+        else:
+            # Verifica tag embutida no texto tipo *(Protagonista:)*
+            m_text = re.search(r"\*\(([^:)]+):?\)\*", en) or re.search(r"\*\(([^:)]+):?\)\*", pt)
+            if m_text:
+                raw_speaker = m_text.group(1).strip()
+            elif any(k in sec.lower() for k in ("mestre bron", "amariss", "sugar", "rasho", "sanary", "kutty", "chaves")):
+                for k in ("mestre bron", "amariss", "sugar", "rasho", "sanary", "kutty", "chaves"):
+                    if k in sec.lower():
+                        raw_speaker = k.title()
+                        break
+            elif any(k in doc_title.lower() for k in ("interface", "menu", "armas", "itens", "bestiário")):
+                raw_speaker = "Sistema"
+            else:
+                raw_speaker = "Geral"
+
+        s_id, s_name = canonicalize_character(raw_speaker)
+        e["speaker_raw"] = raw_speaker
+        e["speaker"] = s_name
+        e["speaker_id"] = s_id
+
+        # Pensamento / Monólogo
+        clean_en = en.strip()
+        is_thought = (clean_en.startswith("(") and clean_en.endswith(")")) or "(Pensamento)" in ctx or "(Monólogo)" in ctx
+        e["is_thought"] = is_thought
+
+    # 2ª Passada: Agrupa por script_group e infere Destinatário
+    groups: Dict[str, List[int]] = {}
+    for idx, e in enumerate(entries):
+        groups.setdefault(e["script_group"], []).append(idx)
+
+    for s_group, indices in groups.items():
+        # Coleta participantes não-sistema e não-escolha da cena
+        participants = []
+        for i in indices:
+            sp_id = entries[i]["speaker_id"]
+            if sp_id not in ("system", "choice", "geral") and sp_id not in participants:
+                participants.append(sp_id)
+
+        last_non_self_speaker_id: Optional[str] = None
+        last_speaker_id: Optional[str] = None
+
+        for i in indices:
+            e = entries[i]
+            sp_id = e["speaker_id"]
+            ctx = e.get("context", "")
+            en_lower = e.get("en_text", "").lower()
+            pt_lower = e.get("pt_text", "").lower()
+
+            target_name = ""
+            target_id = ""
+
+            if e["is_thought"]:
+                target_name = "💭 Pensamento (Monólogo)"
+                target_id = "thought"
+            elif "(c/ rasho)" in ctx.lower():
+                target_id, target_name = canonicalize_character("Rasho")
+            elif "(c/ sanary)" in ctx.lower():
+                target_id, target_name = canonicalize_character("Sanary")
+            elif "(c/ sugar)" in ctx.lower():
+                target_id, target_name = canonicalize_character("Sugar")
+            elif "(c/ kutty)" in ctx.lower():
+                target_id, target_name = canonicalize_character("Kutty")
+            elif any(w in en_lower[:30] or w in pt_lower[:30] for w in ("mother", "mãe", "mamãe")) and sp_id != "amariss":
+                target_id, target_name = canonicalize_character("Amariss")
+            elif any(w in en_lower[:30] or w in pt_lower[:30] for w in ("master bron", "mestre bron")) and sp_id != "bron":
+                target_id, target_name = canonicalize_character("Mestre Bron")
+            elif "sugar" in en_lower[:30] and sp_id != "sugar":
+                target_id, target_name = canonicalize_character("Sugar")
+            elif "rasho" in en_lower[:30] and sp_id != "rasho":
+                target_id, target_name = canonicalize_character("Rasho")
+            elif "sanary" in en_lower[:30] and sp_id != "sanary":
+                target_id, target_name = canonicalize_character("Sanary")
+            elif "kutty" in en_lower[:30] and sp_id != "kutty":
+                target_id, target_name = canonicalize_character("Kutty")
+            elif sp_id == "system":
+                target_name = "Jogador"
+                target_id = "player"
+            elif sp_id == "choice":
+                target_name = "Interlocutor da Cena"
+                target_id = "interlocutor"
+            else:
+                # Se mudou de falante, o destinatário é o anterior!
+                if last_speaker_id and last_speaker_id != sp_id and last_speaker_id not in ("system", "choice"):
+                    target_id, target_name = canonicalize_character(last_speaker_id)
+                # Se o mesmo falante continua falando
+                elif last_non_self_speaker_id and last_non_self_speaker_id != sp_id:
+                    target_id, target_name = canonicalize_character(last_non_self_speaker_id)
+                # Se há exatamente 2 participantes na cena
+                elif len(participants) == 2:
+                    other_id = participants[1] if participants[0] == sp_id else participants[0]
+                    target_id, target_name = canonicalize_character(other_id)
+                elif len(participants) > 1 and sp_id != "protagonist":
+                    # Maioria dos NPCs fala com o Protagonista
+                    target_id, target_name = canonicalize_character("Protagonista")
+                else:
+                    target_name = "Cena / Todos"
+                    target_id = "geral"
+
+            e["addressee"] = target_name
+            e["addressee_id"] = target_id
+
+            if sp_id not in ("system", "choice"):
+                if last_speaker_id and last_speaker_id != sp_id:
+                    last_non_self_speaker_id = last_speaker_id
+                last_speaker_id = sp_id
+
+    # 3ª Passada: Monta lista consolidada de personagens para os filtros
+    char_map: Dict[str, Dict[str, Any]] = {}
+    for e in entries:
+        s_id = e["speaker_id"]
+        s_name = e["speaker"]
+        if s_id not in char_map:
+            char_map[s_id] = {"id": s_id, "name": s_name, "spoken": 0, "addressed": 0, "total": 0}
+        char_map[s_id]["spoken"] += 1
+        char_map[s_id]["total"] += 1
+
+        t_id = e["addressee_id"]
+        t_name = e["addressee"]
+        if t_id and t_id not in ("thought", "geral", "player", "interlocutor"):
+            if t_id not in char_map:
+                char_map[t_id] = {"id": t_id, "name": t_name, "spoken": 0, "addressed": 0, "total": 0}
+            char_map[t_id]["addressed"] += 1
+            char_map[t_id]["total"] += 1
+
+    sorted_chars = sorted(char_map.values(), key=lambda c: (c["total"], c["spoken"]), reverse=True)
+    return sorted_chars
+
+
 def parse_md_file(filepath: Path) -> Dict[str, Any]:
     """
     Lê um arquivo .md e extrai todas as linhas de tabelas de tradução,
@@ -287,11 +508,14 @@ def parse_md_file(filepath: Path) -> Dict[str, Any]:
 
         i += 1
 
+    characters = enrich_entries(entries, doc_title)
+
     rel_name = filepath.relative_to(MD_DIR).as_posix() if filepath.is_relative_to(MD_DIR) else filepath.name
     return {
         "filename": rel_name,
         "title": doc_title,
         "entries": entries,
+        "characters": characters,
     }
 
 

@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validador de Tradução — Summon Night: Swordcraft Story (GBA)</title>
+  <style>
+    :root {
+      --bg-main: #0b1120;
+      --bg-panel: #131d31;
+      --bg-card: #1c2a44;
+      --bg-card-hover: #233555;
+      --bg-input: #090e1a;
+      --border: #263859;
+      --border-focus: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      --success: #22c55e;
+      --success-hover: #16a34a;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --purple: #a855f7;
+
+      /* Cores temáticas de personagens */
+      --char-protagonist-bg: rgba(2, 132, 199, 0.18);
+      --char-protagonist-border: #0284c7;
+      --char-protagonist-text: #38bdf8;
+
+      --char-amariss-bg: rgba(16, 185, 129, 0.18);
+      --char-amariss-border: #10b981;
+      --char-amariss-text: #34d399;
+
+      --char-bron-bg: rgba(217, 119, 6, 0.18);
+      --char-bron-border: #d97706;
+      --char-bron-text: #fbbf24;
+
+      --char-rasho-bg: rgba(239, 68, 68, 0.18);
+      --char-rasho-border: #ef4444;
+      --char-rasho-text: #f87171;
+
+      --char-sanary-bg: rgba(168, 85, 247, 0.18);
+      --char-sanary-border: #a855f7;
+      --char-sanary-text: #c084fc;
+
+      --char-sugar-bg: rgba(6, 182, 212, 0.18);
+      --char-sugar-border: #06b6d4;
+      --char-sugar-text: #22d3ee;
+
+      --char-kutty-bg: rgba(234, 179, 8, 0.18);
+      --char-kutty-border: #eab308;
+      --char-kutty-text: #fde047;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* TOP BAR */
+    header {
+      background: var(--bg-panel);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #0284c7, #6366f1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      box-shadow: 0 2px 10px rgba(2, 132, 199, 0.35);
+    }
+
+    .brand h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .brand p {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .controls-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      max-width: 1080px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    select, input[type="search"] {
+      background: var(--bg-input);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12.5px;
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    select:focus, input[type="search"]:focus {
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+    }
+
+    #categorySelect {
+      min-width: 240px;
+      font-weight: 600;
+    }
+
+    #sectionSelect {
+      max-width: 160px;
+    }
+
+    #charSelect {
+      max-width: 200px;
+      color: #7dd3fc;
+      font-weight: 600;
+    }
+
+    #charFilterMode {
+      max-width: 150px;
+      font-size: 11.5px;
+    }
+
+    #searchInput {
+      width: 160px;
+    }
+
+    .progress-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      min-width: 140px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .progress-top strong {
+      color: var(--success);
+    }
+
+    .progress-bar-bg {
+      height: 5px;
+      background: var(--bg-input);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #22c55e, #38bdf8);
+      width: 0%;
+      transition: width 0.25s ease;
+    }
+
+    /* MAIN LAYOUT */
+    .workspace {
+      display: grid;
+      grid-template-columns: 370px 1fr;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR LIST */
+    .sidebar {
+      background: var(--bg-panel);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      background: #0f182b;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .filter-tab {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 3px 7px;
+      border-radius: 5px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+
+    .filter-tab.active {
+      background: var(--accent);
+      color: #090e1a;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    .entry-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .entry-item {
+      background: var(--bg-card);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+    }
+
+    .entry-item:hover {
+      border-color: #3b5073;
+      background: var(--bg-card-hover);
+    }
+
+    .entry-item.active {
+      border-color: var(--accent);
+      background: #173252;
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .entry-item.validated {
+      border-left: 4px solid var(--success);
+    }
+
+    .entry-item.pending {
+      border-left: 4px solid var(--warning);
+    }
+
+    .entry-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .entry-ref {
+      font-family: Consolas, monospace;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .entry-speaker-badge {
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 220px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .entry-en {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .entry-pt {
+      font-size: 11.5px;
+      color: #94a3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .entry-char-warn {
+      font-size: 10px;
+      color: #f87171;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+
+    /* EDITOR MAIN PANEL */
+    .editor-pane {
+      padding: 16px 22px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    /* CONTEXT BANNER WITH SPEAKER & TARGET */
+    .dialogue-banner {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .dialogue-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .dialogue-actors {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .actor-card {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    .actor-icon {
+      font-size: 15px;
+    }
+
+    .actor-role {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+    }
+
+    .actor-arrow {
+      color: var(--accent);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .context-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .badge-script {
+      color: #38bdf8;
+      border-color: rgba(56, 189, 248, 0.3);
+      font-family: Consolas, monospace;
+    }
+
+    .badge-status.valid {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      border-color: rgba(34, 197, 94, 0.4);
+    }
+
+    .badge-status.pend {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .context-detail-text {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* SCENE TIMELINE (FLOW / CHAT VIEW) */
+    .scene-flow-card {
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .scene-flow-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .flow-bubbles {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .flow-bubble {
+      padding: 7px 11px;
+      border-radius: 8px;
+      font-size: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: #162032;
+      border: 1px solid #24344d;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .flow-bubble:hover {
+      border-color: #38bdf8;
+      background: #1c2b45;
+    }
+
+    .flow-bubble.current {
+      background: #1e355b;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .flow-bubble-sp {
+      font-weight: 700;
+      white-space: nowrap;
+      font-size: 11.5px;
+      min-width: 110px;
+    }
+
+    .flow-bubble-text {
+      color: #e2e8f0;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* COMPARISON GRID */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .box-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .box-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .box-tools {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-toggle-btns {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .view-toggle-btn {
+      background: var(--bg-input);
+      color: var(--text-muted);
+      border: none;
+      padding: 3px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .view-toggle-btn.active {
+      background: var(--accent);
+      color: #090e1a;
+      font-weight: 700;
+    }
+
+    .box-content {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 14.5px;
+      line-height: 1.55;
+      min-height: 68px;
+      font-family: "Consolas", "Segoe UI", monospace;
+      white-space: pre-wrap;
+      position: relative;
+    }
+
+    .desc-subbox {
+      margin-top: 4px;
+      padding-top: 6px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .desc-label {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .optional-card {
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      border-radius: 8px;
+      padding: 8px 12px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .optional-card.visible {
+      display: flex;
+    }
+
+    .optional-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #d8b4fe;
+      text-transform: uppercase;
+    }
+
+    .optional-val {
+      font-size: 13.5px;
+      color: #f3e8ff;
+      font-family: "Consolas", monospace;
+      white-space: pre-wrap;
+    }
+
+    .btn-small {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-small:hover {
+      background: var(--accent);
+      color: #090e1a;
+      border-color: var(--accent);
+    }
+
+    .btn-small-success:hover {
+      background: var(--success);
+      color: #052e16;
+      border-color: var(--success);
+    }
+
+    /* EDIT AREA */
+    .edit-card {
+      background: var(--bg-panel);
+      border: 1px solid #2a4365;
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .edit-card:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent), 0 4px 24px rgba(56, 189, 248, 0.15);
+    }
+
+    .edit-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-main);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      background: var(--bg-input);
+      color: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 15px;
+      line-height: 1.55;
+      font-family: "Consolas", "Segoe UI", monospace;
+      resize: vertical;
+      min-height: 84px;
+      outline: none;
+      transition: border 0.15s ease;
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    /* LIVE LINE-BY-LINE RULER / METRICS */
+    .line-rulers {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: #090f1d;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+
+    .ruler-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .ruler-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-family: Consolas, monospace;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .ruler-row.safe {
+      color: #4ade80;
+    }
+
+    .ruler-row.warn {
+      color: #facc15;
+      background: rgba(234, 179, 8, 0.1);
+    }
+
+    .ruler-row.overflow {
+      color: #f87171;
+      background: rgba(239, 68, 68, 0.15);
+      font-weight: bold;
+    }
+
+    .ruler-line-label {
+      min-width: 55px;
+      opacity: 0.7;
+    }
+
+    .ruler-line-snippet {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0 8px;
+      color: #cbd5e1;
+    }
+
+    .ruler-count-badge {
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .ruler-count-badge.safe {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+    }
+
+    .ruler-count-badge.warn {
+      background: rgba(234, 179, 8, 0.2);
+      color: #facc15;
+    }
+
+    .ruler-count-badge.overflow {
+      background: rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+
+    .char-metrics-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag-warning {
+      color: #fbbf24;
+      font-weight: 600;
+      display: none;
+    }
+
+    /* ACTION FOOTER */
+    .actions-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .nav-btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-main);
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn:hover {
+      background: #2a3c5a;
+    }
+
+    .btn-confirm {
+      background: var(--success);
+      color: #052e16;
+      border-color: var(--success);
+      font-size: 14.5px;
+      padding: 10px 22px;
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-confirm:hover {
+      background: var(--success-hover);
+      color: #fff;
+    }
+
+    .auto-next-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 24px;
+      background: #065f46;
+      border: 1px solid #34d399;
+      color: #ecfdf5;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.2s ease;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* BADGE COLORS POR PERSONAGEM */
+    .char-protagonist {
+      background: var(--char-protagonist-bg);
+      border-color: var(--char-protagonist-border);
+      color: var(--char-protagonist-text);
+    }
+
+    .char-amariss {
+      background: var(--char-amariss-bg);
+      border-color: var(--char-amariss-border);
+      color: var(--char-amariss-text);
+    }
+
+    .char-bron {
+      background: var(--char-bron-bg);
+      border-color: var(--char-bron-border);
+      color: var(--char-bron-text);
+    }
+
+    .char-rasho {
+      background: var(--char-rasho-bg);
+      border-color: var(--char-rasho-border);
+      color: var(--char-rasho-text);
+    }
+
+    .char-sanary {
+      background: var(--char-sanary-bg);
+      border-color: var(--char-sanary-border);
+      color: var(--char-sanary-text);
+    }
+
+    .char-sugar {
+      background: var(--char-sugar-bg);
+      border-color: var(--char-sugar-border);
+      color: var(--char-sugar-text);
+    }
+
+    .char-kutty {
+      background: var(--char-kutty-bg);
+      border-color: var(--char-kutty-border);
+      color: var(--char-kutty-text);
+    }
+
+    @media (max-width: 980px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">SN</div>
+      <div>
+        <h1>Validador de Tradução — Summon Night (GBA)</h1>
+        <p>Edição por contexto narrativo, contagem de caracteres e fluxo de diálogos</p>
+      </div>
+    </div>
+
+    <div class="controls-bar">
+      <div class="filter-group">
+        <select id="categorySelect" title="Selecione o Arquivo .md"></select>
+        <select id="sectionSelect" title="Filtrar por Seção">
+          <option value="">Todas as Seções</option>
+        </select>
+      </div>
+
+      <!-- FILTRO DE PERSONAGEM DEDICADO -->
+      <div class="filter-group">
+        <select id="charSelect" title="Filtrar por Personagem">
+          <option value="">👤 Todos os Personagens</option>
+        </select>
+        <select id="charFilterMode" title="Direção da Interação">
+          <option value="both">🔄 Falas Dele ou Para Ele</option>
+          <option value="spoken">🗣️ Falas Dele (Falante)</option>
+          <option value="addressed">👂 Direcionadas a Ele</option>
+        </select>
+      </div>
+
+      <input type="search" id="searchInput" placeholder="Buscar texto, #id..." />
+
+      <div class="progress-pill">
+        <div class="progress-top">
+          <span>Progresso:</span>
+          <strong id="progressText">0 / 0 (0%)</strong>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span id="listCountLabel">0 falas</span>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">Todos</button>
+          <button class="filter-tab" data-filter="pending">⏳ Pendentes</button>
+          <button class="filter-tab" data-filter="validated">✅ Validados</button>
+        </div>
+      </div>
+      <div class="entry-list" id="entryList"></div>
+    </aside>
+
+    <!-- MAIN EDITOR -->
+    <main class="editor-pane" id="editorPane">
+      
+      <!-- DIALOGUE CONTEXT BANNER -->
+      <div class="dialogue-banner">
+        <div class="dialogue-header-row">
+          <div class="dialogue-actors">
+            <div class="actor-card" id="speakerCard">
+              <span class="actor-icon">👤</span>
+              <div>
+                <div class="actor-role">Quem Fala</div>
+                <div id="speakerName">Protagonista</div>
+              </div>
+            </div>
+
+            <span class="actor-arrow">➔</span>
+
+            <div class="actor-card" id="targetCard">
+              <span class="actor-icon">🎯</span>
+              <div>
+                <div class="actor-role">Direcionado a</div>
+                <div id="targetName">Amariss (Mãe)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="context-badges">
+            <span class="badge badge-script" id="ctxScript">Script #1601</span>
+            <span class="badge" id="ctxLine">Linha #0</span>
+            <span class="badge badge-status pend" id="ctxStatus">⏳ Pendente</span>
+            <button class="btn-small" id="btnToggleStatus" title="Alternar status de validação">↩ Alternar Status</button>
+          </div>
+        </div>
+
+        <div class="context-detail-text" id="ctxDetail">Contexto da cena</div>
+      </div>
+
+      <!-- NOVO COMPONENTE: FLUXO DA CENA / HISTÓRICO DE CONVERSA -->
+      <div class="scene-flow-card" id="sceneFlowCard">
+        <div class="scene-flow-header">
+          <span>💬 Fluxo da Conversa / Cena Recente</span>
+          <span style="font-size:10px; color:var(--accent);">Clique em um balão para navegar</span>
+        </div>
+        <div class="flow-bubbles" id="flowBubbles"></div>
+      </div>
+
+      <!-- ORIGINAL EN & SUGGESTED PT -->
+      <div class="comparison-grid">
+        <!-- ORIGINAL EN -->
+        <div class="box-card">
+          <div class="box-header">
+            <span>🇺🇸 Texto Original (EN-US)</span>
+            <div class="box-tools">
+              <div class="view-toggle-btns">
+                <button class="view-toggle-btn active" id="btnEnViewParagraph" title="Ver fala contínua unificada">📄 Parágrafo</button>
+                <button class="view-toggle-btn" id="btnEnViewLines" title="Ver quebras de linha exatas do GBA">📐 Linhas GBA</button>
+              </div>
+              <button class="btn-small" id="btnCopyEn" title="Copiar texto original">📋 Copiar</button>
+              <button class="btn-small" id="btnUseAsBase" title="Usar texto original como base na edição">🇺🇸 Usar Original</button>
+            </div>
+          </div>
+
+          <div class="box-content" id="enTextDisplay"></div>
+
+          <div class="desc-subbox" id="enDescBox" style="display:none;">
+            <div class="desc-label">Descrição Original (EN-US)</div>
+            <div class="box-content" id="enDescDisplay" style="min-height:42px; font-size:13.5px;"></div>
+          </div>
+        </div>
+
+        <!-- SUGGESTED & OPTIONAL PT -->
+        <div class="box-card">
+          <div class="box-header">
+            <span>🇧🇷 Tradução Atual / Sugerida (PT-BR)</span>
+            <div class="box-tools">
+              <div class="view-toggle-btns">
+                <button class="view-toggle-btn active" id="btnPtViewParagraph" title="Ver fala contínua unificada">📄 Parágrafo</button>
+                <button class="view-toggle-btn" id="btnPtViewLines" title="Ver quebras de linha exatas do GBA">📐 Linhas GBA</button>
+              </div>
+              <button class="btn-small" id="btnCopyPtSuggested" title="Copiar sugestão">📋 Copiar</button>
+              <button class="btn-small btn-small-success" id="btnUseSuggested" title="Inserir sugestão no campo de edição">🇧🇷 Usar Sugerida</button>
+            </div>
+          </div>
+
+          <div class="box-content" id="ptSuggestedDisplay"></div>
+
+          <div class="desc-subbox" id="ptDescSuggestedBox" style="display:none;">
+            <div class="desc-label">Descrição Sugerida (PT-BR)</div>
+            <div class="box-content" id="ptDescSuggestedDisplay" style="min-height:42px; font-size:13.5px;"></div>
+          </div>
+
+          <!-- OPTIONAL TRANSLATION -->
+          <div class="optional-card" id="optionalCard">
+            <div style="flex:1;">
+              <span class="optional-title">💡 Opção Alternativa Disponível</span>
+              <div class="optional-val" id="optionalTextDisplay"></div>
+            </div>
+            <div style="display:flex; gap:4px;">
+              <button class="btn-small" id="btnCopyOptional" title="Copiar opção alternativa">📋 Copiar</button>
+              <button class="btn-small" id="btnUseOptional" title="Usar opção alternativa">💡 Usar Opcional</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDIT FIELD WITH REALTIME LINE RULER -->
+      <div class="edit-card">
+        <div class="edit-header">
+          <span>✏️ Ajustar Tradução Final (PT-BR)</span>
+          <div style="display:flex; gap:6px;">
+            <button class="btn-small" id="btnAutoWrap" title="Quebra o texto automaticamente em até 34 caracteres por linha">✨ Auto-Wrap (≤34 chars)</button>
+            <button class="btn-small" id="btnUnifyLines" title="Remove as quebras de linha para editar um parágrafo fluido">🧹 Unificar Linhas</button>
+            <button class="btn-small" id="btnCopyEdit" title="Copiar texto editado">📋 Copiar Edição</button>
+          </div>
+        </div>
+
+        <textarea id="ptEditInput" placeholder="Digite ou ajuste a tradução em português..."></textarea>
+
+        <div id="editDescContainer" style="display:none; flex-direction:column; gap:4px;">
+          <label class="desc-label" for="ptDescEditInput">✏️ Editar Descrição (PT-BR):</label>
+          <textarea id="ptDescEditInput" style="min-height:55px; font-size:13.5px;" placeholder="Descrição em português..."></textarea>
+        </div>
+
+        <!-- RÉGUA / CONTAGEM LINHA A LINHA EM TEMPO REAL -->
+        <div class="line-rulers" id="lineRulersContainer">
+          <div class="ruler-header">
+            <span>📐 Medidor por Linha (Teto GBA: 35 chars)</span>
+            <span id="rulerSummary">0 linhas</span>
+          </div>
+          <div id="lineRulerList"></div>
+        </div>
+
+        <div class="char-metrics-summary">
+          <span id="editMetrics">0 caracteres | 1 linha</span>
+          <span class="tag-warning" id="tagWarning">⚠️ Atenção: Tag dinâmica {TAG} do original ausente na tradução!</span>
+        </div>
+
+        <div class="actions-row">
+          <div class="nav-btns">
+            <button class="btn" id="btnPrev">⬅ Anterior</button>
+            <button class="btn" id="btnNext">Próximo ➡</button>
+            <label class="auto-next-label">
+              <input type="checkbox" id="chkAutoNext" checked />
+              Avançar automaticamente após confirmar
+            </label>
+          </div>
+
+          <button class="btn btn-confirm" id="btnConfirm">
+            ✅ Confirmar Tradução (Ctrl + Enter)
+          </button>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast">✅ Operação realizada com sucesso!</div>
+
+  <script src="embedded_md_data.js"></script>
+  <script>
+    const API_BASE = window.location.protocol === "file:" ? "http://127.0.0.1:8765" : "";
+    let categories = [];
+    let currentFile = "";
+    let allEntries = [];
+    let filteredEntries = [];
+    let charactersList = [];
+    let currentIndex = 0;
+    let statusFilter = "all";
+
+    // Modos de visualização (parágrafo vs linhas)
+    let enViewMode = "paragraph";
+    let ptViewMode = "paragraph";
+
+    // Elementos DOM
+    const categorySelect = document.getElementById("categorySelect");
+    const sectionSelect = document.getElementById("sectionSelect");
+    const charSelect = document.getElementById("charSelect");
+    const charFilterMode = document.getElementById("charFilterMode");
+    const searchInput = document.getElementById("searchInput");
+    const entryList = document.getElementById("entryList");
+    const listCountLabel = document.getElementById("listCountLabel");
+    const progressText = document.getElementById("progressText");
+    const progressBar = document.getElementById("progressBar");
+
+    const speakerCard = document.getElementById("speakerCard");
+    const speakerName = document.getElementById("speakerName");
+    const targetCard = document.getElementById("targetCard");
+    const targetName = document.getElementById("targetName");
+    const ctxScript = document.getElementById("ctxScript");
+    const ctxLine = document.getElementById("ctxLine");
+    const ctxStatus = document.getElementById("ctxStatus");
+    const ctxDetail = document.getElementById("ctxDetail");
+    const btnToggleStatus = document.getElementById("btnToggleStatus");
+
+    const flowBubbles = document.getElementById("flowBubbles");
+
+    const enTextDisplay = document.getElementById("enTextDisplay");
+    const enDescBox = document.getElementById("enDescBox");
+    const enDescDisplay = document.getElementById("enDescDisplay");
+    const btnEnViewParagraph = document.getElementById("btnEnViewParagraph");
+    const btnEnViewLines = document.getElementById("btnEnViewLines");
+    const btnCopyEn = document.getElementById("btnCopyEn");
+    const btnUseAsBase = document.getElementById("btnUseAsBase");
+
+    const ptSuggestedDisplay = document.getElementById("ptSuggestedDisplay");
+    const ptDescSuggestedBox = document.getElementById("ptDescSuggestedBox");
+    const ptDescSuggestedDisplay = document.getElementById("ptDescSuggestedDisplay");
+    const btnPtViewParagraph = document.getElementById("btnPtViewParagraph");
+    const btnPtViewLines = document.getElementById("btnPtViewLines");
+    const btnCopyPtSuggested = document.getElementById("btnCopyPtSuggested");
+    const btnUseSuggested = document.getElementById("btnUseSuggested");
+
+    const optionalCard = document.getElementById("optionalCard");
+    const optionalTextDisplay = document.getElementById("optionalTextDisplay");
+    const btnCopyOptional = document.getElementById("btnCopyOptional");
+    const btnUseOptional = document.getElementById("btnUseOptional");
+
+    const ptEditInput = document.getElementById("ptEditInput");
+    const editDescContainer = document.getElementById("editDescContainer");
+    const ptDescEditInput = document.getElementById("ptDescEditInput");
+    const lineRulerList = document.getElementById("lineRulerList");
+    const rulerSummary = document.getElementById("rulerSummary");
+    const editMetrics = document.getElementById("editMetrics");
+    const tagWarning = document.getElementById("tagWarning");
+
+    const btnAutoWrap = document.getElementById("btnAutoWrap");
+    const btnUnifyLines = document.getElementById("btnUnifyLines");
+    const btnCopyEdit = document.getElementById("btnCopyEdit");
+    const chkAutoNext = document.getElementById("chkAutoNext");
+    const toast = document.getElementById("toast");
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function copyToClipboard(text, label = "Copiado") {
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`📋 ${label} para a área de transferência!`);
+      }).catch(() => {
+        // Fallback clássico
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast(`📋 ${label} copiado!`);
+      });
+    }
+
+    function getCharClass(charId) {
+      if (!charId) return "";
+      const id = charId.toLowerCase();
+      if (id.includes("protagonist")) return "char-protagonist";
+      if (id.includes("amariss")) return "char-amariss";
+      if (id.includes("bron")) return "char-bron";
+      if (id.includes("rasho")) return "char-rasho";
+      if (id.includes("sanary")) return "char-sanary";
+      if (id.includes("sugar")) return "char-sugar";
+      if (id.includes("kutty")) return "char-kutty";
+      return "";
+    }
+
+    function unifyParagraph(text) {
+      if (!text) return "";
+      const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+      return lines.join(" ");
+    }
+
+    function autoWrapText(text, maxChars = 34) {
+      if (!text) return "";
+      const words = text.replace(/\n/g, " ").split(/\s+/).filter(Boolean);
+      const lines = [];
+      let currentLine = "";
+
+      for (const w of words) {
+        if (!currentLine) {
+          currentLine = w;
+        } else if ((currentLine + " " + w).length <= maxChars) {
+          currentLine += " " + w;
+        } else {
+          lines.push(currentLine);
+          currentLine = w;
+        }
+      }
+      if (currentLine) lines.push(currentLine);
+      return lines.join("\n");
+    }
+
+    async function loadCategories(preserveCurrent = true) {
+      let catsData = null;
+      try {
+        const res = await fetch(`${API_BASE}/api/categories`);
+        if (res.ok) {
+          const data = await res.json();
+          catsData = data.categories;
+        }
+      } catch (err) {}
+
+      if (!catsData && window.EMBEDDED_MD_DATA && window.EMBEDDED_MD_DATA.categories) {
+        catsData = window.EMBEDDED_MD_DATA.categories;
+      }
+      categories = catsData || [];
+
+      const prev = categorySelect.value;
+      categorySelect.innerHTML = "";
+      categories.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.filename;
+        const pct = c.total > 0 ? Math.round((c.validated / c.total) * 100) : 0;
+        opt.textContent = `${c.filename.replace(".md", "")} — [${c.validated}/${c.total} • ${pct}%]`;
+        categorySelect.appendChild(opt);
+      });
+
+      if (preserveCurrent && prev && categories.some(c => c.filename === prev)) {
+        categorySelect.value = prev;
+      } else if (categories.length > 0) {
+        categorySelect.value = categories[0].filename;
+      }
+
+      if (categorySelect.value && categorySelect.value !== currentFile) {
+        await loadFile(categorySelect.value);
+      } else {
+        updateHeaderProgress();
+      }
+    }
+
+    function updateHeaderProgress() {
+      const total = allEntries.length;
+      const valid = allEntries.filter(e => e.validated).length;
+      const pct = total > 0 ? Math.round((valid / total) * 100) : 0;
+      progressText.textContent = `${valid} / ${total} (${pct}%)`;
+      progressBar.style.width = `${pct}%`;
+
+      const catObj = categories.find(c => c.filename === currentFile);
+      if (catObj) {
+        catObj.validated = valid;
+        catObj.total = total;
+        Array.from(categorySelect.options).forEach(opt => {
+          if (opt.value === currentFile) {
+            opt.textContent = `${currentFile.replace(".md", "")} — [${valid}/${total} • ${pct}%]`;
+          }
+        });
+      }
+    }
+
+    async function loadFile(filename) {
+      currentFile = filename;
+      let fileData = null;
+      try {
+        const res = await fetch(`${API_BASE}/api/file?name=${encodeURIComponent(filename)}`);
+        if (res.ok) {
+          fileData = await res.json();
+        }
+      } catch (err) {}
+
+      if (!fileData && window.EMBEDDED_MD_DATA && window.EMBEDDED_MD_DATA.files) {
+        fileData = window.EMBEDDED_MD_DATA.files[filename];
+      }
+
+      const rawEntries = (fileData && fileData.entries) ? fileData.entries : [];
+      charactersList = (fileData && fileData.characters) ? fileData.characters : [];
+
+      allEntries = rawEntries.map(e => ({
+        ...e,
+        initial_suggested_pt: e.pt_text,
+        initial_suggested_desc: e.pt_desc
+      }));
+
+      // Popula seções
+      const sections = [...new Set(allEntries.map(e => e.section).filter(Boolean))];
+      sectionSelect.innerHTML = `<option value="">Todas as Seções (${sections.length})</option>`;
+      sections.forEach(s => {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        sectionSelect.appendChild(opt);
+      });
+
+      // Popula personagens
+      charSelect.innerHTML = `<option value="">👤 Todos os Personagens (${charactersList.length})</option>`;
+      charactersList.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.id;
+        opt.textContent = `${c.name} [${c.total} falas/interações]`;
+        charSelect.appendChild(opt);
+      });
+
+      updateHeaderProgress();
+      applyFilters(0);
+    }
+
+    function applyFilters(targetIdx = 0) {
+      const sec = sectionSelect.value;
+      const targetChar = charSelect.value;
+      const charMode = charFilterMode.value;
+      const q = searchInput.value.trim().toLowerCase();
+
+      filteredEntries = allEntries.filter(e => {
+        if (statusFilter === "pending" && e.validated) return false;
+        if (statusFilter === "validated" && !e.validated) return false;
+        if (sec && e.section !== sec) return false;
+
+        if (targetChar) {
+          const isSp = (e.speaker_id === targetChar);
+          const isTarget = (e.addressee_id === targetChar);
+          if (charMode === "spoken" && !isSp) return false;
+          if (charMode === "addressed" && !isTarget) return false;
+          if (charMode === "both" && !isSp && !isTarget) return false;
+        }
+
+        if (q) {
+          const hay = `${e.ref_id} ${e.speaker} ${e.addressee} ${e.en_text} ${e.en_desc} ${e.pt_text} ${e.pt_desc} ${e.opt_text} ${e.context}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      listCountLabel.textContent = `${filteredEntries.length} falas`;
+      renderSidebarList();
+
+      if (filteredEntries.length > 0) {
+        currentIndex = Math.max(0, Math.min(targetIdx, filteredEntries.length - 1));
+        selectEntry(currentIndex);
+      } else {
+        clearEditorPane();
+      }
+    }
+
+    function renderSidebarList() {
+      entryList.innerHTML = "";
+      filteredEntries.forEach((e, idx) => {
+        const div = document.createElement("div");
+        div.className = `entry-item ${e.validated ? "validated" : "pending"} ${idx === currentIndex ? "active" : ""}`;
+        div.dataset.idx = idx;
+
+        // Verifica se há linhas com overflow (>35 chars)
+        const ptLines = (e.pt_text || "").split("\n");
+        const maxLen = Math.max(...ptLines.map(l => l.length), 0);
+        const hasWarn = maxLen > 35;
+
+        const top = document.createElement("div");
+        top.className = "entry-item-top";
+        top.innerHTML = `
+          <span class="entry-ref">${e.ref_id || "#" + (idx + 1)}</span>
+          <span>${e.validated ? "✅ Validado" : "⏳ Pendente"}</span>
+        `;
+
+        const speakerRow = document.createElement("div");
+        const spCls = getCharClass(e.speaker_id);
+        const tgtCls = getCharClass(e.addressee_id);
+        speakerRow.innerHTML = `
+          <span class="entry-speaker-badge ${spCls}">${e.speaker || "Geral"}</span>
+          <span style="font-size:10px; color:var(--accent);">➔</span>
+          <span class="entry-speaker-badge ${tgtCls}" style="opacity:0.85;">${e.addressee || "Cena"}</span>
+          ${hasWarn ? `<span class="entry-char-warn" title="Linha com ${maxLen} caracteres (teto 35)">⚠️ ${maxLen}c</span>` : ""}
+        `;
+
+        const enDiv = document.createElement("div");
+        enDiv.className = "entry-en";
+        enDiv.textContent = e.en_text.replace(/\n/g, " / ");
+
+        const ptDiv = document.createElement("div");
+        ptDiv.className = "entry-pt";
+        ptDiv.textContent = (e.pt_text || "").replace(/\n/g, " / ");
+
+        div.appendChild(top);
+        div.appendChild(speakerRow);
+        div.appendChild(enDiv);
+        div.appendChild(ptDiv);
+
+        div.addEventListener("click", () => selectEntry(idx));
+        entryList.appendChild(div);
+      });
+    }
+
+    function clearEditorPane() {
+      speakerName.textContent = "—";
+      targetName.textContent = "—";
+      ctxScript.textContent = "—";
+      ctxLine.textContent = "—";
+      ctxDetail.textContent = "Nenhum item encontrado com os filtros atuais.";
+      enTextDisplay.textContent = "";
+      ptSuggestedDisplay.textContent = "";
+      ptEditInput.value = "";
+      lineRulerList.innerHTML = "";
+      flowBubbles.innerHTML = "";
+    }
+
+    function selectEntry(idx) {
+      if (idx < 0 || idx >= filteredEntries.length) return;
+      currentIndex = idx;
+      const e = filteredEntries[idx];
+
+      // Atualiza seleção visual na sidebar
+      Array.from(entryList.children).forEach((el, i) => {
+        el.classList.toggle("active", i === idx);
+        if (i === idx) el.scrollIntoView({ block: "nearest" });
+      });
+
+      // Banner de atores
+      speakerName.textContent = e.speaker || "Geral";
+      speakerCard.className = `actor-card ${getCharClass(e.speaker_id)}`;
+      targetName.textContent = e.addressee || "Cena / Todos";
+      targetCard.className = `actor-card ${getCharClass(e.addressee_id)}`;
+
+      ctxScript.textContent = e.script_group || e.ref_id || "Script";
+      ctxLine.textContent = `Linha #${e.line_index + 1}`;
+      ctxStatus.textContent = e.validated ? "✅ Validado" : "⏳ Pendente";
+      ctxStatus.className = `badge badge-status ${e.validated ? "valid" : "pend"}`;
+      ctxDetail.innerHTML = `<strong>Contexto:</strong> ${e.context || e.section} | <strong>Arquivo:</strong> ${currentFile}`;
+
+      // Renderiza textos original e sugerido
+      updateComparisonDisplays(e);
+
+      // Descrições
+      if (e.has_desc) {
+        enDescBox.style.display = "block";
+        enDescDisplay.textContent = e.en_desc;
+        ptDescSuggestedBox.style.display = "block";
+        ptDescSuggestedDisplay.textContent = e.initial_suggested_desc;
+        editDescContainer.style.display = "flex";
+        ptDescEditInput.value = e.pt_desc || "";
+      } else {
+        enDescBox.style.display = "none";
+        ptDescSuggestedBox.style.display = "none";
+        editDescContainer.style.display = "none";
+        ptDescEditInput.value = "";
+      }
+
+      // Opção alternativa
+      if (e.opt_text) {
+        optionalCard.classList.add("visible");
+        optionalTextDisplay.textContent = e.opt_text;
+      } else {
+        optionalCard.classList.remove("visible");
+        optionalTextDisplay.textContent = "";
+      }
+
+      // Campo de edição
+      ptEditInput.value = e.pt_text || "";
+      updateLiveLineRulers();
+      renderSceneFlow(e);
+    }
+
+    function updateComparisonDisplays(e) {
+      // Original EN
+      if (enViewMode === "paragraph") {
+        enTextDisplay.textContent = unifyParagraph(e.en_text);
+      } else {
+        enTextDisplay.textContent = e.en_text;
+      }
+
+      // Sugestão PT
+      if (ptViewMode === "paragraph") {
+        ptSuggestedDisplay.textContent = unifyParagraph(e.initial_suggested_pt);
+      } else {
+        ptSuggestedDisplay.textContent = e.initial_suggested_pt;
+      }
+    }
+
+    function renderSceneFlow(currentEntry) {
+      flowBubbles.innerHTML = "";
+      // Procura entradas vizinhas da mesma cena / script_group dentro de allEntries
+      const currentPos = allEntries.findIndex(item => item.line_index === currentEntry.line_index);
+      if (currentPos < 0) return;
+
+      const groupName = currentEntry.script_group;
+      const start = Math.max(0, currentPos - 2);
+      const end = Math.min(allEntries.length, currentPos + 3);
+
+      for (let i = start; i < end; i++) {
+        const item = allEntries[i];
+        if (groupName && item.script_group !== groupName && Math.abs(i - currentPos) > 1) {
+          continue;
+        }
+
+        const bubble = document.createElement("div");
+        bubble.className = `flow-bubble ${item.line_index === currentEntry.line_index ? "current" : ""}`;
+        
+        const spClass = getCharClass(item.speaker_id);
+        const snippet = unifyParagraph(item.pt_text || item.en_text);
+
+        bubble.innerHTML = `
+          <span class="flow-bubble-sp ${spClass}">${item.speaker}:</span>
+          <span class="flow-bubble-text">${snippet}</span>
+        `;
+
+        bubble.addEventListener("click", () => {
+          const fIdx = filteredEntries.findIndex(fe => fe.line_index === item.line_index);
+          if (fIdx >= 0) {
+            selectEntry(fIdx);
+          } else {
+            // Se o item estiver fora do filtro atual, remove o filtro de personagem para mostrá-lo
+            charSelect.value = "";
+            applyFilters(0);
+            const refIdx = filteredEntries.findIndex(fe => fe.line_index === item.line_index);
+            if (refIdx >= 0) selectEntry(refIdx);
+          }
+        });
+
+        flowBubbles.appendChild(bubble);
+      }
+    }
+
+    function updateLiveLineRulers() {
+      const e = filteredEntries[currentIndex];
+      if (!e) return;
+
+      const val = ptEditInput.value;
+      const lines = val.split("\n");
+      lineRulerList.innerHTML = "";
+
+      let maxLen = 0;
+      let hasOverflow = false;
+
+      lines.forEach((ln, idx) => {
+        const len = ln.length;
+        if (len > maxLen) maxLen = len;
+
+        let statusClass = "safe";
+        let statusTag = "🟢 Ideal";
+        if (len >= 36) {
+          statusClass = "overflow";
+          statusTag = `🔴 EXCESSO (+${len - 35})`;
+          hasOverflow = true;
+        } else if (len >= 33) {
+          statusClass = "warn";
+          statusTag = "🟡 Atenção";
+        }
+
+        const row = document.createElement("div");
+        row.className = `ruler-row ${statusClass}`;
+        row.innerHTML = `
+          <span class="ruler-line-label">Linha ${idx + 1}:</span>
+          <span class="ruler-line-snippet">"${ln || " "}"</span>
+          <span class="ruler-count-badge ${statusClass}">${len} / 35 chars (${statusTag})</span>
+        `;
+        lineRulerList.appendChild(row);
+      });
+
+      rulerSummary.textContent = `${lines.length} linha(s) | Máx: ${maxLen} caracteres/linha`;
+      editMetrics.textContent = `Total: ${val.length} caracteres | ${lines.length} linha(s) (Maior: ${maxLen} chars)`;
+
+      // Verifica tags dinâmicas
+      const enTags = e.en_text.match(/\{[A-Z0-9_]+\}/g) || [];
+      const missing = enTags.filter(t => !val.includes(t));
+      if (missing.length > 0) {
+        tagWarning.style.display = "inline";
+        tagWarning.textContent = `⚠️ Atenção: Tag(s) ${missing.join(", ")} ausente(s) na tradução!`;
+      } else {
+        tagWarning.style.display = "none";
+      }
+    }
+
+    async function saveCurrentEntry(validatedState = true) {
+      const e = filteredEntries[currentIndex];
+      if (!e) return;
+
+      const newPt = ptEditInput.value;
+      const newDesc = e.has_desc ? ptDescEditInput.value : null;
+
+      let data = { ok: false };
+      try {
+        const res = await fetch(`${API_BASE}/api/save`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            filename: currentFile,
+            line_index: e.line_index,
+            pt_text: newPt,
+            pt_desc: newDesc,
+            validated: validatedState
+          })
+        });
+        data = await res.json();
+      } catch (err) {
+        alert("Para gravar direto no arquivo .md no disco, certifique-se de que o Iniciar_Validador_Traducao.bat esteja aberto!");
+        return;
+      }
+
+      if (data.ok) {
+        e.pt_text = newPt;
+        if (e.has_desc) e.pt_desc = newDesc;
+        e.validated = validatedState;
+        e.status_str = data.status_str;
+
+        updateHeaderProgress();
+        loadCategories(true);
+
+        showToast(validatedState
+          ? `✅ Salvo e validado na Linha #${e.line_index + 1} de ${currentFile}!`
+          : `↩ Linha #${e.line_index + 1} marcada como pendente.`);
+
+        if (statusFilter !== "all") {
+          applyFilters(currentIndex);
+        } else {
+          renderSidebarList();
+          selectEntry(currentIndex);
+          if (validatedState && chkAutoNext.checked && currentIndex < filteredEntries.length - 1) {
+            selectEntry(currentIndex + 1);
+          }
+        }
+      } else {
+        alert("Erro ao salvar: " + (data.error || "Desconhecido"));
+      }
+    }
+
+    // EVENT LISTENERS
+    categorySelect.addEventListener("change", () => loadFile(categorySelect.value));
+    sectionSelect.addEventListener("change", () => applyFilters(0));
+    charSelect.addEventListener("change", () => applyFilters(0));
+    charFilterMode.addEventListener("change", () => applyFilters(0));
+    searchInput.addEventListener("input", () => applyFilters(0));
+
+    document.querySelectorAll(".filter-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        statusFilter = btn.dataset.filter;
+        applyFilters(0);
+      });
+    });
+
+    ptEditInput.addEventListener("input", updateLiveLineRulers);
+
+    // Toggles de visualização (Parágrafo x Linhas)
+    btnEnViewParagraph.addEventListener("click", () => {
+      enViewMode = "paragraph";
+      btnEnViewParagraph.classList.add("active");
+      btnEnViewLines.classList.remove("active");
+      if (filteredEntries[currentIndex]) updateComparisonDisplays(filteredEntries[currentIndex]);
+    });
+
+    btnEnViewLines.addEventListener("click", () => {
+      enViewMode = "lines";
+      btnEnViewLines.classList.add("active");
+      btnEnViewParagraph.classList.remove("active");
+      if (filteredEntries[currentIndex]) updateComparisonDisplays(filteredEntries[currentIndex]);
+    });
+
+    btnPtViewParagraph.addEventListener("click", () => {
+      ptViewMode = "paragraph";
+      btnPtViewParagraph.classList.add("active");
+      btnPtViewLines.classList.remove("active");
+      if (filteredEntries[currentIndex]) updateComparisonDisplays(filteredEntries[currentIndex]);
+    });
+
+    btnPtViewLines.addEventListener("click", () => {
+      ptViewMode = "lines";
+      btnPtViewLines.classList.add("active");
+      btnPtViewParagraph.classList.remove("active");
+      if (filteredEntries[currentIndex]) updateComparisonDisplays(filteredEntries[currentIndex]);
+    });
+
+    // Copiar e Usar Original
+    btnCopyEn.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (e) copyToClipboard(e.en_text, "Texto original em inglês copiado");
+    });
+
+    btnUseAsBase.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (!e) return;
+      ptEditInput.value = e.en_text;
+      updateLiveLineRulers();
+      ptEditInput.focus();
+      showToast("🇺🇸 Texto original inserido no editor!");
+    });
+
+    // Copiar e Usar Sugerida
+    btnCopyPtSuggested.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (e) copyToClipboard(e.initial_suggested_pt, "Tradução sugerida copiada");
+    });
+
+    btnUseSuggested.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (!e) return;
+      ptEditInput.value = e.initial_suggested_pt;
+      if (e.has_desc) ptDescEditInput.value = e.initial_suggested_desc;
+      updateLiveLineRulers();
+      ptEditInput.focus();
+      showToast("🇧🇷 Sugestão inserida no editor!");
+    });
+
+    // Copiar e Usar Opcional
+    btnCopyOptional.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (e && e.opt_text) copyToClipboard(e.opt_text, "Opção alternativa copiada");
+    });
+
+    btnUseOptional.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (!e || !e.opt_text) return;
+      ptEditInput.value = e.opt_text;
+      updateLiveLineRulers();
+      ptEditInput.focus();
+      showToast("💡 Opção alternativa inserida!");
+    });
+
+    // Ferramentas de Edição
+    btnAutoWrap.addEventListener("click", () => {
+      ptEditInput.value = autoWrapText(ptEditInput.value, 34);
+      updateLiveLineRulers();
+      showToast("✨ Quebra de linhas inteligente aplicada (máx 34 chars)!");
+    });
+
+    btnUnifyLines.addEventListener("click", () => {
+      ptEditInput.value = unifyParagraph(ptEditInput.value);
+      updateLiveLineRulers();
+      showToast("🧹 Linhas unificadas em parágrafo contínuo!");
+    });
+
+    btnCopyEdit.addEventListener("click", () => {
+      copyToClipboard(ptEditInput.value, "Texto editado copiado");
+    });
+
+    btnToggleStatus.addEventListener("click", () => {
+      const e = filteredEntries[currentIndex];
+      if (e) saveCurrentEntry(!e.validated);
+    });
+
+    document.getElementById("btnPrev").addEventListener("click", () => {
+      if (currentIndex > 0) selectEntry(currentIndex - 1);
+    });
+
+    document.getElementById("btnNext").addEventListener("click", () => {
+      if (currentIndex < filteredEntries.length - 1) selectEntry(currentIndex + 1);
+    });
+
+    document.getElementById("btnConfirm").addEventListener("click", () => saveCurrentEntry(true));
+
+    // Atalhos Globais de Teclado
+    window.addEventListener("keydown", (ev) => {
+      // Ctrl + Enter: Confirmar e Salvar
+      if ((ev.ctrlKey || ev.metaKey) && ev.key === "Enter") {
+        ev.preventDefault();
+        saveCurrentEntry(true);
+      }
+      // Alt + 1: Usar Original
+      if (ev.altKey && ev.key === "1") {
+        ev.preventDefault();
+        btnUseAsBase.click();
+      }
+      // Alt + 2: Usar Sugerida
+      if (ev.altKey && ev.key === "2") {
+        ev.preventDefault();
+        btnUseSuggested.click();
+      }
+      // Alt + 3: Usar Opcional
+      if (ev.altKey && ev.key === "3") {
+        ev.preventDefault();
+        btnUseOptional.click();
+      }
+      // Alt + W: Auto-Wrap
+      if (ev.altKey && (ev.key === "w" || ev.key === "W")) {
+        ev.preventDefault();
+        btnAutoWrap.click();
+      }
+      // Alt + Seta Esquerda: Anterior
+      if (ev.altKey && ev.key === "ArrowLeft") {
+        ev.preventDefault();
+        document.getElementById("btnPrev").click();
+      }
+      // Alt + Seta Direita: Próximo
+      if (ev.altKey && ev.key === "ArrowRight") {
+        ev.preventDefault();
+        document.getElementById("btnNext").click();
+      }
+    });
+
+    loadCategories(false);
+  </script>
+</body>
+</html>
