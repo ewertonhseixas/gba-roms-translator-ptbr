@@ -20,6 +20,11 @@ __pycache__/
 !**/rom/.gitkeep
 !**/rom/COLOQUE_SUA_ROM_AQUI.txt
 
+# Projetos de jogos individuais (o repositório mantém estritamente processos e ferramentas)
+jogos/*
+!jogos/_MODELO_NOVO_JOGO/
+!jogos/_MODELO_NOVO_JOGO/**
+
 # Backups locais de trabalho
 backups/
 **/backups/
