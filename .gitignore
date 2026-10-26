@@ -25,6 +25,17 @@ jogos/*
 !jogos/_MODELO_NOVO_JOGO/
 !jogos/_MODELO_NOVO_JOGO/**
 
+# Documentação técnica e protocolos dos jogos
+!jogos/Summon_Night_Swordcraft_Story_1/
+jogos/Summon_Night_Swordcraft_Story_1/*
+!jogos/Summon_Night_Swordcraft_Story_1/docs/
+!jogos/Summon_Night_Swordcraft_Story_1/docs/**
+
+!jogos/Summon_Night_Swordcraft_Story_2/
+jogos/Summon_Night_Swordcraft_Story_2/*
+!jogos/Summon_Night_Swordcraft_Story_2/docs/
+!jogos/Summon_Night_Swordcraft_Story_2/docs/**
+
 # Backups locais de trabalho
 backups/
 **/backups/

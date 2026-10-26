@@ -1,5 +1,5 @@
 # 📜 Protocolo Mestre de Tradução e Localização de ROMs (PT-BR)
-**Versão:** 1.0.0  
+**Versão:** 1.1.0  
 **Escopo Primário:** Game Boy Advance (GBA) & Consoles Retrô (SNES, Mega Drive, NDS, PS1)  
 **Ambiente Integrado:** Suíte GBA ROMs Translator PT-BR & Antigravity (Google DeepMind)  
 **Status:** Vital e Mandatório para todos os lotes de tradução e revisão  
@@ -72,20 +72,34 @@ O protocolo determina a utilização de **sintaxe neutra e epicena** para todas 
 
 ---
 
-### 2.3. Eliminação Total do Inglês (Manter Apenas Nomes Próprios)
-*   **Tolerância Zero:** Nenhum resquício de inglês deve permanecer em diálogos, comandos de combate, interfaces, tutoriais ou telas pós-batalha (*Victory, Level Up, Equip, Guard, Target, Miss, Run*).
-*   **Critério para Nomes Próprios (Permanecem Originais):**
-    *   Nomes de personagens fictícios (*Cleru, Pratty, Bron, Amar, Sanary, Varil, Lubert, etc.*).
-    *   Nomes de continentes, reinos ou dimensões fantasia (*Silturn, Sapureth, Loreilal, Maetropa, Wystern*).
-    *   Nomes geográficos puros (*Kagro, Mirana, Rugista*).
-*   **Nomes Compostos com Tradução Obrigatória:**
-    *   Elementos geográficos ou organizacionais compostos por palavras comuns **devem ser 100% traduzidos**:
+### 2.3. Eliminação Total do Inglês (Localização Integral — Manter Apenas Nomes Próprios)
+*   **Tolerância Zero:** Nenhum resquício de língua inglesa deve permanecer em qualquer elemento do jogo. A localização abrange 100% dos textos textuais e estruturados:
+    *   **Diálogos e Narrativa:** Falas de NPCs, tutoriais, prólogos, epílogos e escolhas.
+    *   **Interface e Menus:** Comandos de combate, telas pós-batalha (*Vitória, Subiu de Nível, Equipar, Defender, Fugir*).
+    *   **Armas, Equipamentos e Acessórios:** Todos os nomes de espadas, machados, lanças, soqueiras, brocas, escudos e anéis devem ser traduzidos para o português (*Metal Saber* $\rightarrow$ **Sabre de Metal**; *Grand Saber* $\rightarrow$ **Grão-Sabre**; *Amateur Knife* $\rightarrow$ **Faca de Aprendiz**).
+    *   **Itens, Consumíveis e Minérios:** Ervas, poções, pedras mágicas e matérias-primas (*Healing Herb* $\rightarrow$ **Erva Medicinal**; *Iron Ore* $\rightarrow$ **Minério de Ferro**; *Antidote Ore* $\rightarrow$ **Minério Antídoto**).
+    *   **Bestiário, Monstros e Chefes:** Todos os inimigos comuns e chefes compostos devem ser traduzidos e adaptados (*Slime* $\rightarrow$ **Gosma**; *Mud Boxer* $\rightarrow$ **Lutador de Lama**; *Evil Spirit* $\rightarrow$ **Espírito Maligno**; *Iron Giant* $\rightarrow$ **Gigante de Ferro**).
+    *   **Magias, Habilidades e Efeitos Especiais:** Golpes, combos, feitiços de invocação e status (*Water Slash* $\rightarrow$ **Corte Aquático**; *2 Hit Combo* $\rightarrow$ **Combo de 2 Golpes**).
+*   **Critério Exclusivo para Nomes Próprios (Permanecem Originais):**
+    *   Nomes próprios de personagens fictícios (*Cleru, Pratty, Edgar, Aera, Blaire, Orin, Ryouga, Bron, Amar, Sanary, Varil, Lubert, etc.*).
+    *   Nomes próprios de Feras Guardiãs e Deuses/Demônios (*Sugar, Rasho, Zantek, Kutty, EXeLD, Dinah, Arno, Loki, Goura*).
+    *   Nomes de continentes, reinos ou dimensões fantasia (*Silturn, Sapureth, Loreilal, Maetropa, Lyndbaum*).
+    *   Nomes geográficos de cidades e ilhas sem significado descritivo comum (*Kagro, Mirana, Rugista, Wystern*).
+*   **Nomes Compostos e Descritivos com Tradução Obrigatória:**
+    *   Elementos geográficos, masmorras ou organizações compostos por substantivos/adjetivos comuns **devem ser 100% traduzidos**:
         *   *Silver Guild* $\rightarrow$ **Guilda Prateada**
         *   *Gold Guild* $\rightarrow$ **Guilda Dourada**
         *   *Central Tower* $\rightarrow$ **Torre Central**
         *   *Marine Dungeon* $\rightarrow$ **Labirinto Marinho**
         *   *Cape Lighthouse* $\rightarrow$ **Farol do Cabo**
         *   *City of Swords* $\rightarrow$ **Cidade das Espadas**
+        *   *Cliff Village* $\rightarrow$ **Vila do Penhasco**
+        *   *Entry Woods* $\rightarrow$ **Bosque da Entrada**
+        *   *Goura's Gate* $\rightarrow$ **Portão de Goura**
+        *   *Subterranean Canal* $\rightarrow$ **Canal Subterrâneo**
+        *   *Fire Fortress* $\rightarrow$ **Fortaleza de Fogo**
+        *   *Ruined Factory* $\rightarrow$ **Fábrica em Ruínas**
+        *   *Daemon Vault* $\rightarrow$ **Câmara do Demônio**
 
 ---
 
@@ -167,6 +181,26 @@ As variáveis dinâmicas injetadas pelo código ASM (`{PLAYER}`, `{PARTNER}`, `{
     *   *Gah! / Argh!* $\rightarrow$ *Argh!* / *Droga!*
     *   *Huh?* $\rightarrow$ *Hã?* / *Hein?*
     *   *Yikes!* $\rightarrow$ *Eita!* / *Caramba!*
+
+---
+
+### 3.5. Métricas Comparativas e Matriz Cross-Game (Estudo de Caso: SN1 vs SN2)
+
+A aplicação do framework de tradução entre jogos consecutivos da mesma franquia exige um mapeamento meticuloso de densidade e estruturas na ROM:
+
+| Parâmetro de Engenharia | Summon Night: Swordcraft Story 1 | Summon Night: Swordcraft Story 2 | Impacto Operacional no Processo |
+| :--- | :---: | :---: | :--- |
+| **Tamanho da ROM** | 8 MB (`0x800000`) | **16 MB** (`0x1000000`) | Expansão de espaço livre para scripts relocados. |
+| **Volume de Diálogos** | ~35.000 linhas | **45.318 linhas** | Crescimento de 30% no escopo e número de eventos. |
+| **Scripts de Cena / Evento**| 100 scripts (Arch 0/1) | **2.544 scripts** (Arch 2) | Uso de tabela de alocação de 16 bytes relativos na VM PSI3. |
+| **Limite por Linha de Diálogo**| 36 caracteres | **36 caracteres** | **Zona Segura:** 1-32 chars \| **Atenção:** 33-35 chars \| **Crítico:** 36+ chars. |
+| **Quebra de Linha** | `<br>` | `<br>` | Quebra manual estrita entre as linhas da mesma caixa. |
+| **Tags de Engine Dinâmicas** | `{PLAYER}`, `{PARTNER}`, `{SIBLING}`, `{MASTER}`, `{VAR_2}` | `{PLAYER}`, `{PARTNER}`, `{SIBLING}`, `{MASTER}`, `{VAR_2}`, `{VAR_4}` | Sintaxe neutra e flexibilidade gramatical ao redor da tag. |
+| **Armas no Catálogo** | 130 armas | **213 armas** | Stride de 132 bytes; 100% dos nomes e descrições localizados em PT-BR. |
+| **Itens e Materiais** | 120 itens | **156 itens** | Stride de 132 bytes; consumíveis, minérios e acessórios em PT-BR. |
+| **Magias e Técnicas** | 32 magias | **95 técnicas / magias** | 40 magias (stride 112) + 25 combos (stride 74) + 30 efeitos especiais. |
+| **Bestiário (Monstros/Chefes)**| 88 monstros | **114 monstros** | Stride de 184 bytes; nomes e descrições de até 4 linhas 100% em PT-BR. |
+| **Diretriz de Nomes Próprios** | Preservados (*Cleru, Pratty, Bron*) | Preservados (*Edgar, Aera, Blaire*) | Preservação restrita a pessoas, feras e mundos fantasia (*Silturn, etc.*). |
 
 ---
 
