@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Validador de Tradução — Summon Night: Swordcraft Story (GBA)</title>
+  <title>Validador de Tradução — Framework GBA (PT-BR)</title>
   <style>
     :root {
       --bg-main: #0b1120;
@@ -25,16 +25,25 @@
       --danger: #ef4444;
       --purple: #a855f7;
 
-      /* Cores temáticas de personagens */
-      --char-protagonist-bg: rgba(2, 132, 199, 0.18);
-      --char-protagonist-border: #0284c7;
-      --char-protagonist-text: #38bdf8;
+      /* Cores temáticas de gênero do jogador */
+      --gender-male-bg: rgba(2, 132, 199, 0.20);
+      --gender-male-border: #0284c7;
+      --gender-male-text: #38bdf8;
 
+      --gender-female-bg: rgba(236, 72, 153, 0.20);
+      --gender-female-border: #ec4899;
+      --gender-female-text: #f472b6;
+
+      --gender-both-bg: rgba(168, 85, 247, 0.18);
+      --gender-both-border: #a855f7;
+      --gender-both-text: #c084fc;
+
+      /* Cores temáticas de personagens */
       --char-amariss-bg: rgba(16, 185, 129, 0.18);
       --char-amariss-border: #10b981;
       --char-amariss-text: #34d399;
 
-      --char-bron-bg: rgba(217, 119, 6, 0.18);
+      --char-bron-bg: rgba(217, 119, 6, 0.20);
       --char-bron-border: #d97706;
       --char-bron-text: #fbbf24;
 
@@ -75,11 +84,11 @@
     header {
       background: var(--bg-panel);
       border-bottom: 1px solid var(--border);
-      padding: 10px 18px;
+      padding: 8px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
       z-index: 10;
     }
@@ -94,17 +103,17 @@
       width: 36px;
       height: 36px;
       border-radius: 8px;
-      background: linear-gradient(135deg, #0284c7, #6366f1);
+      background: linear-gradient(135deg, #0284c7, #ec4899);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 16px;
+      font-size: 15px;
       box-shadow: 0 2px 10px rgba(2, 132, 199, 0.35);
     }
 
     .brand h1 {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.01em;
@@ -120,7 +129,7 @@
       align-items: center;
       gap: 8px;
       flex: 1;
-      max-width: 1080px;
+      max-width: 1250px;
       justify-content: flex-end;
       flex-wrap: wrap;
     }
@@ -148,37 +157,45 @@
     }
 
     #categorySelect {
-      min-width: 240px;
+      min-width: 210px;
+      max-width: 250px;
       font-weight: 600;
     }
 
     #sectionSelect {
-      max-width: 160px;
+      max-width: 140px;
+    }
+
+    #genderFilter {
+      max-width: 175px;
+      font-weight: 700;
+      color: #38bdf8;
+      border-color: #0284c7;
     }
 
     #charSelect {
-      max-width: 200px;
-      color: #7dd3fc;
+      max-width: 190px;
+      color: #fde047;
       font-weight: 600;
     }
 
     #charFilterMode {
-      max-width: 150px;
+      max-width: 140px;
       font-size: 11.5px;
     }
 
     #searchInput {
-      width: 160px;
+      width: 140px;
     }
 
     .progress-pill {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 5px 10px;
+      padding: 4px 9px;
       display: flex;
       flex-direction: column;
-      min-width: 140px;
+      min-width: 130px;
     }
 
     .progress-top {
@@ -210,7 +227,7 @@
     /* MAIN LAYOUT */
     .workspace {
       display: grid;
-      grid-template-columns: 370px 1fr;
+      grid-template-columns: 380px 1fr;
       flex: 1;
       overflow: hidden;
     }
@@ -305,6 +322,7 @@
       align-items: center;
       font-size: 11px;
       color: var(--text-muted);
+      gap: 6px;
     }
 
     .entry-ref {
@@ -312,6 +330,13 @@
       color: var(--accent);
       font-weight: 600;
       font-size: 11px;
+    }
+
+    .entry-speaker-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
     }
 
     .entry-speaker-badge {
@@ -322,10 +347,12 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 220px;
+      max-width: 140px;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      border: 1px solid var(--border);
+      background: #101a2d;
     }
 
     .entry-en {
@@ -349,7 +376,50 @@
       font-size: 10px;
       color: #f87171;
       font-weight: 700;
-      margin-left: 4px;
+      margin-left: auto;
+    }
+
+    /* BADGES DE RAMO DE GÊNERO */
+    .badge-branch {
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .branch-male {
+      background: rgba(2, 132, 199, 0.22);
+      color: #38bdf8;
+      border: 1px solid #0284c7;
+    }
+
+    .branch-female {
+      background: rgba(236, 72, 153, 0.22);
+      color: #f472b6;
+      border: 1px solid #ec4899;
+    }
+
+    .branch-both {
+      background: rgba(168, 85, 247, 0.20);
+      color: #c084fc;
+      border: 1px solid #a855f7;
+    }
+
+    .branch-npc {
+      background: rgba(100, 116, 139, 0.2);
+      color: #94a3b8;
+      border: 1px solid #475569;
+    }
+
+    .branch-system {
+      background: rgba(71, 85, 105, 0.25);
+      color: #cbd5e1;
+      border: 1px solid #64748b;
     }
 
     /* EDITOR MAIN PANEL */
@@ -398,17 +468,23 @@
       font-weight: 700;
       border: 1px solid var(--border);
       background: var(--bg-card);
+      transition: all 0.2s ease;
     }
 
     .actor-icon {
-      font-size: 15px;
+      font-size: 16px;
     }
 
     .actor-role {
-      font-size: 10px;
+      font-size: 9.5px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      opacity: 0.7;
+      letter-spacing: 0.06em;
+      opacity: 0.75;
+    }
+
+    .actor-name {
+      font-size: 13.5px;
+      font-weight: 700;
     }
 
     .actor-arrow {
@@ -455,6 +531,7 @@
     .context-detail-text {
       font-size: 12px;
       color: #94a3b8;
+      line-height: 1.4;
     }
 
     /* SCENE TIMELINE (FLOW / CHAT VIEW) */
@@ -490,7 +567,7 @@
       border-radius: 8px;
       font-size: 12px;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 8px;
       background: #162032;
       border: 1px solid #24344d;
@@ -506,14 +583,29 @@
     .flow-bubble.current {
       background: #1e355b;
       border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent);
+      box-shadow: 0 0 0 1px var(--accent), 0 2px 10px rgba(56, 189, 248, 0.2);
+    }
+
+    .flow-bubble.bubble-male {
+      border-left: 3px solid #0284c7;
+    }
+
+    .flow-bubble.bubble-female {
+      border-left: 3px solid #ec4899;
+    }
+
+    .flow-bubble.bubble-both {
+      border-left: 3px solid #a855f7;
     }
 
     .flow-bubble-sp {
       font-weight: 700;
       white-space: nowrap;
       font-size: 11.5px;
-      min-width: 110px;
+      min-width: 130px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .flow-bubble-text {
@@ -894,11 +986,106 @@
       transform: translateY(0);
     }
 
-    /* BADGE COLORS POR PERSONAGEM */
+    /* ESTILIZAÇÃO ESPECÍFICA POR PERSONAGEM */
+
+    .char-hero_male, .char-cleru, .char-edgar {
+      background: var(--gender-male-bg);
+      border-color: var(--gender-male-border);
+      color: var(--gender-male-text);
+      box-shadow: 0 0 10px rgba(2, 132, 199, 0.15);
+    }
+
+    .char-hero_female, .char-pratty, .char-aera {
+      background: var(--gender-female-bg);
+      border-color: var(--gender-female-border);
+      color: var(--gender-female-text);
+      box-shadow: 0 0 10px rgba(236, 72, 153, 0.15);
+    }
+
+    .char-choice_male, .char-choice_cleru, .char-choice_edgar {
+      background: rgba(2, 132, 199, 0.12);
+      border-color: #0284c7;
+      color: #7dd3fc;
+    }
+
+    .char-choice_female, .char-choice_pratty, .char-choice_aera {
+      background: rgba(236, 72, 153, 0.12);
+      border-color: #ec4899;
+      color: #f9a8d4;
+    }
+
+    .char-partner {
+      background: rgba(168, 85, 247, 0.18);
+      border-color: #a855f7;
+      color: #c084fc;
+    }
+
+    .char-mentor {
+      background: rgba(249, 115, 22, 0.20);
+      border-color: #f97316;
+      color: #fdba74;
+    }
+
+    .char-mother {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    .char-father {
+      background: rgba(245, 158, 11, 0.22);
+      border-color: #f59e0b;
+      color: #fbbf24;
+    }
+
+    .char-sibling {
+      background: rgba(20, 184, 166, 0.18);
+      border-color: #14b8a6;
+      color: #2dd4bf;
+    }
+
+    .char-morador {
+      background: rgba(100, 116, 139, 0.18);
+      border-color: #64748b;
+      color: #cbd5e1;
+    }
+
+    .char-cleru {
+      background: var(--gender-male-bg);
+      border-color: var(--gender-male-border);
+      color: var(--gender-male-text);
+      box-shadow: 0 0 10px rgba(2, 132, 199, 0.15);
+    }
+
+    .char-pratty {
+      background: var(--gender-female-bg);
+      border-color: var(--gender-female-border);
+      color: var(--gender-female-text);
+      box-shadow: 0 0 10px rgba(236, 72, 153, 0.15);
+    }
+
     .char-protagonist {
-      background: var(--char-protagonist-bg);
-      border-color: var(--char-protagonist-border);
-      color: var(--char-protagonist-text);
+      background: var(--gender-both-bg);
+      border-color: var(--gender-both-border);
+      color: var(--gender-both-text);
+    }
+
+    .char-choice_cleru {
+      background: rgba(2, 132, 199, 0.12);
+      border-color: #0284c7;
+      color: #7dd3fc;
+    }
+
+    .char-choice_pratty {
+      background: rgba(236, 72, 153, 0.12);
+      border-color: #ec4899;
+      color: #f9a8d4;
+    }
+
+    .char-choice {
+      background: rgba(168, 85, 247, 0.12);
+      border-color: #a855f7;
+      color: #d8b4fe;
     }
 
     .char-amariss {
@@ -937,6 +1124,85 @@
       color: var(--char-kutty-text);
     }
 
+    .char-zantek {
+      background: rgba(100, 116, 139, 0.18);
+      border-color: #64748b;
+      color: #94a3b8;
+    }
+
+    .char-varil {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: #3b82f6;
+      color: #60a5fa;
+    }
+
+    .char-chaves {
+      background: rgba(234, 88, 12, 0.18);
+      border-color: #ea580c;
+      color: #fb923c;
+    }
+
+    .char-kenon {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    .char-razzy {
+      background: rgba(244, 63, 94, 0.18);
+      border-color: #f43f5e;
+      color: #fb7185;
+    }
+
+    .char-ariel {
+      background: rgba(139, 92, 246, 0.18);
+      border-color: #8b5cf6;
+      color: #a78bfa;
+    }
+
+    .char-sakuro {
+      background: rgba(14, 165, 233, 0.18);
+      border-color: #0ea5e9;
+      color: #38bdf8;
+    }
+
+    .char-lubert {
+      background: rgba(34, 197, 94, 0.18);
+      border-color: #22c55e;
+      color: #4ade80;
+    }
+
+    .char-ureksa {
+      background: rgba(234, 179, 8, 0.18);
+      border-color: #eab308;
+      color: #fde047;
+    }
+
+    .char-kouren {
+      background: rgba(239, 68, 68, 0.18);
+      border-color: #ef4444;
+      color: #f87171;
+    }
+
+    .char-shintetsu {
+      background: rgba(245, 158, 11, 0.22);
+      border-color: #f59e0b;
+      color: #fbbf24;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+    }
+
+    .char-lojista {
+      background: rgba(20, 184, 166, 0.18);
+      border-color: #14b8a6;
+      color: #2dd4bf;
+    }
+
+    .char-system {
+      background: rgba(71, 85, 105, 0.2);
+      border-color: #475569;
+      color: #cbd5e1;
+    }
+
     @media (max-width: 980px) {
       .workspace {
         grid-template-columns: 1fr;
@@ -945,16 +1211,44 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* BOTÃO COMPILAR ROM */
+    .btn-build {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #fff;
+      border: 1px solid #38bdf8;
+      border-radius: 6px;
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+    }
+    .btn-build:hover:not(:disabled) {
+      background: linear-gradient(135deg, #0369a1, #1d4ed8);
+      border-color: #7dd3fc;
+      transform: translateY(-1px);
+    }
+    .btn-build:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
     <div class="brand">
-      <div class="brand-icon">SN</div>
+      <div class="brand-icon">GBA</div>
       <div>
-        <h1>Validador de Tradução — Summon Night (GBA)</h1>
-        <p>Edição por contexto narrativo, contagem de caracteres e fluxo de diálogos</p>
+        <h1>Validador de Tradução — Framework GBA</h1>
+        <p>Validação narrativa com identificação de gênero, personagens e fluxo de cena</p>
       </div>
     </div>
 
@@ -966,7 +1260,18 @@
         </select>
       </div>
 
-      <!-- FILTRO DE PERSONAGEM DEDICADO -->
+      <!-- FILTRO DEDICADO DE RAMO DE GÊNERO DO PLAYER -->
+      <div class="filter-group">
+        <select id="genderFilter" title="Filtrar por Ramo de Gênero do Jogador">
+          <option value="">🌟 Todos os Ramos</option>
+          <option value="male">♂ Ramo Masculino</option>
+          <option value="female">♀ Ramo Feminino</option>
+          <option value="both">👥 Ramo Compartilhado (Ambos)</option>
+          <option value="npc">🗣️ Falas de NPCs / Cena</option>
+        </select>
+      </div>
+
+      <!-- FILTRO DE PERSONAGEM AGRUPADO POR CATEGORIA -->
       <div class="filter-group">
         <select id="charSelect" title="Filtrar por Personagem">
           <option value="">👤 Todos os Personagens</option>
@@ -978,7 +1283,12 @@
         </select>
       </div>
 
-      <input type="search" id="searchInput" placeholder="Buscar texto, #id..." />
+      <input type="search" id="searchInput" placeholder="Buscar texto, #id, ator..." />
+
+
+      <button class="btn-build" id="btnBuildRom" title="Compilar ROM PT-BR e gerar Patch IPS agora">
+        🎮 Compilar ROM PT-BR
+      </button>
 
       <div class="progress-pill">
         <div class="progress-top">
@@ -1014,20 +1324,20 @@
         <div class="dialogue-header-row">
           <div class="dialogue-actors">
             <div class="actor-card" id="speakerCard">
-              <span class="actor-icon">👤</span>
+              <span class="actor-icon" id="speakerIcon">👤</span>
               <div>
-                <div class="actor-role">Quem Fala</div>
-                <div id="speakerName">Protagonista</div>
+                <div class="actor-role" id="speakerRole">QUEM FALA</div>
+                <div class="actor-name" id="speakerName">Protagonista</div>
               </div>
             </div>
 
             <span class="actor-arrow">➔</span>
 
             <div class="actor-card" id="targetCard">
-              <span class="actor-icon">🎯</span>
+              <span class="actor-icon" id="targetIcon">🎯</span>
               <div>
-                <div class="actor-role">Direcionado a</div>
-                <div id="targetName">Amariss (Mãe)</div>
+                <div class="actor-role" id="targetRole">DIRECIONADO A</div>
+                <div class="actor-name" id="targetName">Amariss (Mãe)</div>
               </div>
             </div>
           </div>
@@ -1035,6 +1345,7 @@
           <div class="context-badges">
             <span class="badge badge-script" id="ctxScript">Script #1601</span>
             <span class="badge" id="ctxLine">Linha #0</span>
+            <span class="badge-branch branch-both" id="ctxGenderBadge">👥 Ramo Compartilhado</span>
             <span class="badge badge-status pend" id="ctxStatus">⏳ Pendente</span>
             <button class="btn-small" id="btnToggleStatus" title="Alternar status de validação">↩ Alternar Status</button>
           </div>
@@ -1043,11 +1354,11 @@
         <div class="context-detail-text" id="ctxDetail">Contexto da cena</div>
       </div>
 
-      <!-- NOVO COMPONENTE: FLUXO DA CENA / HISTÓRICO DE CONVERSA -->
+      <!-- COMPONENTE: FLUXO DA CENA / HISTÓRICO DE CONVERSA -->
       <div class="scene-flow-card" id="sceneFlowCard">
         <div class="scene-flow-header">
-          <span>💬 Fluxo da Conversa / Cena Recente</span>
-          <span style="font-size:10px; color:var(--accent);">Clique em um balão para navegar</span>
+          <span>💬 Fluxo da Conversa / Diálogos Vizinhos</span>
+          <span style="font-size:10px; color:var(--accent);">Clique em um balão para navegar direto à fala</span>
         </div>
         <div class="flow-bubbles" id="flowBubbles"></div>
       </div>
@@ -1182,6 +1493,7 @@
     // Elementos DOM
     const categorySelect = document.getElementById("categorySelect");
     const sectionSelect = document.getElementById("sectionSelect");
+    const genderFilter = document.getElementById("genderFilter");
     const charSelect = document.getElementById("charSelect");
     const charFilterMode = document.getElementById("charFilterMode");
     const searchInput = document.getElementById("searchInput");
@@ -1191,11 +1503,18 @@
     const progressBar = document.getElementById("progressBar");
 
     const speakerCard = document.getElementById("speakerCard");
+    const speakerIcon = document.getElementById("speakerIcon");
+    const speakerRole = document.getElementById("speakerRole");
     const speakerName = document.getElementById("speakerName");
+
     const targetCard = document.getElementById("targetCard");
+    const targetIcon = document.getElementById("targetIcon");
+    const targetRole = document.getElementById("targetRole");
     const targetName = document.getElementById("targetName");
+
     const ctxScript = document.getElementById("ctxScript");
     const ctxLine = document.getElementById("ctxLine");
+    const ctxGenderBadge = document.getElementById("ctxGenderBadge");
     const ctxStatus = document.getElementById("ctxStatus");
     const ctxDetail = document.getElementById("ctxDetail");
     const btnToggleStatus = document.getElementById("btnToggleStatus");
@@ -1248,7 +1567,6 @@
       navigator.clipboard.writeText(text).then(() => {
         showToast(`📋 ${label} para a área de transferência!`);
       }).catch(() => {
-        // Fallback clássico
         const ta = document.createElement("textarea");
         ta.value = text;
         document.body.appendChild(ta);
@@ -1262,14 +1580,33 @@
     function getCharClass(charId) {
       if (!charId) return "";
       const id = charId.toLowerCase();
-      if (id.includes("protagonist")) return "char-protagonist";
-      if (id.includes("amariss")) return "char-amariss";
-      if (id.includes("bron")) return "char-bron";
-      if (id.includes("rasho")) return "char-rasho";
-      if (id.includes("sanary")) return "char-sanary";
-      if (id.includes("sugar")) return "char-sugar";
-      if (id.includes("kutty")) return "char-kutty";
+      if (id === "hero_male" || id === "cleru" || id === "edgar" || id.includes("hero_male")) return "char-hero_male";
+      if (id === "hero_female" || id === "pratty" || id === "aera" || id.includes("hero_female")) return "char-hero_female";
+      if (id === "protagonist") return "char-protagonist";
+      if (id === "choice_male" || id === "choice_cleru" || id === "choice_edgar") return "char-choice_male";
+      if (id === "choice_female" || id === "choice_pratty" || id === "choice_aera") return "char-choice_female";
+      if (id === "choice") return "char-choice";
+      if (id === "partner" || id.includes("partner")) return "char-partner";
+      if (id === "mentor" || id.includes("mentor") || id.includes("blaire") || id.includes("bron")) return "char-mentor";
+      if (id === "mother" || id.includes("mother") || id.includes("amariss")) return "char-mother";
+      if (id === "father" || id.includes("father") || id.includes("shintetsu")) return "char-father";
+      if (id === "sibling" || id.includes("sibling") || id.includes("orin")) return "char-sibling";
+      if (id.includes("rasho") || id.includes("arno")) return "char-rasho";
+      if (id.includes("sugar") || id.includes("dinah")) return "char-sugar";
+      if (id.includes("zantek") || id.includes("exeld")) return "char-zantek";
+      if (id.includes("loki") || id.includes("kutty")) return "char-kutty";
+      if (id.includes("ryouga") || id.includes("varil") || id.includes("sanary") || id.includes("tatiana")) return "char-varil";
+      if (id.includes("lojista") || id.includes("shopkeeper")) return "char-lojista";
+      if (id === "system") return "char-system";
       return "";
+    }
+
+    function getBranchClass(branch) {
+      if (branch === "male") return "branch-male";
+      if (branch === "female") return "branch-female";
+      if (branch === "both") return "branch-both";
+      if (branch === "system") return "branch-system";
+      return "branch-npc";
     }
 
     function unifyParagraph(text) {
@@ -1388,30 +1725,76 @@
         sectionSelect.appendChild(opt);
       });
 
-      // Popula personagens
-      charSelect.innerHTML = `<option value="">👤 Todos os Personagens (${charactersList.length})</option>`;
-      charactersList.forEach(c => {
-        const opt = document.createElement("option");
-        opt.value = c.id;
-        opt.textContent = `${c.name} [${c.total} falas/interações]`;
-        charSelect.appendChild(opt);
-      });
+      // Popula personagens agrupados por categoria
+      renderCharacterOptions(charactersList);
 
       updateHeaderProgress();
       applyFilters(0);
     }
 
+    function renderCharacterOptions(chars) {
+      charSelect.innerHTML = `<option value="">👤 Todos os Personagens (${chars.length})</option>`;
+      if (!chars || chars.length === 0) return;
+
+      const groups = {};
+      chars.forEach(c => {
+        const cat = c.category || "Outros";
+        if (!groups[cat]) groups[cat] = [];
+        groups[cat].push(c);
+      });
+
+      // Ordem prioritária de exibição de categorias
+      const categoryOrder = [
+        "Protagonistas & Escolhas",
+        "Feras Guardiãs",
+        "Personagens Principais",
+        "Lordes do Ofício",
+        "NPCs de Wystern",
+        "Sistema & Interface"
+      ];
+
+      const allCats = [...new Set([...categoryOrder, ...Object.keys(groups)])];
+
+      allCats.forEach(cat => {
+        if (!groups[cat] || groups[cat].length === 0) return;
+        const optgroup = document.createElement("optgroup");
+        optgroup.label = cat;
+
+        groups[cat].forEach(c => {
+          const opt = document.createElement("option");
+          opt.value = c.id;
+          opt.textContent = `${c.icon || "👤"} ${c.name} [${c.total} falas]`;
+          optgroup.appendChild(opt);
+        });
+
+        charSelect.appendChild(optgroup);
+      });
+    }
+
     function applyFilters(targetIdx = 0) {
       const sec = sectionSelect.value;
+      const genderVal = genderFilter.value;
       const targetChar = charSelect.value;
       const charMode = charFilterMode.value;
       const q = searchInput.value.trim().toLowerCase();
 
       filteredEntries = allEntries.filter(e => {
+        // Filtro de status
         if (statusFilter === "pending" && e.validated) return false;
         if (statusFilter === "validated" && !e.validated) return false;
+
+        // Filtro de seção
         if (sec && e.section !== sec) return false;
 
+        // Filtro de Ramo de Gênero do Jogador
+        if (genderVal) {
+          if (genderVal === "male" && e.gender_branch !== "male") return false;
+          if (genderVal === "female" && e.gender_branch !== "female") return false;
+          if (genderVal === "both" && e.gender_branch !== "both") return false;
+          if (genderVal === "npc" && !["npc", "system", ""].includes(e.gender_branch)) return false;
+        }
+
+        // Filtro de personagem
         if (targetChar) {
           const isSp = (e.speaker_id === targetChar);
           const isTarget = (e.addressee_id === targetChar);
@@ -1420,8 +1803,9 @@
           if (charMode === "both" && !isSp && !isTarget) return false;
         }
 
+        // Busca textual
         if (q) {
-          const hay = `${e.ref_id} ${e.speaker} ${e.addressee} ${e.en_text} ${e.en_desc} ${e.pt_text} ${e.pt_desc} ${e.opt_text} ${e.context}`.toLowerCase();
+          const hay = `${e.ref_id} ${e.speaker} ${e.addressee} ${e.gender_label} ${e.en_text} ${e.en_desc} ${e.pt_text} ${e.pt_desc} ${e.opt_text} ${e.context}`.toLowerCase();
           if (!hay.includes(q)) return false;
         }
         return true;
@@ -1450,21 +1834,28 @@
         const maxLen = Math.max(...ptLines.map(l => l.length), 0);
         const hasWarn = maxLen > 35;
 
+        const branchCls = getBranchClass(e.gender_branch);
+
         const top = document.createElement("div");
         top.className = "entry-item-top";
         top.innerHTML = `
-          <span class="entry-ref">${e.ref_id || "#" + (idx + 1)}</span>
+          <div style="display:flex; align-items:center; gap:5px;">
+            <span class="entry-ref">${e.ref_id || "#" + (idx + 1)}</span>
+            <span class="badge-branch ${branchCls}">${e.gender_label ? e.gender_label.split(" ")[0] : "👤"} ${e.gender_branch === "male" ? "Herói" : (e.gender_branch === "female" ? "Heroína" : (e.gender_branch === "both" ? "Ambos" : "Cena"))}</span>
+          </div>
           <span>${e.validated ? "✅ Validado" : "⏳ Pendente"}</span>
         `;
 
         const speakerRow = document.createElement("div");
+        speakerRow.className = "entry-speaker-row";
         const spCls = getCharClass(e.speaker_id);
         const tgtCls = getCharClass(e.addressee_id);
+
         speakerRow.innerHTML = `
-          <span class="entry-speaker-badge ${spCls}">${e.speaker || "Geral"}</span>
+          <span class="entry-speaker-badge ${spCls}">${e.actor_icon || "👤"} ${e.speaker || "Geral"}</span>
           <span style="font-size:10px; color:var(--accent);">➔</span>
-          <span class="entry-speaker-badge ${tgtCls}" style="opacity:0.85;">${e.addressee || "Cena"}</span>
-          ${hasWarn ? `<span class="entry-char-warn" title="Linha com ${maxLen} caracteres (teto 35)">⚠️ ${maxLen}c</span>` : ""}
+          <span class="entry-speaker-badge ${tgtCls}" style="opacity:0.9;">${e.target_icon || "🎯"} ${e.addressee || "Cena"}</span>
+          ${hasWarn ? `<span class="entry-char-warn" title="Linha com ${maxLen} caracteres (teto GBA: 35)">⚠️ ${maxLen}c</span>` : ""}
         `;
 
         const enDiv = document.createElement("div");
@@ -1486,10 +1877,16 @@
     }
 
     function clearEditorPane() {
+      speakerIcon.textContent = "—";
+      speakerRole.textContent = "—";
       speakerName.textContent = "—";
+      targetIcon.textContent = "—";
+      targetRole.textContent = "—";
       targetName.textContent = "—";
+
       ctxScript.textContent = "—";
       ctxLine.textContent = "—";
+      ctxGenderBadge.textContent = "—";
       ctxDetail.textContent = "Nenhum item encontrado com os filtros atuais.";
       enTextDisplay.textContent = "";
       ptSuggestedDisplay.textContent = "";
@@ -1509,17 +1906,29 @@
         if (i === idx) el.scrollIntoView({ block: "nearest" });
       });
 
-      // Banner de atores
+      // Banner de atores com suporte explícito a gênero
+      speakerIcon.textContent = e.actor_icon || "👤";
+      speakerRole.textContent = e.actor_role || "QUEM FALA";
       speakerName.textContent = e.speaker || "Geral";
       speakerCard.className = `actor-card ${getCharClass(e.speaker_id)}`;
+
+      targetIcon.textContent = e.target_icon || "🎯";
+      targetRole.textContent = e.target_role || "DIRECIONADO A";
       targetName.textContent = e.addressee || "Cena / Todos";
       targetCard.className = `actor-card ${getCharClass(e.addressee_id)}`;
 
+      // Badges de contexto
       ctxScript.textContent = e.script_group || e.ref_id || "Script";
       ctxLine.textContent = `Linha #${e.line_index + 1}`;
+
+      const bCls = getBranchClass(e.gender_branch);
+      ctxGenderBadge.className = `badge-branch ${bCls}`;
+      ctxGenderBadge.textContent = e.gender_label || "👥 Ramo Compartilhado";
+
       ctxStatus.textContent = e.validated ? "✅ Validado" : "⏳ Pendente";
       ctxStatus.className = `badge badge-status ${e.validated ? "valid" : "pend"}`;
-      ctxDetail.innerHTML = `<strong>Contexto:</strong> ${e.context || e.section} | <strong>Arquivo:</strong> ${currentFile}`;
+
+      ctxDetail.innerHTML = `<strong>Contexto:</strong> ${e.context || e.section} | <strong>Arquivo:</strong> ${currentFile} | <strong>Ramo:</strong> ${e.gender_label || "Geral"}`;
 
       // Renderiza textos original e sugerido
       updateComparisonDisplays(e);
@@ -1555,14 +1964,12 @@
     }
 
     function updateComparisonDisplays(e) {
-      // Original EN
       if (enViewMode === "paragraph") {
         enTextDisplay.textContent = unifyParagraph(e.en_text);
       } else {
         enTextDisplay.textContent = e.en_text;
       }
 
-      // Sugestão PT
       if (ptViewMode === "paragraph") {
         ptSuggestedDisplay.textContent = unifyParagraph(e.initial_suggested_pt);
       } else {
@@ -1572,13 +1979,12 @@
 
     function renderSceneFlow(currentEntry) {
       flowBubbles.innerHTML = "";
-      // Procura entradas vizinhas da mesma cena / script_group dentro de allEntries
       const currentPos = allEntries.findIndex(item => item.line_index === currentEntry.line_index);
       if (currentPos < 0) return;
 
       const groupName = currentEntry.script_group;
-      const start = Math.max(0, currentPos - 2);
-      const end = Math.min(allEntries.length, currentPos + 3);
+      const start = Math.max(0, currentPos - 3);
+      const end = Math.min(allEntries.length, currentPos + 4);
 
       for (let i = start; i < end; i++) {
         const item = allEntries[i];
@@ -1587,13 +1993,14 @@
         }
 
         const bubble = document.createElement("div");
-        bubble.className = `flow-bubble ${item.line_index === currentEntry.line_index ? "current" : ""}`;
+        const bType = item.gender_branch === "male" ? "bubble-male" : (item.gender_branch === "female" ? "bubble-female" : "bubble-both");
+        bubble.className = `flow-bubble ${bType} ${item.line_index === currentEntry.line_index ? "current" : ""}`;
         
         const spClass = getCharClass(item.speaker_id);
         const snippet = unifyParagraph(item.pt_text || item.en_text);
 
         bubble.innerHTML = `
-          <span class="flow-bubble-sp ${spClass}">${item.speaker}:</span>
+          <span class="flow-bubble-sp ${spClass}">${item.actor_icon || "👤"} ${item.speaker}:</span>
           <span class="flow-bubble-text">${snippet}</span>
         `;
 
@@ -1602,8 +2009,9 @@
           if (fIdx >= 0) {
             selectEntry(fIdx);
           } else {
-            // Se o item estiver fora do filtro atual, remove o filtro de personagem para mostrá-lo
+            // Se o item estiver oculto pelo filtro atual, limpa os filtros restritivos para mostrá-lo
             charSelect.value = "";
+            genderFilter.value = "";
             applyFilters(0);
             const refIdx = filteredEntries.findIndex(fe => fe.line_index === item.line_index);
             if (refIdx >= 0) selectEntry(refIdx);
@@ -1653,7 +2061,7 @@
       rulerSummary.textContent = `${lines.length} linha(s) | Máx: ${maxLen} caracteres/linha`;
       editMetrics.textContent = `Total: ${val.length} caracteres | ${lines.length} linha(s) (Maior: ${maxLen} chars)`;
 
-      // Verifica tags dinâmicas
+      // Alerta para tags dinâmicas ausentes
       const enTags = e.en_text.match(/\{[A-Z0-9_]+\}/g) || [];
       const missing = enTags.filter(t => !val.includes(t));
       if (missing.length > 0) {
@@ -1720,6 +2128,7 @@
     // EVENT LISTENERS
     categorySelect.addEventListener("change", () => loadFile(categorySelect.value));
     sectionSelect.addEventListener("change", () => applyFilters(0));
+    genderFilter.addEventListener("change", () => applyFilters(0));
     charSelect.addEventListener("change", () => applyFilters(0));
     charFilterMode.addEventListener("change", () => applyFilters(0));
     searchInput.addEventListener("input", () => applyFilters(0));
@@ -1735,7 +2144,7 @@
 
     ptEditInput.addEventListener("input", updateLiveLineRulers);
 
-    // Toggles de visualização (Parágrafo x Linhas)
+    // Toggles de visualização
     btnEnViewParagraph.addEventListener("click", () => {
       enViewMode = "paragraph";
       btnEnViewParagraph.classList.add("active");
@@ -1843,38 +2252,56 @@
     document.getElementById("btnConfirm").addEventListener("click", () => saveCurrentEntry(true));
 
     // Atalhos Globais de Teclado
+
+    // Build ROM listener
+    const btnBuildRom = document.getElementById("btnBuildRom");
+    if (btnBuildRom) {
+      btnBuildRom.addEventListener("click", async () => {
+        btnBuildRom.disabled = true;
+        btnBuildRom.textContent = "⏳ Compilando...";
+        try {
+          const res = await fetch(`${API_BASE}/api/build`, { method: "POST" });
+          const data = await res.json();
+          if (data.ok) {
+            showToast("🎮 ROM compilada com sucesso!");
+            alert("✅ ROM PT-BR gerada com sucesso!\n\n" + (data.output || "Compilação concluída com sucesso."));
+          } else {
+            alert("❌ Erro ao compilar ROM: " + (data.error || "Desconhecido"));
+          }
+        } catch (err) {
+          alert("Não foi possível conectar ao servidor local. Certifique-se de que o validador esteja rodando via Iniciar_Validador_Traducao.bat.");
+        } finally {
+          btnBuildRom.disabled = false;
+          btnBuildRom.textContent = "🎮 Compilar ROM PT-BR";
+        }
+      });
+    }
+
     window.addEventListener("keydown", (ev) => {
-      // Ctrl + Enter: Confirmar e Salvar
       if ((ev.ctrlKey || ev.metaKey) && ev.key === "Enter") {
         ev.preventDefault();
         saveCurrentEntry(true);
       }
-      // Alt + 1: Usar Original
       if (ev.altKey && ev.key === "1") {
         ev.preventDefault();
         btnUseAsBase.click();
       }
-      // Alt + 2: Usar Sugerida
       if (ev.altKey && ev.key === "2") {
         ev.preventDefault();
         btnUseSuggested.click();
       }
-      // Alt + 3: Usar Opcional
       if (ev.altKey && ev.key === "3") {
         ev.preventDefault();
         btnUseOptional.click();
       }
-      // Alt + W: Auto-Wrap
       if (ev.altKey && (ev.key === "w" || ev.key === "W")) {
         ev.preventDefault();
         btnAutoWrap.click();
       }
-      // Alt + Seta Esquerda: Anterior
       if (ev.altKey && ev.key === "ArrowLeft") {
         ev.preventDefault();
         document.getElementById("btnPrev").click();
       }
-      // Alt + Seta Direita: Próximo
       if (ev.altKey && ev.key === "ArrowRight") {
         ev.preventDefault();
         document.getElementById("btnNext").click();

@@ -24,6 +24,8 @@ __pycache__/
 jogos/*
 !jogos/_MODELO_NOVO_JOGO/
 !jogos/_MODELO_NOVO_JOGO/**
+jogos/_MODELO_NOVO_JOGO/**/__pycache__/
+jogos/_MODELO_NOVO_JOGO/**/embedded_md_data.js
 
 # Documentação técnica e protocolos dos jogos
 !jogos/Summon_Night_Swordcraft_Story_1/
