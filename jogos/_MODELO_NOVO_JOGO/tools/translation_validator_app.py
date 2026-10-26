@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
 Validador e Editor Interativo de Tradução (PT-BR)
-Summon Night: Swordcraft Story (GBA)
+Framework de Localização de ROMs GBA / Retrô
 =================================================
 Servidor local (zero dependências externas) que lê e atualiza diretamente
 os arquivos .md da pasta "ARQUIVOS md/", permitindo:
   - Selecionar a categoria (arquivo .md) e filtrar por seção/status/busca
+  - Filtrar por Ramo de Gênero do Jogador (♂ Masculino / ♀ Feminino / 👥 Compartilhado / NPCs)
+  - Filtrar por Personagem agrupado por categoria (Protagonistas, Companheiros, Principais, NPCs, Sistema)
   - Visualizar o texto original em EN-US, o contexto (endereço ROM, personagem,
     seção, observações), a tradução sugerida em PT-BR e a opção alternativa (se houver)
+  - Identificar com precisão quem fala e a quem a fala se destina (com sinalização de gênero)
+  - Visualizar a régua em tempo real com os limites físicos do GBA (Ideal <=32, Atenção 33-35, Excesso >=36)
+  - Compilar a ROM diretamente pela interface web (com log de execução)
   - Editar livremente a tradução (incluindo Nome + Descrição para armas/itens/magias)
   - Confirmar a tradução com 1 clique (ou Ctrl+Enter), salvando direto na linha
     correspondente do arquivo .md e marcando como "✅ Validado".
@@ -16,6 +21,7 @@ os arquivos .md da pasta "ARQUIVOS md/", permitindo:
 import json
 import os
 import re
+import subprocess
 import sys
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -33,6 +39,21 @@ INLINE_OPT_RE = re.compile(
     r"^(.*?)\s*\*?\(\s*ou\s+([^)]+?)\s*\)\*?\s*$",
     re.IGNORECASE | re.DOTALL,
 )
+
+# Pistas linguísticas para inferência de gênero do interlocutor
+MALE_CUES = re.compile(
+    r"\b(garoto|menino|filho|irmãozinho|maninho|garotinho|rapaz|senhor|amigo|cansado|envergonhado|pronto|sozinho|preparado|ele|dele|irmão|homem|herói)\b",
+    re.IGNORECASE,
+)
+FEMALE_CUES = re.compile(
+    r"\b(garota|menina|filha|irmãzinha|maninha|garotinha|senhorita|amiga|cansada|envergonhada|pronta|sozinha|preparada|ela|dela|irmã|mulher|heroína)\b",
+    re.IGNORECASE,
+)
+
+# Mapa global de falantes indexado por (script_id, string_id)
+GLOBAL_SCRIPT_SPEAKERS: Dict[Tuple[int, int], str] = {}
+# Mapa dinâmico de catálogo de personagens do projeto
+PROJECT_CHARACTERS: Dict[str, Dict[str, Any]] = {}
 
 
 def split_md_row(line: str) -> List[str]:
@@ -54,9 +75,6 @@ def clean_cell_to_text(raw: str) -> Tuple[str, str, str]:
     """
     Converte o conteúdo bruto de uma célula Markdown em:
       (texto_principal_limpo, alternativa_inline_limpa, nota_extra)
-    Exemplo:
-      '`Maninho` / `Maninha` *(ou `Irmãozão` / `Irmãzona`)*'
-      -> ('Maninho / Maninha', 'Irmãozão / Irmãzona', '')
     """
     s = raw.strip()
     opt_text = ""
@@ -103,14 +121,14 @@ def classify_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
     """
     h_lower = [h.lower() for h in headers]
 
-    # Ignora tabelas que não são de tradução (ex: tabelas técnicas em 00/01 se houver)
-    has_en = any("original" in h or "en-us" in h or "padrão" in h for h in h_lower)
-    has_pt = any("sugerid" in h or "pt-br" in h or "tradução" in h for h in h_lower)
+    has_en = any("original" in h or "en-us" in h or "padrão" in h or "inglês" in h for h in h_lower)
+    has_pt = any("sugerid" in h or "pt-br" in h or "tradução" in h or "português" in h for h in h_lower)
     if not (has_en and has_pt):
         return None
 
     mapping: Dict[str, Any] = {
         "id_col": None,
+        "speaker_col": None,
         "en_col": None,
         "en_desc_col": None,
         "pt_col": None,
@@ -127,7 +145,7 @@ def classify_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
             mapping["en_desc_col"] = idx
         elif ("descrição sugerida" in h) or ("desc" in h and "sugerid" in h):
             mapping["pt_desc_col"] = idx
-        elif "original" in h or "en-us" in h or "padrão (en" in h:
+        elif "original" in h or "en-us" in h or "padrão (en" in h or "texto original" in h:
             if mapping["en_col"] is None:
                 mapping["en_col"] = idx
         elif "alternativa" in h or "opção b" in h:
@@ -135,13 +153,23 @@ def classify_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
         elif "sugerid" in h or "pt-br" in h or "tradução" in h:
             if mapping["pt_col"] is None:
                 mapping["pt_col"] = idx
-        elif any(k in h for k in ("endereço", "offset", "tag no script", "script / offset")):
+        elif any(k in h for k in ("personagem", "falante", "interlocutor", "ator")):
+            mapping["speaker_col"] = idx
+        elif any(k in h for k in ("endereço", "offset", "tag no script", "script / offset", "id", "tag", "código", "ponteiro")):
             if mapping["id_col"] is None:
                 mapping["id_col"] = idx
             else:
                 mapping["context_cols"].append(idx)
+        elif "contexto" in h and any(k in " ".join(h_lower) for k in ("id", "offset", "script", "endereço")):
+            if mapping["speaker_col"] is None:
+                mapping["speaker_col"] = idx
+            else:
+                mapping["context_cols"].append(idx)
         else:
             mapping["context_cols"].append(idx)
+
+    if mapping["pt_col"] is None and mapping["pt_desc_col"] is not None:
+        mapping["pt_col"] = mapping["pt_desc_col"]
 
     if mapping["en_col"] is None or mapping["pt_col"] is None:
         return None
@@ -149,8 +177,67 @@ def classify_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
     return mapping
 
 
+def load_project_character_catalog() -> None:
+    """
+    Escaneia catalogo-de-personagens.md ou arquivos de documentação para identificar
+    os personagens definidos especificamente para o projeto.
+    """
+    PROJECT_CHARACTERS.clear()
+    cat_file = MD_DIR / "catalogo-de-personagens.md"
+    if not cat_file.is_file():
+        return
+
+    try:
+        text = cat_file.read_text(encoding="utf-8")
+        # Procura por seções '### `CHR_...` — Nome ➔ **Display**' ou '### Nome'
+        for m in re.finditer(r"###\s+(?:`[^`]+`\s*—\s*)?([^\n➔]+)(?:➔\s*\*\*([^\*]+)\*\*)?", text):
+            raw = (m.group(2) or m.group(1)).strip()
+            clean = re.sub(r"\(.*?\)", "", raw).strip()
+            c_id = clean.lower().replace(" ", "_")
+            if c_id and c_id not in PROJECT_CHARACTERS:
+                PROJECT_CHARACTERS[c_id] = {
+                    "id": c_id,
+                    "name": clean,
+                    "gender": "neutral",
+                    "role": "Personagem do Jogo",
+                    "icon": "👤",
+                    "category": "Personagens Principais",
+                }
+    except Exception:
+        pass
+
+
+def build_global_speaker_map() -> None:
+    """
+    Escaneia arquivos de diálogo com colunas explícitas de personagem para
+    construir uma base unificada (script_id, string_id) -> falante.
+    """
+    GLOBAL_SCRIPT_SPEAKERS.clear()
+    load_project_character_catalog()
+    for f in MD_DIR.rglob("*.md"):
+        fname = f.name
+        if fname.startswith(("00-", "01-", "02-", "03-", "04-", "05-", "06-", "07-")):
+            continue
+        try:
+            with open(f, "r", encoding="utf-8", errors="ignore") as fp:
+                for line in fp:
+                    if not line.startswith("|") or "---" in line or "Original" in line:
+                        continue
+                    cols = [c.strip() for c in line.split("|")[1:-1]]
+                    if len(cols) >= 3:
+                        m = re.search(r"#?(\d+)\s*\[?(\d+)\]?", cols[0])
+                        if m:
+                            s_id = int(m.group(1))
+                            str_id = int(m.group(2))
+                            clean_sp = cols[1].replace("**", "").replace("`", "").strip()
+                            if clean_sp and not clean_sp.lower().startswith("0x") and not clean_sp.lower().startswith("opcode"):
+                                GLOBAL_SCRIPT_SPEAKERS[(s_id, str_id)] = clean_sp
+        except Exception:
+            pass
+
+
 def list_translation_md_files() -> List[Dict[str, Any]]:
-    """Lista todos os arquivos .md de tradução (na raiz e subpastas de ARQUIVOS md) com estatísticas."""
+    """Lista todos os arquivos .md de tradução com estatísticas de progresso."""
     files = sorted(MD_DIR.rglob("*.md"), key=lambda p: (p.name, p.as_posix()))
     result = []
     for f in files:
@@ -170,76 +257,161 @@ def list_translation_md_files() -> List[Dict[str, Any]]:
     return result
 
 
-def canonicalize_character(raw_name: str) -> Tuple[str, str]:
+def canonicalize_character(
+    raw_name: str,
+    context: str = "",
+    text: str = "",
+) -> Tuple[str, str, str, str, str, str]:
     """
-    Normaliza um nome de personagem bruto extraído de tabelas/contexto.
-    Retorna (id_canônico, nome_exibição).
+    Normaliza um nome de personagem bruto e extrai seus atributos de gênero e categoria.
+    Retorna:
+      (char_id, display_name, gender, role, icon, category)
+      onde gender é 'male' | 'female' | 'both' | 'neutral'
     """
     if not raw_name:
-        return "geral", "Cena / Geral"
-    
-    clean = re.sub(r"\(.*?\)", "", raw_name).strip()
+        return "geral", "Cena / Geral", "neutral", "Cena", "🎬", "Cena"
+
+    clean = raw_name.strip()
     c_lower = clean.lower()
 
-    if any(k in c_lower for k in ("protagonista", "cleru", "pratty", "{player}", "protagonist")):
-        return "protagonist", "Protagonista (Cleru / Pratty)"
-    if any(k in c_lower for k in ("amariss", "mãe", "mother")):
-        return "amariss", "Amariss (Mãe)"
-    if any(k in c_lower for k in ("mestre bron", "bron", "master bron")):
-        return "bron", "Mestre Bron"
-    if "rasho" in c_lower:
-        return "rasho", "Rasho"
-    if "sanary" in c_lower:
-        return "sanary", "Sanary"
-    if "sugar" in c_lower:
-        return "sugar", "Sugar"
-    if "kutty" in c_lower:
-        return "kutty", "Kutty"
-    if "zantek" in c_lower:
-        return "zantek", "Zantek"
-    if "chaves" in c_lower:
-        return "chaves", "Chaves"
-    if "kenon" in c_lower:
-        return "kenon", "Kenon"
-    if "razzy" in c_lower:
-        return "razzy", "Razzy"
-    if "ariel" in c_lower:
-        return "ariel", "Ariel"
-    if "varil" in c_lower:
-        return "varil", "Varil"
-    if "sakuro" in c_lower:
-        return "sakuro", "Sakuro (Lord Safira)"
-    if "kouren" in c_lower:
-        return "kouren", "Kouren (Lorde Rubi)"
-    if any(k in c_lower for k in ("shintetsu", "pai", "father")):
-        return "shintetsu", "Shintetsu (Pai)"
-    if "lynn" in c_lower:
-        return "lynn", "Lynn"
-    if "blaire" in c_lower:
-        return "blaire", "Blaire"
-    if "zeed" in c_lower:
-        return "zeed", "Zeed"
-    if "parista" in c_lower:
-        return "parista", "Parista"
-    if any(k in c_lower for k in ("sistema", "aviso", "tela", "menu", "status", "system")):
-        return "system", "Sistema / Narração"
-    if any(k in c_lower for k in ("escolha", "choice")):
-        return "choice", "Escolha do Jogador"
+    # 1. Escolhas de Diálogo
+    if "escolha" in c_lower or "choice" in c_lower:
+        if any(k in c_lower for k in ("masc", "homem", "garoto", "cleru", "edgar", "bost")):
+            return "choice_male", "Escolha ♂ (Herói)", "male", "Opção de Diálogo (♂)", "🗳️", "Protagonistas & Escolhas"
+        if any(k in c_lower for k in ("fem", "mulher", "garota", "pratty", "aera", "prat")):
+            return "choice_female", "Escolha ♀ (Heroína)", "female", "Opção de Diálogo (♀)", "🗳️", "Protagonistas & Escolhas"
+        return "choice", "Escolha do Jogador", "both", "Opção de Diálogo", "🗳️", "Protagonistas & Escolhas"
 
-    c_name = clean.title() if clean.islower() else clean
-    return clean.lower().replace(" ", "_"), c_name
+    # 2. Protagonistas Canônicos
+    if any(k in c_lower for k in ("cleru", "edgar", "bost", "{player} (masc)", "{player} (edgar)", "{player} (cleru)")):
+        return "hero_male", "♂ Herói", "male", "Herói (Protagonista)", "♂", "Protagonistas & Escolhas"
+    if any(k in c_lower for k in ("pratty", "aera", "prat", "{player} (fem)", "{player} (aera)", "{player} (pratty)")):
+        return "hero_female", "♀ Heroína", "female", "Heroína (Protagonista)", "♀", "Protagonistas & Escolhas"
+
+    # 3. Protagonista Compartilhado / Genérico
+    if any(k in c_lower for k in ("protagonista", "{player}", "protagonist", "player")):
+        ctx_l = (context + " " + text).lower()
+        if any(k in ctx_l for k in ("(masc)", "(edgar)", "(cleru)", "ramo cleru", "ramo edgar", "ramo masculino", "hardest steel")):
+            return "hero_male", "♂ Herói", "male", "Herói (Protagonista)", "♂", "Protagonistas & Escolhas"
+        if any(k in ctx_l for k in ("(fem)", "(aera)", "(pratty)", "ramo pratty", "ramo aera", "ramo feminino", "toughest chain")):
+            return "hero_female", "♀ Heroína", "female", "Heroína (Protagonista)", "♀", "Protagonistas & Escolhas"
+        return "protagonist", "👥 Protagonista (Ambos)", "both", "Protagonista (Compartilhado)", "👥", "Protagonistas & Escolhas"
+
+    # 4. Companheiros e Guardiões
+    if any(k in c_lower for k in ("partner", "parceiro", "guardião", "guardian", "beast")):
+        return "partner", "Companheiro(a)", "both", "Companheiro(a) de Jornada", "🐾", "Companheiros & Guardiões"
+    if any(k in c_lower for k in ("rasho", "arno")):
+        return c_lower, clean.title(), "male", "Companheiro Guerreiro", "🐾", "Companheiros & Guardiões"
+    if any(k in c_lower for k in ("sugar", "dinah")):
+        return c_lower, clean.title(), "female", "Companheira Mística / Fada", "🧚", "Companheiros & Guardiões"
+    if any(k in c_lower for k in ("exeld", "zantek", "run-d")):
+        return c_lower, clean.title(), "neutral", "Companheiro Autômato / Mecânico", "🤖", "Companheiros & Guardiões"
+    if any(k in c_lower for k in ("loki", "kutty")):
+        return c_lower, clean.title(), "male", "Companheiro Espiritual", "😈", "Companheiros & Guardiões"
+
+    # 5. Mentores e Personagens Centrais
+    if any(k in c_lower for k in ("mestre", "master", "blaire", "bron")):
+        return "mentor", clean.title() if clean else "Mestre / Mentor", "male", "Mestre / Mentor", "🔨", "Personagens Principais"
+    if any(k in c_lower for k in ("mãe", "mother", "amariss")):
+        return "mother", "Mãe do Protagonista", "female", "Família do Protagonista", "👩", "Personagens Principais"
+    if any(k in c_lower for k in ("pai", "father", "shintetsu")):
+        return "father", "Pai do Protagonista", "male", "Família do Protagonista", "⚡", "Personagens Principais"
+    if any(k in c_lower for k in ("irmão", "irmã", "sibling", "orin")):
+        return "sibling", clean.title() if clean else "Irmão(ã)", "both", "Irmão(ã) Adotivo(a)", "🧑", "Personagens Principais"
+    if any(k in c_lower for k in ("rival", "sanary", "varil", "ryouga", "tatiana")):
+        return clean.lower().replace(" ", "_"), clean.title(), "both", "Rival / Oponente", "⚔️", "Personagens Principais"
+
+    # 6. NPCs e Sistema
+    if any(k in c_lower for k in ("lojista", "comerciante", "shopkeeper", "vendedor")):
+        return "lojista", "Lojista", "neutral", "Comerciante", "🏪", "NPCs do Jogo"
+    if any(k in c_lower for k in ("guarda", "guard", "soldado")):
+        return "guarda", "Guarda", "male", "Guarda / Vigia", "💂", "NPCs do Jogo"
+    if any(k in c_lower for k in ("invocador", "summoner", "mago")):
+        return "invocador", "Invocador", "neutral", "Invocador", "🧙", "NPCs do Jogo"
+    if any(k in c_lower for k in ("morador", "villager", "aldeão", "cidadão", "ancião", "elder")):
+        return "morador", "Habitante do Local", "neutral", "NPC da Cidade", "👤", "NPCs do Jogo"
+    if any(k in c_lower for k in ("sistema", "aviso", "tela", "menu", "status", "system")):
+        return "system", "Sistema / Narração", "neutral", "Interface / HUD", "⚙️", "Sistema & Interface"
+
+    clean_name = re.sub(r"\(.*?\)", "", clean).strip()
+    c_name = clean_name.title() if clean_name.islower() else clean_name
+    c_id = clean_name.lower().replace(" ", "_")
+
+    if c_id in PROJECT_CHARACTERS:
+        meta = PROJECT_CHARACTERS[c_id]
+        return c_id, meta["name"], meta["gender"], meta["role"], meta["icon"], meta["category"]
+
+    return c_id, c_name, "neutral", "Personagem", "👤", "NPCs do Jogo"
+
+
+def infer_gender_branch(
+    speaker_id: str,
+    target_id: str,
+    sec: str,
+    ctx: str,
+    en: str,
+    pt: str,
+) -> Tuple[str, str]:
+    """
+    Determina o ramo de gênero do jogador para a linha de diálogo:
+      'male'   -> ♂ Ramo Masculino
+      'female' -> ♀ Ramo Feminino
+      'both'   -> 👥 Ramo Compartilhado (Ambos)
+      'npc'    -> 🗣️ Diálogo Geral
+      'system' -> ⚙️ Sistema
+    """
+    # 1. Falante é o herói ou heroína diretamente
+    if speaker_id in ("hero_male", "choice_male", "cleru", "edgar"):
+        return "male", "♂ Ramo Masculino"
+    if speaker_id in ("hero_female", "choice_female", "pratty", "aera"):
+        return "female", "♀ Ramo Feminino"
+
+    # 2. Contexto de seção / título
+    all_ctx = f"{sec} {ctx}".lower()
+    if any(k in all_ctx for k in ("(masc)", "(edgar)", "(cleru)", "(bost)", "ramo cleru", "ramo edgar", "ramo masculino")):
+        return "male", "♂ Ramo Masculino"
+    if any(k in all_ctx for k in ("(fem)", "(aera)", "(pratty)", "(prat)", "ramo pratty", "ramo aera", "ramo feminino")):
+        return "female", "♀ Ramo Feminino"
+
+    # 3. Destinatário é o herói ou heroína diretamente
+    if target_id in ("hero_male", "cleru", "edgar"):
+        return "male", "♂ Ramo Masculino"
+    if target_id in ("hero_female", "pratty", "aera"):
+        return "female", "♀ Ramo Feminino"
+
+    # 4. Pistas textuais de gênero em português ou inglês
+    text_check = f"{en} {pt}".lower()
+    has_male = bool(MALE_CUES.search(text_check))
+    has_fem = bool(FEMALE_CUES.search(text_check))
+    if has_male and not has_fem and ("{player}" in text_check or target_id in ("protagonist", "player", "hero_male", "hero_female")):
+        return "male", "♂ Ramo Masculino"
+    if has_fem and not has_male and ("{player}" in text_check or target_id in ("protagonist", "player", "hero_male", "hero_female")):
+        return "female", "♀ Ramo Feminino"
+
+    # 5. Fala compartilhada pelo protagonista
+    if speaker_id in ("protagonist", "choice") or target_id in ("protagonist", "player"):
+        return "both", "👥 Ramo Compartilhado (Ambos)"
+
+    # 6. Sistema ou Mensagem técnica
+    if speaker_id == "system":
+        return "system", "⚙️ Sistema"
+
+    return "npc", "🗣️ Diálogo Geral"
 
 
 def enrich_entries(entries: List[Dict[str, Any]], doc_title: str) -> List[Dict[str, Any]]:
     """
-    Enriquece as entradas identificando Falante, Destinatário, se é Pensamento,
-    Script Group e estatísticas completas de personagens da cena.
+    Enriquece as entradas identificando Falante, Destinatário, Gênero do Jogador,
+    Papel Narrativo, Ícones e estatísticas completas de personagens da cena.
     """
     if not entries:
         return []
 
-    # 1ª Passada: detecta Script Group e Falante Bruto
-    for idx, e in enumerate(entries):
+    if not GLOBAL_SCRIPT_SPEAKERS:
+        build_global_speaker_map()
+
+    # 1ª Passada: detecta Script Group, Falante Bruto e Atributos Básicos
+    for e in entries:
         ref_id = e.get("ref_id", "")
         sec = e.get("section", "")
         ctx = e.get("context", "")
@@ -247,143 +419,198 @@ def enrich_entries(entries: List[Dict[str, Any]], doc_title: str) -> List[Dict[s
         pt = e.get("pt_text", "")
 
         # Grupo de Script / Cena
-        m_scr = re.search(r"#(\d+)", ref_id) or re.search(r"#(\d+)", sec)
+        m_scr = re.search(r"#?(\d+)", ref_id) or re.search(r"#?(\d+)", sec)
         if m_scr:
-            s_group = f"Script #{m_scr.group(1)}"
+            s_group = f"Script #{int(m_scr.group(1)):04d}"
         elif sec:
             s_group = sec.split("›")[0].strip()
         else:
             s_group = doc_title or "Geral"
         e["script_group"] = s_group
 
-        # Extrai falante bruto
-        raw_speaker = ""
-        m_ctx = re.search(r"Personagem(?:\s*/\s*Contexto)?:\s*([^|]+)", ctx, re.I)
-        if m_ctx:
-            raw_speaker = m_ctx.group(1).strip()
-        elif "Falante:" in ctx:
-            raw_speaker = ctx.split("Falante:")[1].split("|")[0].strip()
-        else:
-            # Verifica tag embutida no texto tipo *(Protagonista:)*
+        # Extração de falante
+        raw_speaker = e.get("raw_speaker_extracted", "")
+        if not raw_speaker:
+            m_ctx = re.search(r"(?:Personagem|Contexto|Falante)(?:\s*/\s*Contexto)?:\s*([^|]+)", ctx, re.I)
+            if m_ctx:
+                cand = m_ctx.group(1).strip()
+                if not cand.lower().startswith("0x") and not cand.lower().startswith("opcode"):
+                    raw_speaker = cand
+
+        if not raw_speaker:
+            m_id = re.search(r"#?(\d+)\s*\[?(\d+)\]?", ref_id)
+            if m_id:
+                s_num = int(m_id.group(1))
+                str_num = int(m_id.group(2))
+                raw_speaker = GLOBAL_SCRIPT_SPEAKERS.get((s_num, str_num), "")
+
+        if not raw_speaker:
             m_text = re.search(r"\*\(([^:)]+):?\)\*", en) or re.search(r"\*\(([^:)]+):?\)\*", pt)
             if m_text:
                 raw_speaker = m_text.group(1).strip()
-            elif any(k in sec.lower() for k in ("mestre bron", "amariss", "sugar", "rasho", "sanary", "kutty", "chaves")):
-                for k in ("mestre bron", "amariss", "sugar", "rasho", "sanary", "kutty", "chaves"):
-                    if k in sec.lower():
-                        raw_speaker = k.title()
-                        break
             elif any(k in doc_title.lower() for k in ("interface", "menu", "armas", "itens", "bestiário")):
                 raw_speaker = "Sistema"
             else:
                 raw_speaker = "Geral"
 
-        s_id, s_name = canonicalize_character(raw_speaker)
+        s_id, s_name, s_gender, s_role, s_icon, s_cat = canonicalize_character(
+            raw_speaker, context=f"{sec} {ctx}", text=f"{en} {pt}"
+        )
         e["speaker_raw"] = raw_speaker
         e["speaker"] = s_name
         e["speaker_id"] = s_id
+        e["speaker_gender"] = s_gender
+        e["actor_role"] = s_role
+        e["actor_icon"] = s_icon
+        e["actor_category"] = s_cat
 
         # Pensamento / Monólogo
         clean_en = en.strip()
         is_thought = (clean_en.startswith("(") and clean_en.endswith(")")) or "(Pensamento)" in ctx or "(Monólogo)" in ctx
         e["is_thought"] = is_thought
 
-    # 2ª Passada: Agrupa por script_group e infere Destinatário
+    # 2ª Passada: Agrupa por cena/script e infere Destinatário e Ramo de Gênero
     groups: Dict[str, List[int]] = {}
     for idx, e in enumerate(entries):
         groups.setdefault(e["script_group"], []).append(idx)
 
     for s_group, indices in groups.items():
-        # Coleta participantes não-sistema e não-escolha da cena
-        participants = []
+        group_has_male = any(
+            entries[i]["speaker_id"] in ("hero_male", "choice_male", "cleru", "edgar")
+            or "(masc)" in entries[i]["context"].lower()
+            for i in indices
+        )
+        group_has_female = any(
+            entries[i]["speaker_id"] in ("hero_female", "choice_female", "pratty", "aera")
+            or "(fem)" in entries[i]["context"].lower()
+            for i in indices
+        )
+
+        participants: List[str] = []
         for i in indices:
             sp_id = entries[i]["speaker_id"]
-            if sp_id not in ("system", "choice", "geral") and sp_id not in participants:
+            if sp_id not in ("system", "choice", "choice_male", "choice_female", "geral") and sp_id not in participants:
                 participants.append(sp_id)
 
-        last_non_self_speaker_id: Optional[str] = None
         last_speaker_id: Optional[str] = None
+        last_non_self_speaker_id: Optional[str] = None
 
         for i in indices:
             e = entries[i]
             sp_id = e["speaker_id"]
             ctx = e.get("context", "")
-            en_lower = e.get("en_text", "").lower()
-            pt_lower = e.get("pt_text", "").lower()
+            text_combo = f"{e.get('pt_text', '')} {e.get('en_text', '')}"
 
-            target_name = ""
             target_id = ""
+            target_name = ""
 
             if e["is_thought"]:
                 target_name = "💭 Pensamento (Monólogo)"
                 target_id = "thought"
-            elif "(c/ rasho)" in ctx.lower():
-                target_id, target_name = canonicalize_character("Rasho")
-            elif "(c/ sanary)" in ctx.lower():
-                target_id, target_name = canonicalize_character("Sanary")
-            elif "(c/ sugar)" in ctx.lower():
-                target_id, target_name = canonicalize_character("Sugar")
-            elif "(c/ kutty)" in ctx.lower():
-                target_id, target_name = canonicalize_character("Kutty")
-            elif any(w in en_lower[:30] or w in pt_lower[:30] for w in ("mother", "mãe", "mamãe")) and sp_id != "amariss":
-                target_id, target_name = canonicalize_character("Amariss")
-            elif any(w in en_lower[:30] or w in pt_lower[:30] for w in ("master bron", "mestre bron")) and sp_id != "bron":
-                target_id, target_name = canonicalize_character("Mestre Bron")
-            elif "sugar" in en_lower[:30] and sp_id != "sugar":
-                target_id, target_name = canonicalize_character("Sugar")
-            elif "rasho" in en_lower[:30] and sp_id != "rasho":
-                target_id, target_name = canonicalize_character("Rasho")
-            elif "sanary" in en_lower[:30] and sp_id != "sanary":
-                target_id, target_name = canonicalize_character("Sanary")
-            elif "kutty" in en_lower[:30] and sp_id != "kutty":
-                target_id, target_name = canonicalize_character("Kutty")
             elif sp_id == "system":
                 target_name = "Jogador"
                 target_id = "player"
-            elif sp_id == "choice":
+            elif sp_id in ("choice", "choice_male", "choice_female"):
                 target_name = "Interlocutor da Cena"
                 target_id = "interlocutor"
             else:
-                # Se mudou de falante, o destinatário é o anterior!
-                if last_speaker_id and last_speaker_id != sp_id and last_speaker_id not in ("system", "choice"):
-                    target_id, target_name = canonicalize_character(last_speaker_id)
-                # Se o mesmo falante continua falando
+                candidate_id: Optional[str] = None
+                if last_speaker_id and last_speaker_id != sp_id and last_speaker_id not in ("system", "choice", "choice_male", "choice_female"):
+                    candidate_id = last_speaker_id
                 elif last_non_self_speaker_id and last_non_self_speaker_id != sp_id:
-                    target_id, target_name = canonicalize_character(last_non_self_speaker_id)
-                # Se há exatamente 2 participantes na cena
+                    candidate_id = last_non_self_speaker_id
                 elif len(participants) == 2:
-                    other_id = participants[1] if participants[0] == sp_id else participants[0]
-                    target_id, target_name = canonicalize_character(other_id)
-                elif len(participants) > 1 and sp_id != "protagonist":
-                    # Maioria dos NPCs fala com o Protagonista
-                    target_id, target_name = canonicalize_character("Protagonista")
+                    candidate_id = participants[1] if participants[0] == sp_id else participants[0]
+                elif len(participants) > 1 and sp_id not in ("hero_male", "hero_female", "protagonist"):
+                    if group_has_male and not group_has_female:
+                        candidate_id = "hero_male"
+                    elif group_has_female and not group_has_male:
+                        candidate_id = "hero_female"
+                    else:
+                        candidate_id = "protagonist"
+
+                if candidate_id == sp_id:
+                    if last_non_self_speaker_id:
+                        candidate_id = last_non_self_speaker_id
+                    else:
+                        others = [p for p in participants if p != sp_id]
+                        candidate_id = others[0] if others else None
+
+                if candidate_id:
+                    if candidate_id in ("protagonist", "hero_male", "hero_female"):
+                        if MALE_CUES.search(text_combo) and not FEMALE_CUES.search(text_combo):
+                            candidate_id = "hero_male"
+                        elif FEMALE_CUES.search(text_combo) and not MALE_CUES.search(text_combo):
+                            candidate_id = "hero_female"
+                        elif group_has_male and not group_has_female:
+                            candidate_id = "hero_male"
+                        elif group_has_female and not group_has_male:
+                            candidate_id = "hero_female"
+                    target_id, target_name, _, _, _, _ = canonicalize_character(candidate_id)
                 else:
                     target_name = "Cena / Todos"
                     target_id = "geral"
 
+            # Determina o Ramo de Gênero
+            branch, branch_label = infer_gender_branch(
+                sp_id, target_id, e.get("section", ""), ctx, e.get("en_text", ""), e.get("pt_text", "")
+            )
+
+            # Refina destinatário se o ramo for estritamente masculino ou feminino
+            if branch == "male" and target_id == "protagonist":
+                target_id, target_name, _, _, _, _ = canonicalize_character("hero_male")
+            elif branch == "female" and target_id == "protagonist":
+                target_id, target_name, _, _, _, _ = canonicalize_character("hero_female")
+
             e["addressee"] = target_name
             e["addressee_id"] = target_id
+            e["gender_branch"] = branch
+            e["gender_label"] = branch_label
 
-            if sp_id not in ("system", "choice"):
+            # Metadados do destinatário
+            t_id, t_name, t_gen, t_role, t_icon, t_cat = canonicalize_character(target_id)
+            e["target_role"] = t_role
+            e["target_icon"] = t_icon
+
+            if sp_id not in ("system", "choice", "choice_male", "choice_female"):
                 if last_speaker_id and last_speaker_id != sp_id:
                     last_non_self_speaker_id = last_speaker_id
                 last_speaker_id = sp_id
 
-    # 3ª Passada: Monta lista consolidada de personagens para os filtros
+    # 3ª Passada: Constrói a lista estruturada de personagens para filtros da UI
     char_map: Dict[str, Dict[str, Any]] = {}
     for e in entries:
         s_id = e["speaker_id"]
-        s_name = e["speaker"]
         if s_id not in char_map:
-            char_map[s_id] = {"id": s_id, "name": s_name, "spoken": 0, "addressed": 0, "total": 0}
+            char_map[s_id] = {
+                "id": s_id,
+                "name": e["speaker"],
+                "gender": e["speaker_gender"],
+                "role": e["actor_role"],
+                "icon": e["actor_icon"],
+                "category": e["actor_category"],
+                "spoken": 0,
+                "addressed": 0,
+                "total": 0,
+            }
         char_map[s_id]["spoken"] += 1
         char_map[s_id]["total"] += 1
 
         t_id = e["addressee_id"]
-        t_name = e["addressee"]
         if t_id and t_id not in ("thought", "geral", "player", "interlocutor"):
             if t_id not in char_map:
-                char_map[t_id] = {"id": t_id, "name": t_name, "spoken": 0, "addressed": 0, "total": 0}
+                t_id_c, t_name_c, t_gen_c, t_role_c, t_icon_c, t_cat_c = canonicalize_character(t_id)
+                char_map[t_id] = {
+                    "id": t_id,
+                    "name": t_name_c,
+                    "gender": t_gen_c,
+                    "role": t_role_c,
+                    "icon": t_icon_c,
+                    "category": t_cat_c,
+                    "spoken": 0,
+                    "addressed": 0,
+                    "total": 0,
+                }
             char_map[t_id]["addressed"] += 1
             char_map[t_id]["total"] += 1
 
@@ -438,7 +665,6 @@ def parse_md_file(filepath: Path) -> Dict[str, Any]:
 
             while i < n and lines[i].strip().startswith("|"):
                 row_cells = split_md_row(lines[i])
-                # Garante que a linha tem células suficientes
                 while len(row_cells) < len(headers):
                     row_cells.append("")
 
@@ -464,6 +690,10 @@ def parse_md_file(filepath: Path) -> Dict[str, Any]:
                 ref_id = ""
                 if col_map["id_col"] is not None and col_map["id_col"] < len(row_cells):
                     ref_id = _strip_md_formatting(row_cells[col_map["id_col"]])
+
+                raw_sp_extracted = ""
+                if col_map["speaker_col"] is not None and col_map["speaker_col"] < len(row_cells):
+                    raw_sp_extracted = _strip_md_formatting(row_cells[col_map["speaker_col"]])
 
                 ctx_parts = []
                 for c_idx in col_map["context_cols"]:
@@ -492,6 +722,7 @@ def parse_md_file(filepath: Path) -> Dict[str, Any]:
                     "sep_line_index": sep_line_idx,
                     "section": section_label,
                     "ref_id": ref_id,
+                    "raw_speaker_extracted": raw_sp_extracted,
                     "context": " | ".join(ctx_parts) if ctx_parts else section_label,
                     "en_text": en_text,
                     "en_desc": en_desc,
@@ -537,7 +768,6 @@ def update_md_entry(
     if not (0 <= line_index < len(lines)):
         raise ValueError(f"Linha inválida: {line_index}")
 
-    # Encontra o cabeçalho da tabela à qual esta linha pertence
     h_idx = line_index - 1
     while h_idx >= 0 and lines[h_idx].strip().startswith("|"):
         h_idx -= 1
@@ -549,7 +779,6 @@ def update_md_entry(
     if col_map is None:
         raise ValueError("Não foi possível identificar as colunas da tabela.")
 
-    # Se a tabela ainda não possui coluna "Status", adiciona no cabeçalho, separador e todas as linhas da tabela!
     if col_map["status_col"] is None:
         headers.append("Status")
         lines[header_line_idx] = join_md_row(headers)
@@ -569,7 +798,6 @@ def update_md_entry(
 
         col_map["status_col"] = len(headers) - 1
 
-    # Agora atualiza a linha específica
     row_cells = split_md_row(lines[line_index])
     while len(row_cells) < len(headers):
         row_cells.append("")
@@ -578,8 +806,6 @@ def update_md_entry(
     old_pt_raw = row_cells[pt_col].strip()
     use_backticks = not old_pt_raw.startswith("**")
 
-    # Preserva a alternativa inline *(ou ...)* se o usuário não quiser perdê-la?
-    # Não: ao confirmar, salvamos o texto escolhido limpo na coluna PT-BR!
     row_cells[pt_col] = text_to_md_cell(new_pt_text, use_backticks=use_backticks)
 
     if col_map["pt_desc_col"] is not None and new_pt_desc is not None:
@@ -606,6 +832,7 @@ def export_embedded_js() -> None:
     parseados para que `validator_ui.html` funcione instantaneamente mesmo se
     aberto direto via `file:///...`.
     """
+    build_global_speaker_map()
     files = sorted(MD_DIR.rglob("*.md"), key=lambda p: (p.name, p.as_posix()))
     cats = []
     files_map = {}
@@ -632,7 +859,6 @@ def export_embedded_js() -> None:
 
 class ValidatorRequestHandler(BaseHTTPRequestHandler):
     def log_message(self, format: str, *args: Any) -> None:
-        # Silencia logs excessivos no terminal
         pass
 
     def _send_cors_headers(self) -> None:
@@ -701,6 +927,34 @@ class ValidatorRequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
+
+        if parsed.path == "/api/build":
+            try:
+                build_script = ROOT_DIR / "tools" / "build_ptbr_rom.py"
+                build_bat = ROOT_DIR / "Compilar_ROM_PTBR.bat"
+                if build_script.is_file():
+                    cmd = [sys.executable, str(build_script)]
+                elif build_bat.is_file():
+                    cmd = ["cmd.exe", "/c", str(build_bat)]
+                else:
+                    self._send_json({"ok": False, "error": "Script ou rotina de compilação da ROM não encontrada."}, status=404)
+                    return
+
+                p = subprocess.run(
+                    cmd,
+                    cwd=str(ROOT_DIR),
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                )
+                if p.returncode == 0:
+                    self._send_json({"ok": True, "output": p.stdout})
+                else:
+                    self._send_json({"ok": False, "error": p.stderr or p.stdout}, status=500)
+            except Exception as exc:
+                self._send_json({"ok": False, "error": str(exc)}, status=500)
+            return
+
         if parsed.path == "/api/save":
             length = int(self.headers.get("Content-Length", "0"))
             raw_body = self.rfile.read(length).decode("utf-8")
@@ -728,6 +982,7 @@ class ValidatorRequestHandler(BaseHTTPRequestHandler):
 
 
 def main() -> int:
+    build_global_speaker_map()
     export_embedded_js()
     port = int(os.environ.get("VALIDATOR_PORT", "8765"))
     no_browser = "--no-browser" in sys.argv
@@ -735,9 +990,10 @@ def main() -> int:
     server = ThreadingHTTPServer(("127.0.0.1", port), ValidatorRequestHandler)
     url = f"http://127.0.0.1:{port}"
     print("=" * 72)
-    print(" VALIDADOR DE TRADUÇÃO GBA — SUMMON NIGHT: SWORDCRAFT STORY")
+    print(" VALIDADOR DE TRADUÇÃO GBA — SUÍTE DE PROCESSOS E ENGENHARIA")
     print("=" * 72)
     print(f" • Pasta monitorada : {MD_DIR}")
+    print(f" • Falantes mapeados: {len(GLOBAL_SCRIPT_SPEAKERS)} scripts/linhas")
     print(f" • Acesse no browser: {url}")
     print("=" * 72)
 
