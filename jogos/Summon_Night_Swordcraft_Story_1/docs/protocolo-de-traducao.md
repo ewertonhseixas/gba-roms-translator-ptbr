@@ -1,6 +1,6 @@
 # 📜 Protocolo Oficial de Tradução e Localização (PT-BR)
 **Projeto:** Summon Night: Swordcraft Story (GBA)  
-**Versão:** 1.0 — Diretriz Canônica  
+**Versão:** 1.2.0 — Diretriz Canônica  
 **Status:** Vital / Mandatório para todos os lotes de tradução e revisão  
 
 ---
@@ -13,8 +13,20 @@ A tradução deste projeto não é uma mera substituição literal de palavras d
 
 ## 🏛️ 2. Diretrizes Vitais do Projeto (Requisitos Centrais)
 
+### 2.0. Fase 0: Pré-Tradução Obrigatória — Criação do Catálogo de Personagens (`catalogo-de-personagens.md`)
+> [!IMPORTANT]
+> **REGRA DE OURO DA PRÉ-TRADUÇÃO:** É expressamente **PROIBIDO** iniciar a tradução de diálogos de qualquer lote sem antes preencher e consultar o **Catálogo de Personagens**.
+
+A criação do catálogo na pré-tradução garante que:
+1. Nenhuma personagem caia na "voz neutra/pasteurizada" de tradução automática.
+2. Cada falante tenha seu grau de formalidade, vocabulário e maneirismos fixados antes do texto começar.
+3. As relações de tratamento (apelidos, pronomes, reverência a mestres) sejam uniformes em todos os lotes.
+4. O assistente de IA receba o contexto dramático exato dos personagens ativos em cada cena.
+
+---
+
 ### 2.1. Localização por Classes, Papéis e Perfis de Personagens
-Cada personagem possui uma voz única (*character voice*), um vocabulário característico e um nível de formalidade próprio. A tradução deve manter essa distinção evidente:
+Cada personagem possui uma voz única (*character voice*), um vocabulário característico e um nível de formalidade próprio:
 
 *   **Mestres e Lordes (Ex: Mestre Bron, Sakuro, Lubert, Kouren):**
     *   *Tom:* Paternal, rústico, solene ou autoritário.
@@ -63,8 +75,8 @@ Para evitar quebras de imersão ("Você foi muito corajoso" quando jogando com P
     *   **Nomes Próprios de Nações/Mundos:** Lyndbaum, Silturn, Sapureth, Maetropa, Loreilal.
     *   **Nomes Próprios de Regiões:** Wystern, Mirana, Kagro, Rugista.
 *   **Nomes Compostos com Tradução Obrigatória:**
-    *   *Silver Guild* $\rightarrow$ **Guilda Prateada** (ou **Guilda de Prata**)
-    *   *Gold Guild* $\rightarrow$ **Guilda Dourada** (ou **Guilda de Ouro**)
+    *   *Silver Guild* $\rightarrow$ **Guilda Prateada**
+    *   *Gold Guild* $\rightarrow$ **Guilda Dourada**
     *   *Central Tower* $\rightarrow$ **Torre Central**
     *   *Marine Dungeon* $\rightarrow$ **Labirinto Marinho**
     *   *Cape Lighthouse* $\rightarrow$ **Farol do Cabo**
@@ -87,12 +99,11 @@ Para evitar quebras de imersão ("Você foi muito corajoso" quando jogando com P
     *   Se a frase estiver longa demais para a caixa de diálogo, ela deve ser **reescrita com vocabulário mais conciso**, e nunca mutilada com pontos de abreviação.
 *   **Nas Telas de Menus, Itens, Equipamentos e Sistema:**
     *   ✅ **PERMITIDAS E REGULAMENTADAS.**
-    *   Devido às limitações de largura de colunas (máximo de 8 a 16 caracteres para nomes de itens e 2 linhas de 26 a 30 caracteres para descrições), as abreviações devem seguir um padrão canônico (ver Seção 3.3).
+    *   Devido às limitações de largura de colunas (máximo de 8 a 16 caracteres para nomes de itens e 2 linhas de 26 a 30 caracteres para descrições), as abreviações devem seguir o padrão canônico da Seção 3.3.
 
 ---
 
 ### 2.6. Termos Adaptados: Estratégia de Introdução vs. Uso Comum
-Alguns termos-chave do universo de *Summon Night* são longos no português. Repeti-los por extenso a cada linha estoura a caixa de diálogo e torna a leitura enfadonha. Adota-se a seguinte estratégia de ciclo de vida do termo:
 
 | Termo Original | 1ª Apresentação (Lore / Solene / Tutorial) | Uso Corriqueiro nos Diálogos | Uso em Menus e UI | Motivo da Adaptação |
 | :--- | :--- | :--- | :--- | :--- |
@@ -106,12 +117,21 @@ Alguns termos-chave do universo de *Summon Night* são longos no português. Rep
 
 ---
 
-## ⚡ 3. Pilares Críticos Adicionados (Limitações Técnicas e Qualidade)
+### 2.7. Tipos de Técnicas de Armas (*Weapon Types*)
 
-Para garantir que a tradução seja viável tecnicamente e não cause bugs de renderização na ROM, adicionam-se os seguintes pilares vitais:
+| Termo Original (EN-US) | Menu de Técnicas / Forja | Diálogos da História | Observações de Métrica |
+| :--- | :--- | :--- | :--- |
+| **`Sword Type`** | **`Espada`** | **`Técnica com Espada`** | Uso conciso no menu e natural na narrativa. |
+| **`Axe Type`** | **`Machado`** | **`Técnica com Machado`** | Respeita limite de 35 caracteres por linha. |
+| **`Spear Type`** | **`Lança`** | **`Técnica com Lança`** | Evita anglicismos e termos soltos. |
+| **`Knuckle Type`** | **`Soqueira`** | **`Técnica com Soqueira`** | Padronizado para socos/garras/manoplas. |
+| **`Drill Type`** | **`Broca`** | **`Técnica com Broca`** | Categoria mecânica exclusiva do universo. |
+
+---
+
+## ⚡ 3. Pilares Críticos Técnicos (Limitações de Hardware)
 
 ### 3.1. Métricas Técnicas de Tela e Quebra de Linhas no GBA
-Conforme demonstrado na auditoria de métricas (`estudo-de-metricas-e-caracteres.md`):
 *   **Hard Limit:** **36 caracteres por linha** (Teto operacional absoluto da engine).
 *   **Zonas de Segurança:**
     *   🟢 **1 a 32 caracteres:** Ideal e 100% seguro contra encostar nas bordas.
@@ -119,8 +139,8 @@ Conforme demonstrado na auditoria de métricas (`estudo-de-metricas-e-caracteres
     *   🔴 **36+ caracteres:** **Proibido.** Risco de corte de texto (overflow) ou texto invisível fora da moldura.
 *   **Altura da Caixa de Diálogo:**
     *   A caixa padrão suporta no máximo **2 a 3 linhas** por avanço.
-    *   Sempre use quebra manual (`<br>` ou código de controle) em pontos sintáticos naturais (vírgulas, pausas, antes de conjunções).
-    *   **Proibição de Orfandade:** Nunca deixe artigos (`o`, `a`, `um`), pronomes ou preposições (`de`, `em`) isolados no final de uma linha se a palavra seguinte couber na próxima.
+    *   Sempre use quebra manual (`<br>` ou código de controle) em pontos sintáticos naturais.
+    *   **Proibição de Orfandade:** Nunca deixe artigos (`o`, `a`, `um`), pronomes ou preposições (`de`, `em`) isolados no final de uma linha.
 
 ---
 
@@ -136,13 +156,9 @@ As variáveis dinâmicas inseridas pelo código ASM do jogo não podem ser modif
 | `{VAR_4}` | Nome da magia invocada | Exemplo: *"Aprendeu {VAR_4}!"* |
 | `{MASTER}` | Nome do mestre/invocador antigo | Usar sem alterações. |
 
-> [!CAUTION]
-> **NUNCA** apague os colchetes/chaves `{}` ou `<>`. A ausência de um fecha-chaves trava a engine de script da ROM em loop infinito.
-
 ---
 
 ### 3.3. Tabela Canônica de Abreviações para Menus e Itens
-Para manter uniformidade nas descrições curtas e nomes de itens:
 
 | Palavra / Conceito | Abreviação Padronizada | Exemplo de Aplicação |
 | :--- | :---: | :--- |
@@ -174,29 +190,22 @@ Para manter uniformidade nas descrições curtas e nomes de itens:
 
 ---
 
-## 🔄 4. Ciclo de Qualidade e Validação em 4 Etapas (QA)
-
-Nenhum arquivo traduzido deve ser mesclado à ROM final sem passar pelo seguinte funil de controle:
+## 🔄 4. Ciclo de Qualidade e Validação em 5 Etapas (QA)
 
 ```mermaid
 flowchart LR
-    A["1. Tradução & Adaptação<br>(Markdown / Lote)"] --> B["2. Validador Automático<br>(Contagem de Caracteres & Tags)"]
-    B --> C["3. Revisão Textual Cruzada<br>(Gramática, Voz & Neutro)"]
-    C --> D["4. Teste In-Game<br>(mGBA / Port Nativo)"]
-    D --> E["✅ Pronto para Release"]
+    A["0. Pré-Tradução<br>(Catálogo de Personagens)"] --> B["1. Tradução & Adaptação<br>(Markdown / Lote)"]
+    B --> C["2. Validador Automático<br>(Contagem & Tags)"]
+    C --> D["3. Revisão Textual Cruzada<br>(Gramática, Voz & Neutro)"]
+    D --> E["4. Teste In-Game<br>(Port / Emulador)"]
+    E --> F["✅ Pronto para Release"]
 ```
-
-1.  **Etapa 1 — Tradução & Adaptação:** Tradução orientada pelo perfil dos personagens, neutralidade e uso dos termos adaptados.
-2.  **Etapa 2 — Validação Automatizada de Script:** Execução do `validator_ui.bat` ou script de métricas para conferir se há linhas com **mais de 35 caracteres**, tags corrompidas ou palavras em inglês.
-3.  **Etapa 3 — Revisão Textual Cruzada:** Leitura em voz alta para assegurar ritmo dramático, naturalidade e eliminação de termos rebuscados ou telegráficos.
-4.  **Etapa 4 — Teste In-Game:** Teste no emulador mGBA ou no executável nativo `summon_night_port.exe` para confirmar alinhamento visual, animação da caixa de texto e tempo de leitura.
 
 ---
 
 ## 📌 5. Checklist Rápido do Tradutor / Revisor
 
-Antes de dar uma linha ou arquivo como concluído, faça este teste mental:
-
+- [ ] O **Catálogo de Personagens** foi previamente consultado antes de traduzir a fala?
 - [ ] A frase respeita o limite de **32 a 35 caracteres por linha**?
 - [ ] O texto soa natural para um falante nativo de português brasileiro?
 - [ ] Se o jogador estiver com **Pratty**, a frase funciona perfeitamente sem soar masculina?
@@ -204,3 +213,4 @@ Antes de dar uma linha ou arquivo como concluído, faça este teste mental:
 - [ ] As tags como `{PLAYER}` e `{PARTNER}` estão intactas?
 - [ ] Foi eliminada qualquer abreviação do diálogo?
 - [ ] O termo adaptado foi usado corretamente (ex: *Lorde* ou *Mestre* no lugar de *Craftlord*)?
+- [ ] O tipo de técnica foi adaptado corretamente (*Técnica com Espada*, etc.)?

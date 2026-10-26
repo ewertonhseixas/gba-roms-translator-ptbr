@@ -48,8 +48,8 @@ backups/
 
 # Arquivos de log e temporários
 *.log
-_ferramentas_gerais/mGBA/portable.ini
-_ferramentas_gerais/mGBA/config.ini
+# Aplicativos e softwares utilitários de terceiros (não versionados)
+_ferramentas_gerais/
 
 # Configurações de IDEs e Sistemas Operacionais
 .vscode/

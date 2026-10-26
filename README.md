@@ -40,12 +40,8 @@ gba-roms-translator-ptbr/
 │       └── token_optimizer_batcher.py # Fatiador com injeção cirúrgica de contexto (Token Economy)
 │
 ├── 📁 protocolo_traducao/        # ✍️ PROTOCOLO MESTRE DE TRADUÇÃO & LOCALIZAÇÃO
-│   ├── PROTOCOLO_MESTRE_TRADUCAO.md # Diretrizes canônicas (Vozes, Gênero Neutro, QA)
+│   ├── PROTOCOLO_MESTRE_TRADUCAO.md # Diretrizes canônicas (Pré-tradução, Vozes, QA)
 │   └── README.md                 # Guia de diretrizes de escrita e adaptação
-│
-├── 📁 _ferramentas_gerais/       # Softwares utilitários independentes de plataforma
-│   ├── mGBA/                    # Emulador de precisão com depurador integrado
-│   └── crystaltile2/            # Editor hexadecimal e visualizador de padrões gráficos
 │
 ├── 📁 jogos/                     # Workspace local para projetos de jogos
 │   │
