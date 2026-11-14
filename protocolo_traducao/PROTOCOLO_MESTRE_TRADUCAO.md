@@ -109,8 +109,8 @@ O protocolo determina a utilização de **sintaxe neutra e epicena** para todas 
 ---
 
 ### 2.5. Coerência Narrativa e Terminológica Unificada
-*   **Fonte Única da Verdade:** Toda a tradução deve obedecer rigorosamente ao arquivo de Glossário do projeto (`02-glossario-e-terminologias.md`).
-*   Se um item, material ou monstro foi nomeado no Capítulo 1, ele **jamais** poderá receber uma variação sinônima nos capítulos posteriores.
+*   **Fonte Única da Verdade:** Toda a tradução da franquia *Summon Night* (todos os 13 jogos) deve obedecer rigorosamente ao **[Glossário Global da Franquia Summon Night](./GLOSSARIO_GLOBAL_SUMMON_NIGHT.md)** e ao arquivo local de Glossário do projeto (`02-glossario-personagens-e-locais.md`).
+*   Se um item, material ou monstro foi nomeado no Capítulo 1 (ou em outro jogo da franquia), ele **jamais** poderá receber uma variação sinônima nos capítulos ou jogos posteriores.
 *   Termos de mecânica (nomes de status, atributos, elementos e técnicas) devem ser idênticos no diálogo, na interface de batalha e nas notificações do sistema.
 
 ---
@@ -131,9 +131,9 @@ Termos conceituais próprios do universo do jogo que resultam em expressões lon
 
 | Fase | Contexto de Aplicação | Regra de Uso | Exemplo de Aplicação |
 | :--- | :--- | :--- | :--- |
-| **Fase 1: Introdução** | 1ª aparição, tutoriais, lore oficial e momentos solenes | Tradução completa e explicativa | *"Craftlord"* $\rightarrow$ **Lorde da Forja**<br>*"Craftknight"* $\rightarrow$ **Cavaleiro-Ferreiro**<br>*"Stray Summon"* $\rightarrow$ **Invocação Errante** |
-| **Fase 2: Diálogo Comum** | Conversas cotidianas, ritmo rápido de ação | Forma adaptada e enxuta | **Lorde**, **Mestre**, **Ferreiro**, **Forjador**, **Errante**, **Guardião** |
-| **Fase 3: Interface & Menus** | Listas de status, tabelas de títulos e menus | Forma sintetizada ou sigla oficial | **Lorde**, **Forjador**, **Errante** |
+| **Fase 1: Introdução** | 1ª aparição, tutoriais, lore oficial e momentos solenes | Tradução completa e explicativa | *"Craftlord"* $\rightarrow$ **Lorde Forjador**<br>*"Craftknight"* $\rightarrow$ **Cavaleiro Forjador**<br>*"Summon Stray"* $\rightarrow$ **Invocação Errante**<br>*"Summonite"* $\rightarrow$ **Pedra de Invocação** |
+| **Fase 2: Diálogo Comum** | Conversas cotidianas, ritmo rápido de ação | Forma adaptada e enxuta | **Lorde**, **Cavaleiro**, **Forjador**, **Errante**, **Guardião**, **Invocação** |
+| **Fase 3: Interface & Menus** | Listas de status, tabelas de títulos e menus | Forma sintetizada ou sigla oficial | **Lorde**, **Forjador**, **Errante**, **Pedra Invoc.** |
 
 ---
 

@@ -15,10 +15,27 @@ Este repositório reúne a metodologia oficial, os protocolos de extração estr
 
 ## 📂 Arquitetura do Repositório
 
-O repositório é enxuto e preserva apenas o pipeline operacional de desenvolvimento:
+O repositório é enxuto e preserva apenas o pipeline operacional de desenvolvimento e a hierarquia multi-agente do **GBA Localization Studio**:
 
 ```
 gba-roms-translator-ptbr/
+│
+├── 📁 .agents/                   # 🏛️ GBA LOCALIZATION STUDIO (Arquitetura em 3 Tiers)
+│   ├── 📁 agents/                # 7 Personas Especializadas (Direção, Liderança e Execução)
+│   │   ├── gba-localization-director.md    # Tier 1: Showrunner & Guardião do Glossário/Catálogo
+│   │   ├── gba-rom-hacking-director.md     # Tier 1: Engenharia ARM7TDMI, Ponteiros, VWF & Build
+│   │   ├── gba-narrative-lead.md           # Tier 2: Character Voice & Fatiamento Cirúrgico
+│   │   ├── gba-graphics-ui-lead.md         # Tier 2: Auditoria de Tiles/PNGs, Paletas & Glifos PT-BR
+│   │   ├── gba-dialogue-translator.md      # Tier 3: Tradução Dramatúrgica (≤35 chars, Gênero Neutro)
+│   │   ├── gba-system-arsenal-translator.md# Tier 3: UI, Menus, Itens & Abreviações Canônicas
+│   │   └── gba-strict-qa-auditor.md        # Tier 3: Quality Gate Implacável & Revisão Pente-Fino
+│   │
+│   └── 📁 skills/                # ⚡ 5 Workflows Acionáveis (Skills)
+│       ├── gba-new-game-kickoff/ # Kickoff estruturado de nova ROM
+│       ├── gba-character-bible/  # Fase 0: Mapeamento de falantes e Character Voice
+│       ├── gba-translate-sprint/ # Sprint de tradução com Contexto Cirúrgico / Swarm
+│       ├── gba-qa-gate/          # Funil de auditoria automatizada + revisão humana
+│       └── gba-rom-build-verify/ # Compilação segura de ROM, gráficos e patch IPS/BPS
 │
 ├── 📁 protocolo_extracao/        # 📜 PROTOCOLO MESTRE & ENGENHARIA DE EXTRAÇÃO
 │   ├── PROTOCOLO_MESTRE_EXTRACAO.md # Manual técnico integral (Normas, VRAM, Multi-Console)
@@ -35,13 +52,15 @@ gba-roms-translator-ptbr/
 │   │
 │   └── 📁 tools/                 # Ferramentas CLI em Python (Core do Protocolo)
 │       ├── metrics_analyzer.py        # Análise estatística de limites de caracteres e overflow
+│       ├── qa_gate_hook.py            # Quality Gate automatizado (overflow, gênero, órfãs, tags)
 │       ├── rom_feature_detector.py    # Fingerprint, detecção de compressão e vídeos (Mobiclip)
 │       ├── image_text_auditor.py      # Catalogação e auditoria de integridade de imagens/paleta
 │       └── token_optimizer_batcher.py # Fatiador com injeção cirúrgica de contexto (Token Economy)
 │
 ├── 📁 protocolo_traducao/        # ✍️ PROTOCOLO MESTRE DE TRADUÇÃO & LOCALIZAÇÃO
-│   ├── PROTOCOLO_MESTRE_TRADUCAO.md # Diretrizes canônicas (Pré-tradução, Vozes, QA)
-│   └── README.md                 # Guia de diretrizes de escrita e adaptação
+│   ├── PROTOCOLO_MESTRE_TRADUCAO.md      # Diretrizes canônicas (Pré-tradução, Vozes, QA)
+│   ├── GLOSSARIO_GLOBAL_SUMMON_NIGHT.md  # Fonte Única da Verdade para os 13 jogos da franquia
+│   └── README.md                         # Guia de diretrizes de escrita e adaptação
 │
 ├── 📁 jogos/                     # Workspace local para projetos de jogos
 │   │
@@ -55,9 +74,33 @@ gba-roms-translator-ptbr/
 │       ├── Iniciar_Validador_Traducao.bat # Atalho para interface web local
 │       └── README.md            # Guia passo a passo do novo jogo
 │
+├── AGENTS.md                    # Regras globais de governança por escopo de arquivo (Path-Scoped)
 ├── .gitignore                   # Blindagem estrita (ignora jogos/*, ROMs, zips, saves e backups)
 └── README.md                    # Esta documentação
 ```
+
+---
+
+## 🏛️ 0. GBA Localization Studio (Arquitetura Multi-Agente em 3 Tiers)
+
+Inspirado na organização do *Claude-Code-Game-Studios* e integrado nativamente aos Protocolos Mestres deste projeto, o repositório opera como um **Estúdio de Localização em 3 Tiers** governado por [`AGENTS.md`](AGENTS.md):
+
+| Tier | Agente (`.agents/agents/`) | Papel no Estúdio |
+| :---: | :--- | :--- |
+| **Tier 1 (Direção)** | `gba-localization-director` | **Showrunner e Diretor de Localização:** Guardião da Fase 0 obrigatória, do Catálogo de Personagens e do Glossário Global. |
+| **Tier 1 (Direção)** | `gba-rom-hacking-director` | **Diretor de Engenharia e ROM Hacking:** Arquitetura ARM7TDMI, tabelas de ponteiros, fontes VWF/monoespaçadas, compressão BIOS e build IPS/BPS. |
+| **Tier 2 (Liderança)** | `gba-narrative-lead` | **Líder de Narrativa e Dramaturgia:** Constrói a biografia híbrida, define o *Character Voice* e fatia lotes com `token_optimizer_batcher.py`. |
+| **Tier 2 (Liderança)** | `gba-graphics-ui-lead` | **Líder de Gráficos, Fontes e UI:** Audita PNGs/tiles com `image_text_auditor.py`, protege o índice 0 de transparência e desenha glifos acentuados. |
+| **Tier 3 (Execução)** | `gba-dialogue-translator` | **Tradutor Dramatúrgico de Diálogos:** Traduz lotes narrativos (1–32 chars ideal, máx 35 chars, `<br>`, neutralidade de gênero para `{PLAYER}`, zero abreviações). |
+| **Tier 3 (Execução)** | `gba-system-arsenal-translator` | **Tradutor de Sistema, Menus e Arsenal:** Traduz `03-` e `06-` aplicando 0% de inglês residual e a Tabela Canônica de Abreviações. |
+| **Tier 3 (Execução)** | `gba-strict-qa-auditor` | **Auditor Implacável de QA:** Executa o Quality Gate automatizado (`qa_gate_hook.py` + `metrics_analyzer.py`) e inspeção pente-fino. |
+
+### ⚡ Workflows Acionáveis (`.agents/skills/`)
+- **`gba-new-game-kickoff`**: Disseca uma nova ROM do zero, gera o relatório técnico e instancia a estrutura Markdown.
+- **`gba-character-bible`**: Executa a Fase 0 obrigatória antes da tradução, mapeando falantes e criando o `catalogo-de-personagens.md`.
+- **`gba-translate-sprint`**: Orquestra sprints de tradução em série ou enxame (*Swarm*) com Contexto Cirúrgico e validação imediata.
+- **`gba-qa-gate`**: Roda o funil de qualidade automatizado e corrige overflows (>35 chars), choques de gênero, órfãs e tags.
+- **`gba-rom-build-verify`**: Audita imagens editadas, compila a ROM PT-BR e gera o patch IPS/BPS pronto para teste.
 
 ---
 
@@ -123,6 +166,7 @@ Todas as ferramentas foram desenvolvidas em **Python 3** (sem dependências exte
 | :--- | :--- | :--- |
 | **`rom_feature_detector.py`** | `python protocolo_extracao/tools/rom_feature_detector.py rom/jogo.gba -o docs/relatorio.md` | Detecta serial oficial, compressões BIOS (LZ77/Huffman), tabelas de ponteiros e vídeos FMV. |
 | **`metrics_analyzer.py`** | `python protocolo_extracao/tools/metrics_analyzer.py -d "ARQUIVOS md" -g "Jogo" -l 36` | Analisa limites de caracteres, quebras `<br>`, calcula médias e sinaliza falas com risco de overflow. |
+| **`qa_gate_hook.py`** | `python protocolo_extracao/tools/qa_gate_hook.py "ARQUIVOS md" -l 35` | Quality Gate automatizado que bloqueia overflows (>35 chars), choques de gênero em `{PLAYER}`, abreviações proibidas, órfãs no fim de linha e tags dessincronizadas. |
 | **`image_text_auditor.py`** | `python protocolo_extracao/tools/image_text_auditor.py -d "extracted/graphics" -o "controle-imagens.md"` | Mapeia dimensões e paletas de PNGs e audita imagens editadas antes da reinjeção na ROM. |
 | **`token_optimizer_batcher.py`** | `python protocolo_extracao/tools/token_optimizer_batcher.py "ARQUIVOS md/08-dialogos.md" -s 35` | Gera prompts enxutos de alta densidade informacional para tradução assistida por IA. |
 | **`translation_validator_app.py`** | `python tools/translation_validator_app.py` *(dentro do projeto)* | Servidor web local com interface visual simulando a tela de diálogo do GBA em tempo real. |
