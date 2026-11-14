@@ -248,8 +248,11 @@ def main():
     print(f"🔍 Escaneando {len(md_files)} arquivos Markdown em '{target_dir}'...")
 
     for f in md_files:
-        # Pula arquivos de índice e templates
-        if f.name.startswith(("00-", "01-", "TEMPLATE")) or "catalogo" in f.name.lower():
+        # Pula arquivos de índice, glossários, controle de imagens e templates
+        fname_lower = f.name.lower()
+        if f.name.startswith(("00-", "01-", "02-", "TEMPLATE")) or any(
+            k in fname_lower for k in ("catalogo", "glossario", "controle-de-imagens", "estudo-de-metricas", "relatorio")
+        ):
             continue
         entries = analyze_markdown_file(f)
         all_entries.extend(entries)
