@@ -1,5 +1,13 @@
 # ROMs Translator PT-BR
 
+> [!NOTE]
+> ### ⚖️ Aviso Legal & Filosofia do Repositório (Projeto Feito por Fã — Processos Apenas)
+> - **Projeto Independente Feito por Fã:** Este é um projeto não oficial, independente e **sem fins lucrativos**, desenvolvido por fã com propósito exclusivamente educacional, de pesquisa técnica em engenharia reversa e preservação cultural. Não possui qualquer afiliação, endosso ou vínculo com as detentoras dos direitos originais.
+> - **Repositório Exclusivo de Processos e Ferramental:** Este repositório é um **framework de engenharia e processos**. Ele contém exclusivamente diretrizes metodológicas, especificações de protocolo, templates padronizados, scripts de automação e utilitários de validação/edição.
+> - **Nenhum Dado de Jogo Comercial Versionado:** **Nenhuma ROM, mídia extraída, imagem comercial, build ou patch de jogo é mantido neste repositório**. As pastas de trabalho locais com insumos e arquivos extraídos dos jogos são mantidas estritamente em ambiente local e ignoradas pelo Git.
+> - **Zero Tolerância para Distribuição de ROMs:** Este projeto **NÃO contém, não hospeda e NÃO disponibiliza nenhum arquivo de ROM comercial protegido por copyright** (GBA, NDS ou qualquer outro console). O usuário opera localmente com suas próprias cópias legítimas.
+> - **Direitos Autorais:** Todas as marcas, nomes, personagens e elementos de propriedades intelectuais originais citados a título de estudo pertencem aos seus respectivos estúdios e publicadores (Nintendo, Bandai Namco, Flight-Plan, Banpresto, Konami, Atlus, Capcom, etc.).
+
 Ferramentas e protocolos para localizar jogos de **Game Boy Advance** e **Nintendo DS** em português do Brasil. O fluxo cobre extração, organização de textos em Markdown, revisão visual, auditoria e compilação local.
 
 | Pasta | Conteúdo |
