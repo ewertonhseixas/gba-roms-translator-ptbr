@@ -173,6 +173,45 @@
       min-width: 145px;
     }
 
+    .global-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1.1;
+      min-width: 210px;
+    }
+
+    #globalSearchInput {
+      flex: 1;
+      min-width: 165px;
+      border-color: rgba(6, 182, 212, 0.55);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(14, 20, 34, 0.92));
+      color: #e0f2fe;
+    }
+
+    #globalSearchInput:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.25);
+    }
+
+    #globalSearchBtn {
+      background: rgba(6, 182, 212, 0.16);
+      border: 1px solid rgba(6, 182, 212, 0.55);
+      color: #67e8f9;
+      border-radius: 7px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    #globalSearchBtn:hover {
+      background: var(--cyan);
+      color: #082f49;
+    }
+
     .studio-actions {
       display: flex;
       align-items: center;
@@ -1296,7 +1335,11 @@
         <option value="SPEAKER">Só Quem Fala</option>
         <option value="ADDRESSEE">Só Com Quem</option>
       </select>
-      <input type="text" id="searchInput" placeholder="Buscar texto, ID (0x...), tag {PLAYER}...">
+      <input type="text" id="searchInput" placeholder="Buscar no arquivo atual (texto, ID, tag)...">
+      <div class="global-search-wrap" title="Buscar em todos os arquivos Markdown deste projeto (Enter ou clique em Global)">
+        <input type="text" id="globalSearchInput" placeholder="🌎 Buscar em todos os arquivos do projeto...">
+        <button type="button" id="globalSearchBtn">🔍 Global</button>
+      </div>
     </div>
 
     <div class="studio-actions">
@@ -1563,6 +1606,23 @@
       </div>
       <div class="modal-body">
         <pre id="buildTerminalOutput" style="background:#050811; border:1px solid var(--border); padding:14px; border-radius:8px; font-family:'Consolas',monospace; font-size:0.8rem; color:#a7f3d0; white-space:pre-wrap; max-height:60vh; overflow-y:auto;">Aguardando execução...</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: BUSCA GLOBAL EM TODOS OS ARQUIVOS DO PROJETO -->
+  <div class="modal-backdrop" id="globalSearchModalBackdrop">
+    <div class="modal-window" style="max-width: 1080px;">
+      <div class="modal-header">
+        <div class="modal-title">🌎 Busca Global no Projeto (<span id="globalSearchProjectTitle">Projeto</span>)</div>
+        <div style="display:flex; gap:8px; align-items:center; flex:1; max-width:560px; justify-content:flex-end;">
+          <input type="text" id="globalSearchModalInput" placeholder="Digite texto original, tradução, ID (0x...), personagem ou tag..." style="flex:1;">
+          <button class="mini-btn" id="runGlobalSearchModalBtn" style="background:var(--cyan); color:#082f49; font-weight:800; border-color:var(--cyan);">🔍 Buscar</button>
+          <button class="mini-btn" id="closeGlobalSearchModalBtn">✖ Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body" id="globalSearchModalBody">
+        <div style="padding:20px; color:var(--text-muted); text-align:center;">Digite um termo acima para pesquisar em todos os arquivos Markdown deste projeto.</div>
       </div>
     </div>
   </div>
@@ -2744,6 +2804,7 @@
 
     window.jumpToFileAndLine = async function(filename, lineIndex) {
       document.getElementById("qaModalBackdrop").classList.remove("open");
+      document.getElementById("globalSearchModalBackdrop").classList.remove("open");
       if (filename !== currentFile) {
         await loadFile(filename);
       }
@@ -2764,6 +2825,164 @@
         renderCurrentEntry();
       }
     };
+
+    function highlightSearchMatch(text, query) {
+      const escaped = escapeHtml(text || "");
+      if (!query) return escaped;
+      const safeQ = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return escaped.replace(new RegExp(`(${safeQ})`, "gi"), `<mark style="background:rgba(6,182,212,0.35); color:#fff; padding:0 2px; border-radius:3px;">$1</mark>`);
+    }
+
+    async function executeGlobalProjectSearch(rawQuery) {
+      const backdrop = document.getElementById("globalSearchModalBackdrop");
+      const body = document.getElementById("globalSearchModalBody");
+      const modalInput = document.getElementById("globalSearchModalInput");
+      const topInput = document.getElementById("globalSearchInput");
+      document.getElementById("globalSearchProjectTitle").textContent = activeProject.title || activeProject.id;
+
+      const q = (rawQuery !== undefined ? rawQuery : (modalInput.value || topInput.value || "")).trim();
+      modalInput.value = q;
+      topInput.value = q;
+      backdrop.classList.add("open");
+
+      if (!q) {
+        body.innerHTML = `<div style="padding:24px; color:var(--text-muted); text-align:center;">Digite um termo acima e clique em <strong>🔍 Buscar</strong> (ou pressione Enter) para pesquisar em todos os arquivos Markdown de <strong>${escapeHtml(activeProject.title)}</strong>.</div>`;
+        modalInput.focus();
+        return;
+      }
+
+      body.innerHTML = `<div style="padding:24px; color:var(--text-muted); text-align:center;">🔎 Pesquisando <strong>"${escapeHtml(q)}"</strong> em todos os arquivos de ${escapeHtml(activeProject.title)}...</div>`;
+
+      try {
+        let data = null;
+        if (serverOnline) {
+          const res = await fetch(`/api/global_search?q=${encodeURIComponent(q)}&game=${encodeURIComponent(activeProject.id)}&limit=300`);
+          data = await res.json();
+        } else if (window.EMBEDDED_MD_DATA) {
+          const emb = window.EMBEDDED_MD_DATA;
+          const qLow = q.toLowerCase();
+          const results = [];
+          let totalMatches = 0;
+          const filesSet = new Set();
+
+          for (const cat of (emb.categories || [])) {
+            const fname = cat.filename;
+            if (!emb.files[fname] && emb.file_scripts && emb.file_scripts[fname] && typeof loadDataScript === "function") {
+              try { await loadDataScript(emb.file_scripts[fname]); } catch (_) {}
+            }
+            const fdata = emb.files[fname];
+            if (!fdata || !fdata.entries) continue;
+            fdata.entries.forEach((e, idxInFile) => {
+              const hay = `${e.ref_id || ""} ${e.en_text || ""} ${e.pt_text || ""} ${e.en_desc || ""} ${e.pt_desc || ""} ${e.section || ""} ${e.speaker || ""} ${e.addressee || ""}`.toLowerCase();
+              if (hay.includes(qLow)) {
+                totalMatches++;
+                filesSet.add(fname);
+                if (results.length < 300) {
+                  results.push({
+                    filename: fname,
+                    file_title: cat.title || fname,
+                    entry_index: idxInFile,
+                    line_index: e.line_index,
+                    line_number: e.line_index + 1,
+                    ref_id: e.ref_id || "",
+                    section: e.section || "",
+                    speaker: e.speaker || "",
+                    addressee: e.addressee || "",
+                    en_text: e.en_text || "",
+                    pt_text: e.pt_text || "",
+                    validated: !!e.validated,
+                    has_qa_error: !!e.has_qa_error,
+                    has_qa_warn: !!e.has_qa_warn
+                  });
+                }
+              }
+            });
+          }
+          data = {
+            ok: true,
+            query: q,
+            total_matches: totalMatches,
+            files_matched: filesSet.size,
+            truncated: totalMatches > 300,
+            results
+          };
+        }
+
+        if (!data || !data.ok) {
+          body.innerHTML = `<div style="color:var(--red); padding:20px;">Erro ao executar busca global.</div>`;
+          return;
+        }
+
+        let html = `
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between; background:rgba(7,10,18,0.65); padding:10px 14px; border-radius:8px; border:1px solid var(--border);">
+            <div>
+              <strong>Termo pesquisado:</strong> <code style="color:#67e8f9;">${escapeHtml(q)}</code>
+              ${data.truncated ? `<span style="color:var(--amber); font-size:0.74rem; margin-left:8px;">(Exibindo os primeiros ${data.results.length} de ${data.total_matches} resultados)</span>` : ""}
+            </div>
+            <div style="display:flex; gap:10px;">
+              <span class="badge valid" style="background:var(--cyan-soft); color:#67e8f9;">🔎 ${data.total_matches} ocorrência(s)</span>
+              <span class="badge pending">📂 ${data.files_matched} arquivo(s)</span>
+            </div>
+          </div>
+        `;
+
+        if (!data.results || data.results.length === 0) {
+          html += `<div style="padding:30px; text-align:center; color:var(--text-muted); font-size:0.86rem;">Nenhuma ocorrência encontrada para <strong>"${escapeHtml(q)}"</strong> em nenhum arquivo deste projeto.</div>`;
+        } else {
+          html += `<table class="modal-table">
+            <thead>
+              <tr>
+                <th>Arquivo</th>
+                <th>Linha / ID</th>
+                <th>Falante ➔ Alvo</th>
+                <th>Texto Original (EN/JP)</th>
+                <th>Tradução PT-BR</th>
+                <th>Status</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>`;
+
+          data.results.forEach(r => {
+            const stBadge = r.validated
+              ? `<span class="badge valid">✅</span>`
+              : `<span class="badge pending">⏳</span>`;
+            const qaBadge = r.has_qa_error
+              ? ` <span class="badge qa-err">🔴</span>`
+              : (r.has_qa_warn ? ` <span class="badge qa-warn">🟡</span>` : "");
+
+            html += `
+              <tr>
+                <td style="font-family:monospace; font-size:0.72rem; color:#93c5fd;">
+                  <strong>${escapeHtml(r.filename)}</strong>
+                  <div style="font-size:0.66rem; color:var(--text-muted);">${escapeHtml(r.section || "")}</div>
+                </td>
+                <td style="font-family:monospace; white-space:nowrap;">
+                  L${r.line_number}<br>
+                  <span style="color:var(--text-muted); font-size:0.7rem;">${ highlightSearchMatch(r.ref_id, q) }</span>
+                </td>
+                <td>
+                  <strong>${ highlightSearchMatch(r.speaker || "Geral", q) }</strong>
+                  <div style="font-size:0.68rem; color:var(--text-muted);">➔ ${ highlightSearchMatch(r.addressee || "-", q) }</div>
+                </td>
+                <td style="font-family:monospace; font-size:0.75rem; color:var(--text-muted);">${ highlightSearchMatch((r.en_text || "").replace(/\n/g, " <br> "), q) }</td>
+                <td style="font-family:monospace; font-size:0.77rem; color:#f8fafc;">${ highlightSearchMatch((r.pt_text || "").replace(/\n/g, " <br> "), q) }</td>
+                <td style="white-space:nowrap;">${stBadge}${qaBadge}</td>
+                <td>
+                  <button class="mini-btn" onclick="jumpToFileAndLine(${JSON.stringify(r.filename).replace(/"/g, '&quot;')}, ${r.line_index})">Abrir ➔</button>
+                </td>
+              </tr>
+            `;
+          });
+
+          html += `</tbody></table>`;
+        }
+
+        body.innerHTML = html;
+      } catch (err) {
+        body.innerHTML = `<div style="color:var(--red); padding:20px;">Falha ao pesquisar no projeto: ${escapeHtml(err.message)}</div>`;
+      }
+    }
 
     function openBibleAndGlossaryModal(initialFilter = "") {
       const backdrop = document.getElementById("bibleModalBackdrop");
@@ -3074,9 +3293,31 @@
     });
     document.getElementById("closeBuildModalBtn").addEventListener("click", () => document.getElementById("buildModalBackdrop").classList.remove("open"));
 
+    // Busca Global em Todos os Arquivos do Projeto
+    const globalSearchInput = document.getElementById("globalSearchInput");
+    const globalSearchModalInput = document.getElementById("globalSearchModalInput");
+    document.getElementById("globalSearchBtn").addEventListener("click", () => executeGlobalProjectSearch(globalSearchInput.value));
+    globalSearchInput.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchInput.value);
+      }
+    });
+    document.getElementById("runGlobalSearchModalBtn").addEventListener("click", () => executeGlobalProjectSearch(globalSearchModalInput.value));
+    globalSearchModalInput.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchModalInput.value);
+      }
+    });
+    document.getElementById("closeGlobalSearchModalBtn").addEventListener("click", () => document.getElementById("globalSearchModalBackdrop").classList.remove("open"));
+
     // Atalhos Globais
     window.addEventListener("keydown", (ev) => {
-      if (ev.ctrlKey && ev.key === "Enter") {
+      if (ev.ctrlKey && ev.shiftKey && (ev.key === "f" || ev.key === "F")) {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchInput.value);
+      } else if (ev.ctrlKey && ev.key === "Enter") {
         ev.preventDefault();
         saveEntry(true, true);
       } else if (ev.altKey && (ev.key === "w" || ev.key === "W")) {

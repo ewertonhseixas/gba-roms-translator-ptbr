@@ -1,0 +1,63 @@
+# Byte-compiled / otimizações Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ROMs, Imagens de Disco e Saves (Proibida distribuição de material com copyright)
+*.gba
+*.sav
+*.srm
+*.dsv
+*.ss[0-9]
+*.sgm
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+*.iso
+*.bin
+!**/rom/.gitkeep
+!**/rom/COLOQUE_SUA_ROM_AQUI.txt
+
+# Projetos de jogos individuais (o repositório mantém estritamente processos e ferramentas)
+jogos/*
+!jogos/_MODELO_NOVO_JOGO/
+!jogos/_MODELO_NOVO_JOGO/**
+jogos/_MODELO_NOVO_JOGO/**/__pycache__/
+jogos/_MODELO_NOVO_JOGO/**/embedded_md_data.js
+
+# Documentação técnica e protocolos dos jogos
+!jogos/Summon_Night_Swordcraft_Story_1/
+jogos/Summon_Night_Swordcraft_Story_1/*
+!jogos/Summon_Night_Swordcraft_Story_1/docs/
+!jogos/Summon_Night_Swordcraft_Story_1/docs/**
+
+!jogos/Summon_Night_Swordcraft_Story_2/
+jogos/Summon_Night_Swordcraft_Story_2/*
+!jogos/Summon_Night_Swordcraft_Story_2/docs/
+!jogos/Summon_Night_Swordcraft_Story_2/docs/**
+
+# Backups locais de trabalho
+backups/
+**/backups/
+
+# Fotos e anexos temporários de testes
+*.jpeg
+*.jpg
+
+# Arquivos de log e temporários
+*.log
+# Aplicativos e softwares utilitários de terceiros (não versionados)
+_ferramentas_gerais/*
+!_ferramentas_gerais/image_editor/
+
+# Configurações de IDEs e Sistemas Operacionais
+.vscode/
+.idea/
+.venv/
+env/
+venv/
+.DS_Store
+Thumbs.db
+Desktop.ini

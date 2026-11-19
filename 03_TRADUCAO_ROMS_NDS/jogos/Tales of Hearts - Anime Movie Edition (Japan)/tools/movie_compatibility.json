@@ -1,0 +1,9 @@
+{
+  "movie/MOV002.mods": {
+    "asset": "assets/movies_ptbr/MOV002.mods",
+    "sha256": "6db7b3d288cb95f73804b9c93cf8a9b092d39d07534f252e527b3cf84760c385",
+    "native_ds_decoder_frames_verified": 1704,
+    "native_audio_matches_original": true,
+    "reason": "Removed out-of-range Q56/Q57 quantizers starting at frame 853; encoder qpmax=50."
+  }
+}

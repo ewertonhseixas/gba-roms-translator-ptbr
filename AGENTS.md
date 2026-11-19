@@ -1,6 +1,6 @@
 # 🎮 GBA Localization Studio — Regras Globais de Engenharia & Tradução
 
-Este repositório opera sob a arquitetura de estúdio em **3 Tiers** inspirada no *Claude-Code-Game-Studios*, governada pelo **[Protocolo Mestre de Extração](protocolo_extracao/PROTOCOLO_MESTRE_EXTRACAO.md)** e pelo **[Protocolo Mestre de Tradução](protocolo_traducao/PROTOCOLO_MESTRE_TRADUCAO.md)**.
+Este repositório opera sob a arquitetura de estúdio em **3 Tiers** inspirada no *Claude-Code-Game-Studios*, governada pelo **[Protocolo Mestre de Extração](02_TRADUCAO_ROMS_GBA/protocolo_extracao/PROTOCOLO_MESTRE_EXTRACAO.md)** e pelo **[Protocolo Mestre de Tradução](02_TRADUCAO_ROMS_GBA/protocolo_traducao/PROTOCOLO_MESTRE_TRADUCAO.md)**.
 
 ## 🏛️ 1. Hierarquia de Personas e Agentes (`.agents/agents/`)
 - **Tier 1 (Direção):**

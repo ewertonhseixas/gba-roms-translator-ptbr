@@ -32,7 +32,7 @@ def split_md_row(line: str) -> List[str]:
         s = s[1:]
     if s.endswith("|"):
         s = s[:-1]
-    return [c.strip() for c in s.split("|")]
+    return [c.strip().replace(r"\|", "|") for c in re.split(r"(?<!\\)\|", s)]
 
 
 def clean_cell_text(raw: str) -> str:
@@ -43,11 +43,16 @@ def clean_cell_text(raw: str) -> str:
 
 
 def parse_dialogue_lines(cell: str) -> List[str]:
-    """Divide a célula em linhas individuais separadas por <br>."""
+    """Divide a célula em linhas individuais separadas por <br>, <page> ou @ colado."""
     cleaned = clean_cell_text(cell)
-    lines = re.split(r"<br\s*/?>", cleaned, flags=re.IGNORECASE)
-    # Filtra linhas vazias irrelevantes
-    return [ln.strip() for ln in lines if ln.strip()]
+    lines = re.split(r"<br\s*/?>|<page>|(?<!\s)@(?!\s)", cleaned, flags=re.IGNORECASE)
+    # Filtra linhas vazias irrelevantes e remove tags de controle de voz iniciais
+    out = []
+    for ln in lines:
+        ln = re.sub(r"^\t?\([A-Za-z0-9_]+\)", "", ln.strip()).strip()
+        if ln:
+            out.append(ln)
+    return out
 
 
 def analyze_markdown_file(filepath: Path) -> List[Dict[str, Any]]:

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GBA Pixel Studio — Editor de Imagens & Text-in-Tiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header>
+        <div class="brand-section">
+            <div class="brand-title">
+                <span>🎮</span> GBA Pixel Studio
+            </div>
+            <select id="gameSelect" class="game-select">
+                <option value="sn1">Summon Night 1: Swordcraft Story</option>
+                <option value="sn2">Summon Night 2: Swordcraft Story 2</option>
+                <option value="port">Port PC / Android</option>
+            </select>
+        </div>
+
+        <div class="header-center">
+            <button id="prevBtn" class="nav-arrow-btn" title="Imagem Anterior (Atalho: [)">
+                ◀ Anterior
+            </button>
+            <div class="active-asset-badge">
+                <span id="activeAssetTitle">Carregando ativo...</span>
+                <span id="activeAssetStatus" class="asset-status-pill status-pending">⏳ Pendente</span>
+            </div>
+            <button id="nextBtn" class="nav-arrow-btn" title="Próxima Imagem (Atalho: ])">
+                Próxima ▶
+            </button>
+        </div>
+
+        <div class="header-actions">
+            <button id="shortcutsBtn" class="btn-header btn-secondary" title="Atalhos do Teclado (?)">
+                ⌨️ Atalhos
+            </button>
+            <button id="downloadBtn" class="btn-header btn-secondary" title="Baixar arquivo PNG">
+                ⬇️ Exportar PNG
+            </button>
+            <button id="saveBtn" class="btn-header btn-save" title="Salvar diretamente na pasta fixes/ do projeto (Ctrl+S)">
+                💾 Salvar no Projeto <span style="font-size:10px;opacity:0.8;">(Ctrl+S)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main 3-Column Layout -->
+    <div class="app-body">
+
+        <!-- Left Sidebar: Asset & Image Browser -->
+        <aside class="sidebar-left">
+            <div class="sidebar-search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Filtrar imagens por nome ou texto...">
+            </div>
+
+            <div class="sidebar-tabs">
+                <button class="sidebar-tab-btn active" data-tab="catalog">📋 Textos da ROM</button>
+                <button class="sidebar-tab-btn" data-tab="all">📁 Todas Extraídas</button>
+            </div>
+
+            <div id="assetList" class="asset-list">
+                <!-- Cards renderizados dinamicamente via JS -->
+            </div>
+        </aside>
+
+        <!-- Center Viewport & Canvas Area -->
+        <main class="canvas-container">
+
+            <!-- Floating Top Toolbar -->
+            <div class="toolbar-top">
+                <div class="tool-group">
+                    <button class="tool-btn active" data-tool="pencil" title="Lápis (B / P)">✏️</button>
+                    <button class="tool-btn" data-tool="eraser" title="Borracha / Transparência (E)">🧼</button>
+                    <button class="tool-btn" data-tool="picker" title="Conta-gotas / Amostrador (I)">💧</button>
+                    <button class="tool-btn" data-tool="bucket" title="Balde de Tinta (F / G)">🪣</button>
+                    <button class="tool-btn" data-tool="line" title="Linha Reta (L)">📏</button>
+                    <button class="tool-btn" data-tool="rect" title="Retângulo Vazio (R)">⬜</button>
+                    <button class="tool-btn" data-tool="rect-fill" title="Retângulo Preenchido (U)">⬛</button>
+                    <button class="tool-btn" data-tool="select" title="Seleção Retangular (M)">🔲</button>
+                    <button class="tool-btn" data-tool="stamp" title="Carimbador de Texto Pixel Art (T)">🔤</button>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <select id="brushSizeSelect" class="game-select" style="padding:4px 8px;font-size:12px;" title="Tamanho do Pincel">
+                        <option value="1">1 px</option>
+                        <option value="2">2 px</option>
+                    </select>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <button id="tileGridBtn" class="tool-btn active" title="Alternar Grade de Tiles 8x8 do GBA">🧱</button>
+                    <button id="pixelGridBtn" class="tool-btn active" title="Alternar Grade de Pixels 1px (G)">🔲</button>
+
+                    <div class="view-slider-group" title="Transparência da Imagem Original (Onion Skin / Fantasma)">
+                        <span>👻 Guia:</span>
+                        <input type="range" id="onionSlider" class="view-slider" min="0" max="1" step="0.05" value="0.35">
+                    </div>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <button id="zoomOutBtn" class="tool-btn" title="Diminuir Zoom (-)">🔍-</button>
+                    <button id="zoomInBtn" class="tool-btn" title="Aumentar Zoom (+)">🔍+</button>
+                    <button id="zoomResetBtn" class="tool-btn" title="Ajustar à Tela (C)">🎯</button>
+                </div>
+
+                <div class="tool-separator"></div>
+
+                <div class="tool-group">
+                    <button id="undoBtn" class="tool-btn" title="Desfazer (Ctrl+Z)">↩️</button>
+                    <button id="redoBtn" class="tool-btn" title="Refazer (Ctrl+Y)">↪️</button>
+                    <button id="revertBtn" class="tool-btn" title="Reverter ao Original">🔄</button>
+                    <button id="clearBtn" class="tool-btn" title="Limpar Canvas (Índice 0)">🧹</button>
+                </div>
+            </div>
+
+            <!-- Viewport Interativo -->
+            <div id="viewport" class="viewport">
+                <div id="canvasWrapper" class="canvas-wrapper">
+                    <canvas id="canvasBase" class="canvas-layer"></canvas>
+                    <canvas id="canvasMain" class="canvas-layer"></canvas>
+                    <canvas id="canvasOverlay" class="canvas-layer"></canvas>
+                </div>
+            </div>
+
+            <!-- Bottom Status Bar -->
+            <div class="canvas-status-bar">
+                <div class="status-item">
+                    <span>Posição:</span>
+                    <span id="statusCoords" class="status-val">X: 0, Y: 0</span>
+                </div>
+                <div class="status-item">
+                    <span>GBA:</span>
+                    <span id="statusTile" class="status-val">Tile: [0, 0]</span>
+                </div>
+                <div class="status-item">
+                    <span>Cor sob cursor:</span>
+                    <span id="statusColor" class="status-val">Índice: [0]</span>
+                </div>
+                <div class="status-item">
+                    <span>Dimensões:</span>
+                    <span id="statusDims" class="status-val">160x22 px (20x3 tiles)</span>
+                </div>
+                <div class="status-item">
+                    <span>Zoom:</span>
+                    <span id="statusZoom" class="status-val">1600%</span>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Right Sidebar: Palette & Live Mockup -->
+        <aside class="sidebar-right">
+
+            <!-- Active Colors & Palette -->
+            <div class="panel-section">
+                <div class="section-title">
+                    <span>Paleta do GBA</span>
+                    <button class="btn-mini" onclick="window.app.swapColors()" title="Inverter Cores (Atalho: X)">Inverter (X)</button>
+                </div>
+
+                <div class="active-colors-row">
+                    <div class="color-badge">
+                        <div id="primaryColorChip" class="color-chip-large" style="background:#fff;"></div>
+                        <div class="color-info-text">
+                            <span class="color-label">Primária (Esq)</span>
+                            <span id="primaryHex" class="color-hex">[1] #FFFFFF</span>
+                        </div>
+                    </div>
+
+                    <div class="color-badge">
+                        <div id="secondaryColorChip" class="color-chip-large transparent-zero"></div>
+                        <div class="color-info-text">
+                            <span class="color-label">Secundária (Dir)</span>
+                            <span id="secondaryHex" class="color-hex">[0] TRANSP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="paletteGrid" class="palette-grid">
+                    <!-- Swatches preenchidos via JS -->
+                </div>
+
+                <div class="index-zero-warning">
+                    ⚠️ <strong>Índice 0 = Transparência PPU:</strong> No hardware de vídeo do GBA, a cor do índice 0 é sempre interpretada como transparente. Use a borracha ou clique com botão direito para usá-la.
+                </div>
+            </div>
+
+            <!-- Live 1:1 GBA Mockup -->
+            <div class="panel-section">
+                <div class="section-title">
+                    <span>Prévia em Tempo Real</span>
+                    <select id="mockupBgSelect" class="game-select" style="padding:2px 6px;font-size:11px;">
+                        <option value="#000000">Fundo Preto</option>
+                        <option value="#1c2438">Fundo Azul GBA</option>
+                        <option value="#ffffff">Fundo Branco</option>
+                        <option value="#2a2a2a">Cinza Neutro</option>
+                    </select>
+                </div>
+
+                <div class="mockup-box">
+                    <canvas id="mockupCanvas" class="mockup-img"></canvas>
+                </div>
+
+                <div class="mockup-controls">
+                    <span style="font-size:11px;color:var(--text-muted);">Escala da Prévia:</span>
+                    <div class="scale-btn-group">
+                        <button class="btn-mini active" data-mockup-scale="1">1x Real</button>
+                        <button class="btn-mini" data-mockup-scale="2">2x</button>
+                        <button class="btn-mini" data-mockup-scale="3">3x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Context Card & Translation Reference -->
+            <div class="panel-section" style="flex:1;">
+                <div class="section-title">
+                    <span>Contexto de Tradução</span>
+                </div>
+
+                <div class="context-row">
+                    <strong>Texto Original (EN/JP):</strong>
+                    <div id="contextOrigText" class="context-text-box">PRESS START BUTTON</div>
+                </div>
+
+                <div class="context-row">
+                    <strong>Tradução Sugerida (PT-BR):</strong>
+                    <div id="contextSuggText" class="context-text-box" style="border-color:#3b82f6;color:#93c5fd;">PRESSIONE START</div>
+                </div>
+
+                <div class="context-row">
+                    <strong>Localização na ROM:</strong>
+                    <div id="contextLocation" class="context-text-box">Archive 1 Entry 1110</div>
+                </div>
+
+                <div class="context-row">
+                    <strong>Arquivo de Destino (Fix):</strong>
+                    <div id="contextTargetPath" class="context-text-box" style="font-size:11px;color:#a7f3d0;">telas_e_menus/title_press_start_button.png</div>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Modal: Carimbador de Texto Pixel Art -->
+    <div id="textStampModal" class="modal-overlay">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <span class="modal-title">🔤 Carimbador de Texto Pixel Art</span>
+                <button id="textStampCloseBtn" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Texto a Inserir (com acentos PT-BR):</label>
+                    <input type="text" id="textStampInput" class="form-input" placeholder="Ex: NOVO JOGO, CARREGAR, ATACAR...">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Estilo da Fonte Pixel Art:</label>
+                    <select id="textStampFontSelect" class="form-input">
+                        <option value="retro_5x7">5x7 Retro Clássica RPG (Ideal para menus e botões)</option>
+                        <option value="mini_4x6">4x6 Mini Compacta (Ideal para barras e HUD)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="flex-direction:row;align-items:center;gap:10px;">
+                    <input type="checkbox" id="textStampShadowCheck" checked style="accent-color:var(--accent);width:16px;height:16px;cursor:pointer;">
+                    <label for="textStampShadowCheck" class="form-label" style="cursor:pointer;margin:0;">Aplicar Sombra Automática (Usa a Cor Secundária)</label>
+                </div>
+
+                <div style="font-size:12px;color:var(--text-muted);background:var(--bg-card);padding:10px;border-radius:6px;line-height:1.4;">
+                    💡 <em>Após carimbar o texto, você poderá usar a ferramenta de lápis e borracha para retocar e personalizar livremente os pixels.</em>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-header btn-secondary" onclick="window.app.closeTextStampModal()">Cancelar</button>
+                <button id="textStampApplyBtn" class="btn-header btn-save">Gerar Carimbo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Atalhos do Teclado -->
+    <div id="shortcutsModal" class="modal-overlay">
+        <div class="modal-dialog" style="width:480px;">
+            <div class="modal-header">
+                <span class="modal-title">⌨️ Atalhos do Teclado</span>
+                <button id="shortcutsCloseBtn" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body" style="font-size:13px;line-height:1.6;">
+                <table style="width:100%;border-collapse:collapse;">
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>Ctrl + S</strong></td><td>Salvar diretamente no projeto (fixes/)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>Ctrl + Z / Ctrl + Y</strong></td><td>Desfazer / Refazer histórico</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>B ou P</strong></td><td>Lápis (Pencil)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>E</strong></td><td>Borracha (Índice 0 transparente)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>I</strong></td><td>Conta-gotas (Amostrador de Cor)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>F ou G</strong></td><td>Balde de Tinta (Flood Fill)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>L</strong></td><td>Linha Reta</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>R / U</strong></td><td>Retângulo (Contorno / Preenchido)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>T</strong></td><td>Carimbador de Texto Pixel Art</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>X</strong></td><td>Inverter Cor Primária / Secundária</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>0 a 9</strong></td><td>Selecionar índice da cor na paleta</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>Tab ou Espaço (Segurar)</strong></td><td>Espiar imagem original da ROM</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>[ e ]</strong></td><td>Navegar para imagem anterior / seguinte</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>Botão do Meio (Arrastar)</strong></td><td>Mover a tela (Pan)</td></tr>
+                    <tr><td style="color:var(--text-muted);padding:4px 0;"><strong>Roda do Mouse</strong></td><td>Aumentar / Diminuir Zoom</td></tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-header btn-secondary" onclick="document.getElementById('shortcutsModal').classList.remove('active')">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container de Notificações Toast -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="bitmap_fonts.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

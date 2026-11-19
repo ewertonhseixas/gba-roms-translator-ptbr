@@ -1688,6 +1688,59 @@ class ValidatorRequestHandler(BaseHTTPRequestHandler):
             self._send_json(data)
             return
 
+        if parsed.path == "/api/global_search":
+            query = qs.get("q", [""])[0].strip().lower()
+            limit = int(qs.get("limit", ["300"])[0])
+            if not query:
+                self._send_json({"ok": True, "query": "", "total_matches": 0, "files_matched": 0, "results": []})
+                return
+
+            cats = list_translation_md_files(proj)
+            results = []
+            total_matches = 0
+            files_matched_set = set()
+
+            for c in cats:
+                fdata = parse_md_file(proj.md_dir / c["filename"], proj=proj)
+                for idx_in_file, e in enumerate(fdata["entries"]):
+                    hay = (
+                        f"{e.get('ref_id', '')} {e.get('en_text', '')} {e.get('pt_text', '')} "
+                        f"{e.get('en_desc', '')} {e.get('pt_desc', '')} {e.get('section', '')} "
+                        f"{e.get('speaker', '')} {e.get('addressee', '')}"
+                    ).lower()
+                    if query in hay:
+                        total_matches += 1
+                        files_matched_set.add(c["filename"])
+                        if len(results) < limit:
+                            results.append({
+                                "filename": c["filename"],
+                                "file_title": c["title"],
+                                "entry_index": idx_in_file,
+                                "line_index": e["line_index"],
+                                "line_number": e["line_index"] + 1,
+                                "ref_id": e.get("ref_id", ""),
+                                "section": e.get("section", ""),
+                                "speaker": e.get("speaker", ""),
+                                "speaker_id": e.get("speaker_id", ""),
+                                "addressee": e.get("addressee", ""),
+                                "en_text": e.get("en_text", ""),
+                                "pt_text": e.get("pt_text", ""),
+                                "validated": e.get("validated", False),
+                                "has_qa_error": e.get("has_qa_error", False),
+                                "has_qa_warn": e.get("has_qa_warn", False),
+                            })
+
+            self._send_json({
+                "ok": True,
+                "project": proj.profile,
+                "query": query,
+                "total_matches": total_matches,
+                "files_matched": len(files_matched_set),
+                "truncated": total_matches > limit,
+                "results": results,
+            })
+            return
+
         if parsed.path == "/api/qa_audit":
             fname = qs.get("name", [""])[0]
             cats = list_translation_md_files(proj)

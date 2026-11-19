@@ -1,0 +1,3365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBA Localization Studio v2.0 — Suite de Validação & Quality Gate</title>
+  <style>
+    :root {
+      --bg-dark: #070a12;
+      --bg-panel: #0e1422;
+      --bg-card: #151d30;
+      --bg-card-hover: #1d2842;
+      --bg-glass: rgba(14, 20, 34, 0.88);
+      --border: #26334d;
+      --border-light: #35476b;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-soft: rgba(99, 102, 241, 0.14);
+      --cyan: #06b6d4;
+      --cyan-soft: rgba(6, 182, 212, 0.14);
+      --green: #10b981;
+      --green-soft: rgba(16, 185, 129, 0.14);
+      --amber: #f59e0b;
+      --amber-soft: rgba(245, 158, 11, 0.14);
+      --red: #ef4444;
+      --red-soft: rgba(239, 68, 68, 0.15);
+      --purple: #a855f7;
+      --purple-soft: rgba(168, 85, 247, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* TOPBAR STUDIO v2.0 */
+    header {
+      background: linear-gradient(180deg, #111829 0%, #0b101d 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 9px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      box-shadow: 0 0 14px rgba(99, 102, 241, 0.45);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 0.96rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg, #fff 0%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tier-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(99, 102, 241, 0.18);
+      border: 1px solid rgba(99, 102, 241, 0.45);
+      color: #c7d2fe;
+      border-radius: 999px;
+      padding: 1px 7px;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex: 1;
+      max-width: 1120px;
+      flex-wrap: wrap;
+    }
+
+    select, input[type="text"], input[type="number"] {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    select:focus, input[type="text"]:focus, input[type="number"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.22);
+    }
+
+    #projectSelect {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.22), rgba(6, 182, 212, 0.14));
+      border-color: rgba(99, 102, 241, 0.55);
+      color: #e0e7ff;
+      font-weight: 700;
+      min-width: 165px;
+    }
+
+    #categorySelect {
+      min-width: 225px;
+      max-width: 280px;
+      font-weight: 600;
+    }
+
+    #sectionSelect {
+      min-width: 145px;
+      max-width: 195px;
+    }
+
+    #genderFilter {
+      min-width: 140px;
+      border-color: #3b4261;
+    }
+
+    #charSelect {
+      min-width: 145px;
+      max-width: 185px;
+    }
+
+    #searchInput {
+      flex: 1;
+      min-width: 145px;
+    }
+
+    .global-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1.1;
+      min-width: 210px;
+    }
+
+    #globalSearchInput {
+      flex: 1;
+      min-width: 165px;
+      border-color: rgba(6, 182, 212, 0.55);
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(14, 20, 34, 0.92));
+      color: #e0f2fe;
+    }
+
+    #globalSearchInput:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.25);
+    }
+
+    #globalSearchBtn {
+      background: rgba(6, 182, 212, 0.16);
+      border: 1px solid rgba(6, 182, 212, 0.55);
+      color: #67e8f9;
+      border-radius: 7px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    #globalSearchBtn:hover {
+      background: var(--cyan);
+      color: #082f49;
+    }
+
+    .studio-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+    }
+
+    .studio-btn {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 6px 11px;
+      border-radius: 7px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .studio-btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .studio-btn.qa-btn {
+      border-color: rgba(16, 185, 129, 0.45);
+      background: rgba(16, 185, 129, 0.1);
+      color: #6ee7b7;
+    }
+
+    .studio-btn.qa-btn.has-errors {
+      border-color: rgba(239, 68, 68, 0.65);
+      background: rgba(239, 68, 68, 0.16);
+      color: #fca5a5;
+    }
+
+    .studio-btn.bible-btn {
+      border-color: rgba(168, 85, 247, 0.5);
+      background: rgba(168, 85, 247, 0.13);
+      color: #d8b4fe;
+    }
+
+    .studio-btn.prompt-btn {
+      border-color: rgba(6, 182, 212, 0.5);
+      background: rgba(6, 182, 212, 0.13);
+      color: #67e8f9;
+    }
+
+    .studio-btn.build-btn {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border-color: #34d399;
+      color: #042f2e;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.25);
+    }
+
+    .studio-btn.build-btn:hover {
+      filter: brightness(1.08);
+    }
+
+    .qa-counter-pill {
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-width: 185px;
+    }
+
+    .progress-bar-bg {
+      flex: 1;
+      height: 8px;
+      background-color: var(--bg-card);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--green));
+      width: 0%;
+      transition: width 0.25s ease;
+    }
+
+    .progress-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* MAIN LAYOUT */
+    .workspace {
+      display: grid;
+      grid-template-columns: 370px 1fr;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background-color: var(--bg-panel);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .filter-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--border);
+      padding: 6px;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .filter-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 5px 4px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.15s;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .filter-tab:hover {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+    }
+
+    .filter-tab.active {
+      background-color: var(--accent-soft);
+      color: #a5b4fc;
+      border-color: rgba(99, 102, 241, 0.45);
+    }
+
+    .filter-tab.qa-tab.active {
+      background-color: var(--red-soft);
+      color: #fca5a5;
+      border-color: rgba(239, 68, 68, 0.5);
+    }
+
+    .sidebar-batch-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      background: rgba(7, 10, 18, 0.55);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .batch-approve-btn {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #6ee7b7;
+      border-radius: 5px;
+      padding: 3px 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .batch-approve-btn:hover {
+      background: var(--green);
+      color: #052e16;
+    }
+
+    .entry-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .entry-item {
+      background-color: var(--bg-card);
+      border: 1px solid transparent;
+      border-radius: 7px;
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: background-color 0.12s, border-color 0.12s;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .entry-item:hover {
+      background-color: var(--bg-card-hover);
+    }
+
+    .entry-item.active {
+      border-color: var(--accent);
+      background-color: rgba(99, 102, 241, 0.14);
+    }
+
+    .entry-item.has-qa-err {
+      border-left: 3px solid var(--red);
+    }
+
+    .entry-item.has-qa-warn:not(.has-qa-err) {
+      border-left: 3px solid var(--amber);
+    }
+
+    .entry-item-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.71rem;
+      color: var(--text-muted);
+      gap: 4px;
+    }
+
+    .entry-id {
+      font-family: 'Consolas', monospace;
+      color: #93c5fd;
+      font-weight: 700;
+    }
+
+    .badge {
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .badge.valid {
+      background-color: var(--green-soft);
+      color: #34d399;
+    }
+
+    .badge.pending {
+      background-color: var(--amber-soft);
+      color: #fbbf24;
+    }
+
+    .badge.qa-err {
+      background-color: var(--red-soft);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.45);
+    }
+
+    .badge.qa-warn {
+      background-color: var(--amber-soft);
+      color: #fde68a;
+      border: 1px solid rgba(245, 158, 11, 0.45);
+    }
+
+    .entry-preview-en {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .entry-preview-pt {
+      font-size: 0.8rem;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+
+    /* MAIN CONTENT PANEL */
+    .main-panel {
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 15px 22px;
+      gap: 13px;
+    }
+
+    .entry-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .entry-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .meta-pill {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: 'Consolas', monospace;
+    }
+
+    .meta-pill strong {
+      color: var(--text-main);
+    }
+
+    /* DIALOGUE ACTOR BANNER + CHARACTER VOICE STRIP */
+    .dialogue-context-banner {
+      background: linear-gradient(135deg, rgba(21, 29, 48, 0.96), rgba(14, 20, 34, 0.96));
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 11px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+    }
+
+    .dialogue-actors-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .actor-flow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .actor-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(7, 10, 18, 0.65);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 9px;
+      transition: all 0.2s ease;
+    }
+
+    .actor-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(99, 102, 241, 0.2);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .actor-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .actor-label {
+      font-size: 0.63rem;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .actor-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .actor-sub {
+      font-size: 0.7rem;
+      color: #93c5fd;
+    }
+
+    .flow-arrow {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      padding: 0 2px;
+      user-select: none;
+    }
+
+    .voice-guide-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(99, 102, 241, 0.09);
+      border: 1px dashed rgba(99, 102, 241, 0.4);
+      border-radius: 7px;
+      padding: 6px 11px;
+      font-size: 0.76rem;
+      color: #cbd5e1;
+    }
+
+    .voice-guide-strip strong {
+      color: #a5b4fc;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+      letter-spacing: 0.5px;
+      margin-right: 6px;
+    }
+
+    /* TEMAS DE CORES POR PERSONAGEM (SN1, SN2, SN3) */
+    .char-theme-cleru, .char-theme-edgar, .char-theme-ritchie, .char-theme-hero_male { border-color: #3b82f6 !important; background: rgba(59, 130, 246, 0.14) !important; color: #93c5fd !important; }
+    .char-theme-pratty, .char-theme-aera, .char-theme-rif, .char-theme-hero_female { border-color: #ec4899 !important; background: rgba(236, 72, 153, 0.14) !important; color: #f472b6 !important; }
+    .char-theme-player { border-color: #818cf8 !important; background: rgba(129, 140, 248, 0.15) !important; color: #c7d2fe !important; }
+    .char-theme-sugar, .char-theme-dinah, .char-theme-murno { border-color: #a855f7 !important; background: rgba(168, 85, 247, 0.15) !important; color: #d8b4fe !important; }
+    .char-theme-rasho, .char-theme-zantek, .char-theme-enzi, .char-theme-killfith { border-color: #ef4444 !important; background: rgba(239, 68, 68, 0.15) !important; color: #fca5a5 !important; }
+    .char-theme-kutty, .char-theme-rufeel, .char-theme-lemmy { border-color: #10b981 !important; background: rgba(16, 185, 129, 0.15) !important; color: #6ee7b7 !important; }
+    .char-theme-exeld, .char-theme-rundor, .char-theme-govan { border-color: #64748b !important; background: rgba(100, 116, 139, 0.2) !important; color: #cbd5e1 !important; }
+    .char-theme-bron, .char-theme-shintetsu, .char-theme-bostaph { border-color: #f59e0b !important; background: rgba(245, 158, 11, 0.15) !important; color: #fcd34d !important; }
+    .char-theme-blaire, .char-theme-arno, .char-theme-loki, .char-theme-zakk { border-color: #f97316 !important; background: rgba(249, 115, 22, 0.15) !important; color: #fdba74 !important; }
+    .char-theme-amariss, .char-theme-sanary, .char-theme-tatiana, .char-theme-tier, .char-theme-anise { border-color: #14b8a6 !important; background: rgba(20, 184, 166, 0.15) !important; color: #5eead4 !important; }
+    .char-theme-system { border-color: #eab308 !important; background: rgba(234, 179, 8, 0.14) !important; color: #fde047 !important; }
+
+    .entry-char-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 1px 7px;
+      border-radius: 5px;
+      font-size: 0.67rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.65);
+      color: var(--text-muted);
+    }
+
+    .gender-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .gender-male {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: #3b82f6;
+      color: #93c5fd;
+    }
+
+    .gender-female {
+      background: rgba(236, 72, 153, 0.18);
+      border-color: #ec4899;
+      color: #f472b6;
+    }
+
+    .gender-both {
+      background: rgba(148, 163, 184, 0.12);
+      border-color: #475569;
+      color: #cbd5e1;
+    }
+
+    /* SCENE FLOW */
+    .scene-flow-card {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 9px 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .scene-flow-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .scene-flow-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-height: 155px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .scene-bubble {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 6px 10px;
+      border-radius: 7px;
+      background-color: rgba(21, 29, 48, 0.55);
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 0.78rem;
+      transition: all 0.12s;
+    }
+
+    .scene-bubble:hover {
+      background-color: var(--bg-card-hover);
+      border-color: var(--border);
+    }
+
+    .scene-bubble.current {
+      background-color: rgba(99, 102, 241, 0.14);
+      border-color: var(--accent);
+      box-shadow: inset 3px 0 0 var(--accent);
+    }
+
+    .scene-bubble-speaker {
+      min-width: 115px;
+      font-weight: 700;
+      font-size: 0.73rem;
+      flex-shrink: 0;
+    }
+
+    .scene-bubble-text {
+      flex: 1;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .scene-bubble-en {
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* COMPARISON CARDS */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+
+    .text-card {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--text-muted);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .text-display {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.92rem;
+      line-height: 1.52;
+      white-space: pre-wrap;
+      color: var(--text-main);
+      background-color: rgba(7, 10, 18, 0.6);
+      padding: 10px 12px;
+      border-radius: 7px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      min-height: 76px;
+    }
+
+    .mini-btn {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.14s;
+    }
+
+    .mini-btn:hover {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* SURGICAL GLOSSARY & ABBREVIATION ASSIST BAR */
+    .surgical-assist-bar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      background: rgba(14, 20, 34, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 7px 12px;
+    }
+
+    .assist-title {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #67e8f9;
+      margin-right: 4px;
+    }
+
+    .glossary-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      color: #e0f2fe;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.73rem;
+      cursor: pointer;
+      transition: all 0.14s;
+    }
+
+    .glossary-chip:hover {
+      background: var(--cyan);
+      color: #082f49;
+      font-weight: 700;
+    }
+
+    .abbr-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fde68a;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.71rem;
+      font-family: 'Consolas', monospace;
+      cursor: pointer;
+      transition: all 0.14s;
+    }
+
+    .abbr-chip:hover {
+      background: var(--amber);
+      color: #451a03;
+      font-weight: 700;
+    }
+
+    /* EDITOR + GBA BOX PREVIEW + LIVE 5-BARRIER QA GATE */
+    .editor-card {
+      background-color: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 13px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .editor-workspace-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 13px;
+      align-items: stretch;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 112px;
+      background-color: #070a12;
+      color: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 11px 13px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.96rem;
+      line-height: 1.52;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.22);
+    }
+
+    /* GBA DIALOGUE SIMULATOR BOX */
+    .gba-simulator-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      background: #070a12;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .gba-sim-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.69rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+    }
+
+    .gba-textbox {
+      background: linear-gradient(180deg, #1e295b 0%, #0f1738 100%);
+      border: 3px solid #cbd5e1;
+      outline: 2px solid #1e293b;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.86rem;
+      line-height: 1.48;
+      color: #ffffff;
+      text-shadow: 1px 1px 0 #090d16;
+      min-height: 78px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.55);
+    }
+
+    .gba-textbox-speaker {
+      display: inline-block;
+      background: #312e81;
+      border: 1px solid #a5b4fc;
+      border-radius: 4px;
+      padding: 0 7px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #e0e7ff;
+      margin-bottom: 4px;
+    }
+
+    .gba-textbox-line {
+      white-space: pre;
+      display: block;
+    }
+
+    .gba-textbox-line.overflow-soft {
+      color: #fde047;
+    }
+
+    .gba-textbox-line.overflow-hard {
+      color: #fca5a5;
+      background: rgba(239, 68, 68, 0.25);
+    }
+
+    /* LIVE 5-BARRIER QA PANEL */
+    .live-qa-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: rgba(7, 10, 18, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 9px 12px;
+    }
+
+    .qa-gates-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .gate-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .gate-pill.ok {
+      background: rgba(16, 185, 129, 0.12);
+      border-color: rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+    }
+
+    .gate-pill.warn {
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: #fde68a;
+    }
+
+    .gate-pill.err {
+      background: rgba(239, 68, 68, 0.16);
+      border-color: rgba(239, 68, 68, 0.55);
+      color: #fca5a5;
+    }
+
+    .qa-issues-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .qa-issue-line {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .qa-issue-line.error {
+      background: rgba(239, 68, 68, 0.14);
+      color: #fecaca;
+      border-left: 3px solid var(--red);
+    }
+
+    .qa-issue-line.warning {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fef08a;
+      border-left: 3px solid var(--amber);
+    }
+
+    .line-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .metric-chip {
+      font-family: 'Consolas', monospace;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 5px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+
+    .metric-chip.ok {
+      color: #34d399;
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+
+    .metric-chip.warn {
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, 0.45);
+    }
+
+    .metric-chip.danger {
+      color: #f87171;
+      border-color: rgba(239, 68, 68, 0.55);
+      background-color: var(--red-soft);
+    }
+
+    /* ACTION BAR */
+    .actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 2px;
+      flex-wrap: wrap;
+    }
+
+    .btn-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.14s;
+    }
+
+    .btn:hover {
+      background-color: var(--bg-card-hover);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      border-color: #34d399;
+      color: #042f2e;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn-secondary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .shortcut-hint {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    kbd {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.68rem;
+      color: #cbd5e1;
+    }
+
+    /* MODALS STUDIO v2.0 */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 14, 0.78);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-window {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-light);
+      border-radius: 13px;
+      width: 100%;
+      max-width: 960px;
+      max-height: 86vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 13px 18px;
+      background: linear-gradient(180deg, #151e32 0%, #0e1422 100%);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-body {
+      padding: 16px 18px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .modal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+
+    .modal-table th, .modal-table td {
+      border-bottom: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .modal-table th {
+      background: rgba(7, 10, 18, 0.6);
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: sticky;
+      top: 0;
+    }
+
+    .modal-table tr:hover td {
+      background: rgba(99, 102, 241, 0.08);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background-color: #1e293b;
+      border: 1px solid var(--accent);
+      color: #f8fafc;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: all 0.2s ease;
+      z-index: 300;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .workspace {
+        grid-template-columns: 300px 1fr;
+      }
+      .comparison-grid, .editor-workspace-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">🎮</div>
+      <div>
+        <div class="brand-title" id="studioBrandTitle">GBA Localization Studio v2.0</div>
+        <div class="brand-sub">
+          <span class="tier-pill" id="projectShortCode">SN1</span>
+          <span id="serverModeIndicator">🟢 Servidor Studio O(1) Ativo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <select id="projectSelect" title="Alternar Jogo / Projeto do Estúdio"></select>
+      <select id="categorySelect" title="Selecionar Arquivo Markdown"></select>
+      <select id="sectionSelect" title="Filtrar por Capítulo / Seção">
+        <option value="">Todas as seções</option>
+      </select>
+      <select id="genderFilter" title="Filtrar por Rota de Gênero do Protagonista">
+        <option value="ALL">⚧ Rota: Todas</option>
+        <option value="MALE" id="genderOptMale">♂ Só Protagonista M</option>
+        <option value="FEMALE" id="genderOptFemale">♀ Só Protagonista F</option>
+        <option value="EXCLUSIVE">⚡ Só Exclusivas (M/F)</option>
+      </select>
+      <select id="charSelect" title="Filtrar por Personagem">
+        <option value="">🎭 Todos os personagens</option>
+      </select>
+      <select id="charFilterMode" title="Modo do filtro de personagem" style="max-width: 120px;">
+        <option value="ANY">Falante/Alvo</option>
+        <option value="SPEAKER">Só Quem Fala</option>
+        <option value="ADDRESSEE">Só Com Quem</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Buscar no arquivo atual (texto, ID, tag)...">
+      <div class="global-search-wrap" title="Buscar em todos os arquivos Markdown deste projeto (Enter ou clique em Global)">
+        <input type="text" id="globalSearchInput" placeholder="🌎 Buscar em todos os arquivos do projeto...">
+        <button type="button" id="globalSearchBtn">🔍 Global</button>
+      </div>
+    </div>
+
+    <div class="studio-actions">
+      <button class="studio-btn qa-btn" id="openQaModalBtn" title="Abrir Relatório Completo do Quality Gate (5 Barreiras)">
+        🛡️ QA Gate <span class="qa-counter-pill" id="headerQaBadge">0</span>
+      </button>
+      <button class="studio-btn bible-btn" id="openBibleModalBtn" title="Consultar Catálogo de Personagens e Glossário Oficial">
+        🎭 Bíblia & Glossário
+      </button>
+      <button class="studio-btn prompt-btn" id="openPromptModalBtn" title="Gerar Prompt Cirúrgico Otimizado para IA (Token Economy)">
+        ⚡ Prompt IA
+      </button>
+      <button class="studio-btn build-btn" id="buildRomBtn" title="Compilar ROM PT-BR e Injetar Textos">
+        🎮 Compilar ROM
+      </button>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText">0 / 0 (0%)</div>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all" id="tabAll">Todos</button>
+        <button class="filter-tab" data-filter="pending" id="tabPending">⏳ Pend.</button>
+        <button class="filter-tab" data-filter="validated" id="tabValidated">✅ Valid.</button>
+        <button class="filter-tab qa-tab" data-filter="qa_issues" id="tabQaIssues">🛡️ QA</button>
+      </div>
+      <div class="sidebar-batch-bar">
+        <span id="sidebarCounterText">0 itens listados</span>
+        <button class="batch-approve-btn" id="batchApproveSafeBtn" title="Marcar como Validado todas as linhas pendentes desta lista que possuem 0 erros no QA Gate">
+          ✅ Aprovar Seguros
+        </button>
+      </div>
+      <div class="entry-list" id="entryList"></div>
+    </aside>
+
+    <!-- MAIN EDITOR -->
+    <main class="main-panel">
+      <div class="entry-header">
+        <div class="entry-meta">
+          <span class="meta-pill">Posição: <strong id="metaIndex">-</strong></span>
+          <span class="meta-pill">ID/Offset: <strong id="metaRefId">-</strong></span>
+          <span class="meta-pill">Linha MD: <strong id="metaLineNum">-</strong></span>
+          <span class="meta-pill">Seção: <strong id="metaSection">-</strong></span>
+        </div>
+        <div id="metaStatusBadge"></div>
+      </div>
+
+      <!-- BANNER DE CONTEXTO DE DIÁLOGO + CHARACTER VOICE -->
+      <div class="dialogue-context-banner" id="dialogueContextBanner">
+        <div class="dialogue-actors-row">
+          <div class="actor-flow">
+            <div class="actor-card" id="speakerCard">
+              <div class="actor-avatar" id="speakerAvatar">🗣️</div>
+              <div class="actor-info">
+                <span class="actor-label">Quem Fala (Falante)</span>
+                <span class="actor-name" id="speakerName">-</span>
+                <span class="actor-sub" id="speakerRole">-</span>
+              </div>
+            </div>
+
+            <div class="flow-arrow">➔</div>
+
+            <div class="actor-card" id="targetCard">
+              <div class="actor-avatar" id="targetAvatar">🎯</div>
+              <div class="actor-info">
+                <span class="actor-label">Com Quem Fala (Alvo)</span>
+                <span class="actor-name" id="targetName">-</span>
+                <span class="actor-sub" id="targetRole">Interlocutor na cena</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; align-items:flex-end; gap:5px;">
+            <span class="meta-pill" id="genderBranchBadge" style="border-color:#475569;">⚧ Rota: Comum</span>
+            <span class="meta-pill" id="dialogueTagHint" style="border-color: rgba(99, 102, 241, 0.35); color: #a5b4fc; font-size:0.71rem;">
+              Tags: -
+            </span>
+          </div>
+        </div>
+
+        <!-- GUIA DE VOZ DO PERSONAGEM (FASE 0) -->
+        <div class="voice-guide-strip" id="voiceGuideBanner">
+          <div>
+            <strong>🎭 Tom de Voz (Character Voice):</strong>
+            <span id="voiceGuideText">Consultando catálogo de personagens...</span>
+          </div>
+          <button class="mini-btn" id="inspectSpeakerBibleBtn" style="flex-shrink:0;">Ver Ficha</button>
+        </div>
+      </div>
+
+      <!-- LINHA DO TEMPO DA CENA -->
+      <div class="scene-flow-card">
+        <div class="scene-flow-header" id="toggleSceneFlow">
+          <span>🎬 Contexto da Cena (Falas Anteriores e Posteriores)</span>
+          <span id="sceneFlowToggleLabel" style="color:#93c5fd;">[Ocultar ▲]</span>
+        </div>
+        <div class="scene-flow-list" id="sceneFlowList"></div>
+      </div>
+
+      <!-- COMPARAÇÃO INGLÊS vs SUGESTÃO PT-BR -->
+      <div class="comparison-grid">
+        <div class="text-card">
+          <div class="card-label">
+            <span>🇺🇸 Texto Original (EN-US)</span>
+            <button class="mini-btn" id="copyEnBtn" title="Copiar texto em inglês">Copiar EN</button>
+          </div>
+          <div class="text-display" id="enDisplay">-</div>
+        </div>
+
+        <div class="text-card">
+          <div class="card-label">
+            <span>🇧🇷 Tradução Atual / Sugerida</span>
+            <div style="display:flex; gap:6px;">
+              <button class="mini-btn" id="toggleViewModeBtn" title="Alternar entre texto corrido (Parágrafo) e linhas GBA" style="border-color:#6366f1; color:#a5b4fc;">📄 Modo: Parágrafo</button>
+              <button class="mini-btn" id="copySuggestedBtn" title="Copiar sugestão PT-BR">Copiar PT</button>
+              <button class="mini-btn" id="useSuggestedBtn" title="Restaurar este texto na caixa de edição">Restaurar</button>
+            </div>
+          </div>
+          <div class="text-display" id="ptSuggestedDisplay">-</div>
+        </div>
+      </div>
+
+      <!-- BARRA CIRÚRGICA DE GLOSSÁRIO E ABREVIAÇÕES CANÔNICAS -->
+      <div class="surgical-assist-bar" id="surgicalAssistBar">
+        <span class="assist-title" id="assistBarTitle">📖 Glossário Cirúrgico:</span>
+        <div id="detectedGlossaryChips" style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;"></div>
+      </div>
+
+      <!-- EDITOR + PREVIEW VISUAL GBA + 5-BARRIER QA GATE -->
+      <div class="editor-card">
+        <div class="card-label">
+          <span>✏️ Editor de Tradução Final (Salvo diretamente no .md em O(1))</span>
+          <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+            <button class="mini-btn" id="autoWrapBtn" title="Quebra linhas em ≤34 caracteres evitando palavras órfãs no fim da linha">✨ Auto-Wrap Anti-Órfãos (≤34c)</button>
+            <button class="mini-btn" id="unifyLinesBtn" title="Juntar todas as linhas em um único parágrafo">🧹 Unificar Linhas</button>
+            <button class="mini-btn" id="restoreTagsBtn" title="Inserir tags dinâmicas ausentes ({PLAYER}, {PARTNER}, etc.)">🏷️ Inserir Tags</button>
+            <button class="mini-btn" id="copyEditorBtn" title="Copiar texto do editor">📋 Copiar</button>
+            <button class="mini-btn" id="useAltBtn" style="display:none; border-color: #f59e0b; color: #fbbf24;">Usar Alternativa "(ou ...)"</button>
+          </div>
+        </div>
+
+        <div class="editor-workspace-grid">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <textarea id="ptEditInput" placeholder="Digite a tradução validada... (Cada Enter vira <br> na tabela Markdown)"></textarea>
+            <div class="line-metrics" id="lineMetrics"></div>
+          </div>
+
+          <!-- SIMULADOR DE CAIXA DE DIÁLOGO GBA -->
+          <div class="gba-simulator-wrap">
+            <div class="gba-sim-header">
+              <span>📺 Simulador de Caixa GBA (Hard Limit: <span id="gbaHardLimitLabel">35</span>c)</span>
+              <span id="gbaBoxPageCounter">Caixa 1/1</span>
+            </div>
+            <div class="gba-textbox" id="gbaSimulatorBox">
+              <div class="gba-textbox-speaker" id="gbaSimSpeaker">FALANTE</div>
+              <div id="gbaSimLines"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAINEL AO VIVO DAS 5 BARREIRAS DO QUALITY GATE -->
+        <div class="live-qa-panel">
+          <div class="qa-gates-row" id="liveQaGatesRow"></div>
+          <div class="qa-issues-detail" id="liveQaIssuesList"></div>
+        </div>
+
+        <div id="descEditorWrap" style="display:none; margin-top: 4px; flex-direction: column; gap: 6px;">
+          <div class="card-label">
+            <span>📝 Descrição / Efeito em Português (Coluna Secundária)</span>
+          </div>
+          <input type="text" id="ptDescInput" placeholder="Descrição do item / habilidade em PT-BR...">
+        </div>
+      </div>
+
+      <!-- BARRA DE AÇÕES -->
+      <div class="actions-bar">
+        <div class="btn-group">
+          <button class="btn" id="prevBtn">⬅️ Anterior</button>
+          <button class="btn" id="nextBtn">Próximo ➡️</button>
+          <button class="btn" id="nextPendingBtn">⏭️ Próximo Pendente</button>
+          <button class="btn" id="nextQaErrorBtn" style="border-color:rgba(239,68,68,0.45); color:#fca5a5;">🛡️ Próximo Alerta QA</button>
+        </div>
+
+        <div class="shortcut-hint">
+          <kbd>Ctrl</kbd>+<kbd>Enter</kbd> Validar e Avançar &nbsp;|&nbsp; <kbd>Alt</kbd>+<kbd>W</kbd> Auto-Wrap &nbsp;|&nbsp; <kbd>Alt</kbd>+<kbd>↑/↓</kbd> Navegar
+        </div>
+
+        <div class="btn-group">
+          <button class="btn" id="markPendingBtn">⏳ Marcar Pendente</button>
+          <button class="btn btn-secondary" id="saveOnlyBtn">💾 Salvar</button>
+          <button class="btn btn-primary" id="validateNextBtn">✅ Validar e Avançar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- MODAL 1: RELATÓRIO DE AUDITORIA DO QUALITY GATE -->
+  <div class="modal-backdrop" id="qaModalBackdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">🛡️ Relatório de Auditoria Quality Gate (5 Barreiras do Estúdio)</div>
+        <div style="display:flex; gap:8px;">
+          <button class="mini-btn" id="qaScopeFileBtn">Auditar Arquivo Atual</button>
+          <button class="mini-btn" id="qaScopeProjectBtn">Auditar Projeto Inteiro</button>
+          <button class="mini-btn" id="closeQaModalBtn">✖ Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body" id="qaModalBody">
+        Carregando auditoria...
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: BÍBLIA DE PERSONAGENS & GLOSSÁRIO OFICIAL -->
+  <div class="modal-backdrop" id="bibleModalBackdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">🎭 Catálogo de Personagens (Character Voice) & Glossário Canônico</div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <input type="text" id="bibleSearchInput" placeholder="Filtrar personagem ou termo..." style="min-width:220px;">
+          <button class="mini-btn" id="closeBibleModalBtn">✖ Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body" id="bibleModalBody"></div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: GERADOR DE PROMPT CIRÚRGICO (TOKEN ECONOMY) -->
+  <div class="modal-backdrop" id="promptModalBackdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">⚡ Gerador de Prompt Cirúrgico (Token Economy Batcher)</div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <label style="font-size:0.75rem; color:var(--text-muted);">Lote:</label>
+          <input type="number" id="promptChunkSize" value="35" min="5" max="100" style="width:65px;">
+          <button class="mini-btn" id="regeneratePromptBtn">🔄 Gerar Lote</button>
+          <button class="mini-btn" id="copySurgicalPromptBtn" style="background:var(--accent); color:#fff;">📋 Copiar Prompt</button>
+          <button class="mini-btn" id="closePromptModalBtn">✖ Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div style="font-size:0.78rem; color:var(--text-muted);" id="promptMetaSummary">
+          Extrai automaticamente apenas os personagens e termos do glossário presentes nas falas pendentes do arquivo atual.
+        </div>
+        <textarea id="surgicalPromptOutput" readonly style="min-height:380px; font-size:0.82rem;"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: COMPILAÇÃO DA ROM PT-BR -->
+  <div class="modal-backdrop" id="buildModalBackdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title">🎮 Pipeline de Compilação da ROM PT-BR</div>
+        <button class="mini-btn" id="closeBuildModalBtn">✖ Fechar</button>
+      </div>
+      <div class="modal-body">
+        <pre id="buildTerminalOutput" style="background:#050811; border:1px solid var(--border); padding:14px; border-radius:8px; font-family:'Consolas',monospace; font-size:0.8rem; color:#a7f3d0; white-space:pre-wrap; max-height:60vh; overflow-y:auto;">Aguardando execução...</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: BUSCA GLOBAL EM TODOS OS ARQUIVOS DO PROJETO -->
+  <div class="modal-backdrop" id="globalSearchModalBackdrop">
+    <div class="modal-window" style="max-width: 1080px;">
+      <div class="modal-header">
+        <div class="modal-title">🌎 Busca Global no Projeto (<span id="globalSearchProjectTitle">Projeto</span>)</div>
+        <div style="display:flex; gap:8px; align-items:center; flex:1; max-width:560px; justify-content:flex-end;">
+          <input type="text" id="globalSearchModalInput" placeholder="Digite texto original, tradução, ID (0x...), personagem ou tag..." style="flex:1;">
+          <button class="mini-btn" id="runGlobalSearchModalBtn" style="background:var(--cyan); color:#082f49; font-weight:800; border-color:var(--cyan);">🔍 Buscar</button>
+          <button class="mini-btn" id="closeGlobalSearchModalBtn">✖ Fechar</button>
+        </div>
+      </div>
+      <div class="modal-body" id="globalSearchModalBody">
+        <div style="padding:20px; color:var(--text-muted); text-align:center;">Digite um termo acima para pesquisar em todos os arquivos Markdown deste projeto.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Salvo com sucesso!</div>
+
+  <!-- Dados embutidos para funcionamento offline instantâneo -->
+  <script>
+    // =========================================================================
+    // ESTADO GLOBAL DO STUDIO v2.0
+    // =========================================================================
+    let activeProject = {
+      id: "Summon_Night_Swordcraft_Story_1",
+      short_code: "SN1",
+      title: "Summon Night: Swordcraft Story 1",
+      male_hero: { id: "cleru", name: "Cleru", icon: "👦" },
+      female_hero: { id: "pratty", name: "Pratty", icon: "👧" },
+      ideal_limit: 32,
+      soft_limit: 35,
+      hard_limit: 35,
+    };
+    let availableProjects = [];
+    let categories = [];
+    let currentFile = "";
+    let allEntries = [];
+    let filteredEntries = [];
+    let currentPos = 0;
+    let currentFilter = "all";
+    let currentGenderFilter = "ALL";
+    let currentCharFilter = "";
+    let currentCharMode = "ANY";
+    let isCurrentFileStoryDialogue = true;
+    let sceneFlowCollapsed = false;
+    let isParagraphMode = true;
+    let serverOnline = true;
+
+    let studioCharacterBible = {};
+    let studioVoiceMatrix = {};
+    let studioGlossaryTerms = [];
+    let studioCanonicalAbbr = [];
+
+    // Regras espelhadas do QA Gate para avaliação instantânea (0ms) enquanto o usuário digita
+    const ORPHAN_END_WORDS = new Set([
+      "o", "a", "os", "as", "um", "uma", "de", "do", "da", "dos", "das",
+      "em", "no", "na", "nos", "nas", "e", "ou", "que", "se", "por", "com", "para"
+    ]);
+    const FORBIDDEN_DIALOGUE_ABBREVS_JS = [
+      [/\bvc\b/i, "vc"], [/\bvcs\b/i, "vcs"], [/\bpq\b/i, "pq"],
+      [/\btb\b/i, "tb"], [/\btbm\b/i, "tbm"], [/\bctz\b/i, "ctz"],
+      [/\bblz\b/i, "blz"], [/\bvlw\b/i, "vlw"], [/\bq\b/i, "q"],
+      [/\batq\./i, "atq."], [/\bdef\./i, "def."], [/\brecup\./i, "recup."],
+      [/\besp\./i, "esp."], [/\bmin\./i, "min."], [/\belem\./i, "elem."]
+    ];
+    const GENDER_BIAS_JS = [
+      [/\bbem-vind[oa]\b/i, "bem-vindo/a (use 'Boas-vindas!')"],
+      [/\bobrigad[oa]\b/i, "obrigado/a (use 'Agradeço!')"],
+      [/\bvocê\s+(?:está|parece|é|ficou)\s+(?:muito\s+|tão\s+)?(cansad[oa]|pront[oa]|cert[oa]|sozinh[oa]|preparad[oa]|corajos[oa]|segur[oa]|nervos[oa]|assustad[oa])\b/i, "adjetivo flexionado para {PLAYER}"]
+    ];
+    const RESIDUAL_EN_JS = [
+      /\b(the|and|you|your|with|from|this|that|what|when|where|have|will|would|could|should|about|before|after)\b/i
+    ];
+
+    // Elementos DOM
+    const projectSelect = document.getElementById("projectSelect");
+    const categorySelect = document.getElementById("categorySelect");
+    const sectionSelect = document.getElementById("sectionSelect");
+    const genderFilter = document.getElementById("genderFilter");
+    const charSelect = document.getElementById("charSelect");
+    const charFilterMode = document.getElementById("charFilterMode");
+    const searchInput = document.getElementById("searchInput");
+    const entryList = document.getElementById("entryList");
+    const progressBar = document.getElementById("progressBar");
+    const progressText = document.getElementById("progressText");
+
+    const metaIndex = document.getElementById("metaIndex");
+    const metaRefId = document.getElementById("metaRefId");
+    const metaLineNum = document.getElementById("metaLineNum");
+    const metaSection = document.getElementById("metaSection");
+    const metaStatusBadge = document.getElementById("metaStatusBadge");
+
+    const speakerCard = document.getElementById("speakerCard");
+    const speakerAvatar = document.getElementById("speakerAvatar");
+    const speakerName = document.getElementById("speakerName");
+    const speakerRole = document.getElementById("speakerRole");
+    const targetCard = document.getElementById("targetCard");
+    const targetAvatar = document.getElementById("targetAvatar");
+    const targetName = document.getElementById("targetName");
+    const targetRole = document.getElementById("targetRole");
+    const genderBranchBadge = document.getElementById("genderBranchBadge");
+    const dialogueTagHint = document.getElementById("dialogueTagHint");
+    const voiceGuideText = document.getElementById("voiceGuideText");
+    const sceneFlowList = document.getElementById("sceneFlowList");
+
+    const enDisplay = document.getElementById("enDisplay");
+    const ptSuggestedDisplay = document.getElementById("ptSuggestedDisplay");
+    const ptEditInput = document.getElementById("ptEditInput");
+    const ptDescInput = document.getElementById("ptDescInput");
+    const descEditorWrap = document.getElementById("descEditorWrap");
+    const lineMetrics = document.getElementById("lineMetrics");
+    const useAltBtn = document.getElementById("useAltBtn");
+    const toast = document.getElementById("toast");
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2300);
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function getLocalOverrideKey(filename, lineIndex) {
+      return `gba_studio_v2::${activeProject.id}::${filename}::${lineIndex}`;
+    }
+
+    function applyLocalOverridesToFile(filename, entries) {
+      let extraValid = 0;
+      entries.forEach(e => {
+        const raw = localStorage.getItem(getLocalOverrideKey(filename, e.line_index));
+        if (raw) {
+          try {
+            const ov = JSON.parse(raw);
+            const wasValid = e.validated;
+            if (ov.pt_text !== undefined) e.pt_text = ov.pt_text;
+            if (ov.pt_desc !== undefined) e.pt_desc = ov.pt_desc;
+            if (ov.validated !== undefined) {
+              e.validated = ov.validated;
+              e.status_str = ov.validated ? "✅ Validado" : "⏳ Pendente";
+            }
+            if (!wasValid && e.validated) extraValid++;
+            if (wasValid && !e.validated) extraValid--;
+          } catch (_) {}
+        }
+      });
+      return extraValid;
+    }
+
+    function applyProjectProfileUI(profile) {
+      if (!profile) return;
+      activeProject = profile;
+      document.getElementById("studioBrandTitle").textContent = `${profile.title} — Studio v2.0`;
+      document.getElementById("projectShortCode").textContent = profile.short_code || "GBA";
+      document.getElementById("gbaHardLimitLabel").textContent = profile.hard_limit || 35;
+
+      const mHero = profile.male_hero || { name: "Herói M" };
+      const fHero = profile.female_hero || { name: "Heroína F" };
+      document.getElementById("genderOptMale").textContent = `♂ Rota ${mHero.name} (M)`;
+      document.getElementById("genderOptFemale").textContent = `♀ Rota ${fHero.name} (F)`;
+    }
+
+    // =========================================================================
+    // MOTOR LOCAL DAS 5 BARREIRAS DO QUALITY GATE (TEMPO REAL)
+    // =========================================================================
+    function evaluateEntryQaLive(enText, ptText, isStoryDialogue) {
+      const issues = [];
+      const idealLimit = activeProject.ideal_limit || 32;
+      const hardLimit = activeProject.hard_limit || 35;
+
+      const enTags = (enText.match(/\{[A-Z0-9_]+\}|\[0x[0-9A-Fa-f]+\]/g) || []);
+      const ptTags = (ptText.match(/\{[A-Z0-9_]+\}|\[0x[0-9A-Fa-f]+\]/g) || []);
+
+      // Gate 1: Tags Dinâmicas
+      const missingTags = enTags.filter(t => !ptTags.includes(t));
+      const extraTags = ptTags.filter(t => !enTags.includes(t));
+      let gate1Status = "ok";
+      if (missingTags.length > 0) {
+        gate1Status = "err";
+        issues.push({
+          gate: "GATE 1 (Tags)",
+          severity: "error",
+          msg: `Tag dinâmica ausente na tradução: ${missingTags.join(", ")}`
+        });
+      } else if (extraTags.length > 0) {
+        gate1Status = "warn";
+        issues.push({
+          gate: "GATE 1 (Tags)",
+          severity: "warning",
+          msg: `Tag dinâmica extra inserida: ${extraTags.join(", ")}`
+        });
+      }
+
+      // Gate 2 & 3: Largura de Linha GBA e Orfandade Textual
+      const lines = (ptText || "").split("\n");
+      let gate2Status = "ok";
+      let gate3Status = "ok";
+
+      lines.forEach((rawLine, idx) => {
+        const cleanLine = rawLine.replace(/\[0x[0-9A-Fa-f]+\]/g, "");
+        const length = cleanLine.length;
+
+        if (length > hardLimit) {
+          gate2Status = "err";
+          issues.push({
+            gate: "GATE 2 (Overflow)",
+            severity: "error",
+            msg: `Linha ${idx + 1} com ${length} chars (Hard Limit: ${hardLimit})`
+          });
+        } else if (length > idealLimit && gate2Status !== "err") {
+          gate2Status = "warn";
+        }
+
+        if (isStoryDialogue && idx < lines.length - 1) {
+          const words = cleanLine.trim().split(/\s+/).filter(Boolean);
+          if (words.length >= 3) {
+            const lastWord = words[words.length - 1].replace(/[.,!?;:"'”’)]+$/g, "").toLowerCase();
+            if (ORPHAN_END_WORDS.has(lastWord)) {
+              gate3Status = "warn";
+              issues.push({
+                gate: "GATE 3 (Orfandade)",
+                severity: "warning",
+                msg: `Palavra curta órfã "${lastWord}" isolada no fim da linha ${idx + 1} antes da quebra`
+              });
+            }
+          }
+        }
+      });
+
+      // Gate 4: Política de Abreviações
+      let gate4Status = "ok";
+      if (isStoryDialogue && ptText) {
+        for (const [rx, label] of FORBIDDEN_DIALOGUE_ABBREVS_JS) {
+          if (rx.test(ptText)) {
+            gate4Status = "err";
+            issues.push({
+              gate: "GATE 4 (Abreviação)",
+              severity: "error",
+              msg: `Abreviação proibida em diálogo narrativo: "${label}"`
+            });
+          }
+        }
+      }
+
+      // Gate 5: Neutralidade de Gênero & Inglês Residual
+      let gate5Status = "ok";
+      if (isStoryDialogue && ptText) {
+        const referencesPlayer = ptText.includes("{PLAYER}") || enText.includes("{PLAYER}");
+        for (const [rx, desc] of GENDER_BIAS_JS) {
+          if (rx.test(ptText) && (referencesPlayer || desc.includes("bem-vind") || desc.includes("obrigad"))) {
+            gate5Status = "warn";
+            issues.push({
+              gate: "GATE 5 (Gênero Neutro)",
+              severity: "warning",
+              msg: `Possível desvio de neutralidade para {PLAYER}: ${desc}`
+            });
+          }
+        }
+      }
+
+      if (ptText && enText && ptText.trim().length > 14) {
+        if (ptText.trim() === enText.trim()) {
+          gate5Status = "err";
+          issues.push({
+            gate: "GATE 5 (Inglês Residual)",
+            severity: "error",
+            msg: "Texto idêntico ao original em inglês (não traduzido)"
+          });
+        } else {
+          for (const rx of RESIDUAL_EN_JS) {
+            const m = ptText.match(rx);
+            if (m) {
+              if (gate5Status !== "err") gate5Status = "warn";
+              issues.push({
+                gate: "GATE 5 (Inglês Residual)",
+                severity: "warning",
+                msg: `Possível palavra em inglês residual: "${m[0]}"`
+              });
+              break;
+            }
+          }
+        }
+      }
+
+      return {
+        issues,
+        missingTags,
+        gates: [
+          { id: "G1", label: "Gate 1: Tags", status: gate1Status },
+          { id: "G2", label: "Gate 2: Largura GBA", status: gate2Status },
+          { id: "G3", label: "Gate 3: Anti-Órfãos", status: gate3Status },
+          { id: "G4", label: "Gate 4: Zero Abrev.", status: gate4Status },
+          { id: "G5", label: "Gate 5: Gênero/PT", status: gate5Status },
+        ]
+      };
+    }
+
+    // =========================================================================
+    // CARREGAMENTO DE PROJETOS E CATEGORIAS
+    // =========================================================================
+    function loadDataScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => { script.remove(); resolve(); };
+        script.onerror = () => { script.remove(); reject(new Error('Não foi possível carregar ' + src)); };
+        document.head.appendChild(script);
+      });
+    }
+
+    async function loadStudioBootstrap() {
+      try {
+        const [projRes, ctxRes, catRes] = await Promise.all([
+          fetch("/api/projects"),
+          fetch("/api/studio_context"),
+          fetch("/api/categories")
+        ]);
+        if (!projRes.ok || !catRes.ok) throw new Error("Offline");
+
+        const projData = await projRes.json();
+        const ctxData = await ctxRes.json();
+        const catData = await catRes.json();
+
+        serverOnline = true;
+        availableProjects = projData.projects || [];
+        studioCharacterBible = ctxData.character_bible || {};
+        studioVoiceMatrix = ctxData.voice_matrix || {};
+        studioGlossaryTerms = ctxData.glossary_terms || [];
+        studioCanonicalAbbr = ctxData.canonical_abbreviations || [];
+
+        applyProjectProfileUI(catData.project || projData.active_project);
+        renderProjectSelect();
+
+        categories = catData.categories || [];
+        renderCategorySelect();
+        if (categories.length > 0) {
+          await loadFile(categories[0].filename);
+        }
+      } catch (err) {
+        if (!window.EMBEDDED_MD_DATA) {
+          try { await loadDataScript('embedded_md_data.js'); }
+          catch (offlineError) { showToast(offlineError.message); return; }
+        }
+        if (window.EMBEDDED_MD_DATA) {
+          serverOnline = false;
+          document.getElementById("serverModeIndicator").textContent = "🟠 Modo Offline (Cache Local)";
+          const emb = window.EMBEDDED_MD_DATA;
+          studioCharacterBible = emb.character_bible || {};
+          studioVoiceMatrix = emb.voice_matrix || {};
+          studioGlossaryTerms = emb.glossary_terms || [];
+          studioCanonicalAbbr = emb.canonical_abbreviations || [];
+          applyProjectProfileUI(emb.project);
+
+          availableProjects = [{
+            id: emb.project ? emb.project.id : "Offline",
+            short_code: emb.project ? emb.project.short_code : "GBA",
+            title: emb.project ? emb.project.title : "Projeto Offline"
+          }];
+          renderProjectSelect();
+
+          categories = emb.categories.map(c => ({ ...c }));
+          renderCategorySelect();
+          if (categories.length > 0) {
+            await loadFile(categories[0].filename);
+          }
+        }
+      }
+    }
+
+    function renderProjectSelect() {
+      projectSelect.innerHTML = "";
+      availableProjects.forEach(p => {
+        const opt = document.createElement("option");
+        opt.value = p.id;
+        opt.textContent = `🎮 [${p.short_code}] ${p.title}`;
+        if (p.id === activeProject.id) opt.selected = true;
+        projectSelect.appendChild(opt);
+      });
+    }
+
+    function renderCategorySelect() {
+      const prev = currentFile;
+      categorySelect.innerHTML = "";
+      let totalQaErrors = 0;
+      categories.forEach(cat => {
+        totalQaErrors += (cat.qa_errors || 0);
+        const opt = document.createElement("option");
+        opt.value = cat.filename;
+        const pct = cat.total > 0 ? Math.round((cat.validated / cat.total) * 100) : 0;
+        const qaFlag = (cat.qa_errors || 0) > 0 ? ` 🔴${cat.qa_errors}` : "";
+        opt.textContent = `${cat.filename} (${cat.validated}/${cat.total} • ${pct}%)${qaFlag}`;
+        categorySelect.appendChild(opt);
+      });
+      if (prev && categories.some(c => c.filename === prev)) {
+        categorySelect.value = prev;
+      }
+
+      const qaBtn = document.getElementById("openQaModalBtn");
+      const qaBadge = document.getElementById("headerQaBadge");
+      qaBadge.textContent = totalQaErrors;
+      qaBtn.classList.toggle("has-errors", totalQaErrors > 0);
+    }
+
+    async function switchProject(targetGameId) {
+      if (!serverOnline) {
+        showToast("Alternância entre jogos requer o servidor Python ativo.");
+        projectSelect.value = activeProject.id;
+        return;
+      }
+      try {
+        const res = await fetch("/api/switch_project", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ game_id: targetGameId })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          studioCharacterBible = data.character_bible || {};
+          studioVoiceMatrix = data.voice_matrix || {};
+          studioGlossaryTerms = data.glossary_terms || [];
+          studioCanonicalAbbr = data.canonical_abbreviations || [];
+          applyProjectProfileUI(data.project);
+          categories = data.categories || [];
+          currentFile = "";
+          renderCategorySelect();
+          if (categories.length > 0) {
+            await loadFile(categories[0].filename);
+          }
+          showToast(`Projeto alternado para ${data.project.title}!`);
+        }
+      } catch (e) {
+        showToast("Erro ao alternar projeto.");
+      }
+    }
+
+    async function loadFile(filename) {
+      currentFile = filename;
+      categorySelect.value = filename;
+      let data = null;
+
+      if (serverOnline) {
+        const res = await fetch(`/api/file?name=${encodeURIComponent(filename)}&game=${encodeURIComponent(activeProject.id)}`);
+        data = await res.json();
+      } else if (window.EMBEDDED_MD_DATA) {
+        const emb = window.EMBEDDED_MD_DATA;
+        if (!emb.files[filename] && emb.file_scripts && emb.file_scripts[filename]) {
+          try { await loadDataScript(emb.file_scripts[filename]); }
+          catch (error) { showToast(error.message); return; }
+        }
+        if (!emb.files[filename]) return;
+        const rawFile = window.EMBEDDED_MD_DATA.files[filename];
+        const clonedEntries = rawFile.entries.map(e => ({ ...e }));
+        applyLocalOverridesToFile(filename, clonedEntries);
+        data = {
+          filename,
+          is_story_dialogue: rawFile.is_story_dialogue !== false,
+          total: clonedEntries.length,
+          validated: clonedEntries.filter(e => e.validated).length,
+          entries: clonedEntries
+        };
+        for (const key of Object.keys(emb.files)) {
+          if (key !== filename) delete emb.files[key];
+        }
+      }
+
+      if (!data) return;
+      allEntries = data.entries || [];
+      isCurrentFileStoryDialogue = data.is_story_dialogue !== false;
+
+      // Popula seções
+      const sections = [...new Set(allEntries.map(e => e.section).filter(Boolean))];
+      sectionSelect.innerHTML = `<option value="">Todas as seções (${sections.length})</option>`;
+      sections.forEach(sec => {
+        const opt = document.createElement("option");
+        opt.value = sec;
+        opt.textContent = sec;
+        sectionSelect.appendChild(opt);
+      });
+
+      // Popula personagens encontrados no arquivo
+      const charMap = new Map();
+      allEntries.forEach(e => {
+        if (e.speaker_id && e.speaker) {
+          const prev = charMap.get(e.speaker_id) || { name: e.speaker, count: 0 };
+          prev.count++;
+          charMap.set(e.speaker_id, prev);
+        }
+        if (e.addressee_id && e.addressee) {
+          const prev = charMap.get(e.addressee_id) || { name: e.addressee, count: 0 };
+          charMap.set(e.addressee_id, prev);
+        }
+      });
+
+      charSelect.innerHTML = `<option value="">🎭 Todos os personagens (${charMap.size})</option>`;
+      [...charMap.entries()]
+        .sort((a, b) => b[1].count - a[1].count)
+        .forEach(([cid, info]) => {
+          const opt = document.createElement("option");
+          opt.value = cid;
+          opt.textContent = `${info.name} (${info.count} falas)`;
+          charSelect.appendChild(opt);
+        });
+      currentCharFilter = "";
+
+      updateProgress();
+      applyFilters(true);
+    }
+
+    function updateProgress() {
+      const total = allEntries.length;
+      const valid = allEntries.filter(e => e.validated).length;
+      const qaErrCount = allEntries.filter(e => e.has_qa_error).length;
+      const qaWarnCount = allEntries.filter(e => e.has_qa_warn).length;
+      const pct = total > 0 ? Math.round((valid / total) * 100) : 0;
+
+      progressBar.style.width = `${pct}%`;
+      progressText.textContent = `${valid} / ${total} (${pct}%)`;
+
+      document.getElementById("tabAll").textContent = `Todos (${total})`;
+      document.getElementById("tabPending").textContent = `⏳ Pend. (${total - valid})`;
+      document.getElementById("tabValidated").textContent = `✅ Valid. (${valid})`;
+      document.getElementById("tabQaIssues").textContent = `🛡️ QA (${qaErrCount + qaWarnCount})`;
+
+      const catIdx = categories.findIndex(c => c.filename === currentFile);
+      if (catIdx !== -1) {
+        categories[catIdx].validated = valid;
+        categories[catIdx].total = total;
+        categories[catIdx].qa_errors = qaErrCount;
+        categories[catIdx].qa_warnings = qaWarnCount;
+        renderCategorySelect();
+      }
+    }
+
+    function applyFilters(resetPos = false) {
+      const sec = sectionSelect.value;
+      const q = searchInput.value.trim().toLowerCase();
+
+      filteredEntries = allEntries.filter(e => {
+        if (currentFilter === "pending" && e.validated) return false;
+        if (currentFilter === "validated" && !e.validated) return false;
+        if (currentFilter === "qa_issues" && !e.has_qa_error && !e.has_qa_warn) return false;
+        if (sec && e.section !== sec) return false;
+
+        if (currentGenderFilter === "MALE" && e.gender_branch === "FEMALE") return false;
+        if (currentGenderFilter === "FEMALE" && e.gender_branch === "MALE") return false;
+        if (currentGenderFilter === "EXCLUSIVE" && e.gender_branch === "BOTH") return false;
+
+        if (currentCharFilter) {
+          if (currentCharMode === "SPEAKER" && e.speaker_id !== currentCharFilter) return false;
+          if (currentCharMode === "ADDRESSEE" && e.addressee_id !== currentCharFilter) return false;
+          if (currentCharMode === "ANY" && e.speaker_id !== currentCharFilter && e.addressee_id !== currentCharFilter) return false;
+        }
+
+        if (q) {
+          const hay = `${e.ref_id} ${e.en_text} ${e.pt_text} ${e.section} ${e.speaker} ${e.addressee}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      document.getElementById("sidebarCounterText").textContent = `${filteredEntries.length} itens listados`;
+
+      if (resetPos) {
+        const firstPending = filteredEntries.findIndex(e => !e.validated);
+        currentPos = firstPending !== -1 ? firstPending : 0;
+      } else if (currentPos >= filteredEntries.length) {
+        currentPos = Math.max(0, filteredEntries.length - 1);
+      }
+
+      renderSidebarList();
+      renderCurrentEntry();
+    }
+
+    // =========================================================================
+    // RENDERIZAÇÃO OTIMIZADA DA SIDEBAR (DOCUMENT FRAGMENT)
+    // =========================================================================
+    function renderSidebarList() {
+      entryList.innerHTML = "";
+      if (filteredEntries.length === 0) {
+        entryList.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-muted); font-size:0.84rem;">Nenhum item encontrado com os filtros atuais.</div>`;
+        return;
+      }
+
+      const mHeroName = activeProject.male_hero ? activeProject.male_hero.name : "M";
+      const fHeroName = activeProject.female_hero ? activeProject.female_hero.name : "F";
+
+      const frag = document.createDocumentFragment();
+      filteredEntries.forEach((e, idx) => {
+        const div = document.createElement("div");
+        let cls = "entry-item";
+        if (idx === currentPos) cls += " active";
+        if (e.has_qa_error) cls += " has-qa-err";
+        else if (e.has_qa_warn) cls += " has-qa-warn";
+        div.className = cls;
+        div.dataset.idx = idx;
+
+        const themeClass = `char-theme-${e.speaker_id || "unknown"}`;
+        const gBadge = e.gender_branch === "MALE"
+          ? `<span class="gender-badge gender-male" title="Exclusivo Rota ${mHeroName}">♂</span>`
+          : e.gender_branch === "FEMALE"
+            ? `<span class="gender-badge gender-female" title="Exclusivo Rota ${fHeroName}">♀</span>`
+            : "";
+
+        let qaBadge = "";
+        if (e.has_qa_error) {
+          qaBadge = `<span class="badge qa-err" title="Contém erro crítico no QA Gate">🔴 QA</span>`;
+        } else if (e.has_qa_warn) {
+          qaBadge = `<span class="badge qa-warn" title="Contém alerta no QA Gate">🟡 QA</span>`;
+        }
+
+        div.innerHTML = `
+          <div class="entry-item-top">
+            <span class="entry-id">#${e.index + 1} • ${escapeHtml(e.ref_id)}</span>
+            <div style="display:flex; gap:4px; align-items:center;">
+              ${qaBadge}
+              <span class="badge ${e.validated ? 'valid' : 'pending'}">${e.validated ? '✅' : '⏳'}</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:4px;">
+            <span class="entry-char-pill ${themeClass}">🗣️ ${escapeHtml(e.speaker || 'Geral')}</span>
+            <div style="display:flex; align-items:center; gap:4px;">
+              ${gBadge}
+              <span style="font-size:0.66rem; color:var(--text-muted);">➔ ${escapeHtml(e.addressee || '-')}</span>
+            </div>
+          </div>
+          <div class="entry-preview-en">${escapeHtml((e.en_text || "").replace(/\n/g, " "))}</div>
+          <div class="entry-preview-pt">${escapeHtml((e.pt_text || "").replace(/\n/g, " "))}</div>
+        `;
+        div.addEventListener("click", () => {
+          currentPos = idx;
+          updateActiveSidebarItem();
+          renderCurrentEntry();
+        });
+        frag.appendChild(div);
+      });
+
+      entryList.appendChild(frag);
+      scrollToActiveSidebarItem();
+    }
+
+    function updateActiveSidebarItem() {
+      const items = entryList.querySelectorAll(".entry-item");
+      items.forEach((el, i) => {
+        el.classList.toggle("active", i === currentPos);
+      });
+      scrollToActiveSidebarItem();
+    }
+
+    function scrollToActiveSidebarItem() {
+      const activeEl = entryList.querySelector(".entry-item.active");
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      }
+    }
+
+    function getAvatarEmoji(charId) {
+      const map = {
+        cleru: "👦", pratty: "👧", edgar: "👦", aera: "👧", ritchie: "👦", rif: "👧",
+        player: "🎮", sugar: "🧚‍♀️", rasho: "🔥", kutty: "🐾", zantek: "⚡",
+        murno: "💧", dinah: "🔮", arno: "🔥", loki: "⚡", rundor: "🤖",
+        enzi: "🐉", killfith: "🗡️", rufeel: "🌿",
+        exeld: "🛡️", bron: "🔨", blaire: "⚔️", amariss: "🌿",
+        rob: "🍺", orin: "⛏️", ryouga: "🥷", sanary: "💃",
+        varil: "💎", tatiana: "❄️", ve: "🎭", lemmy: "🎩",
+        jade: "🦅", tier: "👑", zakk: "🗡️", govan: "⚒️",
+        anise: "🌸", bostaph: "🪓", sakuro: "⛩️", lubert: "⚙️",
+        ureksa: "🐉", kouren: "🏮", shintetsu: "⚔️",
+        system: "⚙️", npc: "💬", unknown: "👤"
+      };
+      return map[charId] || "🗣️";
+    }
+
+    // =========================================================================
+    // RENDERIZAÇÃO DO ITEM ATUAL, GLOSSÁRIO CIRÚRGICO E SIMULADOR GBA
+    // =========================================================================
+    function renderCurrentEntry() {
+      if (filteredEntries.length === 0) {
+        metaIndex.textContent = "-";
+        metaRefId.textContent = "-";
+        metaLineNum.textContent = "-";
+        metaSection.textContent = "-";
+        metaStatusBadge.innerHTML = "";
+        enDisplay.textContent = "-";
+        ptSuggestedDisplay.textContent = "-";
+        ptEditInput.value = "";
+        lineMetrics.innerHTML = "";
+        return;
+      }
+
+      const e = filteredEntries[currentPos];
+      metaIndex.textContent = `${currentPos + 1} de ${filteredEntries.length} (Global #${e.index + 1})`;
+      metaRefId.textContent = e.ref_id;
+      metaLineNum.textContent = `L${e.line_index + 1}`;
+      metaSection.textContent = e.section || "Geral";
+      metaStatusBadge.innerHTML = `<span class="badge ${e.validated ? 'valid' : 'pending'}" style="font-size:0.8rem; padding:4px 10px;">${e.validated ? '✅ Validado' : '⏳ Pendente'}</span>`;
+
+      // Preenche Quem Fala e Com Quem Fala
+      const spkId = e.speaker_id || "unknown";
+      const tgtId = e.addressee_id || "unknown";
+
+      speakerCard.className = `actor-card char-theme-${spkId}`;
+      speakerAvatar.textContent = getAvatarEmoji(spkId);
+      speakerName.textContent = e.speaker || "Desconhecido";
+      speakerRole.textContent = e.actor_role || "Personagem";
+
+      targetCard.className = `actor-card char-theme-${tgtId}`;
+      targetAvatar.textContent = getAvatarEmoji(tgtId);
+      targetName.textContent = e.addressee || "Interlocutor";
+      targetRole.textContent = tgtId === "player" ? "Protagonista / Jogador" : "Interlocutor na cena";
+
+      // Guia de Voz (Character Voice) da Fase 0
+      const voiceText = e.voice_guide
+        || (studioCharacterBible[spkId] && studioCharacterBible[spkId].voice)
+        || studioVoiceMatrix[spkId]
+        || "Mantenha naturalidade dramática em PT-BR, respeitando o limite de 35 caracteres por linha e sem abreviações.";
+      voiceGuideText.textContent = voiceText;
+
+      // Rota de Gênero
+      const mHeroName = activeProject.male_hero ? activeProject.male_hero.name : "M";
+      const fHeroName = activeProject.female_hero ? activeProject.female_hero.name : "F";
+      if (e.gender_branch === "MALE") {
+        genderBranchBadge.className = "meta-pill gender-male";
+        genderBranchBadge.innerHTML = `♂ Rota Exclusiva: <strong>${escapeHtml(mHeroName)} (Masculino)</strong>`;
+      } else if (e.gender_branch === "FEMALE") {
+        genderBranchBadge.className = "meta-pill gender-female";
+        genderBranchBadge.innerHTML = `♀ Rota Exclusiva: <strong>${escapeHtml(fHeroName)} (Feminino)</strong>`;
+      } else {
+        genderBranchBadge.className = "meta-pill gender-both";
+        genderBranchBadge.innerHTML = `⚧ Rota Comum: <strong>${escapeHtml(mHeroName)} & ${escapeHtml(fHeroName)}</strong>`;
+      }
+
+      // Tags dinâmicas na fala
+      const tagsFound = (e.en_text.match(/\{[A-Z0-9_]+\}|\[0x[0-9A-Fa-f]+\]/g) || []);
+      if (tagsFound.length > 0) {
+        dialogueTagHint.textContent = `🏷️ Tags Obrigatórias: ${[...new Set(tagsFound)].join(", ")}`;
+      } else {
+        dialogueTagHint.textContent = `🏷️ Sem tags variáveis`;
+      }
+
+      renderSceneFlow(e.index);
+      renderTextDisplays();
+      renderSurgicalGlossaryAndAbbr(e);
+
+      ptEditInput.value = e.pt_text || "";
+
+      if (e.pt_alt) {
+        useAltBtn.style.display = "inline-block";
+        useAltBtn.textContent = `Usar Alt: "${e.pt_alt.slice(0, 26)}${e.pt_alt.length > 26 ? '...' : ''}"`;
+      } else {
+        useAltBtn.style.display = "none";
+      }
+
+      if (e.has_desc_col) {
+        descEditorWrap.style.display = "flex";
+        ptDescInput.value = e.pt_desc || "";
+      } else {
+        descEditorWrap.style.display = "none";
+        ptDescInput.value = "";
+      }
+
+      updateLiveMetricsAndQa();
+    }
+
+    function renderSurgicalGlossaryAndAbbr(entry) {
+      const container = document.getElementById("detectedGlossaryChips");
+      const titleEl = document.getElementById("assistBarTitle");
+      container.innerHTML = "";
+
+      const enLow = (entry.en_text || "").toLowerCase();
+      const matched = studioGlossaryTerms.filter(g => {
+        const orig = (g.original || "").toLowerCase();
+        return orig.length > 2 && enLow.includes(orig);
+      });
+
+      if (isCurrentFileStoryDialogue) {
+        titleEl.textContent = "📖 Glossário na Fala:";
+        if (matched.length === 0) {
+          container.innerHTML = `<span style="font-size:0.74rem; color:var(--text-dim);">Nenhum termo específico do glossário detectado nesta frase (clique em um termo quando aparecer para inserir).</span>`;
+        } else {
+          matched.slice(0, 10).forEach(g => {
+            const chip = document.createElement("span");
+            chip.className = "glossary-chip";
+            chip.title = g.notes || "Clique para inserir o termo canônico PT-BR no editor";
+            chip.innerHTML = `<span>${escapeHtml(g.original)}</span> ➔ <strong>${escapeHtml(g.pt_br)}</strong>`;
+            chip.addEventListener("click", () => insertAtCursor(ptEditInput, g.pt_br));
+            container.appendChild(chip);
+          });
+        }
+      } else {
+        titleEl.textContent = "⚙️ Abreviações Canônicas (UI/Itens):";
+        matched.slice(0, 5).forEach(g => {
+          const insertVal = g.short_form || g.pt_br;
+          const chip = document.createElement("span");
+          chip.className = "glossary-chip";
+          chip.innerHTML = `<span>${escapeHtml(g.original)}</span> ➔ <strong>${escapeHtml(insertVal)}</strong>`;
+          chip.addEventListener("click", () => insertAtCursor(ptEditInput, insertVal));
+          container.appendChild(chip);
+        });
+        studioCanonicalAbbr.forEach(ab => {
+          const chip = document.createElement("span");
+          chip.className = "abbr-chip";
+          chip.title = `${ab.full} (${ab.en}) — Clique para inserir`;
+          chip.textContent = ab.abbr;
+          chip.addEventListener("click", () => insertAtCursor(ptEditInput, ab.abbr));
+          container.appendChild(chip);
+        });
+      }
+    }
+
+    function insertAtCursor(textarea, textToInsert) {
+      const start = textarea.selectionStart || 0;
+      const end = textarea.selectionEnd || 0;
+      const val = textarea.value;
+      textarea.value = val.slice(0, start) + textToInsert + val.slice(end);
+      textarea.focus();
+      textarea.selectionStart = textarea.selectionEnd = start + textToInsert.length;
+      updateLiveMetricsAndQa();
+    }
+
+    function renderSceneFlow(globalIdx) {
+      sceneFlowList.innerHTML = "";
+      if (sceneFlowCollapsed) {
+        sceneFlowList.style.display = "none";
+        return;
+      }
+      sceneFlowList.style.display = "flex";
+
+      const start = Math.max(0, globalIdx - 2);
+      const end = Math.min(allEntries.length - 1, globalIdx + 2);
+
+      for (let i = start; i <= end; i++) {
+        const item = allEntries[i];
+        const row = document.createElement("div");
+        const isCurr = i === globalIdx;
+        row.className = `scene-bubble ${isCurr ? 'current' : ''}`;
+
+        const gTag = item.gender_branch === "MALE"
+          ? `<span class="gender-badge gender-male">♂</span>`
+          : item.gender_branch === "FEMALE"
+            ? `<span class="gender-badge gender-female">♀</span>`
+            : "";
+
+        row.innerHTML = `
+          <div class="scene-bubble-speaker char-theme-${item.speaker_id || 'unknown'}" style="padding:2px 7px; border-radius:5px; border:1px solid transparent;">
+            #${item.index + 1} ${ getAvatarEmoji(item.speaker_id) } ${escapeHtml(item.speaker || 'Geral')} ${gTag}
+            <div style="font-size:0.65rem; opacity:0.8; font-weight:normal;">➔ ${escapeHtml(item.addressee || '-')}</div>
+          </div>
+          <div class="scene-bubble-text">
+            <div>${escapeHtml((item.pt_text || "").replace(/\n/g, " "))}</div>
+            <span class="scene-bubble-en">🇺🇸 ${escapeHtml((item.en_text || "").replace(/\n/g, " "))}</span>
+          </div>
+        `;
+
+        row.addEventListener("click", () => {
+          const targetFilteredIdx = filteredEntries.findIndex(fe => fe.index === item.index);
+          if (targetFilteredIdx !== -1) {
+            currentPos = targetFilteredIdx;
+            updateActiveSidebarItem();
+            renderCurrentEntry();
+          } else {
+            currentFilter = "all";
+            currentGenderFilter = "ALL";
+            currentCharFilter = "";
+            genderFilter.value = "ALL";
+            charSelect.value = "";
+            searchInput.value = "";
+            sectionSelect.value = "";
+            document.querySelectorAll(".filter-tab").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+            applyFilters(false);
+            const newIdx = filteredEntries.findIndex(fe => fe.index === item.index);
+            if (newIdx !== -1) {
+              currentPos = newIdx;
+              updateActiveSidebarItem();
+              renderCurrentEntry();
+            }
+          }
+        });
+
+        sceneFlowList.appendChild(row);
+      }
+    }
+
+    function toParagraph(text) {
+      if (!text) return "-";
+      return text.split("\n").map(l => l.trim()).filter(Boolean).join(" ");
+    }
+
+    function renderTextDisplays() {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      if (isParagraphMode) {
+        enDisplay.textContent = toParagraph(e.en_text);
+        ptSuggestedDisplay.textContent = toParagraph(e.pt_text);
+      } else {
+        enDisplay.textContent = e.en_text || "-";
+        ptSuggestedDisplay.textContent = e.pt_text || "-";
+      }
+    }
+
+    // =========================================================================
+    // MÉTRICAS DE LINHA, SIMULADOR GBA E PAINEL QA AO VIVO
+    // =========================================================================
+    function updateLiveMetricsAndQa() {
+      const val = ptEditInput.value || "";
+      const lines = val.split("\n");
+      const currentEntry = filteredEntries[currentPos] || { en_text: "", speaker: "FALANTE" };
+      const idealLimit = activeProject.ideal_limit || 32;
+      const hardLimit = activeProject.hard_limit || 35;
+
+      // 1. Chips de comprimento por linha
+      lineMetrics.innerHTML = "";
+      lines.forEach((line, i) => {
+        const cleanLen = line.replace(/\[0x[0-9A-Fa-f]+\]/g, "").length;
+        const chip = document.createElement("span");
+        let status = "ok";
+        if (cleanLen > hardLimit) status = "danger";
+        else if (cleanLen > idealLimit) status = "warn";
+
+        chip.className = `metric-chip ${status}`;
+        chip.textContent = `L${i + 1}: ${cleanLen}/${hardLimit}c`;
+        lineMetrics.appendChild(chip);
+      });
+
+      const totalChip = document.createElement("span");
+      totalChip.className = "metric-chip";
+      totalChip.textContent = `Total: ${val.length} chars (${lines.length} ${lines.length === 1 ? 'linha' : 'linhas'})`;
+      lineMetrics.appendChild(totalChip);
+
+      // 2. Simulador Visual de Caixa GBA
+      document.getElementById("gbaSimSpeaker").textContent = (currentEntry.speaker || "SISTEMA").toUpperCase();
+      const totalBoxes = Math.max(1, Math.ceil(lines.length / 3));
+      document.getElementById("gbaBoxPageCounter").textContent = `${lines.length} linha(s) • ${totalBoxes} caixa(s) GBA`;
+
+      const simLinesEl = document.getElementById("gbaSimLines");
+      simLinesEl.innerHTML = "";
+      lines.forEach(l => {
+        const cleanLen = l.replace(/\[0x[0-9A-Fa-f]+\]/g, "").length;
+        const span = document.createElement("span");
+        let cls = "gba-textbox-line";
+        if (cleanLen > hardLimit) cls += " overflow-hard";
+        else if (cleanLen > idealLimit) cls += " overflow-soft";
+        span.className = cls;
+        span.textContent = l || " ";
+        simLinesEl.appendChild(span);
+      });
+
+      // 3. Avaliação ao vivo das 5 Barreiras do Quality Gate
+      const qaResult = evaluateEntryQaLive(currentEntry.en_text || "", val, isCurrentFileStoryDialogue);
+      const gatesRow = document.getElementById("liveQaGatesRow");
+      const issuesList = document.getElementById("liveQaIssuesList");
+
+      gatesRow.innerHTML = "";
+      qaResult.gates.forEach(g => {
+        const pill = document.createElement("span");
+        pill.className = `gate-pill ${g.status}`;
+        const icon = g.status === "ok" ? "✅" : (g.status === "warn" ? "🟡" : "🔴");
+        pill.textContent = `${icon} ${g.label}`;
+        gatesRow.appendChild(pill);
+      });
+
+      issuesList.innerHTML = "";
+      qaResult.issues.forEach(iss => {
+        const div = document.createElement("div");
+        div.className = `qa-issue-line ${iss.severity}`;
+        div.innerHTML = `<span><strong>[${escapeHtml(iss.gate)}]</strong> ${escapeHtml(iss.msg)}</span>`;
+        issuesList.appendChild(div);
+      });
+    }
+
+    // =========================================================================
+    // AUTO-WRAP INTELIGENTE ANTI-ÓRFÃOS (≤34 CARACTERES)
+    // =========================================================================
+    function smartWrapAntiOrphans(text, maxChars = 34) {
+      const unified = text.split("\n").map(l => l.trim()).filter(Boolean).join(" ");
+      if (!unified) return "";
+      const words = unified.split(/\s+/);
+      const lines = [];
+      let current = "";
+
+      for (const word of words) {
+        if (!current) {
+          current = word;
+        } else if ((current.length + 1 + word.length) <= maxChars) {
+          current += " " + word;
+        } else {
+          lines.push(current);
+          current = word;
+        }
+      }
+      if (current) lines.push(current);
+
+      // Passo 2: Prevenção de Orfandade Textual (se a última palavra de uma linha for artigo/preposição curta, empurra para a próxima linha)
+      for (let i = 0; i < lines.length - 1; i++) {
+        const lineWords = lines[i].split(/\s+/);
+        if (lineWords.length >= 3) {
+          const lastW = lineWords[lineWords.length - 1].replace(/[.,!?;:"'”’)]+$/g, "").toLowerCase();
+          if (ORPHAN_END_WORDS.has(lastW)) {
+            const movedWord = lineWords.pop();
+            const candidateNext = movedWord + " " + lines[i + 1];
+            if (candidateNext.length <= (activeProject.hard_limit || 35)) {
+              lines[i] = lineWords.join(" ");
+              lines[i + 1] = candidateNext;
+            }
+          }
+        }
+      }
+      return lines.join("\n");
+    }
+
+    // =========================================================================
+    // SALVAMENTO O(1) INDIVIDUAL E EM LOTE
+    // =========================================================================
+    async function saveEntry(validated, goNext = false) {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      const newPt = ptEditInput.value;
+      const newDesc = e.has_desc_col ? ptDescInput.value : null;
+
+      try {
+        if (serverOnline) {
+          const res = await fetch("/api/save", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              game: activeProject.id,
+              filename: currentFile,
+              line_index: e.line_index,
+              pt_text: newPt,
+              pt_desc: newDesc,
+              validated: validated
+            })
+          });
+          const data = await res.json();
+          if (!res.ok || !data.ok) {
+            alert("Erro ao salvar no servidor: " + (data.error || "Desconhecido"));
+            return;
+          }
+          if (data.entry) {
+            Object.assign(e, data.entry);
+          } else {
+            e.pt_text = newPt;
+            if (e.has_desc_col) e.pt_desc = newDesc;
+            e.validated = validated;
+          }
+        } else {
+          localStorage.setItem(
+            getLocalOverrideKey(currentFile, e.line_index),
+            JSON.stringify({ pt_text: newPt, pt_desc: newDesc, validated: validated })
+          );
+          e.pt_text = newPt;
+          if (e.has_desc_col) e.pt_desc = newDesc;
+          e.validated = validated;
+          const liveQa = evaluateEntryQaLive(e.en_text || "", newPt, isCurrentFileStoryDialogue);
+          e.qa_issues = liveQa.issues;
+          e.has_qa_error = liveQa.issues.some(i => i.severity === "error");
+          e.has_qa_warn = liveQa.issues.some(i => i.severity === "warning");
+        }
+
+        updateProgress();
+        showToast(validated ? "✅ Validado e salvo no Markdown!" : "💾 Salvo como Pendente!");
+
+        if (goNext) {
+          const nextPendingIdx = filteredEntries.findIndex((item, idx) => idx > currentPos && !item.validated);
+          if (nextPendingIdx !== -1) {
+            currentPos = nextPendingIdx;
+          } else if (currentPos < filteredEntries.length - 1) {
+            currentPos++;
+          }
+        }
+
+        renderSidebarList();
+        renderCurrentEntry();
+      } catch (err) {
+        alert("Falha ao salvar: " + err.message);
+      }
+    }
+
+    async function batchApproveSafeEntries() {
+      const safeCandidates = filteredEntries.filter(e => !e.validated && !e.has_qa_error && (e.pt_text || "").trim().length > 0);
+      if (safeCandidates.length === 0) {
+        showToast("Nenhuma linha pendente sem erros de QA encontrada na lista atual.");
+        return;
+      }
+      if (!confirm(`Deseja aprovar como "✅ Validado" todas as ${safeCandidates.length} linhas pendentes desta lista que possuem 0 erros críticos no QA Gate?`)) {
+        return;
+      }
+
+      if (serverOnline) {
+        const updates = safeCandidates.map(e => ({
+          line_index: e.line_index,
+          pt_text: e.pt_text,
+          pt_desc: e.has_desc_col ? e.pt_desc : null,
+          validated: true
+        }));
+        const res = await fetch("/api/batch_save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            game: activeProject.id,
+            filename: currentFile,
+            updates
+          })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          safeCandidates.forEach(e => {
+            e.validated = true;
+            e.status_str = "✅ Validado";
+          });
+          updateProgress();
+          renderSidebarList();
+          renderCurrentEntry();
+          showToast(`✅ ${safeCandidates.length} linhas aprovadas em lote com sucesso!`);
+        }
+      } else {
+        safeCandidates.forEach(e => {
+          e.validated = true;
+          e.status_str = "✅ Validado";
+          localStorage.setItem(
+            getLocalOverrideKey(currentFile, e.line_index),
+            JSON.stringify({ pt_text: e.pt_text, pt_desc: e.pt_desc, validated: true })
+          );
+        });
+        updateProgress();
+        renderSidebarList();
+        renderCurrentEntry();
+        showToast(`✅ ${safeCandidates.length} linhas aprovadas no cache local!`);
+      }
+    }
+
+    // =========================================================================
+    // MODAIS DO ESTÚDIO (QA GATE, BÍBLIA & GLOSSÁRIO, PROMPT IA, BUILD ROM)
+    // =========================================================================
+    async function openQaAuditModal(scopeFileOnly = true) {
+      const backdrop = document.getElementById("qaModalBackdrop");
+      const body = document.getElementById("qaModalBody");
+      backdrop.classList.add("open");
+      body.innerHTML = `<div style="padding:20px; color:var(--text-muted);">Executando auditoria das 5 Barreiras do Quality Gate...</div>`;
+
+      try {
+        const query = scopeFileOnly ? `?name=${encodeURIComponent(currentFile)}&game=${encodeURIComponent(activeProject.id)}` : `?game=${encodeURIComponent(activeProject.id)}`;
+        const res = await fetch(`/api/qa_audit${query}`);
+        const data = await res.json();
+
+        let html = `
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between; background:rgba(7,10,18,0.65); padding:10px 14px; border-radius:8px; border:1px solid var(--border);">
+            <div>
+              <strong>Escopo:</strong> ${scopeFileOnly ? escapeHtml(currentFile) : 'Projeto Completo (' + escapeHtml(activeProject.title) + ')'}
+            </div>
+            <div style="display:flex; gap:10px;">
+              <span class="badge valid">✅ Validados: ${data.total_validated}/${data.total_rows}</span>
+              <span class="badge qa-err">🔴 Erros Críticos: ${data.total_errors}</span>
+              <span class="badge qa-warn">🟡 Alertas: ${data.total_warnings}</span>
+            </div>
+          </div>
+        `;
+
+        let totalIssuesListed = 0;
+        html += `<table class="modal-table">
+          <thead>
+            <tr>
+              <th>Arquivo</th>
+              <th>Linha</th>
+              <th>Falante</th>
+              <th>Barreira QA</th>
+              <th> Diagnóstico & Texto Atual</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>`;
+
+        (data.files || []).forEach(f => {
+          (f.issues || []).forEach(iss => {
+            totalIssuesListed++;
+            const badgeCls = iss.severity === "error" ? "qa-err" : "qa-warn";
+            html += `
+              <tr>
+                <td style="font-family:monospace; font-size:0.72rem;">${escapeHtml(f.filename)}</td>
+                <td style="font-family:monospace;">L${iss.line_number} (${escapeHtml(iss.ref_id)})</td>
+                <td><strong>${escapeHtml(iss.speaker)}</strong></td>
+                <td><span class="badge ${badgeCls}">${escapeHtml(iss.gate)}</span></td>
+                <td>
+                  <div style="font-weight:600; color:#f8fafc;">${escapeHtml(iss.msg)}</div>
+                  <div style="font-family:monospace; font-size:0.74rem; color:var(--text-muted); margin-top:2px;">${escapeHtml((iss.pt_text || "").replace(/\n/g, " <br> "))}</div>
+                </td>
+                <td>
+                  <button class="mini-btn" onclick="jumpToFileAndLine('${escapeHtml(f.filename)}', ${iss.line_index})">Ir ➔</button>
+                </td>
+              </tr>
+            `;
+          });
+        });
+
+        if (totalIssuesListed === 0) {
+          html += `<tr><td colspan="6" style="text-align:center; padding:24px; color:#34d399; font-weight:700;">🎉 Zero erros ou alertas do Quality Gate encontrados neste escopo!</td></tr>`;
+        }
+
+        html += `</tbody></table>`;
+        body.innerHTML = html;
+      } catch (e) {
+        body.innerHTML = `<div style="color:var(--red);">Falha ao carregar relatório de QA.</div>`;
+      }
+    }
+
+    window.jumpToFileAndLine = async function(filename, lineIndex) {
+      document.getElementById("qaModalBackdrop").classList.remove("open");
+      document.getElementById("globalSearchModalBackdrop").classList.remove("open");
+      if (filename !== currentFile) {
+        await loadFile(filename);
+      }
+      currentFilter = "all";
+      currentGenderFilter = "ALL";
+      currentCharFilter = "";
+      genderFilter.value = "ALL";
+      charSelect.value = "";
+      searchInput.value = "";
+      sectionSelect.value = "";
+      document.querySelectorAll(".filter-tab").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+      applyFilters(false);
+
+      const idx = filteredEntries.findIndex(e => e.line_index === lineIndex);
+      if (idx !== -1) {
+        currentPos = idx;
+        updateActiveSidebarItem();
+        renderCurrentEntry();
+      }
+    };
+
+    function highlightSearchMatch(text, query) {
+      const escaped = escapeHtml(text || "");
+      if (!query) return escaped;
+      const safeQ = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return escaped.replace(new RegExp(`(${safeQ})`, "gi"), `<mark style="background:rgba(6,182,212,0.35); color:#fff; padding:0 2px; border-radius:3px;">$1</mark>`);
+    }
+
+    async function executeGlobalProjectSearch(rawQuery) {
+      const backdrop = document.getElementById("globalSearchModalBackdrop");
+      const body = document.getElementById("globalSearchModalBody");
+      const modalInput = document.getElementById("globalSearchModalInput");
+      const topInput = document.getElementById("globalSearchInput");
+      document.getElementById("globalSearchProjectTitle").textContent = activeProject.title || activeProject.id;
+
+      const q = (rawQuery !== undefined ? rawQuery : (modalInput.value || topInput.value || "")).trim();
+      modalInput.value = q;
+      topInput.value = q;
+      backdrop.classList.add("open");
+
+      if (!q) {
+        body.innerHTML = `<div style="padding:24px; color:var(--text-muted); text-align:center;">Digite um termo acima e clique em <strong>🔍 Buscar</strong> (ou pressione Enter) para pesquisar em todos os arquivos Markdown de <strong>${escapeHtml(activeProject.title)}</strong>.</div>`;
+        modalInput.focus();
+        return;
+      }
+
+      body.innerHTML = `<div style="padding:24px; color:var(--text-muted); text-align:center;">🔎 Pesquisando <strong>"${escapeHtml(q)}"</strong> em todos os arquivos de ${escapeHtml(activeProject.title)}...</div>`;
+
+      try {
+        let data = null;
+        if (serverOnline) {
+          const res = await fetch(`/api/global_search?q=${encodeURIComponent(q)}&game=${encodeURIComponent(activeProject.id)}&limit=300`);
+          data = await res.json();
+        } else if (window.EMBEDDED_MD_DATA) {
+          const emb = window.EMBEDDED_MD_DATA;
+          const qLow = q.toLowerCase();
+          const results = [];
+          let totalMatches = 0;
+          const filesSet = new Set();
+
+          for (const cat of (emb.categories || [])) {
+            const fname = cat.filename;
+            if (!emb.files[fname] && emb.file_scripts && emb.file_scripts[fname]) {
+              try { await loadDataScript(emb.file_scripts[fname]); } catch (_) {}
+            }
+            const fdata = emb.files[fname];
+            if (!fdata || !fdata.entries) continue;
+            fdata.entries.forEach((e, idxInFile) => {
+              const hay = `${e.ref_id || ""} ${e.en_text || ""} ${e.pt_text || ""} ${e.en_desc || ""} ${e.pt_desc || ""} ${e.section || ""} ${e.speaker || ""} ${e.addressee || ""}`.toLowerCase();
+              if (hay.includes(qLow)) {
+                totalMatches++;
+                filesSet.add(fname);
+                if (results.length < 300) {
+                  results.push({
+                    filename: fname,
+                    file_title: cat.title || fname,
+                    entry_index: idxInFile,
+                    line_index: e.line_index,
+                    line_number: e.line_index + 1,
+                    ref_id: e.ref_id || "",
+                    section: e.section || "",
+                    speaker: e.speaker || "",
+                    addressee: e.addressee || "",
+                    en_text: e.en_text || "",
+                    pt_text: e.pt_text || "",
+                    validated: !!e.validated,
+                    has_qa_error: !!e.has_qa_error,
+                    has_qa_warn: !!e.has_qa_warn
+                  });
+                }
+              }
+            });
+          }
+          data = {
+            ok: true,
+            query: q,
+            total_matches: totalMatches,
+            files_matched: filesSet.size,
+            truncated: totalMatches > 300,
+            results
+          };
+        }
+
+        if (!data || !data.ok) {
+          body.innerHTML = `<div style="color:var(--red); padding:20px;">Erro ao executar busca global.</div>`;
+          return;
+        }
+
+        let html = `
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between; background:rgba(7,10,18,0.65); padding:10px 14px; border-radius:8px; border:1px solid var(--border);">
+            <div>
+              <strong>Termo pesquisado:</strong> <code style="color:#67e8f9;">${escapeHtml(q)}</code>
+              ${data.truncated ? `<span style="color:var(--amber); font-size:0.74rem; margin-left:8px;">(Exibindo os primeiros ${data.results.length} de ${data.total_matches} resultados)</span>` : ""}
+            </div>
+            <div style="display:flex; gap:10px;">
+              <span class="badge valid" style="background:var(--cyan-soft); color:#67e8f9;">🔎 ${data.total_matches} ocorrência(s)</span>
+              <span class="badge pending">📂 ${data.files_matched} arquivo(s)</span>
+            </div>
+          </div>
+        `;
+
+        if (!data.results || data.results.length === 0) {
+          html += `<div style="padding:30px; text-align:center; color:var(--text-muted); font-size:0.86rem;">Nenhuma ocorrência encontrada para <strong>"${escapeHtml(q)}"</strong> em nenhum arquivo deste projeto.</div>`;
+        } else {
+          html += `<table class="modal-table">
+            <thead>
+              <tr>
+                <th>Arquivo</th>
+                <th>Linha / ID</th>
+                <th>Falante ➔ Alvo</th>
+                <th>Texto Original (EN/JP)</th>
+                <th>Tradução PT-BR</th>
+                <th>Status</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>`;
+
+          data.results.forEach(r => {
+            const stBadge = r.validated
+              ? `<span class="badge valid">✅</span>`
+              : `<span class="badge pending">⏳</span>`;
+            const qaBadge = r.has_qa_error
+              ? ` <span class="badge qa-err">🔴</span>`
+              : (r.has_qa_warn ? ` <span class="badge qa-warn">🟡</span>` : "");
+
+            html += `
+              <tr>
+                <td style="font-family:monospace; font-size:0.72rem; color:#93c5fd;">
+                  <strong>${escapeHtml(r.filename)}</strong>
+                  <div style="font-size:0.66rem; color:var(--text-muted);">${escapeHtml(r.section || "")}</div>
+                </td>
+                <td style="font-family:monospace; white-space:nowrap;">
+                  L${r.line_number}<br>
+                  <span style="color:var(--text-muted); font-size:0.7rem;">${ highlightSearchMatch(r.ref_id, q) }</span>
+                </td>
+                <td>
+                  <strong>${ highlightSearchMatch(r.speaker || "Geral", q) }</strong>
+                  <div style="font-size:0.68rem; color:var(--text-muted);">➔ ${ highlightSearchMatch(r.addressee || "-", q) }</div>
+                </td>
+                <td style="font-family:monospace; font-size:0.75rem; color:var(--text-muted);">${ highlightSearchMatch((r.en_text || "").replace(/\n/g, " <br> "), q) }</td>
+                <td style="font-family:monospace; font-size:0.77rem; color:#f8fafc;">${ highlightSearchMatch((r.pt_text || "").replace(/\n/g, " <br> "), q) }</td>
+                <td style="white-space:nowrap;">${stBadge}${qaBadge}</td>
+                <td>
+                  <button class="mini-btn" onclick="jumpToFileAndLine(${JSON.stringify(r.filename).replace(/"/g, '&quot;')}, ${r.line_index})">Abrir ➔</button>
+                </td>
+              </tr>
+            `;
+          });
+
+          html += `</tbody></table>`;
+        }
+
+        body.innerHTML = html;
+      } catch (err) {
+        body.innerHTML = `<div style="color:var(--red); padding:20px;">Falha ao pesquisar no projeto: ${escapeHtml(err.message)}</div>`;
+      }
+    }
+
+    function openBibleAndGlossaryModal(initialFilter = "") {
+      const backdrop = document.getElementById("bibleModalBackdrop");
+      const searchEl = document.getElementById("bibleSearchInput");
+      backdrop.classList.add("open");
+      searchEl.value = initialFilter;
+      renderBibleModalContent(initialFilter);
+    }
+
+    function renderBibleModalContent(filterQuery = "") {
+      const body = document.getElementById("bibleModalBody");
+      const q = (filterQuery || "").trim().toLowerCase();
+
+      const bibleEntries = Object.values(studioCharacterBible || {}).filter(c => {
+        if (!q) return true;
+        return `${c.name} ${c.role} ${c.voice} ${c.bio}`.toLowerCase().includes(q);
+      });
+
+      const glossaryEntries = (studioGlossaryTerms || []).filter(g => {
+        if (!q) return true;
+        return `${g.original} ${g.pt_br} ${g.short_form} ${g.notes}`.toLowerCase().includes(q);
+      });
+
+      let html = `<h3 style="font-size:0.88rem; color:#a5b4fc;">🎭 Fichas de Voz dos Personagens (${bibleEntries.length})</h3>`;
+      if (bibleEntries.length > 0) {
+        html += `<table class="modal-table">
+          <thead>
+            <tr>
+              <th>Personagem</th>
+              <th>Papel / Arquétipo</th>
+              <th>Tom de Voz & Idioleto (Character Voice)</th>
+              <th>Pronomes / Tratamento</th>
+            </tr>
+          </thead>
+          <tbody>`;
+        bibleEntries.forEach(c => {
+          html += `
+            <tr>
+              <td><strong>${escapeHtml(c.name)}</strong></td>
+              <td>${escapeHtml(c.role || "-")}</td>
+              <td>${escapeHtml(c.voice || c.bio || "-")}</td>
+              <td>${escapeHtml(c.pronouns || "-")}</td>
+            </tr>
+          `;
+        });
+        html += `</tbody></table>`;
+      } else {
+        html += `<div style="font-size:0.78rem; color:var(--text-muted);">Nenhuma ficha encontrada para o filtro atual.</div>`;
+      }
+
+      html += `<h3 style="font-size:0.88rem; color:#67e8f9; margin-top:12px;">📖 Glossário Oficial & Termos Canônicos (${glossaryEntries.length})</h3>`;
+      html += `<table class="modal-table">
+        <thead>
+          <tr>
+            <th>Original (EN/JP)</th>
+            <th>Tradução Canônica (PT-BR)</th>
+            <th>Forma Curta (Menus)</th>
+            <th>Diretriz / Uso</th>
+          </tr>
+        </thead>
+        <tbody>`;
+      glossaryEntries.slice(0, 120).forEach(g => {
+        html += `
+          <tr>
+            <td style="font-family:monospace; color:#93c5fd;">${escapeHtml(g.original)}</td>
+            <td><strong>${escapeHtml(g.pt_br)}</strong></td>
+            <td style="font-family:monospace; color:#fde68a;">${escapeHtml(g.short_form || "-")}</td>
+            <td style="color:var(--text-muted);">${escapeHtml(g.notes || "-")}</td>
+          </tr>
+        `;
+      });
+      html += `</tbody></table>`;
+      body.innerHTML = html;
+    }
+
+    async function generateSurgicalPrompt() {
+      const backdrop = document.getElementById("promptModalBackdrop");
+      const output = document.getElementById("surgicalPromptOutput");
+      const summary = document.getElementById("promptMetaSummary");
+      const chunkSize = parseInt(document.getElementById("promptChunkSize").value || "35", 10);
+      backdrop.classList.add("open");
+      output.value = "Gerando lote cirúrgico com vozes de personagens e glossário filtrado...";
+
+      if (serverOnline) {
+        try {
+          const res = await fetch("/api/surgical_prompt", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              game: activeProject.id,
+              filename: currentFile,
+              start_index: 0,
+              chunk_size: chunkSize,
+              only_pending: true
+            })
+          });
+          const data = await res.json();
+          if (data.ok) {
+            summary.textContent = `✅ Lote gerado com ${data.count} falas, ${data.matched_speakers_count} fichas de voz e ${data.matched_terms_count} termos do glossário injetados cirurgicamente.`;
+            output.value = data.prompt;
+          } else {
+            output.value = "Erro: " + (data.error || "Falha desconhecida");
+          }
+        } catch (e) {
+          output.value = "Erro de conexão ao gerar prompt.";
+        }
+      } else {
+        output.value = "A geração de prompt cirúrgico requer o servidor Python ativo.";
+      }
+    }
+
+    // =========================================================================
+    // EVENT LISTENERS E ATALHOS DE TECLADO
+    // =========================================================================
+    projectSelect.addEventListener("change", () => switchProject(projectSelect.value));
+    categorySelect.addEventListener("change", () => loadFile(categorySelect.value));
+    sectionSelect.addEventListener("change", () => applyFilters(true));
+    genderFilter.addEventListener("change", () => {
+      currentGenderFilter = genderFilter.value;
+      applyFilters(true);
+    });
+    charSelect.addEventListener("change", () => {
+      currentCharFilter = charSelect.value;
+      applyFilters(true);
+    });
+    charFilterMode.addEventListener("change", () => {
+      currentCharMode = charFilterMode.value;
+      applyFilters(true);
+    });
+    searchInput.addEventListener("input", () => applyFilters(true));
+
+    document.getElementById("toggleSceneFlow").addEventListener("click", () => {
+      sceneFlowCollapsed = !sceneFlowCollapsed;
+      document.getElementById("sceneFlowToggleLabel").textContent = sceneFlowCollapsed ? "[Expandir ▼]" : "[Ocultar ▲]";
+      if (filteredEntries.length > 0) {
+        renderSceneFlow(filteredEntries[currentPos].index);
+      }
+    });
+
+    document.querySelectorAll(".filter-tab").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-tab").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
+        applyFilters(true);
+      });
+    });
+
+    ptEditInput.addEventListener("input", updateLiveMetricsAndQa);
+
+    document.getElementById("toggleViewModeBtn").addEventListener("click", (ev) => {
+      isParagraphMode = !isParagraphMode;
+      ev.currentTarget.textContent = isParagraphMode ? "📄 Modo: Parágrafo" : "📏 Modo: Linhas GBA";
+      renderTextDisplays();
+    });
+
+    document.getElementById("copyEnBtn").addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      const txt = isParagraphMode ? toParagraph(e.en_text) : e.en_text;
+      navigator.clipboard.writeText(txt);
+      showToast("Texto EN copiado!");
+    });
+
+    document.getElementById("copySuggestedBtn").addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      const txt = isParagraphMode ? toParagraph(e.pt_text) : e.pt_text;
+      navigator.clipboard.writeText(txt);
+      showToast("Tradução PT copiada!");
+    });
+
+    document.getElementById("useSuggestedBtn").addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      ptEditInput.value = filteredEntries[currentPos].pt_text || "";
+      updateLiveMetricsAndQa();
+    });
+
+    document.getElementById("autoWrapBtn").addEventListener("click", () => {
+      ptEditInput.value = smartWrapAntiOrphans(ptEditInput.value, 34);
+      updateLiveMetricsAndQa();
+      showToast("✨ Quebra automática Anti-Órfãos (≤34 chars) aplicada!");
+    });
+
+    document.getElementById("unifyLinesBtn").addEventListener("click", () => {
+      ptEditInput.value = toParagraph(ptEditInput.value);
+      updateLiveMetricsAndQa();
+      showToast("🧹 Linhas unificadas em parágrafo único!");
+    });
+
+    document.getElementById("restoreTagsBtn").addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      const liveQa = evaluateEntryQaLive(e.en_text || "", ptEditInput.value, isCurrentFileStoryDialogue);
+      if (liveQa.missingTags.length === 0) {
+        showToast("Todas as tags dinâmicas já estão presentes na tradução!");
+        return;
+      }
+      insertAtCursor(ptEditInput, liveQa.missingTags.join(" "));
+      showToast(`Tags inseridas: ${liveQa.missingTags.join(", ")}`);
+    });
+
+    document.getElementById("copyEditorBtn").addEventListener("click", () => {
+      navigator.clipboard.writeText(ptEditInput.value || "");
+      showToast("📋 Texto do editor copiado!");
+    });
+
+    useAltBtn.addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      const e = filteredEntries[currentPos];
+      if (e.pt_alt) {
+        ptEditInput.value = e.pt_alt;
+        updateLiveMetricsAndQa();
+      }
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (currentPos > 0) {
+        currentPos--;
+        updateActiveSidebarItem();
+        renderCurrentEntry();
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (currentPos < filteredEntries.length - 1) {
+        currentPos++;
+        updateActiveSidebarItem();
+        renderCurrentEntry();
+      }
+    });
+
+    document.getElementById("nextPendingBtn").addEventListener("click", () => {
+      const idx = filteredEntries.findIndex((item, i) => i > currentPos && !item.validated);
+      if (idx !== -1) {
+        currentPos = idx;
+      } else {
+        const firstIdx = filteredEntries.findIndex(item => !item.validated);
+        if (firstIdx !== -1) currentPos = firstIdx;
+      }
+      updateActiveSidebarItem();
+      renderCurrentEntry();
+    });
+
+    document.getElementById("nextQaErrorBtn").addEventListener("click", () => {
+      const idx = filteredEntries.findIndex((item, i) => i > currentPos && (item.has_qa_error || item.has_qa_warn));
+      if (idx !== -1) {
+        currentPos = idx;
+      } else {
+        const firstIdx = filteredEntries.findIndex(item => item.has_qa_error || item.has_qa_warn);
+        if (firstIdx !== -1) currentPos = firstIdx;
+        else showToast("🎉 Nenhum alerta de QA nesta lista!");
+      }
+      updateActiveSidebarItem();
+      renderCurrentEntry();
+    });
+
+    document.getElementById("batchApproveSafeBtn").addEventListener("click", batchApproveSafeEntries);
+    document.getElementById("markPendingBtn").addEventListener("click", () => saveEntry(false, false));
+    document.getElementById("saveOnlyBtn").addEventListener("click", () => saveEntry(true, false));
+    document.getElementById("validateNextBtn").addEventListener("click", () => saveEntry(true, true));
+
+    // Modais
+    document.getElementById("openQaModalBtn").addEventListener("click", () => openQaAuditModal(true));
+    document.getElementById("qaScopeFileBtn").addEventListener("click", () => openQaAuditModal(true));
+    document.getElementById("qaScopeProjectBtn").addEventListener("click", () => openQaAuditModal(false));
+    document.getElementById("closeQaModalBtn").addEventListener("click", () => document.getElementById("qaModalBackdrop").classList.remove("open"));
+
+    document.getElementById("openBibleModalBtn").addEventListener("click", () => openBibleAndGlossaryModal(""));
+    document.getElementById("inspectSpeakerBibleBtn").addEventListener("click", () => {
+      if (filteredEntries.length === 0) return;
+      const spk = filteredEntries[currentPos].speaker || "";
+      openBibleAndGlossaryModal(spk === "Desconhecido" ? "" : spk);
+    });
+    document.getElementById("bibleSearchInput").addEventListener("input", (e) => renderBibleModalContent(e.target.value));
+    document.getElementById("closeBibleModalBtn").addEventListener("click", () => document.getElementById("bibleModalBackdrop").classList.remove("open"));
+
+    document.getElementById("openPromptModalBtn").addEventListener("click", generateSurgicalPrompt);
+    document.getElementById("regeneratePromptBtn").addEventListener("click", generateSurgicalPrompt);
+    document.getElementById("copySurgicalPromptBtn").addEventListener("click", () => {
+      navigator.clipboard.writeText(document.getElementById("surgicalPromptOutput").value || "");
+      showToast("⚡ Prompt Cirúrgico copiado para a área de transferência!");
+    });
+    document.getElementById("closePromptModalBtn").addEventListener("click", () => document.getElementById("promptModalBackdrop").classList.remove("open"));
+
+    document.getElementById("buildRomBtn").addEventListener("click", async () => {
+      const backdrop = document.getElementById("buildModalBackdrop");
+      const term = document.getElementById("buildTerminalOutput");
+      backdrop.classList.add("open");
+      term.textContent = `⏳ Executando pipeline build_ptbr_rom.py para ${activeProject.title}...\n`;
+
+      try {
+        const res = await fetch("/api/build", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ game: activeProject.id })
+        });
+        const data = await res.json();
+        if (res.ok && data.ok) {
+          term.textContent = `✅ COMPILAÇÃO CONCLUÍDA COM SUCESSO!\n\n${data.output || ""}`;
+          showToast("🎮 ROM PT-BR compilada com sucesso!");
+        } else {
+          term.textContent = `❌ ERRO NA COMPILAÇÃO:\n\n${data.error || "Erro desconhecido"}`;
+        }
+      } catch (err) {
+        term.textContent = "⚠️ Servidor offline. Para compilar pelo navegador, inicie o validador pelo script .bat.";
+      }
+    });
+    document.getElementById("closeBuildModalBtn").addEventListener("click", () => document.getElementById("buildModalBackdrop").classList.remove("open"));
+
+    // Busca Global em Todos os Arquivos do Projeto
+    const globalSearchInput = document.getElementById("globalSearchInput");
+    const globalSearchModalInput = document.getElementById("globalSearchModalInput");
+    document.getElementById("globalSearchBtn").addEventListener("click", () => executeGlobalProjectSearch(globalSearchInput.value));
+    globalSearchInput.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchInput.value);
+      }
+    });
+    document.getElementById("runGlobalSearchModalBtn").addEventListener("click", () => executeGlobalProjectSearch(globalSearchModalInput.value));
+    globalSearchModalInput.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchModalInput.value);
+      }
+    });
+    document.getElementById("closeGlobalSearchModalBtn").addEventListener("click", () => document.getElementById("globalSearchModalBackdrop").classList.remove("open"));
+
+    // Atalhos Globais
+    window.addEventListener("keydown", (ev) => {
+      if (ev.ctrlKey && ev.shiftKey && (ev.key === "f" || ev.key === "F")) {
+        ev.preventDefault();
+        executeGlobalProjectSearch(globalSearchInput.value);
+      } else if (ev.ctrlKey && ev.key === "Enter") {
+        ev.preventDefault();
+        saveEntry(true, true);
+      } else if (ev.altKey && (ev.key === "w" || ev.key === "W")) {
+        ev.preventDefault();
+        ptEditInput.value = smartWrapAntiOrphans(ptEditInput.value, 34);
+        updateLiveMetricsAndQa();
+        showToast("✨ Auto-Wrap Anti-Órfãos aplicado!");
+      } else if (ev.altKey && ev.key === "ArrowDown") {
+        ev.preventDefault();
+        if (currentPos < filteredEntries.length - 1) {
+          currentPos++;
+          updateActiveSidebarItem();
+          renderCurrentEntry();
+        }
+      } else if (ev.altKey && ev.key === "ArrowUp") {
+        ev.preventDefault();
+        if (currentPos > 0) {
+          currentPos--;
+          updateActiveSidebarItem();
+          renderCurrentEntry();
+        }
+      }
+    });
+
+    loadStudioBootstrap();
+  </script>
+</body>
+</html>

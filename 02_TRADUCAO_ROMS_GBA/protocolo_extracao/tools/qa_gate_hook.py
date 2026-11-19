@@ -71,7 +71,7 @@ def split_md_row(line: str) -> List[str]:
         s = s[1:]
     if s.endswith("|"):
         s = s[:-1]
-    return [c.strip() for c in s.split("|")]
+    return [c.strip().replace(r"\|", "|") for c in re.split(r"(?<!\\)\|", s)]
 
 
 def clean_cell(raw: str) -> str:
@@ -83,8 +83,15 @@ def clean_cell(raw: str) -> str:
 
 def split_box_lines(cell: str) -> List[str]:
     cleaned = clean_cell(cell)
-    lines = re.split(r"<br\s*/?>", cleaned, flags=re.IGNORECASE)
-    return [ln.strip() for ln in lines if ln.strip()]
+    # Divide por <br>, <page> ou por @ colado (quebra de linha interna em mensagens e bestiário do SN2),
+    # preservando " @ " com espaços dos banners de localidade para auditoria de largura total
+    lines = re.split(r"<br\s*/?>|<page>|(?<!\s)@(?!\s)", cleaned, flags=re.IGNORECASE)
+    out = []
+    for ln in lines:
+        ln = re.sub(r"^\t?\([A-Za-z0-9_]+\)", "", ln.strip()).strip()
+        if ln:
+            out.append(ln)
+    return out
 
 
 def extract_tags(text: str) -> List[str]:
@@ -113,23 +120,24 @@ def detect_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
     """
     h_low = [h.lower() for h in headers]
 
-    # Caso especial: Tabela de Armas/Itens com 2 pares (Nome Original/Sugerido + Descrição Original/Sugerida)
+        # Caso especial: Tabela de Armas/Itens/Magias/Bestiário com 2 pares (Nome Original/Sugerido + Descrição Original/Sugerida)
     name_en, name_pt, desc_en, desc_pt = None, None, None, None
     for idx, h in enumerate(h_low):
-        if "nome original" in h:
+        if any(k in h for k in ("nome original", "magia original", "técnica original", "efeito original", "monstro original")):
             name_en = idx
-        elif ("nome sugerid" in h or "nome pt-br" in h or "tradução pt-br" in h) and name_pt is None:
+        elif any(k in h for k in ("nome sugerid", "nome pt-br", "magia sugerid", "técnica sugerid", "efeito sugerid", "monstro sugerid")) and name_pt is None:
             name_pt = idx
         elif "descrição original" in h:
             desc_en = idx
-        elif "descrição sugerid" in h or "descrição pt-br" in h:
+        elif ("descrição sugerid" in h or "descrição pt-br" in h or "tradução sugerida" in h) and desc_en is not None and desc_pt is None:
             desc_pt = idx
 
     if name_en is not None and name_pt is not None and desc_en is not None and desc_pt is not None:
+        name_limit = 14 if any("monstro" in x for x in h_low) else 16
         return {
             "mode": "dual_item",
             "id_col": 0,
-            "pairs": [(name_en, name_pt, 16), (desc_en, desc_pt, 36)],
+            "pairs": [(name_en, name_pt, name_limit), (desc_en, desc_pt, 35)],
             "status_col": len(headers) - 1
         }
 
@@ -150,7 +158,7 @@ def detect_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
         elif "status" in h:
             status_col = idx
         elif any(k in h for k in ("offset", "script", "id", "endereço")):
-            if id_col == 0:
+            if id_col == 0 and idx == 0:
                 id_col = idx
         elif any(k in h for k in ("personagem", "speaker", "falante", "opcode")):
             if spk_col is None:
@@ -170,7 +178,10 @@ def detect_table_columns(headers: List[str]) -> Optional[Dict[str, Any]]:
 
 
 def parse_script_seq_id(row_id: str) -> Optional[Tuple[str, int]]:
-    """Extrai (script_id, seq_num) de IDs como '#2213 [18]' ou '#1657 79'."""
+    """Extrai (script_id, seq_num) de IDs como '#2213 [18]', '#1657 79' ou '1101@0x0082'."""
+    m_hex = re.search(r"^(\d+)@0x([0-9A-Fa-f]+)$", row_id)
+    if m_hex:
+        return (m_hex.group(1), int(m_hex.group(2), 16))
     m = re.search(r"(#\d+)\s*\[?(\d+)\]?", row_id)
     if m:
         return (m.group(1), int(m.group(2)))
@@ -212,12 +223,23 @@ def audit_file(filepath: Path, hard_limit: int = 35, soft_limit: int = 33) -> Di
             if not tag_resolved[i] or not tag_resolved[i + 1]:
                 s1 = parse_script_seq_id(table_rows[i]["id"])
                 s2 = parse_script_seq_id(table_rows[i + 1]["id"])
-                if s1 and s2 and s1[0] == s2[0] and abs(s2[1] - s1[1]) <= 2:
-                    comb_en = sorted(table_rows[i]["en_tags"] + table_rows[i + 1]["en_tags"])
-                    comb_pt = sorted(table_rows[i]["pt_tags"] + table_rows[i + 1]["pt_tags"])
-                    if comb_en == comb_pt:
-                        tag_resolved[i] = True
-                        tag_resolved[i + 1] = True
+                if s1 and s2 and s1[0] == s2[0]:
+                    max_delta = 0x90 if "@" in table_rows[i]["id"] else 2
+                    if 0 <= abs(s2[1] - s1[1]) <= max_delta:
+                        comb_en = sorted(table_rows[i]["en_tags"] + table_rows[i + 1]["en_tags"])
+                        comb_pt = sorted(table_rows[i]["pt_tags"] + table_rows[i + 1]["pt_tags"])
+                        if comb_en == comb_pt:
+                            tag_resolved[i] = True
+                            tag_resolved[i + 1] = True
+                        elif i + 2 < n:
+                            s3 = parse_script_seq_id(table_rows[i + 2]["id"])
+                            if s3 and s3[0] == s1[0] and 0 <= abs(s3[1] - s2[1]) <= max_delta:
+                                comb_en3 = sorted(comb_en + table_rows[i + 2]["en_tags"])
+                                comb_pt3 = sorted(comb_pt + table_rows[i + 2]["pt_tags"])
+                                if comb_en3 == comb_pt3:
+                                    tag_resolved[i] = True
+                                    tag_resolved[i + 1] = True
+                                    tag_resolved[i + 2] = True
 
         for idx, r in enumerate(table_rows):
             total_rows += 1
@@ -372,6 +394,8 @@ def audit_file(filepath: Path, hard_limit: int = 35, soft_limit: int = 33) -> Di
                 pt_c = col_spec["pt_col"]
                 if len(cells) > max(en_c, pt_c):
                     row_id = clean_cell(cells[col_spec["id_col"]]) if len(cells) > col_spec["id_col"] else f"L{line_idx+1}"
+                    if row_id.isdigit() and len(cells) > 1 and clean_cell(cells[1]).startswith("0x"):
+                        row_id = f"{row_id}@{clean_cell(cells[1])}"
                     status_val = cells[col_spec["status_col"]] if col_spec["status_col"] is not None and col_spec["status_col"] < len(cells) else ""
                     r_en = clean_cell(cells[en_c])
                     r_pt = clean_cell(cells[pt_c])
